@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "live": "python3 scripts/fetch_live.py"
   },
   "repository": {
     "type": "git",

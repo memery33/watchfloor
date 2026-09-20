@@ -58,7 +58,7 @@ export const SNAPSHOT = {
   priorityTheater: "IRAN / GULF",
   sourceAge: "SNAPSHOT 20 SEP 2026 ~08:00 ET",
   disclaimer:
-    "Best-effort open-source COP. Competing claims are labeled. Not live tracks. Not a targeting product.",
+    "Best-effort open-source COP. Yellow = unverified claim. Dashed arcs are reconstructed from named origin+impact, not radar. Not a targeting product.",
 };
 
 export const THEATERS: Theater[] = [
