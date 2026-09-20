@@ -449,7 +449,7 @@ export const THEATERS: Theater[] = [
     short: "SEA",
     status: "HORMUZ NEAR FLOOR",
     pip: "hot",
-    map: { lat: 20, lon: 48, zoom: 3.4 },
+    map: { lat: 22.4, lon: 48.2, zoom: 5 },
     kpis: [
       { label: "HORMUZ FLOW", value: "NEAR FLOOR", tone: "hot" },
       { label: "BRENT PEAK", value: "$126", tone: "warn" },

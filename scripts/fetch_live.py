@@ -47,7 +47,23 @@ AOR = (
     "palestine",
     "gaza",
 )
-NOISE = {"POLICE", "DISTRICT COURT", "COURT", "UN SECURITY COUNCIL"}
+NOISE = {
+    "POLICE",
+    "DISTRICT COURT",
+    "COURT",
+    "UN SECURITY COUNCIL",
+    "AUTHORITIES",
+    "ITALIAN",
+}
+# If the toponym is this place, coords must be near here or the row is junk.
+PLACE_CHECK = (
+    ("sheremetyevo", 55.972, 37.415, 2.5),
+    ("moscow", 55.75, 37.62, 4.0),
+    ("kyiv", 50.45, 30.52, 3.0),
+    ("kiev", 50.45, 30.52, 3.0),
+    ("riyadh", 24.71, 46.68, 2.5),
+    ("tehran", 35.69, 51.39, 2.5),
+)
 ORIGINS = (
     (("HOUTHI", "YEMEN", "YEMENI"), "YEMEN / HOUTHI", 16.85, 43.58),
     (("HEZBOLLAH",), "S. LEBANON", 33.27, 35.21),
@@ -76,6 +92,40 @@ def theater_for(lat: float, lon: float) -> str:
         if south <= lat <= north and west <= lon <= east:
             return tid
     return "overview"
+
+
+GENERIC = {
+    "russia",
+    "iran",
+    "iraq",
+    "yemen",
+    "israel",
+    "ukraine",
+    "sudan",
+    "syria",
+    "lebanon",
+    "saudi arabia",
+}
+CENTROIDS = {
+    (60.0, 100.0),
+    (32.0, 53.0),
+    (33.0, 44.0),
+    (15.5, 47.5),
+}
+
+
+def coords_match_place(location: str, lat: float, lon: float) -> bool:
+    loc = (location or "").split(",")[0].strip().lower()
+    if loc in GENERIC:
+        return False
+    if (round(lat, 1), round(lon, 1)) in CENTROIDS:
+        return False
+    if lon > 70:
+        return False
+    for name, elat, elon, maxd in PLACE_CHECK:
+        if name in loc and (abs(lat - elat) + abs(lon - elon) > maxd * 2):
+            return False
+    return True
 
 
 def infer_origin(actor1: str, actor2: str, lat: float, lon: float) -> dict | None:
@@ -122,7 +172,7 @@ def from_gdelt_row(row: list[str]) -> dict | None:
         return None
     actor1 = (row[6] or "").strip()
     actor2 = (row[16] or "").strip()
-    if actor1 in NOISE and not in_aor(actor2):
+    if actor1 in NOISE or actor2 in NOISE:
         return None
     try:
         lat = float(row[56])
@@ -133,6 +183,8 @@ def from_gdelt_row(row: list[str]) -> dict | None:
         return None
     location = row[52] or "Unknown"
     if not in_aor(location):
+        return None
+    if not coords_match_place(location, lat, lon):
         return None
     try:
         dt = datetime.strptime(row[1], "%Y%m%d").replace(tzinfo=timezone.utc)
@@ -178,6 +230,10 @@ def from_globe_event(raw: dict) -> dict | None:
         return None
     actor1 = raw.get("actor1") or ""
     actor2 = raw.get("actor2") or ""
+    if actor1 in NOISE or actor2 in NOISE:
+        return None
+    if not coords_match_place(location, lat, lon):
+        return None
     origin = infer_origin(actor1, actor2, lat, lon)
     return {
         "id": raw.get("id") or f"globe-{lat}-{lon}",

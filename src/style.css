@@ -200,6 +200,10 @@ h2:first-child { margin-top: 0; }
   font-size: 10px;
   letter-spacing: .06em;
 }
+.track-arrow { background: none !important; border: 0 !important; }
+.claim-arc {
+  stroke-dasharray: 7 7;
+}
 
 @media (max-width: 980px) {
   .shell { grid-template-columns: 1fr; grid-template-rows: auto 46vh auto; }

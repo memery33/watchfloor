@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-20T14:17:48.669767+00:00",
+  "generated_at": "2026-09-20T14:28:19.960081+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
@@ -125,43 +125,6 @@
       "url": "https://www.brisbanetimes.com.au/world/middle-east/flames-smoke-seen-near-riyadh-airport-houthis-claim-attacks-on-saudi-capital-20260920-p60yve.html"
     },
     {
-      "id": "gdelt-1323897646",
-      "dtg": "20 SEP",
-      "date": "2026-09-20",
-      "location": "Yemen",
-      "fact": "SHELLING  YEMEN \u2192 SAUDI",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.5,
-      "lon": 47.5,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://whbl.com/2026/09/19/turkey-says-it-could-help-meet-saudi-military-needs-under-defence-pact/"
-    },
-    {
-      "id": "gdelt-1323898424",
-      "dtg": "20 SEP",
-      "date": "2026-09-20",
-      "location": "Israel",
-      "fact": "SHELLING  ISRAEL \u2192 ?",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.5,
-      "lon": 34.75,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": null,
-      "url": "http://www.pakistantelegraph.com/news/279317568/iran-decision-on-npt-withdrawal-depends-on-us-behavior-top-security-official-says"
-    },
-    {
       "id": "gdelt-1323909409",
       "dtg": "20 SEP",
       "date": "2026-09-20",
@@ -194,22 +157,6 @@
       "url": "https://www.moneycontrol.com/world/us-issues-middle-east-travel-advisory-israel-embassy-alerts-over-houthi-saudi-fighting-article-14033696.html"
     },
     {
-      "id": "gdelt-1323928239",
-      "dtg": "20 SEP",
-      "date": "2026-09-20",
-      "location": "Sheremetyevo",
-      "fact": "STRIKE  RUSSIA \u2192 ?",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 47.3617,
-      "lon": 134.26,
-      "event_type": "strike",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.express.co.uk/news/world/2250071/putin-election-moscow-ukraine-attacks"
-    },
-    {
       "id": "gdelt-1323928245",
       "dtg": "20 SEP",
       "date": "2026-09-20",
@@ -224,22 +171,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.pakistantimes.com/pakistans-religious-leaders-condemn-houthi-attacks-pledge-support-for-saudi-arabia-15062/"
-    },
-    {
-      "id": "gdelt-1323936901",
-      "dtg": "20 SEP",
-      "date": "2026-09-20",
-      "location": "Sheremetyevo",
-      "fact": "SHELLING  RUSSIAN \u2192 ?",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 47.3617,
-      "lon": 134.26,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.mirror.co.uk/news/world-news/moscow-russia-ukraine-war-strikes-37681523"
     },
     {
       "id": "gdelt-1323942749",
@@ -272,22 +203,6 @@
       "theater": "iran",
       "origin": null,
       "url": "http://www.chronline.com/stories/hormuz-oil-shipments-hit-six-month-high-us-commander-says,408519"
-    },
-    {
-      "id": "gdelt-1323946254",
-      "dtg": "20 SEP",
-      "date": "2026-09-20",
-      "location": "Iraq",
-      "fact": "SHELLING  IRAQI \u2192 ISRAELI",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 33.0,
-      "lon": 44.0,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.nydailynews.com/2026/09/20/unlike-zohran-mamdani-dinkins-supported-israel/"
     },
     {
       "id": "gdelt-1323952650",
@@ -386,22 +301,6 @@
       "url": "https://dailycaller.com/2026/09/18/russia-repurposing-training-missiles-ukraine-patriot-shortage/"
     },
     {
-      "id": "gdelt-1323783108",
-      "dtg": "19 SEP",
-      "date": "2026-09-19",
-      "location": "Russia",
-      "fact": "SHELLING  UKRAINIAN \u2192 ?",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 60.0,
-      "lon": 100.0,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://en.apa.az/europe/ukrainian-capital-kyiv-under-missile-attack-mayor-says-525088"
-    },
-    {
       "id": "gdelt-1323799201",
       "dtg": "19 SEP",
       "date": "2026-09-19",
@@ -416,38 +315,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.hngn.com/articles/273291/20260918/trump-signs-russia-sanctions-law-named-late-sen-lindsey-graham.htm"
-    },
-    {
-      "id": "gdelt-1323815675",
-      "dtg": "19 SEP",
-      "date": "2026-09-19",
-      "location": "Iran",
-      "fact": "STRIKE  IRANIAN \u2192 ARMY",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 32.0,
-      "lon": 53.0,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.wsws.org/en/articles/2026/09/19/dcvi-s19.html"
-    },
-    {
-      "id": "gdelt-1323820689",
-      "dtg": "19 SEP",
-      "date": "2026-09-19",
-      "location": "Riyadh",
-      "fact": "SHELLING  UN SECURITY COUNCIL \u2192 SAUDI ARABIA",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.clickorlando.com/news/world/2026/09/19/saudi-arabia-issues-alerts-across-the-country-for-aerial-threat-and-other-mideast-developments/"
     },
     {
       "id": "gdelt-1323821997",
@@ -583,22 +450,6 @@
       "url": "https://www.islamicinvitationturkey.com/sirens-blare-across-riyadh-as-yemen-launches-retaliatory-strikes/"
     },
     {
-      "id": "gdelt-1323866730",
-      "dtg": "19 SEP",
-      "date": "2026-09-19",
-      "location": "Sumy Oblast",
-      "fact": "SHELLING  UKRAINE \u2192 AUTHORITIES",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 51.0,
-      "lon": 34.0,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.euronews.com/my-europe/2026/09/19/russian-attacks-on-ukraine-kill-at-least-11-and-injure-dozens-over-past-24-hours"
-    },
-    {
       "id": "gdelt-1323866740",
       "dtg": "19 SEP",
       "date": "2026-09-19",
@@ -613,38 +464,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://news.az/news/us-approves-268-billion-air-defense-upgrade-for-ukraine"
-    },
-    {
-      "id": "gdelt-1323870187",
-      "dtg": "19 SEP",
-      "date": "2026-09-19",
-      "location": "Taif",
-      "fact": "STRIKE  AUTHORITIES \u2192 THE US",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 21.2703,
-      "lon": 40.4158,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.moneycontrol.com/world/hormuz-oil-shipments-hit-six-month-high-us-commander-says-article-14033627.html"
-    },
-    {
-      "id": "gdelt-1323872812",
-      "dtg": "19 SEP",
-      "date": "2026-09-19",
-      "location": "Iran",
-      "fact": "BLOCKADE  TANKER \u2192 A US",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 32.0,
-      "lon": 53.0,
-      "event_type": "blockade",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.arabnews.com/middle-east/us-military-strait-of-hormuz-shipping-traffic-at-6-month-high-3002355"
     },
     {
       "id": "gdelt-1323878711",
@@ -726,6 +545,22 @@
       "url": "https://www.israelnationalnews.com/news/433404"
     },
     {
+      "id": "gdelt-1323890181",
+      "dtg": "19 SEP",
+      "date": "2026-09-19",
+      "location": "Riyadh",
+      "fact": "SHELLING  JORDAN \u2192 RIYADH",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://jordantimes.com/news/local/jordan-condemns-houthi-missile-attack-on-riyadh"
+    },
+    {
       "id": "gdelt-1323890831",
       "dtg": "19 SEP",
       "date": "2026-09-19",
@@ -740,54 +575,6 @@
       "theater": "energy",
       "origin": null,
       "url": "http://www.jpost.com/middle-east/article-909128"
-    },
-    {
-      "id": "gdelt-1323895501",
-      "dtg": "19 SEP",
-      "date": "2026-09-19",
-      "location": "Israel",
-      "fact": "BLOCKADE  POLICE OFFICER \u2192 ISRAEL",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.5,
-      "lon": 34.75,
-      "event_type": "blockade",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.jpost.com/judaism/article-908884"
-    },
-    {
-      "id": "gdelt-1323739673",
-      "dtg": "18 SEP",
-      "date": "2026-09-18",
-      "location": "Israel",
-      "fact": "SHELLING  ISRAELI \u2192 UKRAINIAN",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.5,
-      "lon": 34.75,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.theepochtimes.com/opinion/elon-musk-is-powering-the-american-renaissance-6090712"
-    },
-    {
-      "id": "gdelt-1323740094",
-      "dtg": "18 SEP",
-      "date": "2026-09-18",
-      "location": "Ukraine",
-      "fact": "SHELLING  UKRAINIAN \u2192 UKRAINE",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 49.0,
-      "lon": 32.0,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://aninews.in/news/world/us/trump-expected-to-sign-russia-sanctions-bill-today-says-white-house-official20260918225458/"
     },
     {
       "id": "gdelt-1323740381",
@@ -825,22 +612,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://timesofindia.indiatimes.com/world/europe/kyiv-comes-under-missile-attack-explosions-heard-across-ukrainian-capital/articleshow/134339977.cms"
-    },
-    {
-      "id": "gdelt-1323744757",
-      "dtg": "18 SEP",
-      "date": "2026-09-18",
-      "location": "Russia",
-      "fact": "SHELLING  COMPANY \u2192 RUSSIAN",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 60.0,
-      "lon": 100.0,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://en.interfax.com.ua/news/general/1206747.html"
     },
     {
       "id": "gdelt-1323754351",
@@ -889,22 +660,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/09/18/russian-glide-bomb-hits-apartment-in-ukraine-s-sumy-two-dead-seven-injured"
-    },
-    {
-      "id": "gdelt-1323776958",
-      "dtg": "18 SEP",
-      "date": "2026-09-18",
-      "location": "Riyadh",
-      "fact": "STRIKE  ITALIAN \u2192 SAUDI ARABIA",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://tribune.com.pk/story/2630172/pakistan-plans-fresh-diplomatic-push"
     },
     {
       "id": "gdelt-1323777165",

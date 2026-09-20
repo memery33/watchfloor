@@ -182,14 +182,30 @@ function addImpact(lat: number, lon: number, color: string, label: string, group
     .addTo(group);
 }
 
+function addArrow(
+  from: { lat: number; lon: number },
+  to: { lat: number; lon: number },
+  color: string,
+  group: L.LayerGroup,
+) {
+  const ang = (Math.atan2(to.lat - from.lat, to.lon - from.lon) * 180) / Math.PI;
+  const icon = L.divIcon({
+    className: "track-arrow",
+    html: `<div style="width:0;height:0;border-left:7px solid transparent;border-right:7px solid transparent;border-bottom:14px solid ${color};transform:rotate(${90 - ang}deg)"></div>`,
+    iconSize: [14, 14],
+    iconAnchor: [7, 7],
+  });
+  L.marker([to.lat, to.lon], { icon, interactive: false }).addTo(group);
+}
+
 function drawTrack(track: (typeof TRACKS)[number]) {
   if (!trackLayer) return;
   const color = colorForConfidence(track.confidence);
   const pts = arcPoints(track.from, track.to);
   L.polyline(pts, {
     color,
-    weight: 2,
-    opacity: 0.9,
+    weight: track.confidence === "CLAIM" ? 2 : 3.5,
+    opacity: 0.95,
     dashArray: dashForConfidence(track.confidence),
     className: track.confidence === "CLAIM" ? "claim-arc" : "track-arc",
   })
@@ -198,8 +214,9 @@ function drawTrack(track: (typeof TRACKS)[number]) {
       { className: "marker-label" },
     )
     .addTo(trackLayer);
-  addImpact(track.from.lat, track.from.lon, "#6d7d8c", `ORIGIN  ${track.from.name}`, trackLayer);
+  addImpact(track.from.lat, track.from.lon, "#8aa0b0", `ORIGIN  ${track.from.name}`, trackLayer);
   addImpact(track.to.lat, track.to.lon, color, `IMPACT  ${track.to.name}`, trackLayer);
+  addArrow(track.from, track.to, color, trackLayer);
 }
 
 function drawLive(event: LiveEvent) {
@@ -305,16 +322,16 @@ window.addEventListener("keydown", (e) => {
   if (e.key === "f" || e.key === "F") document.documentElement.requestFullscreen?.();
 });
 
-async function boot() {
-  live = await loadLive();
-  liveAgeEl.textContent = live
-    ? `${SNAPSHOT.sourceAge} · ${liveAge(live.generated_at)}`
-    : `${SNAPSHOT.sourceAge} · LIVE OVERLAY OFFLINE`;
-  hudNote.textContent = live
-    ? `${live.events.length} GDELT rows in overlay. Yellow = claim. Dashed arc = inferred origin, not radar.`
-    : "Live overlay missing. Curated sitrep only.";
+function boot() {
   const initial = (location.hash.replace("#", "") || "overview") as TheaterId;
   select(THEATERS.some((t) => t.id === initial) ? initial : "overview");
+  void loadLive().then((payload) => {
+    live = payload;
+    liveAgeEl.textContent = live
+      ? `${SNAPSHOT.sourceAge} · ${liveAge(live.generated_at)}`
+      : `${SNAPSHOT.sourceAge} · LIVE OVERLAY OFFLINE`;
+    select(active);
+  });
 }
 
-void boot();
+boot();
