@@ -105,10 +105,9 @@ function colorFor(tone: string) {
 function renderMap(t: Theater) {
   if (!map) {
     map = L.map("map", { zoomControl: true, attributionControl: true });
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png", {
-      attribution: "&copy; OSM &copy; CARTO",
-      subdomains: "abcd",
-      maxZoom: 18,
+    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: "&copy; OpenStreetMap",
+      maxZoom: 19,
     }).addTo(map);
     layer = L.layerGroup().addTo(map);
   }
