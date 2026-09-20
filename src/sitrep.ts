@@ -1,1 +1,1 @@
-test
+file:///workspace/watchfloor/sitrep.ts
