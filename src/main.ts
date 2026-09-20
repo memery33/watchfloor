@@ -105,10 +105,20 @@ function colorFor(tone: string) {
 function renderMap(t: Theater) {
   if (!map) {
     map = L.map("map", { zoomControl: true, attributionControl: true });
-    L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: "&copy; OpenStreetMap",
-      maxZoom: 19,
-    }).addTo(map);
+    L.tileLayer(
+      "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+      {
+        attribution: "Tiles &copy; Esri",
+        maxZoom: 16,
+      },
+    ).addTo(map);
+    L.tileLayer(
+      "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",
+      {
+        attribution: "",
+        maxZoom: 16,
+      },
+    ).addTo(map);
     layer = L.layerGroup().addTo(map);
   }
   layer?.clearLayers();

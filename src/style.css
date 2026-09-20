@@ -90,9 +90,6 @@ body {
 
 #map { min-height: 0; background: #071018; }
 .leaflet-container { background: #071018; font: inherit; }
-.leaflet-tile-pane {
-  filter: invert(1) hue-rotate(180deg) brightness(0.9) contrast(0.95) saturate(0.35);
-}
 .leaflet-control-attribution { font-size: 9px !important; background: rgba(5,7,10,.7) !important; color: var(--dim) !important; }
 
 h2 {
