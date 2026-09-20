@@ -1,0 +1,25 @@
+{
+  "name": "watchfloor",
+  "private": false,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Open-source OSINT common operating picture. Unclassified. Not a targeting product.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/memery33/watchfloor"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "@types/leaflet": "^1.9.21",
+    "typescript": "~5.9.2",
+    "vite": "^7.1.5"
+  }
+}
