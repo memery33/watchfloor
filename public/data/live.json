@@ -1,27 +1,5 @@
 {
-  "generated_at": "2026-09-21T01:41:51.174802+00:00",
+  "generated_at": "2026-09-21T06:31:51.013158+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": [
-    {
-      "id": "gdelt-1324009397",
-      "dtg": "21 SEP",
-      "date": "2026-09-21",
-      "location": "Riyadh",
-      "fact": "SHELLING  YEMEN \u2192 RIYADH  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "http://usa.chinadaily.com.cn/a/202609/21/WS6ab081ffe4b06d4aa055f219.html"
-    }
-  ]
+  "events": []
 }
