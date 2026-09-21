@@ -52,12 +52,12 @@ export interface Theater {
 }
 
 export const SNAPSHOT = {
-  dtgLocal: "2026-09-21 1236L",
-  dtgZulu: "2026-09-21 1636Z",
+  dtgLocal: "2026-09-21 1545L",
+  dtgZulu: "2026-09-21 1945Z",
   classification: "UNCLASSIFIED // OSINT // OPEN PRESS",
   watchcon: "ELEVATED",
   priorityTheater: "IRAN / GULF",
-  sourceAge: "SNAPSHOT 21 SEP 2026 ~12:36 ET",
+  sourceAge: "SNAPSHOT 21 SEP 2026 ~15:45 ET",
   disclaimer:
     "Best-effort open-source COP. Yellow = unverified claim. Dashed arcs are reconstructed from named origin+impact, not radar. Not a targeting product.",
 };
@@ -469,6 +469,17 @@ export const THEATERS: Theater[] = [
         lon: 34.466,
       },
       {
+        id: "lv-shujaiyya",
+        dtg: "21 SEP",
+        location: "SHUJA'IYYA",
+        fact: "Hebrew Telegram (@ramreports): strike on a ‘terror target’ behind the courthouse mosque, east of Shuja'iyya junction, east Gaza City. Night plume is not a geolocation. Neighborhood pin only — not the mosque.",
+        source: "OPEN COMP",
+        confidence: "CLAIM",
+        priority: "PRI-2",
+        lat: 31.501,
+        lon: 34.468,
+      },
+      {
         id: "lv-khanyounis",
         dtg: "21 SEP",
         location: "KHAN YOUNIS",
@@ -578,6 +589,7 @@ export const THEATERS: Theater[] = [
       { id: "gaza", name: "GAZA", lat: 31.5, lon: 34.47, note: "Yellow Line", tone: "dim" },
       { id: "khan-younis", name: "KHAN YOUNIS", lat: 31.344, lon: 34.303, note: "Demolition CLAIM", tone: "warn" },
       { id: "tuffah", name: "TUFFAH", lat: 31.506, lon: 34.466, note: "UAV CLAIM 21 Sep", tone: "hot" },
+      { id: "shujaiyya", name: "SHUJA'IYYA", lat: 31.501, lon: 34.468, note: "Strike CLAIM 21 Sep", tone: "warn" },
       { id: "halamish", name: "HALAMISH", lat: 32.04, lon: 35.12, note: "Shooting", tone: "hot" },
       { id: "silwan", name: "SILWAN", lat: 31.77, lon: 35.237, note: "Clashes CLAIM", tone: "warn" },
       { id: "aleppo", name: "ALEPPO", lat: 36.2, lon: 37.16, note: "Ammo depot claim", tone: "warn" },
