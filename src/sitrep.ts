@@ -1,1 +1,1 @@
-export type Confidence = "CONFIRMED" | "REPORTED" | "CLAIM" | "DELTA" | "HOLD";
+@file:/tmp/sitrep_restore_only.ts
