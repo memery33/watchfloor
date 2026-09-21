@@ -52,12 +52,12 @@ export interface Theater {
 }
 
 export const SNAPSHOT = {
-  dtgLocal: "2026-09-21 1130L",
-  dtgZulu: "2026-09-21 1530Z",
+  dtgLocal: "2026-09-21 1236L",
+  dtgZulu: "2026-09-21 1636Z",
   classification: "UNCLASSIFIED // OSINT // OPEN PRESS",
   watchcon: "ELEVATED",
   priorityTheater: "IRAN / GULF",
-  sourceAge: "SNAPSHOT 21 SEP 2026 ~11:30 ET",
+  sourceAge: "SNAPSHOT 21 SEP 2026 ~12:36 ET",
   disclaimer:
     "Best-effort open-source COP. Yellow = unverified claim. Dashed arcs are reconstructed from named origin+impact, not radar. Not a targeting product.",
 };
@@ -163,6 +163,17 @@ export const THEATERS: Theater[] = [
         lon: 46.699,
       },
       {
+        id: "ov-erbil",
+        dtg: "20 SEP",
+        location: "ERBIL",
+        fact: "Hebrew Telegram: UAV hit near US consulate in Erbil. Greek press same cycle: drone downed near Erbil airport / coalition presence. Plume still is not a geolocation. City pin only \u2014 consulate vs airport is DELTA.",
+        source: "OPEN COMP",
+        confidence: "CLAIM",
+        priority: "PRI-2",
+        lat: 36.191,
+        lon: 44.009,
+      },
+      {
         id: "ov-3",
         dtg: "16 SEP",
         location: "HORMUZ",
@@ -260,6 +271,7 @@ export const THEATERS: Theater[] = [
       { id: "m-kohat", name: "KOHAT / AFPAK", lat: 33.59, lon: 71.44, note: "Mosque attack + escalation talk", tone: "warn" },
       { id: "m-sud", name: "SUDAN", lat: 15.5, lon: 32.5, note: "SAF / RSF", tone: "hot" },
       { id: "m-taiz", name: "TAIZ", lat: 13.58, lon: 44.02, note: "Market-strike CLAIM", tone: "warn" },
+      { id: "m-erbil", name: "ERBIL", lat: 36.191, lon: 44.009, note: "UAV CLAIM 20 Sep", tone: "warn" },
     ],
   },
   {
@@ -338,6 +350,17 @@ export const THEATERS: Theater[] = [
         lon: 56.25,
       },
       {
+        id: "ir-erbil",
+        dtg: "20 SEP",
+        location: "ERBIL",
+        fact: "Hebrew Telegram (News_il_h): UAV near US consulate, Erbil. Same-day Greek press: drone downed near Erbil airport / coalition presence; Reuters/AFP cited on intercept. Smoke still is not a site geolocation. City pin \u2014 consulate vs airport DELTA.",
+        source: "OPEN COMP",
+        confidence: "CLAIM",
+        priority: "PRI-2",
+        lat: 36.191,
+        lon: 44.009,
+      },
+      {
         id: "ir-4",
         dtg: "13 SEP",
         location: "QESHM",
@@ -376,6 +399,7 @@ export const THEATERS: Theater[] = [
       { id: "qeshm", name: "QESHM", lat: 26.76, lon: 55.8, note: "Cargo strike 13 Sep", tone: "warn" },
       { id: "babb", name: "BANDAR ABBAS", lat: 27.18, lon: 56.27, note: "UAS / UUV claims", tone: "warn" },
       { id: "tehran", name: "TEHRAN", lat: 35.69, lon: 51.39, note: "Resume-strike messaging", tone: "hot" },
+      { id: "erbil", name: "ERBIL", lat: 36.191, lon: 44.009, note: "UAV CLAIM 20 Sep", tone: "warn" },
     ],
   },
   {
@@ -443,6 +467,17 @@ export const THEATERS: Theater[] = [
         priority: "PRI-2",
         lat: 31.506,
         lon: 34.466,
+      },
+      {
+        id: "lv-khanyounis",
+        dtg: "21 SEP",
+        location: "KHAN YOUNIS",
+        fact: "Militant Telegram: IDF demolition in southern Khan Younis. Caption-only, no clip geolocation this pass. City-south pin — not a building.",
+        source: "MIL CLAIM",
+        confidence: "CLAIM",
+        priority: "PRI-2",
+        lat: 31.344,
+        lon: 34.303,
       },
       {
         id: "lv-taiz",
@@ -541,6 +576,7 @@ export const THEATERS: Theater[] = [
       { id: "jenin", name: "JENIN / GANIM", lat: 32.46, lon: 35.3, note: "Outpost incident", tone: "hot" },
       { id: "burqin", name: "BURQIN", lat: 32.456, lon: 35.26, note: "Clashes CLAIM", tone: "warn" },
       { id: "gaza", name: "GAZA", lat: 31.5, lon: 34.47, note: "Yellow Line", tone: "dim" },
+      { id: "khan-younis", name: "KHAN YOUNIS", lat: 31.344, lon: 34.303, note: "Demolition CLAIM", tone: "warn" },
       { id: "tuffah", name: "TUFFAH", lat: 31.506, lon: 34.466, note: "UAV CLAIM 21 Sep", tone: "hot" },
       { id: "halamish", name: "HALAMISH", lat: 32.04, lon: 35.12, note: "Shooting", tone: "hot" },
       { id: "silwan", name: "SILWAN", lat: 31.77, lon: 35.237, note: "Clashes CLAIM", tone: "warn" },
