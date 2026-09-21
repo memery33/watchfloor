@@ -343,7 +343,8 @@ body {
   box-shadow: 0 8px 24px rgba(0,0,0,.35);
   backdrop-filter: blur(4px);
 }
-.hud .hud-toggle { pointer-events: auto; }
+.hud .hud-toggle,
+.hud .legend-toggle { pointer-events: auto; }
 .legend {
   display: grid;
   gap: 5px;
@@ -373,6 +374,49 @@ body {
   width: 16px;
   vertical-align: 2px;
 }
+.swatch.landmark {
+  background: #7a8a99;
+  color: #7a8a99;
+  width: 7px;
+  height: 7px;
+  vertical-align: 1px;
+}
+.legend-toggle {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin: 2px 0 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  color: var(--dim);
+  font: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+.legend-toggle.on { color: var(--ink); }
+.legend-toggle:not(.on) { opacity: 0.45; }
+.landmark-label {
+  background: none !important;
+  border: 0 !important;
+}
+.landmark-label .lm-cap {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: .06em;
+  color: #8aa0b0;
+  background: rgba(8, 12, 16, .78);
+  border: 1px solid var(--line-soft);
+  border-radius: 2px;
+  padding: 0 3px;
+  line-height: 1.4;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.landmark-label.zoom-out .lm-cap { display: none; }
 .hud-note {
   margin-top: 8px;
   color: var(--dim);

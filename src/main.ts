@@ -3,6 +3,7 @@ import "leaflet/dist/leaflet.css";
 import { eventsForTheater, loadLive, type LiveEvent, type LivePayload } from "./live";
 import { SNAPSHOT, THEATERS, TICKER, type Theater, type TheaterId, type Confidence } from "./sitrep";
 import { TRACKS } from "./tracks";
+import { LANDMARKS, landmarkFits } from "./landmarks";
 import {
   arcPoints,
   colorForConfidence,
@@ -23,10 +24,13 @@ let map: L.Map | null = null;
 let sitrepLayer: L.LayerGroup | null = null;
 let liveLayer: L.LayerGroup | null = null;
 let trackLayer: L.LayerGroup | null = null;
+let landmarkLayer: L.LayerGroup | null = null;
 let live: LivePayload | null = null;
 let confidenceFilter: FilterMode = "ALL";
 let stackCollapsed = false;
+let landmarksOn = true;
 const LABEL_ZOOM = 6;
+const LANDMARK_LABEL_ZOOM = 7;
 
 app.innerHTML = `
   <header class="top">
@@ -60,6 +64,9 @@ app.innerHTML = `
             <div><i class="swatch claim"></i> CLAIM / UNVERIFIED</div>
             <div><i class="swatch delta"></i> DELTA / DISPUTED</div>
             <div><i class="swatch track"></i> RECONSTRUCTED VECTOR (NOT RADAR)</div>
+            <button type="button" class="legend-toggle on" id="landmarkToggle" aria-pressed="true" title="Toggle airports and seaports">
+              <i class="swatch landmark"></i> AIRPORTS / PORTS
+            </button>
           </div>
           <div class="hud-note" id="hudNote">Curated sitrep + GDELT claim overlay. Yellow = not confirmed.</div>
         </aside>
@@ -101,6 +108,7 @@ const collapseBtn = document.querySelector<HTMLButtonElement>("#collapseBtn")!;
 const railSelect = document.querySelector<HTMLSelectElement>("#railSelect")!;
 const hudEl = document.querySelector<HTMLElement>("#hud")!;
 const hudToggle = document.querySelector<HTMLButtonElement>("#hudToggle")!;
+const landmarkToggle = document.querySelector<HTMLButtonElement>("#landmarkToggle")!;
 const narrowMq = window.matchMedia("(max-width: 980px)");
 
 function theater(id: TheaterId): Theater {
@@ -481,12 +489,51 @@ function drawLive(event: LiveEvent) {
 }
 
 function syncEndpointZoom() {
-  if (!trackLayer && !liveLayer) return;
   const z = map?.getZoom() ?? 3;
   const zoomOut = z < LABEL_ZOOM || (narrowMq.matches && z < LABEL_ZOOM + 1);
   document.querySelectorAll(".endpoint-label").forEach((el) => {
     el.classList.toggle("zoom-out", zoomOut);
   });
+  const showLm = z >= LANDMARK_LABEL_ZOOM;
+  document.querySelectorAll(".landmark-label").forEach((el) => {
+    el.classList.toggle("zoom-out", !showLm);
+  });
+}
+
+function drawLandmarks(t: Theater) {
+  if (!landmarkLayer) return;
+  landmarkLayer.clearLayers();
+  if (!landmarksOn) return;
+  const z = map?.getZoom() ?? 3;
+  const showName = z >= LANDMARK_LABEL_ZOOM;
+  for (const lm of LANDMARKS) {
+    if (!landmarkFits(lm, t.id)) continue;
+    const airport = lm.kind === "airport";
+    const color = airport ? "#7a8a99" : "#6d8494";
+    const kind = airport ? "AIRPORT" : "SEAPORT";
+    const title = lm.code ? `${lm.name} (${lm.code})` : lm.name;
+    L.circleMarker([lm.lat, lm.lon], {
+      radius: airport ? 3 : 3.5,
+      color,
+      weight: 1,
+      fillColor: color,
+      fillOpacity: 0.35,
+      interactive: true,
+    })
+      .bindTooltip(`${kind}  ${title}`, {
+        className: "marker-label",
+        direction: "top",
+        offset: [0, -6],
+      })
+      .addTo(landmarkLayer);
+    const icon = L.divIcon({
+      className: `landmark-label${showName ? "" : " zoom-out"}`,
+      html: `<span class="lm-cap">${lm.code ?? (airport ? "APT" : "PORT")}</span>`,
+      iconSize: [1, 1],
+      iconAnchor: [-6, 8],
+    });
+    L.marker([lm.lat, lm.lon], { icon, interactive: false, keyboard: false }).addTo(landmarkLayer);
+  }
 }
 
 function renderMap(t: Theater) {
@@ -500,15 +547,20 @@ function renderMap(t: Theater) {
       "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",
       { attribution: "", maxZoom: 16 },
     ).addTo(map);
-    // Paint order A: sitrep \u2192 live \u2192 tracks (tracks on top)
+    // Landmarks under sitrep → live → tracks on top
+    landmarkLayer = L.layerGroup().addTo(map);
     sitrepLayer = L.layerGroup().addTo(map);
     liveLayer = L.layerGroup().addTo(map);
     trackLayer = L.layerGroup().addTo(map);
-    map.on("zoomend", syncEndpointZoom);
+    map.on("zoomend", () => {
+      syncEndpointZoom();
+      drawLandmarks(theater(active));
+    });
   }
   sitrepLayer?.clearLayers();
   liveLayer?.clearLayers();
   trackLayer?.clearLayers();
+  drawLandmarks(t);
 
   t.markers.forEach((m) => {
     const c = m.tone === "hot" ? "#ff4d3c" : m.tone === "warn" ? "#ffbf3c" : m.tone === "ok" ? "#3cff8a" : "#6fe3ff";
@@ -618,6 +670,13 @@ hudToggle.addEventListener("click", () => {
   const open = hudEl.classList.toggle("open");
   hudToggle.setAttribute("aria-expanded", String(open));
   hudToggle.querySelector(".chev")!.textContent = open ? "\u25be" : "\u25b8";
+});
+landmarkToggle.addEventListener("click", (ev) => {
+  ev.stopPropagation();
+  landmarksOn = !landmarksOn;
+  landmarkToggle.classList.toggle("on", landmarksOn);
+  landmarkToggle.setAttribute("aria-pressed", String(landmarksOn));
+  drawLandmarks(theater(active));
 });
 narrowMq.addEventListener("change", () => {
   syncHudForViewport();
