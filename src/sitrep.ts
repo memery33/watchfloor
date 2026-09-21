@@ -52,12 +52,12 @@ export interface Theater {
 }
 
 export const SNAPSHOT = {
-  dtgLocal: "2026-09-21 1125L",
-  dtgZulu: "2026-09-21 1525Z",
+  dtgLocal: "2026-09-21 1130L",
+  dtgZulu: "2026-09-21 1530Z",
   classification: "UNCLASSIFIED // OSINT // OPEN PRESS",
   watchcon: "ELEVATED",
   priorityTheater: "IRAN / GULF",
-  sourceAge: "SNAPSHOT 21 SEP 2026 ~11:25 ET",
+  sourceAge: "SNAPSHOT 21 SEP 2026 ~11:30 ET",
   disclaimer:
     "Best-effort open-source COP. Yellow = unverified claim. Dashed arcs are reconstructed from named origin+impact, not radar. Not a targeting product.",
 };
@@ -152,6 +152,17 @@ export const THEATERS: Theater[] = [
         lon: 46.68,
       },
       {
+        id: "ov-kkia",
+        dtg: "19\u201321 SEP",
+        location: "RIYADH KKIA",
+        fact: "Press: Houthi strike on King Khalid Airport fuel storage / jet-fuel tanks; flights disrupted. Telegram satellite (Merrux) circles a tank farm \u2014 oval BDA is CLAIM, not a damage assessment.",
+        source: "OPEN COMP",
+        confidence: "REPORTED",
+        priority: "PRI-1",
+        lat: 24.958,
+        lon: 46.699,
+      },
+      {
         id: "ov-3",
         dtg: "16 SEP",
         location: "HORMUZ",
@@ -243,6 +254,7 @@ export const THEATERS: Theater[] = [
     markers: [
       { id: "m-iran", name: "IRAN / GULF", lat: 27.1, lon: 56.3, note: "Strike-cycle watch", tone: "hot" },
       { id: "m-riyadh", name: "RIYADH", lat: 24.71, lon: 46.68, note: "Air-raid intercept", tone: "warn" },
+      { id: "m-kkia", name: "KKIA FUEL", lat: 24.958, lon: 46.699, note: "Fuel tanks 19\u201320 Sep", tone: "hot" },
       { id: "m-wb", name: "WEST BANK", lat: 32.0, lon: 35.2, note: "Active incidents", tone: "warn" },
       { id: "m-ukr", name: "UKRAINE", lat: 48.4, lon: 35.0, note: "Moscow drone wave", tone: "hot" },
       { id: "m-kohat", name: "KOHAT / AFPAK", lat: 33.59, lon: 71.44, note: "Mosque attack + escalation talk", tone: "warn" },
@@ -466,6 +478,17 @@ export const THEATERS: Theater[] = [
         lon: 46.68,
       },
       {
+        id: "lv-kkia",
+        dtg: "19\u201321 SEP",
+        location: "RIYADH KKIA",
+        fact: "Press: Houthi strike on King Khalid Airport jet-fuel tanks; flights disrupted. Telegram satellite (Merrux) circles a tank farm \u2014 oval BDA is CLAIM, not a damage assessment.",
+        source: "OPEN COMP",
+        confidence: "REPORTED",
+        priority: "PRI-1",
+        lat: 24.958,
+        lon: 46.699,
+      },
+      {
         id: "lv-2",
         dtg: "20 SEP",
         location: "NEVE TZU",
@@ -511,6 +534,7 @@ export const THEATERS: Theater[] = [
       },
     ],
     markers: [
+      { id: "kkia", name: "KKIA FUEL", lat: 24.958, lon: 46.699, note: "Jet-fuel tanks 19\u201320 Sep", tone: "hot" },
       { id: "sleb", name: "SOUTH LEBANON", lat: 33.2, lon: 35.3, note: "Occupation / Litani", tone: "warn" },
       { id: "mansouri", name: "MANSOURI", lat: 33.178, lon: 35.214, note: "Smoke CLAIM 21 Sep", tone: "warn" },
       { id: "deir-siryan", name: "DEIR SIRYAN", lat: 33.283, lon: 35.533, note: "Smoke CLAIM 21 Sep", tone: "warn" },
@@ -796,6 +820,17 @@ export const THEATERS: Theater[] = [
         lon: 46.68,
       },
       {
+        id: "en-kkia",
+        dtg: "19\u201321 SEP",
+        location: "RIYADH KKIA",
+        fact: "Press: Houthi strike on King Khalid Airport fuel storage / jet-fuel tanks. Telegram satellite oval is CLAIM BDA, not independent confirmation of which tanks burned.",
+        source: "OPEN COMP",
+        confidence: "REPORTED",
+        priority: "PRI-1",
+        lat: 24.958,
+        lon: 46.699,
+      },
+      {
         id: "en-5",
         dtg: "21 SEP",
         location: "HORMUZ",
@@ -809,6 +844,7 @@ export const THEATERS: Theater[] = [
     ],
     markers: [
       { id: "kapotnya-en", name: "KAPOTNYA ORF", lat: 55.635, lon: 37.795, note: "UA ORF strike", tone: "hot" },
+      { id: "kkia-en", name: "KKIA FUEL", lat: 24.958, lon: 46.699, note: "Jet-fuel tanks 19\u201320 Sep", tone: "hot" },
       { id: "hormuz2", name: "HORMUZ", lat: 26.57, lon: 56.25, note: "UKMTO 141-26 debris strike 21 Sep", tone: "hot" },
       { id: "bab", name: "BAB EL-MANDEB", lat: 12.58, lon: 43.33, note: "Houthi / Red Sea", tone: "warn" },
       { id: "suez", name: "SUEZ", lat: 30.0, lon: 32.55, note: "Alt artery", tone: "dim" },
