@@ -43,6 +43,8 @@ AOR = (
     "russia",
     "sudan",
     "ethiopia",
+    "pakistan",
+    "afghanistan",
     "west bank",
     "palestine",
     "gaza",
@@ -75,6 +77,7 @@ BBOX = {
     "sudan": (8.0, 21.5, 23.0, 39.0),
     "iran": (25.5, 47.8, 39.9, 63.5),
     "energy": (12.0, 32.0, 32.0, 62.0),
+    "afpak": (29.0, 60.5, 38.5, 75.5),
 }
 
 
