@@ -302,12 +302,13 @@ function addImpact(
   popup: { title: string; meta?: string; fact: string },
 ) {
   const marker = L.circleMarker([lat, lon], {
-    radius: 6,
+    radius: 8,
     color,
     weight: 2,
     fillColor: color,
-    fillOpacity: 0.18,
+    fillOpacity: 0.22,
   }).addTo(group);
+  marker.setStyle({ weight: 3 });
   attachPopup(marker, popup);
 }
 
@@ -332,6 +333,7 @@ function addEndpointLabel(
   group: L.LayerGroup,
   fullTip: string,
   peerLon?: number,
+  popup?: { title: string; meta?: string; fact: string },
 ) {
   // Hide permanent name caps below LABEL_ZOOM (and on narrow overview) \u2014 dots + tooltip only
   const z = map?.getZoom() ?? 3;
@@ -351,9 +353,9 @@ function addEndpointLabel(
     // Anchor at the geographic point; CSS transform offsets the cap opposite the peer
     iconAnchor: [0, 0],
   });
-  L.marker([lat, lon], { icon, interactive: true, keyboard: false })
-    .bindTooltip(fullTip, { className: "marker-label", direction: "top", offset: [0, -8] })
-    .addTo(group);
+  const cap = L.marker([lat, lon], { icon, interactive: true, keyboard: false }).addTo(group);
+  if (popup) attachPopup(cap, popup);
+  else cap.bindTooltip(fullTip, { className: "marker-label", direction: "top", offset: [0, -8] });
 }
 
 function addArrow(
@@ -418,6 +420,11 @@ function drawTrack(track: (typeof TRACKS)[number]) {
     trackLayer,
     `ORIGIN  ${track.from.name}  [${track.confidence}]`,
     track.to.lon,
+    {
+      title: `${track.from.name} \u2192 ${track.to.name}`,
+      meta: `${track.kind.toUpperCase()} \u00b7 ${track.confidence} \u00b7 NOT RADAR`,
+      fact: track.fact,
+    },
   );
   addEndpointLabel(
     track.to.lat,
@@ -428,6 +435,11 @@ function drawTrack(track: (typeof TRACKS)[number]) {
     trackLayer,
     `IMPACT  ${track.to.name}  [${track.confidence}]`,
     track.from.lon,
+    {
+      title: `${track.from.name} \u2192 ${track.to.name}`,
+      meta: `${track.kind.toUpperCase()} \u00b7 ${track.confidence} \u00b7 NOT RADAR`,
+      fact: track.fact,
+    },
   );
   addArrow(track.from, track.to, color, trackLayer);
 }
@@ -502,11 +514,11 @@ function renderMap(t: Theater) {
     const c = m.tone === "hot" ? "#ff4d3c" : m.tone === "warn" ? "#ffbf3c" : m.tone === "ok" ? "#3cff8a" : "#6fe3ff";
     const match = t.events.find((e) => Math.abs(e.lat - m.lat) < 0.02 && Math.abs(e.lon - m.lon) < 0.02);
     const marker = L.circleMarker([m.lat, m.lon], {
-      radius: 8,
+      radius: 10,
       color: c,
-      weight: 2,
+      weight: 3,
       fillColor: c,
-      fillOpacity: 0.12,
+      fillOpacity: 0.18,
     }).addTo(sitrepLayer!);
     attachPopup(marker, {
       title: m.name,
