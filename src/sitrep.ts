@@ -1,1 +1,1 @@
-LOAD_FROM_/tmp/sitrep_restore_only.ts
+export type Confidence = "CONFIRMED" | "REPORTED" | "CLAIM" | "DELTA" | "HOLD";
