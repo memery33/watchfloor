@@ -461,7 +461,7 @@ export const THEATERS: Theater[] = [
         id: "lv-tuffah",
         dtg: "21 SEP",
         location: "GAZA / TUFFAH",
-        fact: "Telegram (301 Arab World): Israeli UAV strike in Tuffah, east Gaza City; one killed. Caption-only — no independent confirmation in this pass.",
+        fact: "Telegram (301 Arab World): UAV strike in Tuffah, east Gaza City; one killed. Press TV same neighborhood: warplanes hit a residential building. Collage (night plume + later rubble) is not a building geolocation. Neighborhood pin only.",
         source: "OPEN COMP",
         confidence: "CLAIM",
         priority: "PRI-2",
