@@ -52,12 +52,12 @@ export interface Theater {
 }
 
 export const SNAPSHOT = {
-  dtgLocal: "2026-09-21 1545L",
-  dtgZulu: "2026-09-21 1945Z",
+  dtgLocal: "2026-09-21 1735L",
+  dtgZulu: "2026-09-21 2135Z",
   classification: "UNCLASSIFIED // OSINT // OPEN PRESS",
   watchcon: "ELEVATED",
   priorityTheater: "IRAN / GULF",
-  sourceAge: "SNAPSHOT 21 SEP 2026 ~15:45 ET",
+  sourceAge: "SNAPSHOT 21 SEP 2026 ~17:35 ET",
   disclaimer:
     "Best-effort open-source COP. Yellow = unverified claim. Dashed arcs are reconstructed from named origin+impact, not radar. Not a targeting product.",
 };
@@ -196,6 +196,17 @@ export const THEATERS: Theater[] = [
         lon: 44.02,
       },
       {
+        id: "ov-madaribah",
+        dtg: "21 SEP",
+        location: "AL-MADARIBAH",
+        fact: "Hebrew Telegram (Hananel Aviv): Southern Giants claim UAV hits on Houthi cells and military pickups on the Al-Wazia–Al-Madaribah front, west Lahij near Bab al-Mandeb. No strike geolocation. District pin only — not a pickup, not a control-line. Arab News 20 Sep has related fighting / a drone downed near Kahboub Mountain in the same district; that is the district fight, not this clip.",
+        source: "MIL CLAIM",
+        confidence: "CLAIM",
+        priority: "PRI-2",
+        lat: 12.72,
+        lon: 43.9,
+      },
+      {
         id: "ov-7",
         dtg: "21 SEP",
         location: "HORMUZ",
@@ -271,6 +282,7 @@ export const THEATERS: Theater[] = [
       { id: "m-kohat", name: "KOHAT / AFPAK", lat: 33.59, lon: 71.44, note: "Mosque attack + escalation talk", tone: "warn" },
       { id: "m-sud", name: "SUDAN", lat: 15.5, lon: 32.5, note: "SAF / RSF", tone: "hot" },
       { id: "m-taiz", name: "TAIZ", lat: 13.58, lon: 44.02, note: "Market-strike CLAIM", tone: "warn" },
+      { id: "m-madaribah", name: "AL-MADARIBAH", lat: 12.72, lon: 43.9, note: "Giants UAV CLAIM", tone: "warn" },
       { id: "m-erbil", name: "ERBIL", lat: 36.191, lon: 44.009, note: "UAV CLAIM 20 Sep", tone: "warn" },
     ],
   },
@@ -421,6 +433,7 @@ export const THEATERS: Theater[] = [
       "West Bank outpost / shooting cycle",
       "Houthi follow-on vs Riyadh / energy",
       "Taiz market-strike CLAIM — city pin only, no site geolocation",
+      "Al-Madaribah Giants UAV CLAIM — district pin only, no pickup geolocation",
       "IDF activity Daraa/Quneitra buffer",
     ],
     events: [
@@ -500,6 +513,17 @@ export const THEATERS: Theater[] = [
         priority: "PRI-2",
         lat: 13.58,
         lon: 44.02,
+      },
+      {
+        id: "lv-madaribah",
+        dtg: "21 SEP",
+        location: "AL-MADARIBAH",
+        fact: "Hebrew Telegram (Hananel Aviv): Southern Giants claim UAV hits on Houthi cells and military pickups on the Al-Wazia–Al-Madaribah front, west Lahij near Bab al-Mandeb. Clip not independently geolocated. District pin only — not a vehicle, not a control-line. Arab News 20 Sep: Nation’s Shield / Giants fighting and a drone downed near Kahboub Mountain in Al-Madaribah Wa Al-Aarah — related district fight, not this clip.",
+        source: "MIL CLAIM",
+        confidence: "CLAIM",
+        priority: "PRI-2",
+        lat: 12.72,
+        lon: 43.9,
       },
       {
         id: "lv-6",
@@ -595,6 +619,7 @@ export const THEATERS: Theater[] = [
       { id: "aleppo", name: "ALEPPO", lat: 36.2, lon: 37.16, note: "Ammo depot claim", tone: "warn" },
       { id: "daraa-yarmouk", name: "DARAA / YARMOUK", lat: 32.67, lon: 35.88, note: "IDF shelling 21 Sep", tone: "warn" },
       { id: "taiz", name: "TAIZ", lat: 13.58, lon: 44.02, note: "Market-strike CLAIM 21 Sep", tone: "warn" },
+      { id: "madaribah", name: "AL-MADARIBAH", lat: 12.72, lon: 43.9, note: "Giants UAV CLAIM 21 Sep", tone: "warn" },
     ],
   },
   {
@@ -842,6 +867,7 @@ export const THEATERS: Theater[] = [
     watch: [
       "AIS vs \u201copen strait\u201d language — UKMTO 141-26 debris strike",
       "Bab el-Mandeb / Red Sea meeting in Riyadh",
+      "Al-Madaribah / west Lahij Giants UAV CLAIM — district only, Bab marker unchanged",
       "Moscow ORF / Kapotnya damage vs Russian refining",
       "Second-order: LNG, fertilizer, helium, aluminum",
       "Gulf/ME flight disruption / travel alerts",
