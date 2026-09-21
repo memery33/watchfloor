@@ -122,6 +122,75 @@ function shortName(name: string): string {
   return part.length > 14 ? `${part.slice(0, 13)}\u2026` : part;
 }
 
+function clipBlurb(text: string, max = 100): { short: string; long: string; clipped: boolean } {
+  const long = text.replace(/\s+/g, " ").trim();
+  if (long.length <= max) return { short: long, long, clipped: false };
+  const cut = long.slice(0, max);
+  const at = cut.lastIndexOf(" ");
+  const short = `${(at > 55 ? cut.slice(0, at) : cut).trimEnd()}\u2026`;
+  return { short, long, clipped: true };
+}
+
+const POPUP_OPTS: L.PopupOptions = {
+  className: "node-popup-wrap",
+  maxWidth: 280,
+  minWidth: 180,
+  closeButton: true,
+  autoPanPadding: [24, 48],
+};
+
+function nodePopupContent(opts: { title: string; meta?: string; fact: string }): HTMLElement {
+  const { short, long, clipped } = clipBlurb(opts.fact, 100);
+  const root = document.createElement("div");
+  root.className = "node-popup";
+
+  const title = document.createElement("div");
+  title.className = "popup-title";
+  title.textContent = opts.title;
+  root.appendChild(title);
+
+  if (opts.meta) {
+    const meta = document.createElement("div");
+    meta.className = "popup-meta";
+    meta.textContent = opts.meta;
+    root.appendChild(meta);
+  }
+
+  const blurb = document.createElement("p");
+  blurb.className = "popup-blurb";
+  blurb.textContent = short;
+  root.appendChild(blurb);
+
+  if (clipped) {
+    const full = document.createElement("p");
+    full.className = "popup-full";
+    full.hidden = true;
+    full.textContent = long;
+
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "popup-more";
+    btn.textContent = "Show more";
+    btn.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      ev.stopPropagation();
+      const expanding = full.hidden;
+      full.hidden = !expanding;
+      blurb.hidden = expanding;
+      btn.textContent = expanding ? "Show less" : "Show more";
+    });
+
+    root.appendChild(btn);
+    root.appendChild(full);
+  }
+
+  return root;
+}
+
+function attachPopup(layer: L.Layer, opts: { title: string; meta?: string; fact: string }) {
+  layer.bindPopup(() => nodePopupContent(opts), POPUP_OPTS);
+}
+
 function renderRail() {
   rail.innerHTML = THEATERS.map((t, i) => {
     const n = live ? live.events.filter((e) => liveFits(e, t.id)).length : 0;
@@ -225,16 +294,21 @@ function renderPanel(t: Theater) {
   renderFilters();
 }
 
-function addImpact(lat: number, lon: number, color: string, label: string, group: L.LayerGroup) {
-  L.circleMarker([lat, lon], {
+function addImpact(
+  lat: number,
+  lon: number,
+  color: string,
+  group: L.LayerGroup,
+  popup: { title: string; meta?: string; fact: string },
+) {
+  const marker = L.circleMarker([lat, lon], {
     radius: 6,
     color,
     weight: 2,
     fillColor: color,
     fillOpacity: 0.18,
-  })
-    .bindTooltip(label, { className: "marker-label" })
-    .addTo(group);
+  }).addTo(group);
+  attachPopup(marker, popup);
 }
 
 function labelSideClass(
@@ -306,18 +380,18 @@ function drawTrack(track: (typeof TRACKS)[number]) {
   if (!passesFilter(track.confidence)) return;
   const color = colorForConfidence(track.confidence);
   const pts = arcPoints(track.from, track.to);
-  L.polyline(pts, {
+  const line = L.polyline(pts, {
     color,
     weight: track.confidence === "CLAIM" ? 2 : 3.5,
     opacity: 0.95,
     dashArray: dashForConfidence(track.confidence),
     className: track.confidence === "CLAIM" ? "claim-arc" : "track-arc",
-  })
-    .bindTooltip(
-      `${track.kind.toUpperCase()}  ${track.from.name} \u2192 ${track.to.name}  [${track.confidence}]  ${track.fact}`,
-      { className: "marker-label" },
-    )
-    .addTo(trackLayer);
+  }).addTo(trackLayer);
+  attachPopup(line, {
+    title: `${track.from.name} \u2192 ${track.to.name}`,
+    meta: `${track.kind.toUpperCase()} \u00b7 ${track.confidence} \u00b7 NOT RADAR`,
+    fact: track.fact,
+  });
 
   // Clear endpoint dots + permanent labeled caps (tracks.ts vectors only)
   L.circleMarker([track.from.lat, track.from.lon], {
@@ -362,13 +436,11 @@ function drawLive(event: LiveEvent) {
   if (!liveLayer) return;
   if (!passesFilter(event.confidence)) return;
   const color = colorForConfidence(event.confidence);
-  addImpact(
-    event.lat,
-    event.lon,
-    color,
-    `${event.dtg}  ${event.location}  [${event.confidence}]`,
-    liveLayer,
-  );
+  addImpact(event.lat, event.lon, color, liveLayer, {
+    title: event.location,
+    meta: `${event.dtg} \u00b7 LIVE \u00b7 ${event.confidence}`,
+    fact: event.fact,
+  });
   // Only draw inferred arc when both ends are named \u2014 keep styling distinct from reconstructed tracks
   if (event.origin && event.origin.name) {
     const pts = arcPoints(event.origin, event);
@@ -428,25 +500,27 @@ function renderMap(t: Theater) {
 
   t.markers.forEach((m) => {
     const c = m.tone === "hot" ? "#ff4d3c" : m.tone === "warn" ? "#ffbf3c" : m.tone === "ok" ? "#3cff8a" : "#6fe3ff";
-    L.circleMarker([m.lat, m.lon], {
+    const match = t.events.find((e) => Math.abs(e.lat - m.lat) < 0.02 && Math.abs(e.lon - m.lon) < 0.02);
+    const marker = L.circleMarker([m.lat, m.lon], {
       radius: 8,
       color: c,
       weight: 2,
       fillColor: c,
       fillOpacity: 0.12,
-    })
-      .bindTooltip(`${m.name} \u2014 ${m.note}`, { className: "marker-label" })
-      .addTo(sitrepLayer!);
+    }).addTo(sitrepLayer!);
+    attachPopup(marker, {
+      title: m.name,
+      meta: match ? `${match.dtg} \u00b7 ${match.confidence} \u00b7 ${match.source}` : m.note,
+      fact: match?.fact ?? m.note,
+    });
   });
 
   t.events.filter((e) => passesFilter(e.confidence)).forEach((e) => {
-    addImpact(
-      e.lat,
-      e.lon,
-      colorForConfidence(e.confidence),
-      `${e.dtg}  ${e.location}  [${e.confidence}]`,
-      sitrepLayer!,
-    );
+    addImpact(e.lat, e.lon, colorForConfidence(e.confidence), sitrepLayer!, {
+      title: e.location,
+      meta: `${e.dtg} \u00b7 ${e.confidence} \u00b7 ${e.source}`,
+      fact: e.fact,
+    });
   });
 
   const tracks = TRACKS.filter((tr) => trackFits(tr, t.id));
