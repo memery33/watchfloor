@@ -52,12 +52,12 @@ export interface Theater {
 }
 
 export const SNAPSHOT = {
-  dtgLocal: "2026-09-21 1100L",
-  dtgZulu: "2026-09-21 1500Z",
+  dtgLocal: "2026-09-21 1110L",
+  dtgZulu: "2026-09-21 1510Z",
   classification: "UNCLASSIFIED // OSINT // OPEN PRESS",
   watchcon: "ELEVATED",
   priorityTheater: "IRAN / GULF",
-  sourceAge: "SNAPSHOT 21 SEP 2026 ~11:00 ET",
+  sourceAge: "SNAPSHOT 21 SEP 2026 ~11:10 ET",
   disclaimer:
     "Best-effort open-source COP. Yellow = unverified claim. Dashed arcs are reconstructed from named origin+impact, not radar. Not a targeting product.",
 };
@@ -163,6 +163,17 @@ export const THEATERS: Theater[] = [
         lon: 56.25,
       },
       {
+        id: "ov-taiz",
+        dtg: "21 SEP",
+        location: "TAIZ",
+        fact: "Houthi-aligned Telegram (@sarzaminkhanjarha): Saudi strike on a local market in Taiz. Clip shows outdoor crowd/vehicles/tents then a fireball; “cmera 01” overlay. Does not prove Saudi, a market, or a specific site. City pin only — no market geolocation.",
+        source: "MIL CLAIM",
+        confidence: "CLAIM",
+        priority: "PRI-2",
+        lat: 13.58,
+        lon: 44.02,
+      },
+      {
         id: "ov-7",
         dtg: "21 SEP",
         location: "HORMUZ",
@@ -236,6 +247,7 @@ export const THEATERS: Theater[] = [
       { id: "m-ukr", name: "UKRAINE", lat: 48.4, lon: 35.0, note: "Moscow drone wave", tone: "hot" },
       { id: "m-kohat", name: "KOHAT / AFPAK", lat: 33.59, lon: 71.44, note: "Mosque attack + escalation talk", tone: "warn" },
       { id: "m-sud", name: "SUDAN", lat: 15.5, lon: 32.5, note: "SAF / RSF", tone: "hot" },
+      { id: "m-taiz", name: "TAIZ", lat: 13.58, lon: 44.02, note: "Market-strike CLAIM", tone: "warn" },
     ],
   },
   {
@@ -372,9 +384,21 @@ export const THEATERS: Theater[] = [
       "South Lebanon occupation incidents",
       "West Bank outpost / shooting cycle",
       "Houthi follow-on vs Riyadh / energy",
+      "Taiz market-strike CLAIM — city pin only, no site geolocation",
       "IDF activity Daraa/Quneitra buffer",
     ],
     events: [
+      {
+        id: "lv-taiz",
+        dtg: "21 SEP",
+        location: "TAIZ",
+        fact: "Houthi-aligned Telegram (@sarzaminkhanjarha): Saudi strike on a local market in Taiz. Clip: outdoor gathering + fireball, camera overlay. Unverified attribution/site. City pin only — no market geolocation.",
+        source: "MIL CLAIM",
+        confidence: "CLAIM",
+        priority: "PRI-2",
+        lat: 13.58,
+        lon: 44.02,
+      },
       {
         id: "lv-6",
         dtg: "21 SEP",
@@ -449,6 +473,7 @@ export const THEATERS: Theater[] = [
       { id: "halamish", name: "HALAMISH", lat: 32.04, lon: 35.12, note: "Shooting", tone: "hot" },
       { id: "aleppo", name: "ALEPPO", lat: 36.2, lon: 37.16, note: "Ammo depot claim", tone: "warn" },
       { id: "daraa-yarmouk", name: "DARAA / YARMOUK", lat: 32.67, lon: 35.88, note: "IDF shelling 21 Sep", tone: "warn" },
+      { id: "taiz", name: "TAIZ", lat: 13.58, lon: 44.02, note: "Market-strike CLAIM 21 Sep", tone: "warn" },
     ],
   },
   {
@@ -560,6 +585,28 @@ export const THEATERS: Theater[] = [
         lat: 46.48,
         lon: 30.73,
       },
+      {
+        id: "uk-7",
+        dtg: "21 SEP",
+        location: "KHARKIV",
+        fact: "OSINT (@war_cube / JHArnous): geolocated strike on Epicentr, Kharkiv 49.908390, 36.275573. Stills show ISR reticle + blurred aftermath overlay. Site name not independently confirmed here.",
+        source: "OPEN COMP",
+        confidence: "CLAIM",
+        priority: "PRI-2",
+        lat: 49.90839,
+        lon: 36.275573,
+      },
+      {
+        id: "uk-8",
+        dtg: "21 SEP",
+        location: "ODESA",
+        fact: "OSINT (@war_cube / JHArnous): unknown warehouse hit at 46.524836, 30.602931. Aligns with SES/OVA warehouse-fire reporting; specific building is a geolocation CLAIM.",
+        source: "OPEN COMP",
+        confidence: "CLAIM",
+        priority: "PRI-2",
+        lat: 46.524836,
+        lon: 30.602931,
+      },
     ],
     markers: [
       { id: "kapotnya", name: "KAPOTNYA ORF", lat: 55.635, lon: 37.795, note: "ORF hit / fire", tone: "hot" },
@@ -569,7 +616,9 @@ export const THEATERS: Theater[] = [
       { id: "blacksea", name: "BLACK SEA", lat: 45.3, lon: 32.5, note: "Energy / maritime", tone: "dim" },
       { id: "zviahel", name: "ZVIAHEL", lat: 50.59, lon: 27.61, note: "M-06 fuel strike 21 Sep", tone: "hot" },
       { id: "zaporizhzhia", name: "ZAPORIZHZHIA", lat: 47.84, lon: 35.14, note: "Mall / ZNU drones", tone: "warn" },
-      { id: "odesa", name: "ODESA", lat: 46.48, lon: 30.73, note: "Warehouse fires", tone: "warn" },
+      { id: "odesa", name: "ODESA", lat: 46.48, lon: 30.73, note: "Warehouse fires (OVA)", tone: "warn" },
+      { id: "kharkiv-epicentr", name: "KHARKIV EPICENTR", lat: 49.90839, lon: 36.275573, note: "OSINT geoloc CLAIM", tone: "warn" },
+      { id: "odesa-wh", name: "ODESA WAREHOUSE", lat: 46.524836, lon: 30.602931, note: "OSINT geoloc CLAIM", tone: "warn" },
     ],
   },
   {
