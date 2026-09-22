@@ -1,43 +1,5 @@
 {
-  "generated_at": "2026-09-22T05:08:38.348812+00:00",
+  "generated_at": "2026-09-22T10:05:12.791698+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": [
-    {
-      "id": "gdelt-1324202457",
-      "dtg": "22 SEP",
-      "date": "2026-09-22",
-      "location": "Sanaa",
-      "fact": "STRIKE  ? \u2192 YEMEN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.moonofalabama.org/2026/09/trump-called-off-a-useless-attack-on-yemen.html/comment-page-2"
-    },
-    {
-      "id": "gdelt-1324203114",
-      "dtg": "22 SEP",
-      "date": "2026-09-22",
-      "location": "Riyadh",
-      "fact": "STRIKE  NEW YORK \u2192 RIYADH  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.aljazeera.com/news/2026/9/22/houthis-battle-for-strategic-heights-in-yemen-as-thousands-more-flee-homes"
-    }
-  ]
+  "events": []
 }
