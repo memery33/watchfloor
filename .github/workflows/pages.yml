@@ -2,6 +2,10 @@ name: GitHub Pages
 on:
   push:
     branches: [main]
+  # live.yml bot commits use GITHUB_TOKEN and do not re-trigger push workflows.
+  # Hourly rebuild ~5m after live.yml (:20) keeps Pages current without a PAT.
+  schedule:
+    - cron: "25 * * * *"
   workflow_dispatch:
 permissions:
   contents: read
