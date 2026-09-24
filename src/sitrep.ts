@@ -52,12 +52,12 @@ export interface Theater {
 }
 
 export const SNAPSHOT = {
-  dtgLocal: "2026-09-21 1735L",
-  dtgZulu: "2026-09-21 2135Z",
+  dtgLocal: "2026-09-24 0915L",
+  dtgZulu: "2026-09-24 1315Z",
   classification: "UNCLASSIFIED // OSINT // OPEN PRESS",
   watchcon: "ELEVATED",
   priorityTheater: "IRAN / GULF",
-  sourceAge: "SNAPSHOT 21 SEP 2026 ~17:35 ET",
+  sourceAge: "SNAPSHOT 24 SEP 2026 ~09:15 ET",
   disclaimer:
     "Best-effort open-source COP. Yellow = unverified claim. Dashed arcs are reconstructed from named origin+impact, not radar. Not a targeting product.",
 };
