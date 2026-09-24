@@ -1,1 +1,1 @@
-export type Confidence = "CONFIRMED" | "REPORTED" | "CLAIM" | "DELTA" | "HOLD";
+__READ_FILE__:/workspace/watchfloor/refresh/src/sitrep.ts
