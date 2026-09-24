@@ -1,38 +1,5 @@
 {
-  "generated_at": "2026-09-24T13:33:14.710533+00:00",
+  "generated_at": "2026-09-24T15:15:00.505423+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": [
-    {
-      "id": "gdelt-1324685700",
-      "dtg": "24 SEP",
-      "date": "2026-09-24",
-      "location": "Tigray",
-      "fact": "SHELLING  ETHIOPIA \u2192 GOVERNMENT  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 13.5,
-      "lon": 39.5,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.hurriyetdailynews.com/tigray-rebels-in-full-blown-war-with-govt-227288"
-    },
-    {
-      "id": "gdelt-1324686343",
-      "dtg": "24 SEP",
-      "date": "2026-09-24",
-      "location": "Kyiv",
-      "fact": "SHELLING  RUSSIA \u2192 KYIV  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.kyivpost.com/post/85338"
-    }
-  ]
+  "events": []
 }
