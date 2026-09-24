@@ -1,1 +1,1 @@
-{{INCLUDE:/workspace/watchfloor/refresh/src/sitrep.ts}}
+PLACEHOLDER_REPLACE_WITH_FILE
