@@ -1,1 +1,1 @@
-__READ_FILE__:/workspace/watchfloor/refresh/src/sitrep.ts
+{{INCLUDE:/workspace/watchfloor/refresh/src/sitrep.ts}}
