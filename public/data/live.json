@@ -1,38 +1,5 @@
 {
-  "generated_at": "2026-09-25T07:57:36.367071+00:00",
+  "generated_at": "2026-09-25T13:55:55.813487+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": [
-    {
-      "id": "gdelt-1324833093",
-      "dtg": "25 SEP",
-      "date": "2026-09-25",
-      "location": "Kabul",
-      "fact": "STRIKE  AFGHANISTAN \u2192 CIVILIAN  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 34.5167,
-      "lon": 69.1833,
-      "event_type": "strike",
-      "theater": "afpak",
-      "origin": null,
-      "url": "https://bdnews24.com/world/south-asia/2kpyqa6kz3"
-    },
-    {
-      "id": "gdelt-1324833094",
-      "dtg": "25 SEP",
-      "date": "2026-09-25",
-      "location": "Khost",
-      "fact": "STRIKE  AFGHAN \u2192 CIVILIAN  (9 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 33.3395,
-      "lon": 69.9204,
-      "event_type": "strike",
-      "theater": "afpak",
-      "origin": null,
-      "url": "https://morningstaronline.co.uk/article/world-brief-september-24-2026"
-    }
-  ]
+  "events": []
 }
