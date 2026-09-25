@@ -1,38 +1,38 @@
 {
-  "generated_at": "2026-09-25T01:37:13.636966+00:00",
+  "generated_at": "2026-09-25T07:57:36.367071+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1324793113",
+      "id": "gdelt-1324833093",
       "dtg": "25 SEP",
       "date": "2026-09-25",
-      "location": "Makkah",
-      "fact": "SHELLING  ? \u2192 KINGDOM  (3 mentions)",
+      "location": "Kabul",
+      "fact": "STRIKE  AFGHANISTAN \u2192 CIVILIAN  (5 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 21.4267,
-      "lon": 39.8261,
-      "event_type": "shelling",
-      "theater": "energy",
+      "priority": "PRI-2",
+      "lat": 34.5167,
+      "lon": 69.1833,
+      "event_type": "strike",
+      "theater": "afpak",
       "origin": null,
-      "url": "https://www.arabnews.com/saudi-arabia/be-ready-to-sacrifice-lives-to-defend-nation-from-houthis-saudi-grand-muftis-urges-troops-3003028"
+      "url": "https://bdnews24.com/world/south-asia/2kpyqa6kz3"
     },
     {
-      "id": "gdelt-1324793904",
+      "id": "gdelt-1324833094",
       "dtg": "25 SEP",
       "date": "2026-09-25",
-      "location": "Kharkiv",
-      "fact": "SHELLING  KYIV \u2192 HOSPITAL  (4 mentions)",
+      "location": "Khost",
+      "fact": "STRIKE  AFGHAN \u2192 CIVILIAN  (9 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 49.9808,
-      "lon": 36.2527,
-      "event_type": "shelling",
-      "theater": "ukraine",
+      "priority": "PRI-2",
+      "lat": 33.3395,
+      "lon": 69.9204,
+      "event_type": "strike",
+      "theater": "afpak",
       "origin": null,
-      "url": "https://www.theguardian.com/world/2026/sep/25/ukraine-war-briefing-finland-elon-musk-starlink-coverage-russia"
+      "url": "https://morningstaronline.co.uk/article/world-brief-september-24-2026"
     }
   ]
 }
