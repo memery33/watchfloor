@@ -1,38 +1,38 @@
 {
-  "generated_at": "2026-09-24T22:33:11.209142+00:00",
+  "generated_at": "2026-09-25T01:37:13.636966+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1324767788",
-      "dtg": "24 SEP",
-      "date": "2026-09-24",
-      "location": "Kabul",
-      "fact": "STRIKE  AFGHAN \u2192 CIVILIAN  (9 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 34.5167,
-      "lon": 69.1833,
-      "event_type": "strike",
-      "theater": "afpak",
-      "origin": null,
-      "url": "https://www.wsbradio.com/news/world/pakistan-strikes/K2AHVSXAUM6AFCE6ERWEALAYVA/"
-    },
-    {
-      "id": "gdelt-1324768320",
-      "dtg": "24 SEP",
-      "date": "2026-09-24",
-      "location": "Jazan",
-      "fact": "SHELLING  MILITARY \u2192 ?  (3 mentions)",
+      "id": "gdelt-1324793113",
+      "dtg": "25 SEP",
+      "date": "2026-09-25",
+      "location": "Makkah",
+      "fact": "SHELLING  ? \u2192 KINGDOM  (3 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
-      "lat": 16.8892,
-      "lon": 42.5511,
+      "lat": 21.4267,
+      "lon": 39.8261,
       "event_type": "shelling",
       "theater": "energy",
       "origin": null,
-      "url": "https://www.arabnews.com/news/what-washingtons-defense-pledge-to-saudi-arabia-means-as-houthi-attacks-intensify-3002918"
+      "url": "https://www.arabnews.com/saudi-arabia/be-ready-to-sacrifice-lives-to-defend-nation-from-houthis-saudi-grand-muftis-urges-troops-3003028"
+    },
+    {
+      "id": "gdelt-1324793904",
+      "dtg": "25 SEP",
+      "date": "2026-09-25",
+      "location": "Kharkiv",
+      "fact": "SHELLING  KYIV \u2192 HOSPITAL  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 49.9808,
+      "lon": 36.2527,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.theguardian.com/world/2026/sep/25/ukraine-war-briefing-finland-elon-musk-starlink-coverage-russia"
     }
   ]
 }
