@@ -1,22 +1,5 @@
 {
-  "generated_at": "2026-09-26T13:12:43.131585+00:00",
+  "generated_at": "2026-09-26T17:16:19.900475+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": [
-    {
-      "id": "gdelt-1325033625",
-      "dtg": "26 SEP",
-      "date": "2026-09-26",
-      "location": "Khamis Mushait",
-      "fact": "SHELLING  KINGDOM \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 18.3064,
-      "lon": 42.7292,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://english.aawsat.com/gulf/5322811-gcc-condemns-attempted-houthi-attacks-riyadh-and-khamis-mushait"
-    }
-  ]
+  "events": []
 }
