@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-09-29T05:52:07.415332+00:00",
+  "generated_at": "2026-09-29T13:05:53.200074+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1325384551",
+      "id": "gdelt-1325441033",
       "dtg": "29 SEP",
       "date": "2026-09-29",
-      "location": "Tehran",
-      "fact": "STRIKE  IRAN \u2192 UNITED KINGDOM  (8 mentions)",
+      "location": "Gaza",
+      "fact": "STRIKE  ISRAELI \u2192 HAMAS  (8 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-2",
-      "lat": 35.75,
-      "lon": 51.5148,
+      "lat": 31.4167,
+      "lon": 34.3333,
       "event_type": "strike",
-      "theater": "iran",
+      "theater": "levant",
       "origin": null,
-      "url": "https://www.dailystar.co.uk/news/latest-news/says-foreign-actor-behind-raf-37712513"
+      "url": "https://www.abc.net.au/news/2026-09-29/israeli-air-strike-kills-hamas-leader-in-gaza/107209362"
     }
   ]
 }
