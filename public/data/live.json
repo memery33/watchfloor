@@ -1,5 +1,22 @@
 {
-  "generated_at": "2026-09-28T23:22:30.571230+00:00",
+  "generated_at": "2026-09-29T05:52:07.415332+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": []
+  "events": [
+    {
+      "id": "gdelt-1325384551",
+      "dtg": "29 SEP",
+      "date": "2026-09-29",
+      "location": "Tehran",
+      "fact": "STRIKE  IRAN \u2192 UNITED KINGDOM  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "strike",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.dailystar.co.uk/news/latest-news/says-foreign-actor-behind-raf-37712513"
+    }
+  ]
 }
