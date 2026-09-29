@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-09-29T13:05:53.200074+00:00",
+  "generated_at": "2026-09-29T18:41:36.566962+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1325441033",
+      "id": "gdelt-1325494204",
       "dtg": "29 SEP",
       "date": "2026-09-29",
-      "location": "Gaza",
-      "fact": "STRIKE  ISRAELI \u2192 HAMAS  (8 mentions)",
+      "location": "Tehran",
+      "fact": "SHELLING  IRANIAN \u2192 ?  (6 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "strike",
-      "theater": "levant",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
       "origin": null,
-      "url": "https://www.abc.net.au/news/2026-09-29/israeli-air-strike-kills-hamas-leader-in-gaza/107209362"
+      "url": "https://www.presstv.co.uk/Detail/2026/09/29/777284/Rezaei-Trump-unable-decide-"
     }
   ]
 }
