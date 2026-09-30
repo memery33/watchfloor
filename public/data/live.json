@@ -1,54 +1,5 @@
 {
-  "generated_at": "2026-09-30T02:11:01.048290+00:00",
+  "generated_at": "2026-09-30T08:42:02.131164+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": [
-    {
-      "id": "gdelt-1325545814",
-      "dtg": "30 SEP",
-      "date": "2026-09-30",
-      "location": "Tehran",
-      "fact": "STRIKE  UNITED KINGDOM \u2192 IRAN  (16 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": null,
-      "url": "http://usa.chinadaily.com.cn/a/202609/30/WS6abc60d3e4b06d4aa0560ee2.html"
-    },
-    {
-      "id": "gdelt-1325545874",
-      "dtg": "30 SEP",
-      "date": "2026-09-30",
-      "location": "Kurdistan",
-      "fact": "SHELLING  PRIME MINISTER \u2192 IRAN  (7 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 30.6693,
-      "lon": 50.2055,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://en.tempo.co/read/2120601/iraq-us-withdrawal-leaves-security-questions"
-    },
-    {
-      "id": "gdelt-1325546521",
-      "dtg": "30 SEP",
-      "date": "2026-09-30",
-      "location": "Minab",
-      "fact": "STRIKE  THE US \u2192 IRANIAN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 25.7893,
-      "lon": 61.1025,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.zerohedge.com/military/hegseth-cut-top-generals-admirals-20-amid-ongoing-pentagon-shakeup"
-    }
-  ]
+  "events": []
 }
