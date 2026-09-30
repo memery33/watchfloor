@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-09-30T15:58:38.087044+00:00",
+  "generated_at": "2026-09-30T20:52:17.321572+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1325652904",
+      "id": "gdelt-1325695405",
       "dtg": "30 SEP",
       "date": "2026-09-30",
-      "location": "Ben Gurion",
-      "fact": "STRIKE  AIRLINE \u2192 ISRAELI  (3 mentions)",
+      "location": "Ashdod",
+      "fact": "SHELLING  EGYPTIAN \u2192 ISRAELI  (7 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 32.0114,
-      "lon": 34.8867,
-      "event_type": "strike",
+      "priority": "PRI-3",
+      "lat": 31.7444,
+      "lon": 34.6809,
+      "event_type": "shelling",
       "theater": "levant",
       "origin": null,
-      "url": "https://www.foxnews.com/live-news/flydubai-flight-israel-saudi-arabia-09-30"
+      "url": "https://americanisraelite.com/today-in-israeli-history-13/"
     }
   ]
 }
