@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-09-30T20:52:17.321572+00:00",
+  "generated_at": "2026-10-01T00:36:46.111472+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1325695405",
-      "dtg": "30 SEP",
-      "date": "2026-09-30",
-      "location": "Ashdod",
-      "fact": "SHELLING  EGYPTIAN \u2192 ISRAELI  (7 mentions)",
+      "id": "gdelt-1325721592",
+      "dtg": "01 OCT",
+      "date": "2026-10-01",
+      "location": "Kyiv",
+      "fact": "SHELLING  UKRAINE \u2192 RUSSIA  (4 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
-      "lat": 31.7444,
-      "lon": 34.6809,
+      "lat": 50.4333,
+      "lon": 30.5167,
       "event_type": "shelling",
-      "theater": "levant",
+      "theater": "ukraine",
       "origin": null,
-      "url": "https://americanisraelite.com/today-in-israeli-history-13/"
+      "url": "https://www.globalsecurity.org/military/agency/dod/autowar.htm"
     }
   ]
 }
