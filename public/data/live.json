@@ -1,5 +1,38 @@
 {
-  "generated_at": "2026-10-01T07:14:30.095394+00:00",
+  "generated_at": "2026-10-01T14:34:34.374162+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": []
+  "events": [
+    {
+      "id": "gdelt-1325824456",
+      "dtg": "01 OCT",
+      "date": "2026-10-01",
+      "location": "Lashkar Gah",
+      "fact": "STRIKE  THE UN \u2192 AFGHANISTAN  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 31.5938,
+      "lon": 64.3716,
+      "event_type": "strike",
+      "theater": "afpak",
+      "origin": null,
+      "url": "https://www.freemalaysiatoday.com/category/world/2026/10/01/un-says-strikes-in-afghanistan-killed-10-civilians"
+    },
+    {
+      "id": "gdelt-1325824561",
+      "dtg": "01 OCT",
+      "date": "2026-10-01",
+      "location": "Tehran",
+      "fact": "STRIKE  TEHRAN \u2192 JORDAN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "strike",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.albawaba.net/news/trump-i-may-annihilate-iran-after-1638204"
+    }
+  ]
 }
