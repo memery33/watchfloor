@@ -1,29 +1,13 @@
 {
-  "generated_at": "2026-10-01T14:34:34.374162+00:00",
+  "generated_at": "2026-10-01T20:22:53.116263+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1325824456",
-      "dtg": "01 OCT",
-      "date": "2026-10-01",
-      "location": "Lashkar Gah",
-      "fact": "STRIKE  THE UN \u2192 AFGHANISTAN  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.5938,
-      "lon": 64.3716,
-      "event_type": "strike",
-      "theater": "afpak",
-      "origin": null,
-      "url": "https://www.freemalaysiatoday.com/category/world/2026/10/01/un-says-strikes-in-afghanistan-killed-10-civilians"
-    },
-    {
-      "id": "gdelt-1325824561",
+      "id": "gdelt-1325879609",
       "dtg": "01 OCT",
       "date": "2026-10-01",
       "location": "Tehran",
-      "fact": "STRIKE  TEHRAN \u2192 JORDAN  (4 mentions)",
+      "fact": "STRIKE  IRAN \u2192 ?  (30 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-2",
@@ -32,7 +16,39 @@
       "event_type": "strike",
       "theater": "iran",
       "origin": null,
-      "url": "https://www.albawaba.net/news/trump-i-may-annihilate-iran-after-1638204"
+      "url": "https://www.wfmz.com/news/ap/us-is-moving-thousands-of-troops-aboard-ships-to-the-mideast-as-trump-weighs-new-strikes-on-iran/article_bc709e88-7278-583c-a81f-48fdc1e9a684.html"
+    },
+    {
+      "id": "gdelt-1325879811",
+      "dtg": "01 OCT",
+      "date": "2026-10-01",
+      "location": "Tehran",
+      "fact": "SHELLING  MILITARY \u2192 IRAN  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.nzherald.co.nz/world/raf-fairford-suspected-terror-plot-second-man-questioned-as-iran-link-probed/KHR7E4KRK5HQ5CPXETWIC3665I/"
+    },
+    {
+      "id": "gdelt-1325879892",
+      "dtg": "01 OCT",
+      "date": "2026-10-01",
+      "location": "Yanbu",
+      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.0891,
+      "lon": 38.0637,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.arabnews.com/saudi-arabia/saudi-arabia-intercepts-four-houthi-drones-two-ballistic-missiles-in-latest-attack-3004155"
     }
   ]
 }
