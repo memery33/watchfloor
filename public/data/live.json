@@ -1,22 +1,5 @@
 {
-  "generated_at": "2026-10-01T00:36:46.111472+00:00",
+  "generated_at": "2026-10-01T07:14:30.095394+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": [
-    {
-      "id": "gdelt-1325721592",
-      "dtg": "01 OCT",
-      "date": "2026-10-01",
-      "location": "Kyiv",
-      "fact": "SHELLING  UKRAINE \u2192 RUSSIA  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.globalsecurity.org/military/agency/dod/autowar.htm"
-    }
-  ]
+  "events": []
 }
