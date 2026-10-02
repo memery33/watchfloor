@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-02T19:24:00.604702+00:00",
+  "generated_at": "2026-10-02T23:51:18.637170+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1326050292",
-      "dtg": "02 OCT",
-      "date": "2026-10-02",
-      "location": "Yanbu",
-      "fact": "STRIKE  RIYADH \u2192 ?  (3 mentions)",
+      "id": "gdelt-1326076483",
+      "dtg": "03 OCT",
+      "date": "2026-10-03",
+      "location": "Odesa",
+      "fact": "STRIKE  RUSSIA \u2192 KYIV  (6 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-2",
-      "lat": 24.0891,
-      "lon": 38.0637,
+      "lat": 46.4639,
+      "lon": 30.7386,
       "event_type": "strike",
-      "theater": "energy",
+      "theater": "ukraine",
       "origin": null,
-      "url": "https://gcaptain.com/saudis-plan-assault-on-houthis-to-break-red-sea-chokehold/"
+      "url": "https://www.gdnonline.com:443/Details/1408428/Russian-strikes-choke-bridges-in-Ukraine"
     }
   ]
 }
