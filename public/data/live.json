@@ -1,38 +1,22 @@
 {
-  "generated_at": "2026-10-02T13:56:57.389379+00:00",
+  "generated_at": "2026-10-02T19:24:00.604702+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1326003657",
+      "id": "gdelt-1326050292",
       "dtg": "02 OCT",
       "date": "2026-10-02",
-      "location": "Tel Aviv",
-      "fact": "STRIKE  BOEING \u2192 ?  (3 mentions)",
+      "location": "Yanbu",
+      "fact": "STRIKE  RIYADH \u2192 ?  (3 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-2",
-      "lat": 32.0667,
-      "lon": 34.7667,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.boredpanda.com/hero-flight-captain-speaks-out-after-preventing-9-11-type-tragedy/"
-    },
-    {
-      "id": "gdelt-1326003659",
-      "dtg": "02 OCT",
-      "date": "2026-10-02",
-      "location": "Tabuk",
-      "fact": "STRIKE  BOEING \u2192 DUBAI  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 28.3998,
-      "lon": 36.5715,
+      "lat": 24.0891,
+      "lon": 38.0637,
       "event_type": "strike",
       "theater": "energy",
       "origin": null,
-      "url": "https://www.boredpanda.com/hero-flight-captain-speaks-out-after-preventing-9-11-type-tragedy/"
+      "url": "https://gcaptain.com/saudis-plan-assault-on-houthis-to-break-red-sea-chokehold/"
     }
   ]
 }
