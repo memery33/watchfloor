@@ -1,5 +1,38 @@
 {
-  "generated_at": "2026-10-02T00:53:18.865926+00:00",
+  "generated_at": "2026-10-02T07:04:47.701123+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": []
+  "events": [
+    {
+      "id": "gdelt-1325946971",
+      "dtg": "02 OCT",
+      "date": "2026-10-02",
+      "location": "Lymanske",
+      "fact": "STRIKE  UKRAINE \u2192 ?  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 46.6557,
+      "lon": 29.9672,
+      "event_type": "strike",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "http://www.rightspeak.net/2026/10/173-c-clashes-in-f-line-24-in-pokrovsk.html"
+    },
+    {
+      "id": "gdelt-1325946972",
+      "dtg": "02 OCT",
+      "date": "2026-10-02",
+      "location": "Moscow",
+      "fact": "STRIKE  UKRAINE \u2192 ?  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "strike",
+      "theater": "overview",
+      "origin": null,
+      "url": "http://www.rightspeak.net/2026/10/173-c-clashes-in-f-line-24-in-pokrovsk.html"
+    }
+  ]
 }
