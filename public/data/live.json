@@ -1,38 +1,38 @@
 {
-  "generated_at": "2026-10-02T07:04:47.701123+00:00",
+  "generated_at": "2026-10-02T13:56:57.389379+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1325946971",
+      "id": "gdelt-1326003657",
       "dtg": "02 OCT",
       "date": "2026-10-02",
-      "location": "Lymanske",
-      "fact": "STRIKE  UKRAINE \u2192 ?  (4 mentions)",
+      "location": "Tel Aviv",
+      "fact": "STRIKE  BOEING \u2192 ?  (3 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-2",
-      "lat": 46.6557,
-      "lon": 29.9672,
+      "lat": 32.0667,
+      "lon": 34.7667,
       "event_type": "strike",
-      "theater": "ukraine",
+      "theater": "levant",
       "origin": null,
-      "url": "http://www.rightspeak.net/2026/10/173-c-clashes-in-f-line-24-in-pokrovsk.html"
+      "url": "https://www.boredpanda.com/hero-flight-captain-speaks-out-after-preventing-9-11-type-tragedy/"
     },
     {
-      "id": "gdelt-1325946972",
+      "id": "gdelt-1326003659",
       "dtg": "02 OCT",
       "date": "2026-10-02",
-      "location": "Moscow",
-      "fact": "STRIKE  UKRAINE \u2192 ?  (3 mentions)",
+      "location": "Tabuk",
+      "fact": "STRIKE  BOEING \u2192 DUBAI  (3 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-2",
-      "lat": 55.7522,
-      "lon": 37.6156,
+      "lat": 28.3998,
+      "lon": 36.5715,
       "event_type": "strike",
-      "theater": "overview",
+      "theater": "energy",
       "origin": null,
-      "url": "http://www.rightspeak.net/2026/10/173-c-clashes-in-f-line-24-in-pokrovsk.html"
+      "url": "https://www.boredpanda.com/hero-flight-captain-speaks-out-after-preventing-9-11-type-tragedy/"
     }
   ]
 }
