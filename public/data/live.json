@@ -1,5 +1,22 @@
 {
-  "generated_at": "2026-10-04T02:44:37.660715+00:00",
+  "generated_at": "2026-10-04T09:56:27.433487+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": []
+  "events": [
+    {
+      "id": "gdelt-1326226729",
+      "dtg": "04 OCT",
+      "date": "2026-10-04",
+      "location": "Sanaa",
+      "fact": "SHELLING  SAUDI \u2192 ?  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.hngn.com/articles/273430/20261004/camp-david-war-council-three-carriers-put-iran-midterm-clock.htm"
+    }
+  ]
 }
