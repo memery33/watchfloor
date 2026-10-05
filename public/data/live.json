@@ -1,5 +1,22 @@
 {
-  "generated_at": "2026-10-05T02:07:27.125269+00:00",
+  "generated_at": "2026-10-05T09:14:05.392192+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": []
+  "events": [
+    {
+      "id": "gdelt-1326342733",
+      "dtg": "05 OCT",
+      "date": "2026-10-05",
+      "location": "Gaza",
+      "fact": "BLOCKADE  ISRAEL \u2192 PARTY LEADER  (9 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "blockade",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://www.huffingtonpost.co.uk/entry/greens-bullied-netanyahu-israel-bans-polanski_uk_6ac354d9e4b0f45fd4cd5125"
+    }
+  ]
 }
