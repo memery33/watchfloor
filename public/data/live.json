@@ -1,22 +1,101 @@
 {
-  "generated_at": "2026-10-05T09:14:05.392192+00:00",
+  "generated_at": "2026-10-05T18:34:49.114192+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1326342733",
+      "id": "gdelt-1326423799",
       "dtg": "05 OCT",
       "date": "2026-10-05",
-      "location": "Gaza",
-      "fact": "BLOCKADE  ISRAEL \u2192 PARTY LEADER  (9 mentions)",
+      "location": "Jerusalem",
+      "fact": "SHELLING  ISRAELI \u2192 ?  (3 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "blockade",
+      "lat": 31.7667,
+      "lon": 35.2333,
+      "event_type": "shelling",
       "theater": "levant",
       "origin": null,
-      "url": "https://www.huffingtonpost.co.uk/entry/greens-bullied-netanyahu-israel-bans-polanski_uk_6ac354d9e4b0f45fd4cd5125"
+      "url": "https://www.jpost.com/opinion/article-910534"
+    },
+    {
+      "id": "gdelt-1326424093",
+      "dtg": "05 OCT",
+      "date": "2026-10-05",
+      "location": "Dhubab",
+      "fact": "STRIKE  SAUDI \u2192 YEMEN  (26 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 12.9431,
+      "lon": 43.4102,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.keighleynews.co.uk/news/national/26606982.saudi-backed-yemeni-forces-expel-houthis-several-areas-officials-say/"
+    },
+    {
+      "id": "gdelt-1326424094",
+      "dtg": "05 OCT",
+      "date": "2026-10-05",
+      "location": "Sanaa",
+      "fact": "SHELLING  SAUDI \u2192 YEMEN  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.hexham-courant.co.uk/news/national/26606982.saudi-backed-yemeni-forces-expel-houthis-several-areas-officials-say/"
+    },
+    {
+      "id": "gdelt-1326424260",
+      "dtg": "05 OCT",
+      "date": "2026-10-05",
+      "location": "Dubai",
+      "fact": "STRIKE  WASHINGTON \u2192 ISRAEL  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 25.2522,
+      "lon": 55.28,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://kxel.com/2026/10/05/flydubai-suspected-attacker-intended-to-crash-plane-into-tel-aviv-airport-sources-say/"
+    },
+    {
+      "id": "gdelt-1326424358",
+      "dtg": "05 OCT",
+      "date": "2026-10-05",
+      "location": "Riyadh",
+      "fact": "STRIKE  YEMEN \u2192 DJIBOUTI  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.arabnews.com/saudi-arabia/saudi-arabia-condemns-continued-houthi-attacks-reaffirms-right-to-defend-itself-3004770"
     }
   ]
 }
