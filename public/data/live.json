@@ -1,22 +1,5 @@
 {
-  "generated_at": "2026-10-04T23:17:40.294214+00:00",
+  "generated_at": "2026-10-05T02:07:27.125269+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": [
-    {
-      "id": "gdelt-1326291248",
-      "dtg": "04 OCT",
-      "date": "2026-10-04",
-      "location": "Tehran",
-      "fact": "SHELLING  BRITISH \u2192 IRANIAN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://whbl.com/2026/10/04/us-removes-b-1-bombers-from-uk-base-amid-security-concerns/"
-    }
-  ]
+  "events": []
 }
