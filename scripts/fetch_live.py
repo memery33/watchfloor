@@ -56,6 +56,7 @@ NOISE = {
     "UN SECURITY COUNCIL",
     "AUTHORITIES",
     "ITALIAN",
+    "KINGDOM",
 }
 # If the toponym is this place, coords must be near here or the row is junk.
 PLACE_CHECK = (
