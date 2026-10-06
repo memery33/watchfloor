@@ -21,6 +21,17 @@ export const THEATER_IRAN: Theater =   {
     ],
     events: [
       {
+        id: "ir-sirik",
+        dtg: "06 OCT",
+        location: "SIRIK",
+        fact: "Telegram (@FotrosResistancee): locals report explosion sounds heard in Sirik (Hormozgan, Gulf of Oman coast). Single-source; no IRNA/Tasnim/Fars/UKMTO/wire corroboration for Sirik this cycle. Same evening IRNA (via Iran Intl) reported a blast sound from the sea near Qeshm — not Sirik-specific. Town pin only.",
+        source: "OPEN COMP",
+        confidence: "CLAIM",
+        priority: "PRI-2",
+        lat: 26.518,
+        lon: 57.102,
+      },
+      {
         id: "ir-cape-dao",
         dtg: "23 SEP",
         location: "HORMUZ / MUSANDAM",
@@ -165,6 +176,7 @@ export const THEATER_IRAN: Theater =   {
       },
     ],
     markers: [
+      { id: "sirik", name: "SIRIK", lat: 26.518, lon: 57.102, note: "Explosion-sounds CLAIM 6 Oct", tone: "warn" },
       { id: "hormuz", name: "HORMUZ", lat: 26.57, lon: 56.25, note: "Cape Dao hit 23 Sep", tone: "hot" },
       { id: "qeshm", name: "QESHM", lat: 26.76, lon: 55.8, note: "Cargo strike 13 Sep", tone: "warn" },
       { id: "babb", name: "BANDAR ABBAS", lat: 27.18, lon: 56.27, note: "UAS / UUV claims", tone: "warn" },

@@ -19,12 +19,12 @@ import { THEATER_ENERGY } from "./sitrep.energy";
 import { THEATER_AFPAK } from "./sitrep.afpak";
 
 export const SNAPSHOT = {
-  dtgLocal: "2026-09-24 0951L",
-  dtgZulu: "2026-09-24 1351Z",
+  dtgLocal: "2026-10-06 1529L",
+  dtgZulu: "2026-10-06 1929Z",
   classification: "UNCLASSIFIED // OSINT // OPEN PRESS",
   watchcon: "ELEVATED",
   priorityTheater: "IRAN / GULF",
-  sourceAge: "SNAPSHOT 24 SEP 2026 ~09:51 ET",
+  sourceAge: "SNAPSHOT 06 OCT 2026 ~15:29 ET",
   disclaimer:
     "Best-effort open-source COP. Yellow = unverified claim. Dashed arcs are reconstructed from named origin+impact, not radar. Not a targeting product.",
 };
