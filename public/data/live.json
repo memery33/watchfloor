@@ -1,5 +1,22 @@
 {
-  "generated_at": "2026-10-06T07:38:30.241868+00:00",
+  "generated_at": "2026-10-06T15:17:36.906113+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": []
+  "events": [
+    {
+      "id": "gdelt-1326579426",
+      "dtg": "06 OCT",
+      "date": "2026-10-06",
+      "location": "Mecca",
+      "fact": "SHELLING  KINGDOM \u2192 ?  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 21.4267,
+      "lon": 39.8261,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "http://www.zerohedge.com/geopolitical/houthis-attack-multiple-saudi-airports-wounding-bystanders-warn-civilian"
+    }
+  ]
 }
