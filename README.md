@@ -28,17 +28,17 @@ Watchfloor is a watch-floor view, not a news site. Every item on the map carries
 
 ## What's on the map
 
-- Seven theaters: Overview, Iran/Gulf, Levant, Ukraine, Sudan, Energy/Sea, and AfPak (keys `1`–`7`)
+- Nine theaters: Overview, Iran/Gulf, Levant, Ukraine, Sudan, Energy/Sea, AfPak, Yemen/Red Sea, and Ethiopia/Horn (keys `1`–`9`)
 - Curated event stack for each theater, with source class and confidence
 - Reconstructed missile and drone vectors where both ends are named
-- Dark English basemap from Esri
+- Dark English basemap, Powered by Esri
 - Live GDELT claim layer (below)
 
-## The live claim layer is often empty, on purpose
+## The live claim layer
 
-A yellow layer from [GDELT](https://www.gdeltproject.org/) refreshes automatically. It keeps only strike, shelling, and blockade events inside the watched areas, and it drops country-level default locations, known bad geocodes, and vague actors. Those filters are strict, so the layer is frequently empty. An empty layer means nothing passed the filters, not that the feed is broken. The legend always shows the current count and the last refresh time, for example `GDELT claims: 0 · refreshed Oct 7, 6:30 PM ET`.
+A yellow layer shows the last ~6 hours of public [GDELT](https://www.gdeltproject.org/) claims, re-read on every refresh. It keeps only strike, shelling, and blockade events inside the watched areas, and it drops country-level default locations, known bad geocodes, and vague actors. Because those filters are strict, the layer can still be thin or empty when news is quiet; an empty layer means nothing passed the filters, not that the feed is broken. The legend always shows the current count and the last refresh time, for example `GDELT claims: 23 · refreshed Oct 7, 6:50 PM ET`.
 
-Every GDELT row is a CLAIM. None of it moves into the curated sitrep without named corroboration.
+Every GDELT row stays a CLAIM until the sitrep curator promotes it with named corroboration.
 
 ## How it stays current
 
@@ -55,7 +55,7 @@ python3 scripts/fetch_live.py
 npm run dev
 ```
 
-Keys: `1`–`7` switch theaters, `F` toggles fullscreen.
+Keys: `1`–`9` switch theaters, `F` toggles fullscreen.
 
 ## Public by design
 
