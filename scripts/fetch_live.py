@@ -10,8 +10,11 @@ import csv
 import io
 import json
 import os
+import time
 import zipfile
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta, timezone
+from urllib.error import HTTPError
 from urllib.request import urlopen
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,6 +23,17 @@ FALLBACK = os.path.expanduser(
     "~/conflict-globe/public/data/events.json"
 )
 LASTUPDATE = "http://data.gdeltproject.org/gdeltv2/lastupdate.txt"
+# Read the last WINDOW_HOURS of 15-minute exports (newest = the one lastupdate.txt
+# names), not just the newest file, so one quiet slice can't publish an empty
+# overlay. 0.25 = newest file only (the pre-window behavior). Override per run with
+# env WATCHFLOOR_WINDOW_HOURS. The 3-day date filter, CLAIM tagging, presets and
+# the 250 cap are unchanged.
+WINDOW_HOURS_DEFAULT = 6.0
+WINDOW_HOURS_MAX = 72.0
+EXPORT_STEP = timedelta(minutes=15)
+FETCH_WORKERS = 4
+RETRY_DELAY_S = 2.0
+FETCH_BUDGET_S = 120.0  # no new attempts after this; caps a GDELT hang in Actions
 
 CODE_TYPE = {
     "191": "blockade",
@@ -443,6 +457,84 @@ def fetch_rows(url: str) -> list[list[str]]:
     return list(csv.reader(io.StringIO(text), delimiter="\t"))
 
 
+def window_hours() -> float:
+    raw = os.environ.get("WATCHFLOOR_WINDOW_HOURS", "").strip()
+    if not raw:
+        return WINDOW_HOURS_DEFAULT
+    try:
+        hours = float(raw)
+    except ValueError:
+        hours = float("nan")
+    if not 0 < hours <= WINDOW_HOURS_MAX:
+        log(f"WATCHFLOOR_WINDOW_HOURS={raw!r} invalid; using {WINDOW_HOURS_DEFAULT:g}")
+        return WINDOW_HOURS_DEFAULT
+    return hours
+
+
+def window_urls(latest_url: str, hours: float) -> list[str]:
+    """Newest-first export URLs covering `hours`, stepping back 15 min from latest."""
+    base, name = latest_url.rsplit("/", 1)
+    try:
+        stamp = datetime.strptime(name[:14], "%Y%m%d%H%M%S")
+    except ValueError:
+        return [latest_url]
+    count = max(1, int(round(hours * 4)))
+    return [
+        f"{base}/{(stamp - EXPORT_STEP * i).strftime('%Y%m%d%H%M%S')}{name[14:]}"
+        for i in range(count)
+    ]
+
+
+def fetch_rows_retry(url: str, deadline: float | None = None) -> list[list[str]] | None:
+    """One export, retried once; a 404, second failure or spent budget is skipped."""
+    error: Exception | None = None
+    for attempt in (1, 2):
+        if deadline is not None and time.monotonic() > deadline:
+            error = error or TimeoutError(f"fetch budget {FETCH_BUDGET_S:g}s spent")
+            break
+        try:
+            return fetch_rows(url)
+        except HTTPError as exc:
+            error = exc
+            if exc.code == 404:
+                break
+        except Exception as exc:  # noqa: BLE001
+            error = exc
+        if attempt == 1:
+            time.sleep(RETRY_DELAY_S)
+    log(f"skip export {url}: {error}")
+    return None
+
+
+def fetch_window(urls: list[str]) -> list[list[list[str]]]:
+    """Fetch exports (newest first, small concurrency). Raises if every one failed."""
+    deadline = time.monotonic() + FETCH_BUDGET_S
+    with ThreadPoolExecutor(max_workers=max(1, min(FETCH_WORKERS, len(urls)))) as pool:
+        results = list(pool.map(lambda u: fetch_rows_retry(u, deadline), urls))
+    exports = [rows for rows in results if rows is not None]
+    if not exports:
+        raise RuntimeError(f"all {len(urls)} GDELT exports failed")
+    return exports
+
+
+def rows_from_exports(exports: list[list[list[str]]]) -> list[list[str]]:
+    """Merge exports newest-first; a GLOBALEVENTID already seen in a newer export
+    is dropped, so the latest version wins. Rows within one export are untouched."""
+    seen: set[str] = set()
+    merged: list[list[str]] = []
+    for export in exports:
+        ids: set[str] = set()
+        for row in export:
+            key = row[0] if row else None
+            if key is not None and key in seen:
+                continue
+            merged.append(row)
+            if key is not None:
+                ids.add(key)
+        seen |= ids
+    return merged
+
+
 def from_gdelt_row(row: list[str]) -> dict | None:
     if len(row) < 61:
         return None
@@ -575,7 +667,11 @@ def main() -> int:
     try:
         url = fetch_export_url()
         log(f"export {url}")
-        rows = fetch_rows(url)
+        hours = window_hours()
+        urls = window_urls(url, hours)
+        exports = fetch_window(urls)
+        rows = rows_from_exports(exports)
+        log(f"window {hours:g}h: {len(exports)}/{len(urls)} exports")
         log(f"raw rows {len(rows)}")
         events = [item for row in rows if (item := from_gdelt_row(row))]
     except Exception as exc:  # noqa: BLE001
