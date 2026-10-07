@@ -169,8 +169,8 @@ def infer_origin(actor1: str, actor2: str, lat: float, lon: float) -> dict | Non
 
 
 # ---------------------------------------------------------------------------
-# REGION PRESETS. Only "sudan" ships enabled (refinement of the built-in sudan
-# theater: place checks + South Sudan country-level drop). Every other preset is
+# REGION PRESETS. "sudan", "ethiopia" and "yemen" ship enabled (sudan refines the
+# built-in sudan theater; ethiopia/yemen own their theaters). Every other preset is
 # enabled=False; a disabled preset adds no tokens, boxes, checks, or noise.
 #
 # Turn a region on with ONE switch, either:
@@ -226,7 +226,7 @@ PRESETS: tuple[dict, ...] = (
     {
         "id": "ethiopia",
         "label": "Ethiopia (Tigray / Amhara / Oromia)",
-        "enabled": False,
+        "enabled": True,
         "aor": ("tigray", "amhara", "oromia"),  # "ethiopia" is already built-in
         "theater": "ethiopia",
         # Two boxes so the theater stops short of Yemen (42.6E) and stays out
@@ -252,7 +252,7 @@ PRESETS: tuple[dict, ...] = (
     {
         "id": "yemen",
         "label": "Yemen / Red Sea / Bab el-Mandeb",
-        "enabled": False,
+        "enabled": True,
         "aor": (),  # "yemen" is already built-in
         "theater": "yemen",
         # Mainland (Sanaa, Aden, Hodeidah, Marib, Red Sea + Bab el-Mandeb coast)
