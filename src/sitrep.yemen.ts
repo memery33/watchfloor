@@ -14,7 +14,7 @@ export const THEATER_YEMEN: Theater = {
   short: "YEMEN",
   status: "DAWN OF YEMEN / DHUBAB FIGHT",
   pip: "hot",
-  map: { lat: 15.0, lon: 44.0, zoom: 6 },
+  map: { lat: 15.0, lon: 44.0, zoom: 5 },
   kpis: [
     { label: "WEST COAST", value: "MOCHA DELTA / DHUBAB", tone: "hot" },
     { label: "HOUTHI\u2192KSA", value: "AIRPORTS HIT (GACA)", tone: "hot" },
