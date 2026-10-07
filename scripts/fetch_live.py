@@ -124,7 +124,11 @@ def coords_match_place(location: str, lat: float, lon: float) -> bool:
         return False
     if (round(lat, 1), round(lon, 1)) in CENTROIDS:
         return False
-    if lon > 70:
+    # [LON70-FIX] Was: drop every row with lon > 70 (meant to kill junk far-east
+    # geocodes such as Khabarovsk). That also silently dropped eastern Pakistan
+    # (Islamabad ~73E, Lahore ~74E) inside the afpak BBOX (60.5-75.5E). Keep the
+    # far-east drop, but allow lon > 70 when the point is inside a theater BBOX.
+    if lon > 70 and theater_for(lat, lon) == "overview":
         return False
     for name, elat, elon, maxd in PLACE_CHECK:
         if name in loc and (abs(lat - elat) + abs(lon - elon) > maxd * 2):
