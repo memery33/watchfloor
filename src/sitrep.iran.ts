@@ -179,8 +179,8 @@ export const THEATER_IRAN: Theater =   {
       { id: "sirik", name: "SIRIK", lat: 26.518, lon: 57.102, note: "Explosion-sounds CLAIM 6 Oct", tone: "dim" },
       { id: "hormuz", name: "HORMUZ", lat: 26.57, lon: 56.25, note: "Cape Dao hit 23 Sep", tone: "hot" },
       { id: "qeshm", name: "QESHM", lat: 26.76, lon: 55.8, note: "Cargo strike 13 Sep", tone: "warn" },
-      { id: "babb", name: "BANDAR ABBAS", lat: 27.18, lon: 56.27, note: "UAS / UUV claims", tone: "warn" },
+      { id: "babb", name: "BANDAR ABBAS", lat: 27.18, lon: 56.27, note: "UAS / UUV claims", tone: "dim" },
       { id: "tehran", name: "TEHRAN", lat: 35.69, lon: 51.39, note: "Hormuz conditions / UNGA", tone: "hot" },
-      { id: "erbil", name: "ERBIL", lat: 36.191, lon: 44.009, note: "UAV CLAIM 20 Sep", tone: "warn" },
+      { id: "erbil", name: "ERBIL", lat: 36.191, lon: 44.009, note: "UAV CLAIM 20 Sep", tone: "dim" },
     ],
   };
