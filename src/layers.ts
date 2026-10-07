@@ -588,7 +588,7 @@ export function frontDrawable(f: FrontSource): boolean {
  * Off means no request at all, so the live site never logs a 404.
  * To turn one on, flip it here in the same commit that first ships the file.
  */
-export const FEED_ENABLED: Record<"fires" | "ships", boolean> = { fires: false, ships: false };
+export const FEED_ENABLED: Record<"fires" | "ships", boolean> = { fires: true, ships: false };
 
 async function getJson<T>(path: string): Promise<T | null> {
   try {
