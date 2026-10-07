@@ -423,6 +423,17 @@ body {
   font-size: 10px;
   line-height: 1.4;
 }
+.live-stamp {
+  display: block;
+  margin-bottom: 2px;
+  color: #ffe36b;
+  font-weight: 600;
+}
+.live-stamp.zero {
+  color: var(--dim);
+  font-weight: 400;
+  opacity: .75;
+}
 
 h2 {
   margin: 14px 0 8px;

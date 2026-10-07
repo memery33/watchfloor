@@ -103,6 +103,15 @@ const watchEl = document.querySelector<HTMLElement>("#watch")!;
 const tickerEl = document.querySelector<HTMLElement>("#ticker")!;
 const liveAgeEl = document.querySelector<HTMLElement>("#liveAge")!;
 const hudNote = document.querySelector<HTMLElement>("#hudNote")!;
+
+function liveRefreshedET(iso: string | undefined): string {
+  const t = iso ? Date.parse(iso) : NaN;
+  if (!Number.isFinite(t)) return "unknown";
+  const d = new Date(t);
+  const day = d.toLocaleDateString("en-US", { timeZone: "America/New_York", month: "short", day: "numeric" });
+  const time = d.toLocaleTimeString("en-US", { timeZone: "America/New_York", hour: "numeric", minute: "2-digit" });
+  return `${day} ${time} ET`;
+}
 const filtersEl = document.querySelector<HTMLElement>("#filters")!;
 const collapseBtn = document.querySelector<HTMLButtonElement>("#collapseBtn")!;
 const railSelect = document.querySelector<HTMLSelectElement>("#railSelect")!;
@@ -593,9 +602,19 @@ function renderMap(t: Theater) {
   overlay.slice(0, 80).forEach(drawLive);
   const visibleTracks = tracks.filter((tr) => passesFilter(tr.confidence)).length;
   const visibleLive = overlay.filter((e) => passesFilter(e.confidence)).length;
-  hudNote.textContent = live
-    ? `${visibleLive} live claims in view \u00b7 ${visibleTracks} reconstructed vectors \u00b7 yellow = unverified \u00b7 dashed = inferred, not radar`
-    : "Live overlay missing. Curated sitrep only.";
+  if (live) {
+    const stamp = document.createElement("span");
+    stamp.className = visibleLive === 0 ? "live-stamp zero" : "live-stamp";
+    stamp.textContent = `GDELT claims: ${visibleLive} \u00b7 refreshed ${liveRefreshedET(live.generated_at)}`;
+    hudNote.replaceChildren(
+      stamp,
+      document.createTextNode(
+        `${visibleTracks} reconstructed vectors \u00b7 yellow = unverified \u00b7 dashed = inferred, not radar`,
+      ),
+    );
+  } else {
+    hudNote.textContent = "Live overlay missing. Curated sitrep only.";
+  }
 
   map.setView([t.map.lat, t.map.lon], t.map.zoom);
   setTimeout(() => {
