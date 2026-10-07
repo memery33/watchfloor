@@ -34,7 +34,7 @@ export const SNAPSHOT = {
 
 // THEATER REGISTRY — rail order. One line per theater; a sitrep.<id>.ts file
 // that isn't listed here is staged but hidden. Keys 1–9 follow this order.
-export const THEATER_ORDER: string[] = ["overview", "iran", "levant", "ukraine", "sudan", "energy", "afpak"];
+export const THEATER_ORDER: string[] = ["overview", "iran", "levant", "ukraine", "sudan", "energy", "afpak", "yemen", "ethiopia"];
 
 export const THEATERS: Theater[] = THEATER_ORDER.flatMap((id) => {
   const t = DISCOVERED.get(id);
