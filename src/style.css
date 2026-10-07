@@ -366,6 +366,7 @@ body {
 .swatch.reported { background: var(--amber); color: var(--amber); }
 .swatch.claim { background: var(--yellow); color: var(--yellow); }
 .swatch.delta { background: var(--cyan); color: var(--cyan); }
+.swatch.hold { background: var(--green); color: var(--green); }
 .swatch.track {
   border-radius: 0;
   height: 0;

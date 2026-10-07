@@ -63,6 +63,7 @@ app.innerHTML = `
             <div><i class="swatch reported"></i> REPORTED</div>
             <div><i class="swatch claim"></i> CLAIM / UNVERIFIED</div>
             <div><i class="swatch delta"></i> DELTA / DISPUTED</div>
+            <div><i class="swatch hold"></i> HOLD / WAIT</div>
             <div><i class="swatch track"></i> RECONSTRUCTED VECTOR (NOT RADAR)</div>
             <button type="button" class="legend-toggle on" id="landmarkToggle" aria-pressed="true" title="Toggle airports and seaports">
               <i class="swatch landmark"></i> AIRPORTS / PORTS
