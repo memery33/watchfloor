@@ -140,6 +140,13 @@ export function frontDrawable(f: FrontSource): boolean {
   return f.licenseCleared === true && f.commercialUse === "yes" && f.data != null && Boolean(f.license && f.url);
 }
 
+/**
+ * Feeds are off until Live publishes the file AND CoS approves the layer.
+ * Off means no request at all, so the live site never logs a 404.
+ * To turn one on, flip it here in the same commit that first ships the file.
+ */
+export const FEED_ENABLED: Record<"fires" | "ships", boolean> = { fires: false, ships: false };
+
 async function getJson<T>(path: string): Promise<T | null> {
   try {
     const res = await fetch(`./${path}?t=${Date.now()}`);
@@ -151,6 +158,7 @@ async function getJson<T>(path: string): Promise<T | null> {
 }
 
 export async function loadFires(): Promise<FirePayload | null> {
+  if (!FEED_ENABLED.fires) return null;
   const p = await getJson<FirePayload>("data/fires.json");
   if (!p || !Array.isArray(p.points) || !/VIIRS/i.test(p.source ?? "") || p.commercial_use !== "yes") return null;
   p.points = p.points.filter((x) => finiteCoord(x.lat, x.lon) && typeof x.theater === "string");
@@ -158,6 +166,7 @@ export async function loadFires(): Promise<FirePayload | null> {
 }
 
 export async function loadShips(): Promise<ShipPayload | null> {
+  if (!FEED_ENABLED.ships) return null;
   const p = await getJson<ShipPayload>("data/ships.json");
   if (!p || !Array.isArray(p.points) || !(p.delay_minutes >= MIN_SHIP_DELAY_MIN) || p.commercial_use !== "yes") return null;
   // Backstop only; the fetcher must enforce the delay server-side.
