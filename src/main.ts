@@ -671,7 +671,10 @@ function drawUnderLayers(t: Theater): { counts: Record<LayerId, number>; attribu
         .addTo(fireLayer);
     }
     if (fireRows.length) {
-      attribution.push('<a href="https://earthdata.nasa.gov/firms" target="_blank" rel="noopener">NASA FIRMS</a>');
+      // FIRMS asks redistributors to link its disclaimer; a tap target, not a hover, so it works on phones.
+      attribution.push(
+        '<a href="https://earthdata.nasa.gov/firms" target="_blank" rel="noopener">NASA FIRMS</a> (<a href="https://firms.modaps.eosdis.nasa.gov/download/Readme.txt" target="_blank" rel="noopener">disclaimer</a>)',
+      );
       // Full FIRMS citation lives in the layer toggle's tooltip; the footer keeps the short linked credit (phone width).
       if (fires.attribution && !/FIRMS/i.test(fires.attribution)) attribution.push(fires.attribution);
     }
