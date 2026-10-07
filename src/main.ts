@@ -706,15 +706,9 @@ narrowMq.addEventListener("change", () => {
 syncHudForViewport();
 
 window.addEventListener("keydown", (e) => {
-  const mapKeys: Record<string, TheaterId> = {
-    "1": "overview",
-    "2": "iran",
-    "3": "levant",
-    "4": "ukraine",
-    "5": "sudan",
-    "6": "energy",
-    "7": "afpak",
-  };
+  const mapKeys: Record<string, TheaterId> = Object.fromEntries(
+    THEATERS.slice(0, 9).map((t, i) => [String(i + 1), t.id]),
+  );
   if (mapKeys[e.key]) select(mapKeys[e.key]);
   if (e.key === "f" || e.key === "F") document.documentElement.requestFullscreen?.();
 });

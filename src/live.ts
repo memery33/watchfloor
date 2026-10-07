@@ -1,4 +1,4 @@
-import type { Confidence, Priority, TheaterId } from "./sitrep";
+import { THEATERS, type Confidence, type Priority, type TheaterId } from "./sitrep";
 
 export interface LiveOrigin {
   name: string;
@@ -46,7 +46,10 @@ export function saneLive(event: LiveEvent): boolean {
   const loc = event.location.split(",")[0].trim().toLowerCase();
   if (GENERIC.has(loc)) return false;
   if (/sheremetyevo|khabarovsk/.test(loc)) return false;
-  if (event.lon > 70 || event.lon < 20) return false;
+  // AOR is the pipeline's job (fetch_live.py tags each row with a theater).
+  // Drop rows for theaters the map doesn't register instead of a fixed 20–70°E box.
+  if (event.theater !== "overview" && !THEATERS.some((t) => t.id === event.theater)) return false;
+  if (Math.abs(event.lat) > 90 || Math.abs(event.lon) > 180) return false;
   if (Math.abs(event.lat - 60) < 0.2 && Math.abs(event.lon - 100) < 0.2) return false;
   if (event.lat === 0 && event.lon === 0) return false;
   return true;

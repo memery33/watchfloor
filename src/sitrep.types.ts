@@ -2,14 +2,9 @@ export type Confidence = "CONFIRMED" | "REPORTED" | "CLAIM" | "DELTA" | "HOLD";
 export type SourceClass = "STATE" | "PRESS" | "MIL CLAIM" | "UN FFM" | "OPEN COMP";
 export type Priority = "PRI-1" | "PRI-2" | "PRI-3";
 
-export type TheaterId =
-  | "overview"
-  | "iran"
-  | "levant"
-  | "ukraine"
-  | "sudan"
-  | "energy"
-  | "afpak";
+// Theater ids are data, not code. A new theater = one src/sitrep.<id>.ts file
+// plus one line in THEATER_ORDER (src/sitrep.ts). See src/theater.template.ts.
+export type TheaterId = string;
 
 export interface Kpi {
   label: string;
