@@ -34,7 +34,7 @@ jobs:
 
           # size-limit parses "KB" as 1000 bytes (not 1024).
           CAPS = {
-              "live.json": 8 * 1000,
+              "live.json": 18 * 1000,  # live.json: 250-row cap ≈ 16.5 KB gzipped (synthetic test, Oct 7 2026), rounded up to the next 2 KB.
               "fires.json": 40 * 1000,
               "ships.json": 8 * 1000,
               "flights.json": 8 * 1000,
