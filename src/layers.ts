@@ -517,6 +517,7 @@ export interface FirePoint {
   acq: string; // ISO acquisition time
   theater: TheaterId;
   frp?: number;
+  likely_flare?: boolean; // persistent gas-flare / industrial heat source; drawn muted
 }
 export interface FirePayload {
   generated_at: string;

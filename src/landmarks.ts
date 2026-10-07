@@ -13,38 +13,48 @@ export interface Landmark {
   major?: boolean;
 }
 
-/** Civil airports + commercial ports only. Not bases, not compounds, not targeting. */
+/**
+ * Civil airports + commercial ports only. Not bases, not compounds, not targeting.
+ *
+ * Sources (checked 2026-10-07, both allow commercial use):
+ * - Airports: coordinates are OurAirports (https://ourairports.com/data/, public domain),
+ *   matched by IATA code and rounded to 4 decimals.
+ * - Seaports: hand-placed on each harbor and checked against the NGA World Port Index,
+ *   Pub 150 (https://msi.nga.mil/Publications/WPI, US Government work, public domain).
+ *   Every port is within 8 km of its WPI reference point (WPI gives whole arc-minutes).
+ * Names are common English names, not copied from any licensed gazetteer.
+ */
 export const LANDMARKS: Landmark[] = [
   // Airports
-  { id: "apt-ruh", name: "King Khalid Intl", kind: "airport", code: "RUH", lat: 24.9578, lon: 46.6989, theaters: ["overview", "iran", "energy"], major: true },
-  { id: "apt-dxb", name: "Dubai Intl", kind: "airport", code: "DXB", lat: 25.2532, lon: 55.3657, theaters: ["overview", "iran", "energy"], major: true },
-  { id: "apt-auh", name: "Abu Dhabi Intl", kind: "airport", code: "AUH", lat: 24.433, lon: 54.6511, theaters: ["iran", "energy"] },
-  { id: "apt-doh", name: "Hamad Intl", kind: "airport", code: "DOH", lat: 25.2731, lon: 51.608, theaters: ["overview", "iran", "energy"], major: true },
-  { id: "apt-kwi", name: "Kuwait Intl", kind: "airport", code: "KWI", lat: 29.2266, lon: 47.9689, theaters: ["iran", "energy"] },
-  { id: "apt-bah", name: "Bahrain Intl", kind: "airport", code: "BAH", lat: 26.2708, lon: 50.6336, theaters: ["iran", "energy"] },
-  { id: "apt-mct", name: "Muscat Intl", kind: "airport", code: "MCT", lat: 23.5933, lon: 58.2844, theaters: ["iran", "energy"] },
+  { id: "apt-ruh", name: "King Khalid Intl", kind: "airport", code: "RUH", lat: 24.9576, lon: 46.6988, theaters: ["overview", "iran", "energy"], major: true },
+  { id: "apt-dxb", name: "Dubai Intl", kind: "airport", code: "DXB", lat: 25.2498, lon: 55.371, theaters: ["overview", "iran", "energy"], major: true },
+  { id: "apt-auh", name: "Abu Dhabi Intl", kind: "airport", code: "AUH", lat: 24.441, lon: 54.6492, theaters: ["iran", "energy"] },
+  { id: "apt-doh", name: "Hamad Intl", kind: "airport", code: "DOH", lat: 25.2731, lon: 51.6081, theaters: ["overview", "iran", "energy"], major: true },
+  { id: "apt-kwi", name: "Kuwait Intl", kind: "airport", code: "KWI", lat: 29.2245, lon: 47.9698, theaters: ["iran", "energy"] },
+  { id: "apt-bah", name: "Bahrain Intl", kind: "airport", code: "BAH", lat: 26.2673, lon: 50.6376, theaters: ["iran", "energy"] },
+  { id: "apt-mct", name: "Muscat Intl", kind: "airport", code: "MCT", lat: 23.6002, lon: 58.2853, theaters: ["iran", "energy"] },
   { id: "apt-ika", name: "Imam Khomeini Intl", kind: "airport", code: "IKA", lat: 35.4161, lon: 51.1522, theaters: ["overview", "iran"], major: true },
   { id: "apt-bnd", name: "Bandar Abbas Intl", kind: "airport", code: "BND", lat: 27.2183, lon: 56.3778, theaters: ["iran", "energy"] },
-  { id: "apt-jed", name: "King Abdulaziz Intl", kind: "airport", code: "JED", lat: 21.6796, lon: 39.1565, theaters: ["iran", "energy"] },
-  { id: "apt-ade", name: "Aden Intl", kind: "airport", code: "ADE", lat: 12.8295, lon: 45.0288, theaters: ["iran", "energy", "yemen"] },
+  { id: "apt-jed", name: "King Abdulaziz Intl", kind: "airport", code: "JED", lat: 21.6802, lon: 39.1574, theaters: ["iran", "energy"] },
+  { id: "apt-ade", name: "Aden Intl", kind: "airport", code: "ADE", lat: 12.8296, lon: 45.03, theaters: ["iran", "energy", "yemen"] },
   { id: "apt-sah", name: "Sanaa Intl", kind: "airport", code: "SAH", lat: 15.4763, lon: 44.2197, theaters: ["iran", "yemen"] },
-  { id: "apt-bey", name: "Beirut Rafic Hariri", kind: "airport", code: "BEY", lat: 33.8209, lon: 35.4884, theaters: ["overview", "levant"], major: true },
-  { id: "apt-dam", name: "Damascus Intl", kind: "airport", code: "DAM", lat: 33.4114, lon: 36.5156, theaters: ["levant"] },
+  { id: "apt-bey", name: "Beirut Rafic Hariri", kind: "airport", code: "BEY", lat: 33.8198, lon: 35.4874, theaters: ["overview", "levant"], major: true },
+  { id: "apt-dam", name: "Damascus Intl", kind: "airport", code: "DAM", lat: 33.4115, lon: 36.5156, theaters: ["levant"] },
   { id: "apt-amm", name: "Queen Alia Intl", kind: "airport", code: "AMM", lat: 31.7226, lon: 35.9932, theaters: ["levant"] },
   { id: "apt-tlv", name: "Ben Gurion", kind: "airport", code: "TLV", lat: 32.0114, lon: 34.8867, theaters: ["overview", "levant"], major: true },
-  { id: "apt-cai", name: "Cairo Intl", kind: "airport", code: "CAI", lat: 30.1219, lon: 31.4056, theaters: ["overview", "levant", "energy"], major: true },
+  { id: "apt-cai", name: "Cairo Intl", kind: "airport", code: "CAI", lat: 30.1115, lon: 31.3967, theaters: ["overview", "levant", "energy"], major: true },
   { id: "apt-bgw", name: "Baghdad Intl", kind: "airport", code: "BGW", lat: 33.2625, lon: 44.2346, theaters: ["iran", "levant"] },
-  { id: "apt-ebl", name: "Erbil Intl", kind: "airport", code: "EBL", lat: 36.2376, lon: 43.9631, theaters: ["iran", "levant"] },
+  { id: "apt-ebl", name: "Erbil Intl", kind: "airport", code: "EBL", lat: 36.236, lon: 43.9466, theaters: ["iran", "levant"] },
   { id: "apt-bsr", name: "Basra Intl", kind: "airport", code: "BSR", lat: 30.5491, lon: 47.6621, theaters: ["iran", "energy"] },
   { id: "apt-kbp", name: "Kyiv Boryspil", kind: "airport", code: "KBP", lat: 50.345, lon: 30.8947, theaters: ["overview", "ukraine"], major: true },
-  { id: "apt-ods", name: "Odesa Intl", kind: "airport", code: "ODS", lat: 46.4268, lon: 30.6765, theaters: ["ukraine", "energy"] },
-  { id: "apt-hrk", name: "Kharkiv Intl", kind: "airport", code: "HRK", lat: 49.9248, lon: 36.29, theaters: ["ukraine"] },
-  { id: "apt-ozh", name: "Zaporizhzhia Intl", kind: "airport", code: "OZH", lat: 47.867, lon: 35.3157, theaters: ["ukraine"] },
-  { id: "apt-svo", name: "Sheremetyevo", kind: "airport", code: "SVO", lat: 55.9726, lon: 37.4146, theaters: ["overview", "ukraine"], major: true },
+  { id: "apt-ods", name: "Odesa Intl", kind: "airport", code: "ODS", lat: 46.4272, lon: 30.6726, theaters: ["ukraine", "energy"] },
+  { id: "apt-hrk", name: "Kharkiv Intl", kind: "airport", code: "HRK", lat: 49.9269, lon: 36.2908, theaters: ["ukraine"] },
+  { id: "apt-ozh", name: "Zaporizhzhia Intl", kind: "airport", code: "OZH", lat: 47.867, lon: 35.3147, theaters: ["ukraine"] },
+  { id: "apt-svo", name: "Sheremetyevo", kind: "airport", code: "SVO", lat: 55.9775, lon: 37.3867, theaters: ["overview", "ukraine"], major: true },
   { id: "apt-krt", name: "Khartoum Intl", kind: "airport", code: "KRT", lat: 15.5895, lon: 32.5532, theaters: ["overview", "sudan"], major: true },
-  { id: "apt-pzu", name: "Port Sudan", kind: "airport", code: "PZU", lat: 19.4336, lon: 37.2341, theaters: ["sudan", "energy"] },
+  { id: "apt-pzu", name: "Port Sudan", kind: "airport", code: "PZU", lat: 19.4346, lon: 37.2341, theaters: ["sudan", "energy"] },
   { id: "apt-khi", name: "Karachi Jinnah", kind: "airport", code: "KHI", lat: 24.9065, lon: 67.1608, theaters: ["overview", "afpak", "energy"], major: true },
-  { id: "apt-isb", name: "Islamabad Intl", kind: "airport", code: "ISB", lat: 33.5607, lon: 72.8516, theaters: ["afpak"] },
+  { id: "apt-isb", name: "Islamabad Intl", kind: "airport", code: "ISB", lat: 33.549, lon: 72.8257, theaters: ["afpak"] },
   { id: "apt-kbl", name: "Kabul Intl", kind: "airport", code: "KBL", lat: 34.5659, lon: 69.2123, theaters: ["afpak"] },
 
   // Commercial seaports / terminals

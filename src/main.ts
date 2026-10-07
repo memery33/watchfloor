@@ -632,9 +632,10 @@ function drawUnderLayers(t: Theater): { counts: Record<LayerId, number>; attribu
   const attribution: string[] = [];
   const fronts = FRONTS.filter((f) => f.theater === t.id && frontDrawable(f)).slice(0, layerCap("fronts"));
   // Newest first, so the phone/desktop cap drops the oldest rows, not random ones.
+  // Non-flare detections first, then newest first, so the cap drops flares and old rows before anything else.
   const fireRows = (fires?.points ?? [])
     .filter((p) => t.id === "overview" || p.theater === t.id)
-    .sort((a, b) => String(b.acq).localeCompare(String(a.acq)));
+    .sort((a, b) => Number(!!a.likely_flare) - Number(!!b.likely_flare) || String(b.acq).localeCompare(String(a.acq)));
   const shipRows = (ships?.points ?? [])
     .filter((p) => t.id === "overview" || p.theater === t.id)
     .sort((a, b) => String(b.at).localeCompare(String(a.at)));
@@ -650,18 +651,30 @@ function drawUnderLayers(t: Theater): { counts: Record<LayerId, number>; attribu
     }
   }
   if (layerOn.fires && fireLayer && fires) {
-    for (const p of fireRows.slice(0, layerCap("fires"))) {
+    // Draw flares first (underneath) so real anomalies sit on top of them.
+    const drawn = fireRows.slice(0, layerCap("fires")).reverse();
+    for (const p of drawn) {
+      const flare = !!p.likely_flare;
       L.circleMarker([p.lat, p.lon], {
         renderer: underRenderer!,
-        radius: 2.5,
+        radius: flare ? 1.5 : 2.5,
         stroke: false,
-        fillColor: "#ff7a2f",
-        fillOpacity: 0.75,
+        fillColor: flare ? "#8a7a6e" : "#ff7a2f",
+        fillOpacity: flare ? 0.35 : 0.75,
       })
-        .bindTooltip(`THERMAL ANOMALY, NOT CONFIRMED STRIKE \u00b7 ${p.acq}`, { className: "marker-label" })
+        .bindTooltip(
+          flare
+            ? `LIKELY GAS FLARE / INDUSTRIAL HEAT \u00b7 ${p.acq}`
+            : `THERMAL ANOMALY, NOT CONFIRMED STRIKE \u00b7 ${p.acq}`,
+          { className: "marker-label" },
+        )
         .addTo(fireLayer);
     }
-    if (fireRows.length) attribution.push(fires.attribution);
+    if (fireRows.length) {
+      attribution.push('<a href="https://earthdata.nasa.gov/firms" target="_blank" rel="noopener">NASA FIRMS</a>');
+      // Full FIRMS citation lives in the layer toggle's tooltip; the footer keeps the short linked credit (phone width).
+      if (fires.attribution && !/FIRMS/i.test(fires.attribution)) attribution.push(fires.attribution);
+    }
   }
   if (layerOn.ships && shipLayer && ships) {
     for (const p of shipRows.slice(0, layerCap("ships"))) {
@@ -706,11 +719,15 @@ function renderLayerToggles(counts: Record<LayerId, number>) {
     const cap = layerCap(id);
     const capped = id !== "vectors" && n > cap;
     const shown = empty ? "\u2014" : capped ? `${cap}/${n}` : String(n);
-    const title = empty
+    const notLoaded = (id === "fires" || id === "ships") && !on && !(id === "fires" ? fires : ships);
+    const cite = id === "fires" && fires?.attribution ? ` \u00b7 ${fires.attribution.replace(/"/g, "&quot;").replace(/</g, "&lt;")}` : "";
+    const title = (notLoaded
+      ? "Off. Data loads when you turn this on"
+      : empty
       ? "No approved data in this theater yet"
       : capped
         ? `Showing newest ${cap} of ${n} to keep the map fast`
-        : `${n} in this theater`;
+        : `${n} in this theater`) + cite;
     return `<button type="button" class="legend-toggle${on ? " on" : ""}${empty ? " empty" : ""}" data-layer="${id}" aria-pressed="${on}" title="${title}">
       <i class="swatch ${LAYER_SWATCH[id]}"></i> ${LAYER_META[id].label}<span class="layer-n">${shown}</span>
     </button>`;
@@ -772,8 +789,9 @@ function renderMap(t: Theater) {
       "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
       {
         // Esri requires "Powered by Esri" plus the service's own copyright text (copyrightText on the MapServer).
+        // The OSM credit is linked here once; it also covers OSM-derived gazetteer coordinates (strikes, waves).
         attribution:
-          'Powered by <a href="https://www.esri.com" target="_blank" rel="noopener">Esri</a> \u00b7 Esri, HERE, Garmin, \u00a9 OpenStreetMap contributors, and the GIS user community \u00b7 Watchfloor OSINT COP',
+          'Powered by <a href="https://www.esri.com" target="_blank" rel="noopener">Esri</a> \u00b7 Esri, HERE, Garmin, \u00a9 <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>, and the GIS user community \u00b7 Watchfloor OSINT COP',
         maxZoom: 16,
       },
     ).addTo(map);
@@ -845,7 +863,10 @@ function renderMap(t: Theater) {
   if (layerOn.strikes) strikes.slice(0, layerCap("strikes")).forEach(drawStrike);
   overlay.slice(0, 80).forEach(drawLive);
   renderLayerToggles({ ...under.counts, vectors: tracks.length + waves.length, strikes: strikes.length });
-  setAttribution(under.attribution);
+  setAttribution([
+    ...(live ? ['<a href="https://www.gdeltproject.org/" target="_blank" rel="noopener">GDELT Project</a>'] : []),
+    ...under.attribution,
+  ]);
   const visibleLive = overlay.filter((e) => passesFilter(e.confidence)).length;
   if (live) {
     const stamp = document.createElement("span");
@@ -942,6 +963,31 @@ landmarkToggle.addEventListener("click", (ev) => {
   landmarkToggle.setAttribute("aria-pressed", String(landmarksOn));
   drawLandmarks(theater(active));
 });
+// Off-by-default feeds are fetched only once their layer is switched on (no request, no 404, no bytes otherwise).
+const feedRequested: Record<"fires" | "ships", boolean> = { fires: false, ships: false };
+function rerenderKeepView() {
+  const center = map?.getCenter();
+  const zoom = map?.getZoom();
+  renderMap(theater(active));
+  if (center && zoom != null) map?.setView(center, zoom, { animate: false });
+}
+function ensureFeeds() {
+  if (layerOn.fires && !feedRequested.fires) {
+    feedRequested.fires = true;
+    void loadFires().then((f) => {
+      fires = f;
+      if (f) rerenderKeepView();
+    });
+  }
+  if (layerOn.ships && !feedRequested.ships) {
+    feedRequested.ships = true;
+    void loadShips().then((sp) => {
+      ships = sp;
+      if (sp) rerenderKeepView();
+    });
+  }
+}
+
 layerTogglesEl.addEventListener("click", (ev) => {
   ev.stopPropagation();
   const btn = (ev.target as HTMLElement).closest<HTMLButtonElement>("[data-layer]");
@@ -953,11 +999,8 @@ layerTogglesEl.addEventListener("click", (ev) => {
   } catch {
     /* ignore */
   }
-  const t = theater(active);
-  const center = map?.getCenter();
-  const zoom = map?.getZoom();
-  renderMap(t);
-  if (center && zoom != null) map?.setView(center, zoom, { animate: false });
+  rerenderKeepView();
+  ensureFeeds();
 });
 narrowMq.addEventListener("change", () => {
   syncHudForViewport();
@@ -984,11 +1027,7 @@ function boot() {
       : `${SNAPSHOT.sourceAge} \u00b7 LIVE OVERLAY OFFLINE`;
     select(active);
   });
-  void Promise.all([loadFires(), loadShips()]).then(([f, s]) => {
-    fires = f;
-    ships = s;
-    if (f || s) select(active);
-  });
+  ensureFeeds();
 }
 
 boot();
