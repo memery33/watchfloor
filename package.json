@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "live": "python3 scripts/fetch_live.py"
+    "live": "python3 scripts/fetch_live.py",
+    "size": "size-limit"
   },
   "repository": {
     "type": "git",
@@ -19,8 +20,24 @@
     "leaflet": "^1.9.4"
   },
   "devDependencies": {
+    "@size-limit/file": "^14.2.0",
     "@types/leaflet": "^1.9.21",
+    "size-limit": "^14.2.0",
     "typescript": "~5.9.2",
     "vite": "^7.1.5"
-  }
+  },
+  "size-limit": [
+    {
+      "name": "initial JS",
+      "path": "dist/assets/*.js",
+      "limit": "95 KB",
+      "gzip": true
+    },
+    {
+      "name": "CSS",
+      "path": "dist/assets/*.css",
+      "limit": "14 KB",
+      "gzip": true
+    }
+  ]
 }

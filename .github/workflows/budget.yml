@@ -1,0 +1,136 @@
+name: Page weight budget
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+# Separate from pages.yml so a budget miss never blocks a Pages deploy.
+permissions:
+  contents: read
+jobs:
+  budget:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: JS and CSS budget
+        id: size
+        run: npx size-limit --json | tee "$RUNNER_TEMP/size-limit.json"
+      - name: Data size warnings
+        if: always() && (steps.size.outcome == 'success' || steps.size.outcome == 'failure')
+        env:
+          SIZE_LIMIT_JSON: ${{ runner.temp }}/size-limit.json
+        run: |
+          python3 - << 'PY'
+          import gzip
+          import json
+          import os
+          from pathlib import Path
+
+          # size-limit parses "KB" as 1000 bytes (not 1024).
+          CAPS = {
+              "live.json": 18 * 1000,  # live.json: 250-row cap ≈ 16.5 KB gzipped (synthetic test, Oct 7 2026), rounded up to the next 2 KB.
+              "fires.json": 40 * 1000,
+              "ships.json": 8 * 1000,
+              "flights.json": 8 * 1000,
+          }
+          FRONT_CAP = 40 * 1000
+
+          def cap_for(name: str):
+              if name in CAPS:
+                  return CAPS[name]
+              if name.startswith("fronts") and name.endswith(".json"):
+                  return FRONT_CAP
+              return None
+
+          def gzip_size(path: Path) -> int:
+              return len(gzip.compress(path.read_bytes(), 9))
+
+          def kb(n: int) -> str:
+              return f"{n / 1000:.1f} KB ({n} B)"
+
+          # Vite copies public/data into dist/data. Record both when the
+          # gzipped sizes differ; otherwise keep the dist copy only.
+          measured = []
+          for root in (Path("public/data"), Path("dist/data")):
+              if not root.is_dir():
+                  continue
+              for path in sorted(root.glob("*.json")):
+                  cap = cap_for(path.name)
+                  if cap is None:
+                      continue
+                  measured.append((path, cap, gzip_size(path)))
+
+          by_name = {}
+          for item in measured:
+              by_name.setdefault(item[0].name, []).append(item)
+
+          chosen = []
+          for name in sorted(by_name):
+              items = by_name[name]
+              dist_items = [item for item in items if item[0].parts[0] == "dist"]
+              public_items = [item for item in items if item[0].parts[0] != "dist"]
+              same_size = len({item[2] for item in items}) == 1
+              if same_size and dist_items:
+                  chosen.append((name, [dist_items[0]]))
+              elif same_size:
+                  chosen.append((name, public_items[:1]))
+              else:
+                  chosen.append((name, dist_items + public_items))
+
+          rows = []
+          size_json = Path(os.environ.get("SIZE_LIMIT_JSON", ""))
+          if size_json.is_file():
+              try:
+                  checks = json.loads(size_json.read_text())
+              except json.JSONDecodeError:
+                  checks = []
+              for check in checks:
+                  if "size" not in check:
+                      continue
+                  limit = check.get("sizeLimit")
+                  passed = check.get("passed")
+                  if passed is True:
+                      status = "ok"
+                  elif passed is False:
+                      status = "over"
+                  else:
+                      status = "n/a"
+                  rows.append((check.get("name", "bundle"), check["size"], limit, status))
+
+          for _name, items in chosen:
+              for path, cap, size in items:
+                  status = "over" if size > cap else "ok"
+                  rows.append((path.as_posix(), size, cap, status))
+                  if size > cap:
+                      print(
+                          f"::warning::{path.as_posix()} is {size} bytes gzipped, "
+                          f"over the {cap} byte cap"
+                      )
+
+          lines = [
+              "### Page weight",
+              "",
+              "| Item | Gzipped | Cap | Status |",
+              "| --- | ---: | ---: | --- |",
+          ]
+          for label, size, limit, status in rows:
+              cap_cell = kb(limit) if isinstance(limit, int) else "—"
+              lines.append(f"| `{label}` | {kb(size)} | {cap_cell} | {status} |")
+          lines.append("")
+          lines.append(
+              "JS and CSS over cap fail this check (`size-limit`, gzip level 9). "
+              "Data files over cap are warnings only. Missing data files are skipped."
+          )
+          text = "\n".join(lines) + "\n"
+          print(text)
+          summary = os.environ.get("GITHUB_STEP_SUMMARY")
+          if summary:
+              with open(summary, "a", encoding="utf-8") as fh:
+                  fh.write(text)
+          PY
