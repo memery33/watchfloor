@@ -1,0 +1,70 @@
+# Watchfloor data sources and licenses
+
+**Last reviewed:** Oct 7, 2026, against commit `cd29edf` and the live site https://memery33.github.io/watchfloor/.
+
+Watchfloor is built to sell, so every data source has to allow commercial use (owner's standing rule, Oct 7, 2026). This file lists every external source the code fetches or ships, along with its license, its commercial-use status, and the attribution it requires. Where a license clause is cited, it is quoted exactly with the URL it was read from (all read Oct 7, 2026). If no clause could be found, the entry says **unverified**.
+
+`src/layers.ts` already enforces this rule in code. A layer draws only when its `commercialUse` / `commercial_use` is `"yes"`. Layers marked `"paid"` or `"no"` stay hidden.
+
+## Launch blockers for selling
+
+1. **Esri basemap: needs a paid license.** A commercial app needs an ArcGIS Location Platform subscription and tokens. The decision is deferred until launch. See the Esri row.
+2. **GitHub Pages hosting: not allowed for a paid product.** The plan is to move the paid version to Vercel at launch, and the free public demo can stay on Pages. See the Hosting row.
+
+## Legend: commercial use
+
+| Value | Meaning | Code value (`CommercialUse`) |
+| --- | --- | --- |
+| **yes** | The license or terms explicitly allow commercial use, so the source may ship in the paid product (attribution still applies). | `"yes"` |
+| **needs paid license** | Commercial use requires a paid subscription, a written license, or prior approval from the owner. Do not ship it in the paid product until that license is in hand. | `"paid"` |
+| **no** | The terms forbid commercial use or redistribution, with no license route known. | `"no"` |
+
+Where no clause could be found, the entry says **unverified**. An unverified source counts as not cleared, and its code value stays at anything but `"yes"`.
+
+## Register
+
+| Source | Used for | License / terms (with link) | Commercial use (yes / no / needs paid license) | Attribution text | Notes |
+| --- | --- | --- | --- | --- | --- |
+| **Esri World Dark Gray Base + World Dark Gray Reference tiles** (`server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer` and `.../World_Dark_Gray_Reference/MapServer`), loaded in `src/main.ts` `renderMap()` | Basemap and labels on every view. Each first view loads 48 tiles on desktop or 12 on phone. The basemap tile is the LCP element on both. | Esri terms of use, plus ArcGIS Location Platform licensing (row supplied by the map owner). Clause checked at https://location.arcgis.com/help/licensing-and-attribution: *"You can deploy commercial and revenue-generating applications with ArcGIS Location Platform. To remain compliant: Use access tokens generated from your ArcGIS Location Platform subscription for all ArcGIS location service requests. Follow the ArcGIS Location Platform agreement. Ensure all service calls are authenticated."* | **needs paid license**: an ArcGIS Location Platform subscription and token (https://location.arcgis.com/help/licensing-and-attribution). Today the tiles are requested **without a token**. | "Powered by Esri" plus the data providers. Same page: *"Keeping required "Powered by Esri" attribution. Displaying data source attribution when required."* The MapServer `copyrightText` (read from `?f=pjson`) is *"Esri, HERE, Garmin, (c) OpenStreetMap contributors, and the GIS user community"*. The current footer in `src/main.ts` already shows this. | **Launch blocker 1 of 2 for selling. Decision deferred until launch.** Legacy service retirement: Esri's "Sunsetting Legacy Basemaps" (Feb 17, 2026, https://www.esri.com/arcgis-blog/products/arcgis-living-atlas/announcements/sunsetting-legacy-basemaps) lists `World_Dark_Gray_Base` and `World_Dark_Gray_Reference` under **December 2029**, with the server.arcgisonline.com URLs among the "Retiring Services". The listed replacement is the "Dark Gray Canvas vector basemap". |
+| **GDELT 2.0 Events exports** (`http://data.gdeltproject.org/gdeltv2/lastupdate.txt` and the 15-minute `*.export.CSV.zip` files it names), read by `scripts/fetch_live.py` at build time and hourly in `live.yml` / `pages.yml` | Live yellow CLAIM overlay. Written to `public/data/live.json` (strike / shelling / blockade rows in the watched areas, capped at 250). | GDELT Terms of Use, https://www.gdeltproject.org/about.html (section "Using GDELT"): *"all datasets released by the GDELT Project are available for unlimited and unrestricted use for any academic, commercial, or governmental use of any kind without fee."* Same page, "Redistributing GDELT": *"You may redistribute, rehost, republish, and mirror any of the GDELT datasets in any form. However, any use or redistribution of the data must include a citation to the GDELT Project and a link to this website (https://www.gdeltproject.org/)."* | **yes** | Required: a citation to the GDELT Project **and a link** to https://www.gdeltproject.org/. Proposed footer text: `Live claims: <a href="https://www.gdeltproject.org/">The GDELT Project</a>` | **Gap:** the README links GDELT, but the deployed map only shows the plain text "GDELT claims: N" and "GDELT claim overlay", with no link. Add the footer link above (or link the legend stamp) so the live map meets "a link to this website". Each GDELT row carries a `SOURCEURL` (row[60]), which is shown as a link to the original article. Those articles fall under the citation row below: linked, not republished. `fetch_live.py` also has a local fallback file (`~/conflict-globe/public/data/events.json`, from another project). It only exists on a dev machine, and its rows are tagged `source: "GDELT"`. Its provenance beyond that tag is **unverified**. |
+| **Leaflet 1.9.4** (npm `leaflet`, the only runtime `dependencies` entry in `package.json`; `^1.9.4`, lockfile resolves to 1.9.4) | Map engine (JS + CSS), bundled into `assets/index-*.js` / `*.css` | BSD-2-Clause. Package metadata: `npm view leaflet@1.9.4 license` returns `BSD-2-Clause`, and `package-lock.json` agrees. License text at https://raw.githubusercontent.com/Leaflet/Leaflet/v1.9.4/LICENSE: *"Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 1. Redistributions of source code must retain the above copyright notice… 2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution."* | **yes** (BSD-2-Clause has no field-of-use restriction) | `Copyright (c) 2010-2023, Volodymyr Agafonkin. Copyright (c) 2010-2011, CloudMade.` plus the BSD-2 text. Leaflet's default "Leaflet" prefix in the attribution control is still on, since `setPrefix` is never called. | **Gap:** the deployed bundle `assets/index-DCeDqS-T.js` has **no** Leaflet copyright notice. Searching it for `Agafonkin`, `CloudMade`, `@license`, and `BSD` finds nothing, and Vite drops the `/* @preserve */` header. Minified JS is commonly treated as the "binary form", so ship a `THIRD-PARTY-NOTICES.txt` (or keep legal comments) with the Leaflet copyright and license. `@types/leaflet`, `typescript`, and `vite` are devDependencies and are not shipped. |
+| **Cited news and official statements**: wire services and outlets (Reuters, AP, AFP, Al Jazeera, Kyiv Independent, Times of Israel, Rudaw, Kurdistan24, Dawn, Sudan War Monitor, …), UKMTO notices, government and military statements (IDF, ISPR, Ukraine Air Force, state media such as IRNA/Tasnim/SANA shown as CLAIM), UN bodies (OCHA, UN News, WFP, UNICEF), analytic shops cited in text (ISW, CTP), and named public Telegram/X channels cited as CLAIM tips (e.g. @IntelSlava, @war_cube) | Curated sitrep text in `src/sitrep.*.ts`, `src/tracks.ts` vectors, and GDELT `SOURCEURL` links | Cited with links (or by name) and not republished. We write our own one-line summaries and carry no article text, photos, video, or map graphics. | **yes, as citation only** | Name the outlet or issuer in each item, as `fact:` already does, and link where a URL exists. | Covered by the owner's rule ("we cite them and don't republish them"). Still forbidden here: copying article text beyond a short quote, embedding photos or video stills, and redrawing ISW/CTP or DeepState map polygons (see the Pending table below). ISW's fair-use policy forbids incorporating its materials into *"other datasets, mapping platforms"* without written permission. Naming ISW as a source in a sitrep line is citation. Copying its lines is not. |
+| **Landmark coordinates**: civil airports and commercial seaports in `src/landmarks.ts` (IATA codes and lat/lon, hand-entered) | Airport and port reference labels | **unverified**: the file records no source | **unverified** | none recorded | No external host is fetched (the data is compiled into the bundle), but the provenance of the coordinates is not recorded. Before launch, record the source (for example a public-domain or open-licensed airport/port dataset) or re-derive the points from one. Until then this row is not cleared. |
+| *Hosting (not a data source)*: **GitHub Pages** (`memery33.github.io`), which also serves `data/live.json`, `data/fires.json`, `data/ships.json` | Static hosting of the app and the JSON overlays | GitHub Pages limits, https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits: *"GitHub Pages is not intended for or allowed to be used as a free web-hosting service to run your online business, e-commerce site, or any other website that is primarily directed at either facilitating commercial transactions or providing commercial software as a service (SaaS)."* | **no**, for a paid product hosted on free Pages. Fine for the free public demo. | n/a | **Launch blocker 2 of 2 for selling.** Plan: move the paid version to Vercel at launch, and keep the free public demo on Pages. As of Oct 7, 2026, `data/fires.json` and `data/ships.json` returned **404** (GitHub's 404 HTML, about 5.5 KB each per page view). The fix is to not fetch layers that start switched off. |
+
+### External hosts the code contacts (grep of `src/` and `scripts/` for `http`)
+
+| Host | Where | What | Register row |
+| --- | --- | --- | --- |
+| `server.arcgisonline.com` | `src/main.ts` | Basemap and reference tiles (browser, every view) | Esri |
+| `data.gdeltproject.org` | `scripts/fetch_live.py` | `lastupdate.txt` plus the 15-minute export ZIPs (build time and CI only, never in the browser) | GDELT |
+| `www.esri.com` | `src/main.ts` | Hyperlink in the attribution only, never fetched | Esri |
+| `www.w3.org` | `src/style.css`, `index.html` | SVG XML namespace inside data: URIs, never fetched | n/a |
+| same origin `./data/*.json` | `src/live.ts`, `src/layers.ts` | `live.json` (GDELT), `fires.json`, `ships.json` (not yet produced, 404) | GDELT / Pending |
+
+The grep found no other external data hosts. The curated sitrep files contain no `http` URLs, and their sources are cited by name.
+
+## Pending / proposed (not yet ingested)
+
+None of these layers is in the repo or on the site. `src/layers.ts` has empty scaffolding for fronts, fires, ships, and strikes. 
+
+| Proposed layer | Candidate source(s) | Commercial use (per review) | Status |
+| --- | --- | --- | --- |
+| (a) Fires (thermal anomalies) | NASA LANCE FIRMS, VIIRS 375 m NRT (S-NPP, NOAA-20, NOAA-21) | **yes** (NASA data CC0 unless marked; FIRMS FAQ asks for a "NASA FIRMS" citation) | Not ingested. `fires.json` is not produced yet. |
+| (b) Ship positions (Red Sea, Gulf, Black Sea; delayed ≥1 h, no names) | AISHub, aisstream.io, Global Fishing Watch, MarineTraffic/Kpler, government open AIS | **none cleared.** GFW and Kpler: needs paid license. AISHub and aisstream.io: unverified. Government open AIS: none found covering these seas. | Not ingested. `ships.json` is not produced yet. |
+| (c) Flights (delayed ≥1 h, never single out military aircraft in real time) | adsb.lol (ODbL 1.0); OpenSky, ADS-B Exchange, airplanes.live | **yes** via adsb.lol (ODbL, share-alike). OpenSky, ADS-B Exchange, airplanes.live: needs paid license / written permission. | Not ingested, and there is no `flights` layer in code yet |
+| (d) Front lines and control areas | DeepStateMap (Ukraine), ISW/CTP, Sudan candidates, ACLED | **needs paid license** (DeepStateMap API needs prior approval for commercial entities; ISW needs written permission; ACLED needs a corporate license, do not ingest). Sudan candidates: unverified. | Not ingested. `FRONTS = []`. |
+| (e) Geolocated strike pins | GeoConfirmed and other named geolocators | **unverified** (no license or terms clause found). Linking is fine. | Not ingested. `STRIKES = []`. |
+
+## Unverified (not cleared until checked)
+
+- Whether NASA's public-domain statement covers VIIRS data from NOAA-20 and NOAA-21, and the wording of the LANCE disclaimer.
+- Commercial terms for AISHub and aisstream.io, and whether any government open AIS feed covers the Red Sea, the Gulf or the Black Sea.
+- CTP's own reuse terms, and whether DeepStateMap charges for approving commercial use.
+- ACLED's attribution policy (moot unless we buy a license).
+- Front-line and control-map sources for Sudan.
+- GeoConfirmed's terms of use.
+- Where the landmark coordinates in `src/landmarks.ts` came from.
+- Where the rows in the dev-only `fetch_live.py` fallback file came from.
+
+No outreach to any provider happens without Michael's yes.
