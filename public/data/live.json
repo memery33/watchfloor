@@ -1,5 +1,38 @@
 {
-  "generated_at": "2026-10-07T00:48:32.275444+00:00",
+  "generated_at": "2026-10-07T14:36:57.508047+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": []
+  "events": [
+    {
+      "id": "gdelt-1326756031",
+      "dtg": "07 OCT",
+      "date": "2026-10-07",
+      "location": "Bucharest",
+      "fact": "STRIKE  EUROPEAN \u2192 ?  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 44.4333,
+      "lon": 26.1,
+      "event_type": "strike",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://breakingdefense.com/2026/10/romania-orders-12-airbus-h225m-multirole-helicopters/"
+    },
+    {
+      "id": "gdelt-1326756392",
+      "dtg": "07 OCT",
+      "date": "2026-10-07",
+      "location": "Naama",
+      "fact": "SHELLING  ISRAEL \u2192 HAMAS  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.8667,
+      "lon": 34.8667,
+      "event_type": "shelling",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://nypost.com/2026/10/07/world-news/nyc-mayor-mamdani-uses-3rd-anniversary-of-oct-7-atrocity-to-attack-israel-for-ongoing-genocide/"
+    }
+  ]
 }
