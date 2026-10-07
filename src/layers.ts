@@ -302,7 +302,7 @@ export const STRIKES: StrikePin[] = [
     lat: 17.493,
     lon: 44.128, // Najran: NGA GNS UFI -3097837, UNI -4371733 (PPLA)
     confidence: "REPORTED",
-    fact: "Al Jazeera: Saudi civil aviation authority (GACA) said attacks hit Jazan and Najran airports; three minor injuries and material damage.",
+    fact: "Al Jazeera: Saudi civil aviation authority (GACA) said attacks hit Jazan and Najran airports; three minor injuries and material damage — pin at city; airport ~33 km NE.",
     geolocator: "Watchfloor (town-level placement)",
     url: "https://www.aljazeera.com/news/2026/10/6/saudi-arabia-says-three-wounded-in-attacks-on-airports-near-yemen-border",
   },
