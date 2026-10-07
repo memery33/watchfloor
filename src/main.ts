@@ -5,6 +5,24 @@ import { SNAPSHOT, THEATERS, TICKER, type Theater, type TheaterId, type Confiden
 import { TRACKS } from "./tracks";
 import { LANDMARKS, landmarkFits } from "./landmarks";
 import {
+  FRONTS,
+  LAYER_META,
+  LAYER_ORDER,
+  STRIKES,
+  WAVES,
+  frontDrawable,
+  loadFires,
+  loadShips,
+  strikeDrawable,
+  waveDrawable,
+  waveLabel,
+  type FirePayload,
+  type LayerId,
+  type ShipPayload,
+  type StrikePin,
+  type Wave,
+} from "./layers";
+import {
   arcPoints,
   colorForConfidence,
   dashForConfidence,
@@ -25,6 +43,19 @@ let sitrepLayer: L.LayerGroup | null = null;
 let liveLayer: L.LayerGroup | null = null;
 let trackLayer: L.LayerGroup | null = null;
 let landmarkLayer: L.LayerGroup | null = null;
+let strikeLayer: L.LayerGroup | null = null;
+let frontLayer: L.LayerGroup | null = null;
+let fireLayer: L.LayerGroup | null = null;
+let shipLayer: L.LayerGroup | null = null;
+let underRenderer: L.Canvas | null = null;
+let fires: FirePayload | null = null;
+let ships: ShipPayload | null = null;
+let shownAttribution: string[] = [];
+// Endpoint caps normally appear at LABEL_ZOOM+; a sparse theater (few vectors)
+// shows them from its opening zoom so both ends stay named.
+let labelZoom = 6;
+const SPARSE_VECTORS = 4;
+const SPARSE_MIN_ZOOM = 5; // never show endpoint caps at overview zooms
 let live: LivePayload | null = null;
 let confidenceFilter: FilterMode = "ALL";
 let stackCollapsed = false;
@@ -64,7 +95,7 @@ app.innerHTML = `
             <div><i class="swatch claim"></i> CLAIM / UNVERIFIED</div>
             <div><i class="swatch delta"></i> DELTA / DISPUTED</div>
             <div><i class="swatch hold"></i> HOLD / WAIT</div>
-            <div><i class="swatch track"></i> RECONSTRUCTED VECTOR (NOT RADAR)</div>
+            <div class="layer-toggles" id="layerToggles" role="group" aria-label="Map layers"></div>
             <button type="button" class="legend-toggle on" id="landmarkToggle" aria-pressed="true" title="Toggle airports and seaports">
               <i class="swatch landmark"></i> AIRPORTS / PORTS
             </button>
@@ -120,6 +151,26 @@ const hudEl = document.querySelector<HTMLElement>("#hud")!;
 const hudToggle = document.querySelector<HTMLButtonElement>("#hudToggle")!;
 const landmarkToggle = document.querySelector<HTMLButtonElement>("#landmarkToggle")!;
 const narrowMq = window.matchMedia("(max-width: 980px)");
+const layerTogglesEl = document.querySelector<HTMLElement>("#layerToggles")!;
+const LAYER_KEY = "wf.layers.v1";
+function defaultLayers(): Record<LayerId, boolean> {
+  const phone = narrowMq.matches;
+  return Object.fromEntries(LAYER_ORDER.map((id) => [id, phone ? LAYER_META[id].phone : LAYER_META[id].desktop])) as Record<LayerId, boolean>;
+}
+function loadLayerPrefs(): Record<LayerId, boolean> {
+  const base = defaultLayers();
+  try {
+    const saved = JSON.parse(localStorage.getItem(LAYER_KEY) ?? "{}") as Partial<Record<LayerId, boolean>>;
+    for (const id of LAYER_ORDER) if (typeof saved[id] === "boolean") base[id] = saved[id]!;
+  } catch {
+    /* ignore */
+  }
+  return base;
+}
+const layerOn: Record<LayerId, boolean> = loadLayerPrefs();
+function layerCap(id: LayerId): number {
+  return LAYER_META[id].cap[narrowMq.matches ? 1 : 0];
+}
 
 function theater(id: TheaterId): Theater {
   return THEATERS.find((t) => t.id === id) ?? THEATERS[0];
@@ -157,7 +208,9 @@ const POPUP_OPTS: L.PopupOptions = {
   autoPanPadding: [24, 48],
 };
 
-function nodePopupContent(opts: { title: string; meta?: string; fact: string }): HTMLElement {
+type PopupOpts = { title: string; meta?: string; fact: string; link?: { href: string; label: string } };
+
+function nodePopupContent(opts: PopupOpts): HTMLElement {
   const { short, long, clipped } = clipBlurb(opts.fact, 100);
   const root = document.createElement("div");
   root.className = "node-popup";
@@ -202,10 +255,20 @@ function nodePopupContent(opts: { title: string; meta?: string; fact: string }):
     root.appendChild(full);
   }
 
+  if (opts.link && /^https:\/\//.test(opts.link.href)) {
+    const a = document.createElement("a");
+    a.className = "popup-link";
+    a.href = opts.link.href;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.textContent = opts.link.label;
+    root.appendChild(a);
+  }
+
   return root;
 }
 
-function attachPopup(layer: L.Layer, opts: { title: string; meta?: string; fact: string }) {
+function attachPopup(layer: L.Layer, opts: PopupOpts) {
   layer.bindPopup(() => nodePopupContent(opts), POPUP_OPTS);
 }
 
@@ -351,11 +414,11 @@ function addEndpointLabel(
   group: L.LayerGroup,
   fullTip: string,
   peerLon?: number,
-  popup?: { title: string; meta?: string; fact: string },
+  popup?: PopupOpts,
 ) {
   // Hide permanent name caps below LABEL_ZOOM (and on narrow overview) \u2014 dots + tooltip only
   const z = map?.getZoom() ?? 3;
-  const zoomOut = z < LABEL_ZOOM || (narrowMq.matches && z < LABEL_ZOOM + 1);
+  const zoomOut = z < labelZoom || (narrowMq.matches && z < labelZoom + 1);
   const inferred = role === "INFERRED";
   const roleText = role === "IMPACT" ? "TO" : role === "ORIGIN" ? "FROM" : "INF";
   const side = peerLon === undefined ? (role === "IMPACT" ? "side-e" : "side-w") : labelSideClass(role, role === "IMPACT" ? peerLon : lon, role === "IMPACT" ? lon : peerLon);
@@ -498,9 +561,165 @@ function drawLive(event: LiveEvent) {
   }
 }
 
+function drawWave(w: Wave) {
+  if (!trackLayer || !layerOn.vectors) return;
+  if (!passesFilter(w.confidence) || !waveDrawable(w)) return;
+  const color = colorForConfidence(w.confidence);
+  const pts = arcPoints(w.from, w.to);
+  const label = waveLabel(w);
+  const popup: PopupOpts = {
+    title: `${w.from.name} \u2192 ${w.to.name}`,
+    meta: `${w.dtg} \u00b7 WAVE \u00b7 ${label} \u00b7 ${w.confidence} \u00b7 ${w.source} \u00b7 NOT RADAR`,
+    fact: `${label} reported by ${w.source}. Launch area and target region as stated in the tally; the line is a reconstruction, not a flight path.`,
+    link: w.url ? { href: w.url, label: `Source: ${w.source}` } : undefined,
+  };
+  const line = L.polyline(pts, {
+    color,
+    weight: w.count && w.count >= 50 ? 4 : w.count && w.count >= 15 ? 3 : 2,
+    opacity: 0.9,
+    dashArray: dashForConfidence(w.confidence),
+    className: "wave-arc",
+  }).addTo(trackLayer);
+  attachPopup(line, popup);
+  const mid = pts[Math.floor(pts.length / 2)];
+  L.marker(mid, {
+    icon: L.divIcon({
+      className: "wave-label",
+      html: `<span style="color:${color}">${label}</span>`,
+      iconSize: [1, 1],
+      iconAnchor: [0, 0],
+    }),
+    interactive: false,
+    keyboard: false,
+  }).addTo(trackLayer);
+  addEndpointLabel(w.from.lat, w.from.lon, "ORIGIN", w.from.name, "#8aa0b0", trackLayer, `LAUNCH AREA  ${w.from.name}`, w.to.lon, popup);
+  addEndpointLabel(w.to.lat, w.to.lon, "IMPACT", w.to.name, color, trackLayer, `TARGET REGION  ${w.to.name}`, w.from.lon, popup);
+  addArrow(w.from, w.to, color, trackLayer);
+}
+
+function drawStrike(sp: StrikePin) {
+  if (!strikeLayer) return;
+  if (!passesFilter(sp.confidence) || !strikeDrawable(sp)) return;
+  const color = colorForConfidence(sp.confidence);
+  const m = L.marker([sp.lat, sp.lon], {
+    icon: L.divIcon({
+      className: "strike-pin",
+      html: `<span style="border-color:${color};background:${color}55"></span>`,
+      iconSize: [10, 10],
+      iconAnchor: [5, 5],
+    }),
+    keyboard: false,
+  }).addTo(strikeLayer);
+  attachPopup(m, {
+    title: sp.name,
+    meta: `${sp.dtg} \u00b7 GEOLOCATED \u00b7 ${sp.confidence} \u00b7 ${sp.geolocator}`,
+    fact: sp.fact,
+    link: { href: sp.url, label: `Geolocation: ${sp.geolocator}` },
+  });
+}
+
+function setAttribution(next: string[]) {
+  if (!map) return;
+  for (const a of shownAttribution) if (!next.includes(a)) map.attributionControl.removeAttribution(a);
+  for (const a of next) if (!shownAttribution.includes(a)) map.attributionControl.addAttribution(a);
+  shownAttribution = next;
+}
+
+function drawUnderLayers(t: Theater): { counts: Record<LayerId, number>; attribution: string[] } {
+  frontLayer?.clearLayers();
+  fireLayer?.clearLayers();
+  shipLayer?.clearLayers();
+  const attribution: string[] = [];
+  const fronts = FRONTS.filter((f) => f.theater === t.id && frontDrawable(f)).slice(0, layerCap("fronts"));
+  // Newest first, so the phone/desktop cap drops the oldest rows, not random ones.
+  const fireRows = (fires?.points ?? [])
+    .filter((p) => t.id === "overview" || p.theater === t.id)
+    .sort((a, b) => String(b.acq).localeCompare(String(a.acq)));
+  const shipRows = (ships?.points ?? [])
+    .filter((p) => t.id === "overview" || p.theater === t.id)
+    .sort((a, b) => String(b.at).localeCompare(String(a.at)));
+
+  if (layerOn.fronts && frontLayer) {
+    for (const f of fronts) {
+      L.geoJSON(f.data!, {
+        pane: "wf-under",
+        interactive: false,
+        style: () => ({ color: "#b79cff", weight: 1.2, opacity: 0.8, fillColor: "#b79cff", fillOpacity: 0.07 }),
+      }).addTo(frontLayer);
+      attribution.push(`Fronts: <a href="${f.url}" target="_blank" rel="noopener">${f.name}</a> (${f.license}, as of ${f.asOf})`);
+    }
+  }
+  if (layerOn.fires && fireLayer && fires) {
+    for (const p of fireRows.slice(0, layerCap("fires"))) {
+      L.circleMarker([p.lat, p.lon], {
+        renderer: underRenderer!,
+        radius: 2.5,
+        stroke: false,
+        fillColor: "#ff7a2f",
+        fillOpacity: 0.75,
+      })
+        .bindTooltip(`THERMAL ANOMALY, NOT CONFIRMED STRIKE \u00b7 ${p.acq}`, { className: "marker-label" })
+        .addTo(fireLayer);
+    }
+    if (fireRows.length) attribution.push(fires.attribution);
+  }
+  if (layerOn.ships && shipLayer && ships) {
+    for (const p of shipRows.slice(0, layerCap("ships"))) {
+      L.circleMarker([p.lat, p.lon], {
+        renderer: underRenderer!,
+        radius: 2.5,
+        color: "#9fd6ff",
+        weight: 1,
+        fillColor: "#9fd6ff",
+        fillOpacity: 0.35,
+      })
+        .bindTooltip(`${p.kind.toUpperCase()} \u00b7 position ${p.at} (\u22651h delayed)`, { className: "marker-label" })
+        .addTo(shipLayer);
+    }
+    if (shipRows.length) attribution.push(ships.attribution);
+  }
+  return {
+    counts: {
+      vectors: 0,
+      strikes: 0,
+      fronts: fronts.length,
+      fires: fireRows.length,
+      ships: shipRows.length,
+    },
+    attribution,
+  };
+}
+
+const LAYER_SWATCH: Record<LayerId, string> = {
+  vectors: "track",
+  strikes: "strike",
+  fronts: "front",
+  fires: "fire",
+  ships: "ship",
+};
+
+function renderLayerToggles(counts: Record<LayerId, number>) {
+  layerTogglesEl.innerHTML = LAYER_ORDER.map((id) => {
+    const on = layerOn[id];
+    const n = counts[id];
+    const empty = n === 0;
+    const cap = layerCap(id);
+    const capped = id !== "vectors" && n > cap;
+    const shown = empty ? "\u2014" : capped ? `${cap}/${n}` : String(n);
+    const title = empty
+      ? "No approved data in this theater yet"
+      : capped
+        ? `Showing newest ${cap} of ${n} to keep the map fast`
+        : `${n} in this theater`;
+    return `<button type="button" class="legend-toggle${on ? " on" : ""}${empty ? " empty" : ""}" data-layer="${id}" aria-pressed="${on}" title="${title}">
+      <i class="swatch ${LAYER_SWATCH[id]}"></i> ${LAYER_META[id].label}<span class="layer-n">${shown}</span>
+    </button>`;
+  }).join("");
+}
+
 function syncEndpointZoom() {
   const z = map?.getZoom() ?? 3;
-  const zoomOut = z < LABEL_ZOOM || (narrowMq.matches && z < LABEL_ZOOM + 1);
+  const zoomOut = z < labelZoom || (narrowMq.matches && z < labelZoom + 1);
   document.querySelectorAll(".endpoint-label").forEach((el) => {
     el.classList.toggle("zoom-out", zoomOut);
   });
@@ -551,15 +770,27 @@ function renderMap(t: Theater) {
     map = L.map("map", { zoomControl: true, attributionControl: true });
     L.tileLayer(
       "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
-      { attribution: "Tiles \u00a9 Esri \u00b7 Watchfloor OSINT COP", maxZoom: 16 },
+      {
+        // Esri requires "Powered by Esri" plus the service's own copyright text (copyrightText on the MapServer).
+        attribution:
+          'Powered by <a href="https://www.esri.com" target="_blank" rel="noopener">Esri</a> \u00b7 Esri, HERE, Garmin, \u00a9 OpenStreetMap contributors, and the GIS user community \u00b7 Watchfloor OSINT COP',
+        maxZoom: 16,
+      },
     ).addTo(map);
     L.tileLayer(
       "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Reference/MapServer/tile/{z}/{y}/{x}",
       { attribution: "", maxZoom: 16 },
     ).addTo(map);
     // Landmarks under sitrep → live → tracks on top
+    // Fronts / fires / ships sit in a pane under every marker and vector.
+    map.createPane("wf-under").style.zIndex = "390";
+    underRenderer = L.canvas({ pane: "wf-under", padding: 0.2 });
+    frontLayer = L.layerGroup().addTo(map);
+    fireLayer = L.layerGroup().addTo(map);
+    shipLayer = L.layerGroup().addTo(map);
     landmarkLayer = L.layerGroup().addTo(map);
     sitrepLayer = L.layerGroup().addTo(map);
+    strikeLayer = L.layerGroup().addTo(map);
     liveLayer = L.layerGroup().addTo(map);
     trackLayer = L.layerGroup().addTo(map);
     map.on("zoomend", () => {
@@ -570,7 +801,9 @@ function renderMap(t: Theater) {
   sitrepLayer?.clearLayers();
   liveLayer?.clearLayers();
   trackLayer?.clearLayers();
+  strikeLayer?.clearLayers();
   drawLandmarks(t);
+  const under = drawUnderLayers(t);
 
   t.markers.forEach((m) => {
     const c = m.tone === "hot" ? "#ff4d3c" : m.tone === "warn" ? "#ffbf3c" : m.tone === "ok" ? "#3cff8a" : "#6fe3ff";
@@ -598,10 +831,21 @@ function renderMap(t: Theater) {
   });
 
   const tracks = TRACKS.filter((tr) => trackFits(tr, t.id));
+  const waves = WAVES.filter((w) => w.theaters.includes(t.id) && waveDrawable(w));
+  const strikes = STRIKES.filter((sp) => sp.theaters.includes(t.id) && strikeDrawable(sp));
   const overlay = (live?.events ?? []).filter((e) => liveFits(e, t.id));
-  tracks.forEach(drawTrack);
-  overlay.slice(0, 80).forEach(drawLive);
   const visibleTracks = tracks.filter((tr) => passesFilter(tr.confidence)).length;
+  const visibleWaves = waves.filter((w) => passesFilter(w.confidence));
+  const vectorCount = visibleTracks + visibleWaves.length;
+  labelZoom = vectorCount <= SPARSE_VECTORS && t.map.zoom >= SPARSE_MIN_ZOOM ? Math.min(LABEL_ZOOM, t.map.zoom) : LABEL_ZOOM;
+  if (layerOn.vectors) {
+    tracks.forEach(drawTrack);
+    visibleWaves.slice(0, Math.max(0, layerCap("vectors") - visibleTracks)).forEach(drawWave);
+  }
+  if (layerOn.strikes) strikes.slice(0, layerCap("strikes")).forEach(drawStrike);
+  overlay.slice(0, 80).forEach(drawLive);
+  renderLayerToggles({ ...under.counts, vectors: tracks.length + waves.length, strikes: strikes.length });
+  setAttribution(under.attribution);
   const visibleLive = overlay.filter((e) => passesFilter(e.confidence)).length;
   if (live) {
     const stamp = document.createElement("span");
@@ -610,7 +854,7 @@ function renderMap(t: Theater) {
     hudNote.replaceChildren(
       stamp,
       document.createTextNode(
-        `${visibleTracks} reconstructed vectors \u00b7 yellow = unverified \u00b7 dashed = inferred, not radar`,
+        `${layerOn.vectors ? vectorCount : 0} reconstructed vectors \u00b7 yellow = unverified \u00b7 dashed = inferred, not radar`,
       ),
     );
   } else {
@@ -698,6 +942,23 @@ landmarkToggle.addEventListener("click", (ev) => {
   landmarkToggle.setAttribute("aria-pressed", String(landmarksOn));
   drawLandmarks(theater(active));
 });
+layerTogglesEl.addEventListener("click", (ev) => {
+  ev.stopPropagation();
+  const btn = (ev.target as HTMLElement).closest<HTMLButtonElement>("[data-layer]");
+  if (!btn) return;
+  const id = btn.dataset.layer as LayerId;
+  layerOn[id] = !layerOn[id];
+  try {
+    localStorage.setItem(LAYER_KEY, JSON.stringify(layerOn));
+  } catch {
+    /* ignore */
+  }
+  const t = theater(active);
+  const center = map?.getCenter();
+  const zoom = map?.getZoom();
+  renderMap(t);
+  if (center && zoom != null) map?.setView(center, zoom, { animate: false });
+});
 narrowMq.addEventListener("change", () => {
   syncHudForViewport();
   syncEndpointZoom();
@@ -722,6 +983,11 @@ function boot() {
       ? `${SNAPSHOT.sourceAge} \u00b7 ${liveAge(live.generated_at)}`
       : `${SNAPSHOT.sourceAge} \u00b7 LIVE OVERLAY OFFLINE`;
     select(active);
+  });
+  void Promise.all([loadFires(), loadShips()]).then(([f, s]) => {
+    fires = f;
+    ships = s;
+    if (f || s) select(active);
   });
 }
 

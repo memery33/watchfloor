@@ -780,3 +780,57 @@ h2:first-child { margin-top: 0; }
   .ticker { font-size: 10px; padding: 0 8px; }
   .hud { bottom: 8px; left: 6px; }
 }
+
+/* ---- Layer toggles (vectors / strikes / fronts / fires / ships) ---- */
+.layer-toggles { display: grid; gap: 4px; margin-top: 2px; }
+.legend-toggle .layer-n {
+  margin-left: 6px;
+  color: var(--dim);
+  font-variant-numeric: tabular-nums;
+}
+.legend-toggle.empty { opacity: 0.4; }
+.legend-toggle.empty.on { opacity: 0.6; }
+.swatch.strike {
+  border-radius: 1px;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  background: var(--amber);
+  color: var(--amber);
+}
+.swatch.front {
+  border-radius: 0;
+  background: repeating-linear-gradient(45deg, #b79cff55 0 2px, transparent 2px 4px);
+  color: #b79cff;
+}
+.swatch.fire { width: 7px; height: 7px; background: #ff7a2f; color: #ff7a2f; vertical-align: 1px; }
+.swatch.ship { width: 7px; height: 7px; background: #9fd6ff55; color: #9fd6ff; vertical-align: 1px; }
+.strike-pin span {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid;
+  transform: rotate(45deg);
+}
+.wave-label span {
+  display: inline-block;
+  transform: translate(-50%, -130%);
+  padding: 1px 4px;
+  font: 600 9.5px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: .05em;
+  white-space: nowrap;
+  background: rgba(8, 12, 16, 0.82);
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  pointer-events: none;
+}
+.popup-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--cyan);
+  text-decoration: underline;
+}
+@media (max-width: 980px) {
+  .wave-label span { font-size: 8.5px; }
+}
