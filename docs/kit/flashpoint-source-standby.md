@@ -1,6 +1,6 @@
 # Watchfloor: flashpoint source standby list
 
-**DRAFT for Chief of Staff, then Michael. Not approved, no theater opened, nothing pushed, nobody messaged.**
+Approved by CoS 7 Oct 2026
 Compiled 07 Oct 2026 (ET). **Revised 07 Oct 2026 ~20:00 ET to the rules adopted 7 Oct** (licence tags, GNS pins, waves, confidence, no fronts, open sources only, theater modules). Changes are listed in `CHANGELOG-2026-10-07.md` (same folder). **CoS approved on 7 Oct 2026 (~8:03 PM ET).**
 Scope excludes the existing theaters (Iran/Gulf, Levant/Yemen, Ukraine, Sudan, Energy, AfPak) and the ones being built separately (Sudan, Ethiopia, Yemen).
 
@@ -54,7 +54,7 @@ These aren't counted in the per-pack tallies.
 | GDELT 2.0 (already in app) | **[YES]** | "unlimited and unrestricted use for any academic, commercial, or governmental use"; must cite GDELT and link gdeltproject.org | https://www.gdeltproject.org/about.html ✓ | terms verified 07 Oct |
 | NGA GeoNames Server (GNS): **the pin gazetteer** | **[YES]** (public domain) | "There are no licensing requirements or restrictions in place for the use of the GNS data"; NGA recommends a citation line | https://geonames.nga.mil/ ✓ (↪ /geonames/GNSHome/) | terms verified 07 Oct |
 | OurAirports | **[YES]** (public domain) | "All data is released to the Public Domain" | https://ourairports.com/data/ ✓ | terms verified 07 Oct |
-| NGA World Port Index (Pub 150) | **[YES]** (public domain, per CoS list 7 Oct; keeping the tag while terms are unverified is *proposed, pending CoS review*) | Not confirmed: the page is a JS-only app and returned only "You need to enable JavaScript" to curl and WebFetch | https://msi.nga.mil/Publications/WPI (JS shell) | **terms not verified** |
+| NGA World Port Index (Pub 150) | **[YES]** (public domain; Approved by CoS (7 Oct 2026, ~8:12 PM ET)) | WPI stays public-domain yes, with "terms not verified". **Use it only to check port positions.** Position check only: never the source of port coordinates (port pins use NGA GNS). Terms not confirmed: the page is a JS-only app and returned only "You need to enable JavaScript" to curl and WebFetch | https://msi.nga.mil/Publications/WPI (JS shell) | **terms not verified** |
 | NASA FIRMS (active fire) | **[YES]** (public domain / CC0, no key) | NASA Earthdata: mission data "licensed as Creative Commons Zero (CC0)" unless marked. The global 24 h VIIRS CSV downloaded without a key (HTTP 200, 07 Oct). **Redistribution: link the FIRMS disclaimer** | https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance ✓ · disclaimer https://firms.modaps.eosdis.nasa.gov/download/Readme.txt ✓ | terms verified 07 Oct |
 | OpenStreetMap / Nominatim | **[YES]** but **ODbL share-alike: avoid for pins** | "If you alter or build upon our data, you may distribute the result only under the same license." Disambiguation lookups only; never copy coords into the repo | https://www.openstreetmap.org/copyright ✓ | terms verified 07 Oct |
 
@@ -64,7 +64,7 @@ These aren't counted in the per-pack tallies.
 | Source | Tag | Terms note (one line) | Terms URL | Verified? |
 |---|---|---|---|---|
 | DeepStateMap.live | **[PAID]** | "Entities operating on a commercial basis may use the API only with prior approval"; no copying of its objects. Never copy its coordinates or polygons | https://deepstatemap.live/license-en.html ✓ | terms verified 07 Oct |
-| ISW (and CTP Ukraine/Iran maps) | **[PAID]** (keeping the tag while terms are unverified is *proposed, pending CoS review*) | Paraphrase only: commercial use or incorporation into datasets/mapping platforms needs prior written permission. Never copy its coordinates or polygons | https://understandingwar.org/fair-use-and-attribution-policy/ ⊘ (Cloudflare to curl and WebFetch) | **terms not verified** (paraphrased) |
+| ISW (and CTP Ukraine/Iran maps) | **[PAID]** (Approved by CoS (7 Oct 2026, ~8:12 PM ET)) | ISW stays paid, with "terms not verified". Reference and links only. Paraphrase only: commercial use or incorporation into datasets/mapping platforms needs prior written permission. Never copy its coordinates or polygons | https://understandingwar.org/fair-use-and-attribution-policy/ ⊘ (Cloudflare to curl and WebFetch) | **terms not verified** (paraphrased) |
 | AEI Critical Threats Project (CTP) | **[PAID]** | "brief quotations or excerpts" with a link are allowed; "Permission must be obtained… for all other requests", including graphics and maps | https://www.criticalthreats.org/terms ✓ | terms verified 07 Oct |
 | ACLED | **[PAID]** | EULA 1.2: "Commercial entities may not access or use the Content and/or Platforms without first obtaining a corporate license"; scraping prohibited. Never copy its coordinates | https://acleddata.com/eula/ (curl gets a JS challenge; read via WebFetch) | terms verified 07 Oct |
 | Liveuamap | **[UNCLEAR]** (paid or unclear) | "You may use our data and maps… with reference to liveuamap.com", but the API is sold as an enterprise product, so commercial scope is unclear | https://liveuamap.com/about ✓ | terms verified 07 Oct (scope unclear) |
@@ -176,15 +176,15 @@ These aren't counted in the per-pack tallies.
 
 **Front-map catalog (rule 5).** Catalog only: `data: null` until cleared. Nothing draws.
 ```ts
-// FRONTS catalog (draft, not in repo). commercialUse/licenseCleared per rule 5.
+// FRONTS catalog (example, not in repo). commercialUse/licenseCleared per rule 5.
 { id: "kivu-ctp-cwsr", theater: "kivu", name: "CTP Congo War Security Review control maps",
   license: "CTP terms: permission required beyond brief quotes", url: "https://www.criticalthreats.org/terms",
   asOf: "2026-09-25", licenseCleared: false, commercialUse: "paid", data: null },
 ```
 UCDP GED ([YES]) covers events, not control, so it can't support control areas. No approximate M23 areas are drawn.
 
-**GNS gazetteer (rule 2): ambiguity checks, 07 Oct** (*the name + admin-area matching reading is proposed, pending CoS review*)
-- **Goma:** 4 GNS populated places named Goma in DRC; only one is in North Kivu (UFI −2043901, PPLA). Pin only when the source puts it in North Kivu (or plainly means the provincial capital). Otherwise drop. (*Proposed, pending CoS review.*)
+**GNS gazetteer (rule 2): ambiguity checks, 07 Oct** (*A name plus its province must match exactly one NGA record, or there is no pin. Approved by CoS (7 Oct 2026, ~8:12 PM ET).*)
+- **Goma:** 4 GNS populated places named Goma in DRC; only one is in North Kivu (UFI −2043901, PPLA). Pin only when the source puts it in North Kivu (or plainly means the provincial capital). Otherwise drop. (*Approved by CoS (7 Oct 2026, ~8:12 PM ET).*)
 - **Masisi:** 2 records. North Kivu town UFI −2054038, UNI −2849741, −1.398, 28.818; the other is in Maniema. Headlines usually mean the *territory*, so pin only when the town is named.
 - **Kalehe:** 3 records. South Kivu UFI −2045779, UNI −2839694, −2.104, 28.919; two more in North Kivu. Usually means the territory. No pin unless the town and province are clear.
 - **Rubaya:** **no GNS record in DRC** (searched `LIKE '%Rubaya%'`). No pin. (Nominatim's first hit is in Rwanda.)
@@ -229,7 +229,7 @@ UCDP GED ([YES]) covers events, not control, so it can't support control areas. 
 | STATE/MIL: BY/RU | Belarus State Border Committee | https://gpk.gov.by/ ✓ | **[CITE]** | Official statements; one state ecosystem with BelTA/MoD | No terms page found · **terms not verified** |
 | STATE/MIL: BY/RU | Belarus MoD | https://www.mil.by/ ✓ (↪ /ru/) | **[CITE]** | Official statements | No terms page found · **terms not verified** |
 | STATE/MIL: BY/RU | BelTA | https://eng.belta.by/ ✓ | **[CITE]** | Reproduction allowed with a hyperlink and unaltered text; commercial use not addressed, so cite only | https://eng.belta.by/copyright-en ✓ · terms verified 07 Oct |
-| STATE/MIL: BY/RU | Kremlin | http://en.kremlin.ru/ ✓ (http only; https fails TLS) | **[YES]** | "All content on this site is licensed under Creative Commons Attribution 4.0" (excludes RIA/TASS photos). Still a party **CLAIM** for confidence. (*[YES] tag proposed, pending CoS review.*) | http://en.kremlin.ru/about/copyrights ✓ · terms verified 07 Oct |
+| STATE/MIL: BY/RU | Kremlin | http://en.kremlin.ru/ ✓ (http only; https fails TLS) | **[YES]** | "All content on this site is licensed under Creative Commons Attribution 4.0" (excludes RIA/TASS photos). Kremlin is commercial-use yes with a CC BY credit. Its statements stay CLAIM and become REPORTED only when a listed wire carries them. (*Approved by CoS (7 Oct 2026, ~8:12 PM ET).*) | http://en.kremlin.ru/about/copyrights ✓ · terms verified 07 Oct |
 | STATE/MIL: BY/RU | TASS | https://tass.com/ ✓ | **[CITE]** | "only Non-Commercial Use of the Text Materials… is allowed"; cite and link only | https://tass.com/terms-of-use ✓ · terms verified 07 Oct |
 | NEUTRAL | NATO | https://www.nato.int/ ✓ (↪ /en) | **[CITE]** | Official statements | No terms page found (old copyright URL 404) · **terms not verified** |
 | NEUTRAL | Frontex | https://www.frontex.europa.eu/ ✓ | **[CITE]** | "For use, reproduction or transmission for purposes other than private use, please request permission" | https://www.frontex.europa.eu/legal-disclaimer/ ✓ · terms verified 07 Oct |
@@ -243,7 +243,7 @@ UCDP GED ([YES]) covers events, not control, so it can't support control areas. 
 **Paid licence needed; reference only (baltic).**
 | Source | URL | Tag | Terms note | Terms URL / status |
 |---|---|---|---|---|
-| ISW | https://www.understandingwar.org/ ⊘ | **[PAID]** (keeping the tag while terms are unverified is *proposed, pending CoS review*) | Written permission for commercial use (paraphrase) | https://understandingwar.org/fair-use-and-attribution-policy/ ⊘ · **terms not verified** |
+| ISW | https://www.understandingwar.org/ ⊘ | **[PAID]** (Approved by CoS (7 Oct 2026, ~8:12 PM ET)) | ISW stays paid, with "terms not verified". Reference and links only. Written permission for commercial use (paraphrase) | https://understandingwar.org/fair-use-and-attribution-policy/ ⊘ · **terms not verified** |
 | ACLED | https://acleddata.com/ ✓ | **[PAID]** | Corporate licence required | https://acleddata.com/eula/ · terms verified 07 Oct |
 
 **Front-map catalog (rule 5):** none. There are no front lines here and no approximate areas are drawn.
@@ -300,7 +300,7 @@ UCDP GED ([YES]) covers events, not control, so it can't support control areas. 
 ```
 No approximate JNIM/FLA/FAMa control areas are drawn.
 
-**GNS gazetteer (rule 2): ambiguity checks, 07 Oct** (*the name + admin-area matching reading is proposed, pending CoS review*)
+**GNS gazetteer (rule 2): ambiguity checks, 07 Oct** (*A name plus its province must match exactly one NGA record, or there is no pin. Approved by CoS (7 Oct 2026, ~8:12 PM ET).*)
 - **Kidal:** one GNS populated place (UFI −1070022, PPLA). Pin the town only. (Nominatim returned the region first.)
 - **Kati:** 3 records. The garrison town in Koulikoro is UFI −1069754, UNI −1587972, PPLA2, 12.741, −8.068; the other two are in Tombouctou (ML-6). Pin only when the source means the Koulikoro town.
 - **Dioura:** 2 records. Mopti-region town UFI −1066670, UNI −1583444, 14.825, −5.255 (approved name); the other is a variant-name record at 14.300, −9.850. Check adm1.

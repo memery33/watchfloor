@@ -1,7 +1,7 @@
 # Watchfloor: first 24 hours of a new theater (Sitrep side)
 
-**DRAFT for Chief of Staff, then Michael. Not approved. Nothing in this file is live data. Nothing pushed, nobody messaged.**
-Drafted 07 Oct 2026. **Revised 07 Oct 2026 ~20:00 ET to the rules adopted 7 Oct**, plus the FIRMS rule (live since commits ad2e337 + 3e8cd5f; footer disclaimer link 85cf933). Changes are listed in `CHANGELOG-2026-10-07.md` (same folder). **CoS approved this kit on 7 Oct 2026 (~8:03 PM ET)** with the decisions recorded there.
+Approved by CoS 7 Oct 2026
+Written 07 Oct 2026. **Revised 07 Oct 2026 ~20:00 ET to the rules adopted 7 Oct**, plus the FIRMS rule (live since commits ad2e337 + 3e8cd5f; footer disclaimer link 85cf933). Changes are listed in `CHANGELOG-2026-10-07.md` (same folder). **CoS approved this kit on 7 Oct 2026 (~8:03 PM ET)** with the decisions recorded there.
 Checked against `memery33/watchfloor@main`: `src/sitrep.types.ts`, `src/sitrep.ts` (`THEATER_ORDER` registry + `import.meta.glob("./sitrep.*.ts")` discovery; `TheaterId = string`), `src/layers.ts` (`StrikePin.geolocator`, `FrontSource.commercialUse/licenseCleared/data`), `src/sitrep.iran.ts`, `src/main.ts`, `src/live.ts`, `scripts/fetch_live.py`.
 Watchfloor is an open-source common operating picture **built to be sold**. It is **not a targeting product**.
 This is the Sitrep piece of the "new theater in under an hour" kit. COP owns the data file and registry line, Live owns the GDELT preset and FIRMS payload, and Ship owns the `docs/` runbook and the source register.
@@ -63,7 +63,7 @@ No source, whether a wire, an official channel, a dataset or a map, goes into a 
 For every strike pin or event marker:
 1. [ ] **Named source first.** A named outlet or named public official channel places the event in a named town or site. No named place → no pin (HOLD or count row).
 2. [ ] **Look it up in NGA GNS** (`geonames.nga.mil` GIS_OUTPUT query: `full_nm_nd='<Name>' AND fc='P' AND cc_ft='<ISO3>'`; for sea features use the feature class, e.g. ATOL/ISL). Polite single lookups only.
-3. [ ] **Count the matches.** Filter by the admin area (adm1) the source states or plainly implies (*this admin-area reading is proposed, pending CoS review*). **More than one GNS record still matching → drop the pin** (no "looks right" picks; e.g. 4 GNS "Goma" in DRC, but only one in North Kivu; "Pag-asa" has 25+ Philippine records). No GNS record at all → no pin.
+3. [ ] **Count the matches.** Filter by the admin area (adm1) the source states or plainly implies. **A name plus its province must match exactly one NGA record, or there is no pin.** (*Approved by CoS (7 Oct 2026, ~8:12 PM ET).*) **More than one GNS record still matching → drop the pin** (no "looks right" picks; e.g. 4 GNS "Goma" in DRC, but only one in North Kivu; "Pag-asa" has 25+ Philippine records). No GNS record at all → no pin.
 4. [ ] **Record UFI and UNI** in a comment next to `lat`/`lon`: `// <Name>: NGA GNS UFI <ufi>, UNI <uni> (<desig_cd>)`. Round to 3 dp.
 5. [ ] **Set `geolocator: "Watchfloor (town-level placement)"`** and `url:` to the **outlet's https article URL** (not a geolocator, not an aggregator).
 6. [ ] **Never copy coordinates** from GeoConfirmed, DeepStateMap, ISW or ACLED (or Liveuamap, Sudan War Monitor or any [PAID]/[UNCLEAR] source). A GeoConfirmed placemark may appear as a reference link only.
