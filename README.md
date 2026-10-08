@@ -42,7 +42,7 @@ Every GDELT row stays a CLAIM until the sitrep curator promotes it with named co
 
 ## Layers
 
-- **Vectors:** reconstructed waves. A wave draws only when both ends are named. `WAVES` is empty, so none are drawn today.
+- **Vectors:** reconstructed strike paths, drawn as arcs. A path draws only when both ends are named, and it is inferred from reporting, not radar.
 - **Strike pins:** town-level placements whose coordinates come from NGA GeoNames (public domain). Each pin names the outlet or official source, and its geolocator reads "Watchfloor (town-level placement)", so it isn't an exact geolocation.
 - **Fronts:** catalog only. Nothing draws until a source is license-cleared for commercial use.
 - **Thermal anomalies (fires):** NASA FIRMS VIIRS 375 m near-real-time. Off by default and fetched only when switched on. Up to 400 points are drawn on desktop and 120 on phone, likely gas flares are drawn small and muted, and each point is labeled "thermal anomaly, not confirmed strike".
