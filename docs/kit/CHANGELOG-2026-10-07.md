@@ -11,10 +11,15 @@ Revised 07 Oct 2026, ~19:40–20:15 ET. **Approved by CoS on 7 Oct 2026 at ~8:03
 
 ## CoS decisions (7 Oct 2026, ~8:03 PM ET)
 1. **MENASTREAM: kept as a reference-only lead.** It can tip us off, but nothing ships on it alone, and nothing it says moves above CLAIM unless a wire on the named-wire list or an official source confirms it. Written into the sahel pack entry and the playbook's promotion rules.
-2. **Named-wire list, closed:** Reuters · AP · AFP (Agence France-Presse) · Anadolu Agency · Al Jazeera · national public broadcasters LSM (Latvia), LRT (Lithuania), ERR (Estonia). Anything not on the list is an **outlet, not a wire**. REPORTED for a carried government/coalition statement now points to this list (`per <party>, via <wire>`). In the packs, the old "T1" tier is split into **WIRE** and **OUTLET** rows, and the Baltic "via LSM/Kyiv Independent" wording now reads "via LSM" (KI is an outlet). *Drafting note:* another national public broadcaster counts only once CoS adds it to the list by name, and state-controlled media of a party to the conflict (e.g. Xinhua, TASS, BelTA, ORTM) are never wires.
+2. **Named-wire list, closed:** Reuters · AP · AFP (Agence France-Presse) · Anadolu Agency · Al Jazeera · national public broadcasters LSM (Latvia), LRT (Lithuania), ERR (Estonia). Anything not on the list is an **outlet, not a wire**. REPORTED for a carried government/coalition statement now points to this list (`per <party>, via <wire>`). In the packs, the old "T1" tier is split into **WIRE** and **OUTLET** rows, and the Baltic "via LSM/Kyiv Independent" wording now reads "via LSM" (KI is an outlet). **CoS ruling (7 Oct 2026, ~8:09 PM ET): the list is closed.** Another national public broadcaster counts only once CoS adds it to the list by name, and state-controlled media of a party to the conflict (e.g. Xinhua, TASS, BelTA, ORTM) are never wires.
 3. **HRW and USNI News stay cite-only:** state the facts in our own words and link to them, with no copied text, images or maps. Written into both source entries and the licence gate's [CITE] definition.
 4. **Kivu Security Tracker (kivusecurity.org): on hold until the Ebuteli move is confirmed.** The domain currently serves a placeholder page; no new URL or terms are listed until the move is confirmed.
-5. CoS also approved these working readings: GNS ambiguity means same name **and** the admin area the source states or plainly implies (so Goma, North Kivu is unique); the Kremlin site is tagged commercial-use yes (CC BY 4.0) but its statements stay CLAIM; NGA WPI and ISW keep their CoS-list tags with "terms not verified".
+## Working readings: proposed, pending CoS review (NOT approved)
+CoS approved decisions 1–4 above. CoS has **not** approved the four readings below individually; they are used in these docs only as proposals.
+1. **Proposed, pending CoS review**: GNS ambiguity means same name **and** the admin area the source states or plainly implies. A place counts as unambiguous only when name + province match exactly one NGA GNS record (so Goma, North Kivu is unique); otherwise the pin is dropped.
+2. **Proposed, pending CoS review**: the Kremlin site (en.kremlin.ru) is tagged [YES] commercial-use yes (CC BY 4.0, terms verified 07 Oct), but its statements stay CLAIM for confidence.
+3. **Proposed, pending CoS review**: NGA World Port Index keeps its CoS-list tag [YES] (public domain), marked "terms not verified".
+4. **Proposed, pending CoS review**: ISW keeps its CoS-list tag [PAID], marked "terms not verified" (paraphrased).
 
 ## sitrep-first-24h-playbook.md
 - **Rule 1:** licence-tag house rule, plus a new 8-step **licence gate** (find terms → fetch yourself → read 5 points → tag → one-line note → record in register/FRONTS/file header → apply gate → re-check). Build step 0 runs the gate.
@@ -42,4 +47,4 @@ Revised 07 Oct 2026, ~19:40–20:15 ET. **Approved by CoS on 7 Oct 2026 at ~8:03
 | baltic | 1 (Kremlin site, CC BY 4.0) | 2 (ISW, ACLED) | 26 | 0 | 29 |
 | sahel | 0 | 2 (ACLED, CTP) | 13 | 2 (Bellingcat, MENASTREAM: reference-only lead) | 17 |
 | §0 cross-theater | 7 | 5 | 0 | 2 (Liveuamap, GeoConfirmed) | 14 |
-"Why now" article links are tagged inline but not counted.
+"Why now" article links are tagged inline but not counted. The Kremlin [YES], NGA WPI [YES] and ISW [PAID] tags in these counts follow readings 2–4, which are proposed, pending CoS review.

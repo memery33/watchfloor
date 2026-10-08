@@ -63,7 +63,7 @@ No source, whether a wire, an official channel, a dataset or a map, goes into a 
 For every strike pin or event marker:
 1. [ ] **Named source first.** A named outlet or named public official channel places the event in a named town or site. No named place → no pin (HOLD or count row).
 2. [ ] **Look it up in NGA GNS** (`geonames.nga.mil` GIS_OUTPUT query: `full_nm_nd='<Name>' AND fc='P' AND cc_ft='<ISO3>'`; for sea features use the feature class, e.g. ATOL/ISL). Polite single lookups only.
-3. [ ] **Count the matches.** Filter by the admin area (adm1) the source states or plainly implies. **More than one GNS record still matching → drop the pin** (no "looks right" picks; e.g. 4 GNS "Goma" in DRC, but only one in North Kivu; "Pag-asa" has 25+ Philippine records). No GNS record at all → no pin.
+3. [ ] **Count the matches.** Filter by the admin area (adm1) the source states or plainly implies (*this admin-area reading is proposed, pending CoS review*). **More than one GNS record still matching → drop the pin** (no "looks right" picks; e.g. 4 GNS "Goma" in DRC, but only one in North Kivu; "Pag-asa" has 25+ Philippine records). No GNS record at all → no pin.
 4. [ ] **Record UFI and UNI** in a comment next to `lat`/`lon`: `// <Name>: NGA GNS UFI <ufi>, UNI <uni> (<desig_cd>)`. Round to 3 dp.
 5. [ ] **Set `geolocator: "Watchfloor (town-level placement)"`** and `url:` to the **outlet's https article URL** (not a geolocator, not an aggregator).
 6. [ ] **Never copy coordinates** from GeoConfirmed, DeepStateMap, ISW or ACLED (or Liveuamap, Sudan War Monitor or any [PAID]/[UNCLEAR] source). A GeoConfirmed placemark may appear as a reference link only.
