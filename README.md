@@ -4,7 +4,7 @@ An unclassified, open-source **OSINT common operating picture** for following se
 
 **Live map:** https://memery33.github.io/watchfloor/
 
-![Watchfloor live map, 7 Oct 2026](docs/watchfloor.png)
+![Watchfloor live map, Ukraine theater with thermal anomalies on, 7 Oct 2026](docs/watchfloor.png)
 
 Watchfloor is a watch-floor view, not a news site. Every item on the map carries a confidence tag and a source. Anything that isn't backed by named, corroborating sources stays **yellow** as a claim. It is **not a targeting product and not radar.**
 
@@ -40,6 +40,16 @@ A yellow layer shows the last ~6 hours of public [GDELT](https://www.gdeltprojec
 
 Every GDELT row stays a CLAIM until the sitrep curator promotes it with named corroboration.
 
+## Layers
+
+- **Vectors:** reconstructed strike paths, drawn as arcs. A path draws only when both ends are named, and it is inferred from reporting, not radar.
+- **Strike pins:** town-level placements whose coordinates come from NGA GeoNames (public domain). Each pin names the outlet or official source, and its geolocator reads "Watchfloor (town-level placement)", so it isn't an exact geolocation.
+- **Fronts:** catalog only. Nothing draws until a source is license-cleared for commercial use.
+- **Thermal anomalies (fires):** NASA FIRMS VIIRS 375 m near-real-time. Off by default and fetched only when switched on. Up to 400 points are drawn on desktop and 120 on phone, likely gas flares are drawn small and muted, and each point is labeled "thermal anomaly, not confirmed strike".
+- **Ships:** off until a commercially cleared source exists.
+
+The map refuses to draw any layer whose source isn't cleared for commercial use; the license register is [docs/sources.md](docs/sources.md).
+
 ## How it stays current
 
 - **Curated sitrep:** `src/sitrep.ts` and the per-theater `src/sitrep.*.ts` files, with a snapshot timestamp shown in the header.
@@ -60,6 +70,14 @@ Keys: `1`–`9` switch theaters, `F` toggles fullscreen.
 ## Public by design
 
 Open sources only. No classified, FOUO, or private Telegram material. If it can't be sourced publicly, it is a yellow claim or it does not plot.
+
+## Credits
+
+- **Basemap:** Powered by Esri; data from Esri, HERE, Garmin, © OpenStreetMap contributors, and the GIS user community.
+- **Live claims:** [The GDELT Project](https://www.gdeltproject.org/).
+- **Thermal anomalies:** [NASA FIRMS](https://earthdata.nasa.gov/firms), with the disclaimer at https://firms.modaps.eosdis.nasa.gov/download/Readme.txt.
+- **Place names for the strike pins:** NGA GeoNames Server. Airports: [OurAirports](https://ourairports.com/data/) (public domain).
+- **Map engine:** Leaflet (BSD-2-Clause); see [`THIRD_PARTY_NOTICES`](THIRD_PARTY_NOTICES).
 
 ## License
 
