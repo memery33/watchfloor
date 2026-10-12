@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-12T06:26:02.148615+00:00",
+  "generated_at": "2026-10-12T07:22:05.724430+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327479019",
+      "dtg": "12 OCT",
+      "date": "2026-10-12",
+      "location": "Riyadh",
+      "fact": "SHELLING  SAUDI ARABIA \u2192 PILGRIM  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.ibtimes.co.in/riyadh-airport-attack-cctv-captures-missile-strike-13-killed-including-indian-national-907367"
+    },
     {
       "id": "gdelt-1327472166",
       "dtg": "12 OCT",
@@ -179,27 +195,6 @@
       "url": "https://aa.com.tr/en/middle-east/israeli-artillery-strike-kills-retired-lebanese-soldier/4085527"
     },
     {
-      "id": "gdelt-1327456567",
-      "dtg": "12 OCT",
-      "date": "2026-10-12",
-      "location": "Riyadh",
-      "fact": "SHELLING  ARMED GROUP \u2192 YEMEN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://economictimes.indiatimes.com/world/us/riyadh-airport-rocked-by-houthi-missile-strikes-how-big-is-the-groups-arsenal-and-why-are-saudi-arabias-air-defenses-struggling/articleshow/134880783.cms"
-    },
-    {
       "id": "gdelt-1327455686",
       "dtg": "12 OCT",
       "date": "2026-10-12",
@@ -278,91 +273,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://economictimes.indiatimes.com/news/india/riyadh-airport-attack-three-indian-nationals-in-icu-but-stable-says-embassy/articleshow/134880211.cms"
-    },
-    {
-      "id": "gdelt-1327448232",
-      "dtg": "12 OCT",
-      "date": "2026-10-12",
-      "location": "Dammam",
-      "fact": "SHELLING  RIYADH \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 26.4344,
-      "lon": 50.1033,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.eurasiareview.com/12102026-houthis-threaten-more-saudi-airport-strikes-as-riyadh-flights-canceled/"
-    },
-    {
-      "id": "gdelt-1327448233",
-      "dtg": "12 OCT",
-      "date": "2026-10-12",
-      "location": "Sanaa",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.eurasiareview.com/12102026-guterres-condemns-deadly-houthi-strike-on-riyadh-airport-these-attacks-must-cease-immediately/"
-    },
-    {
-      "id": "gdelt-1327448272",
-      "dtg": "12 OCT",
-      "date": "2026-10-12",
-      "location": "Al-Kharj",
-      "fact": "SHELLING  MILITIA \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.155,
-      "lon": 47.3346,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://english.aawsat.com/gulf/5328465-gaca-resident-killed-11-others-wounded-two-new-attacks-riyadh-dammam-airports"
-    },
-    {
-      "id": "gdelt-1327446989",
-      "dtg": "12 OCT",
-      "date": "2026-10-12",
-      "location": "Tehran",
-      "fact": "STRIKE  IRAN \u2192 ?  (12 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.foxnews.com/world/houthis-kill-14-saudi-airport-expert-warns-rapid-targets-amid-middle-east-war"
-    },
-    {
-      "id": "gdelt-1327445990",
-      "dtg": "12 OCT",
-      "date": "2026-10-12",
-      "location": "Dammam",
-      "fact": "STRIKE  SAUDI ARABIA \u2192 YEMEN  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 26.4344,
-      "lon": 50.1033,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.staradvertiser.com/2026/10/11/breaking-news/saudi-arabia-reports-injuries-in-new-attack-at-riyadh-airport/"
     }
   ]
 }
