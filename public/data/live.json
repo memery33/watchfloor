@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-12T11:26:14.319746+00:00",
+  "generated_at": "2026-10-12T12:35:34.369398+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1327511539",
+      "id": "gdelt-1327520544",
       "dtg": "12 OCT",
       "date": "2026-10-12",
       "location": "Riyadh",
-      "fact": "SHELLING  REBEL \u2192 SAUDI ARABIA  (10 mentions)",
+      "fact": "SHELLING  SAUDI ARABIA \u2192 SAUDI ARABIA  (3 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
@@ -16,7 +16,87 @@
       "event_type": "shelling",
       "theater": "energy",
       "origin": null,
-      "url": "http://www.goskagit.com/news/nation/saudi-arabia-responds-to-drone-and-cruise-missile-attacks-and-other-mideast-developments/article_69f844bb-2052-5cc7-9544-7fa5fcf2c7da.html"
+      "url": "https://www.aol.co.uk/articles/first-thing-zelenskyy-blindsided-trump-113800000.html"
+    },
+    {
+      "id": "gdelt-1327515969",
+      "dtg": "12 OCT",
+      "date": "2026-10-12",
+      "location": "Riyadh",
+      "fact": "STRIKE  TELEVISION \u2192 RIYADH  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.nova.ie/riyadh-airport-hit-by-fresh-attack-one-dead-11-injured/"
+    },
+    {
+      "id": "gdelt-1327516064",
+      "dtg": "12 OCT",
+      "date": "2026-10-12",
+      "location": "Moscow",
+      "fact": "SHELLING  RUSSIAN \u2192 COLLEGE  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://yourdemocracy.net/drupal/node/61369"
+    },
+    {
+      "id": "gdelt-1327516165",
+      "dtg": "12 OCT",
+      "date": "2026-10-12",
+      "location": "Kiev",
+      "fact": "SHELLING  UKRAINE \u2192 RUSSIA  (16 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://yourdemocracy.net/drupal/node/61369"
+    },
+    {
+      "id": "gdelt-1327513548",
+      "dtg": "12 OCT",
+      "date": "2026-10-12",
+      "location": "Gaza",
+      "fact": "BLOCKADE  ISRAEL \u2192 PALESTINIAN  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "blockade",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://www.middleeasteye.net/news/she-survived-bombing-not-blockade"
+    },
+    {
+      "id": "gdelt-1327514104",
+      "dtg": "12 OCT",
+      "date": "2026-10-12",
+      "location": "Kabul",
+      "fact": "STRIKE  REUTERS \u2192 AFGHAN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 34.5167,
+      "lon": 69.1833,
+      "event_type": "strike",
+      "theater": "afpak",
+      "origin": null,
+      "url": "https://www.moneycontrol.com/world/pakistan-s-army-is-back-in-imran-khan-s-stronghold-could-asim-munir-s-khyber-pakhtunkhwa-move-create-new-security-risks-for-india-article-14050207.html"
     },
     {
       "id": "gdelt-1327509616",
@@ -97,22 +177,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://aninews.in/news/world/middle-east/iran-signals-readiness-for-dialogue-with-saudi-arabia-houthis-to-resolve-conflict-amid-escalating-attacks20261012150317/"
-    },
-    {
-      "id": "gdelt-1327505152",
-      "dtg": "12 OCT",
-      "date": "2026-10-12",
-      "location": "Riyadh",
-      "fact": "STRIKE  RIYADH \u2192 IRAN  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.freemalaysiatoday.com/category/nation/2026/10/12/batik-air-cancels-jeddah-flight-after-latest-houthi-attack-on-riyadh-airport"
     },
     {
       "id": "gdelt-1327502826",
@@ -232,22 +296,6 @@
       "url": "https://www.theyeshivaworld.com/news/israel-news/2608661/saudi-under-threat-mbs-moves-between-fortified-palaces-as-houthi-attacks-escalate.html"
     },
     {
-      "id": "gdelt-1327492002",
-      "dtg": "12 OCT",
-      "date": "2026-10-12",
-      "location": "Gaza",
-      "fact": "BLOCKADE  ISRAEL \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "blockade",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.independent.co.uk/news/world/middle-east/gaza-cancer-medical-evacuations-b3062723.html"
-    },
-    {
       "id": "gdelt-1327492025",
       "dtg": "12 OCT",
       "date": "2026-10-12",
@@ -326,22 +374,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.perthnow.com.au/news/world/smartraveller-warning-for-aussies-travelling-to-middle-east-after-king-khalid-international-airport-attacks-c-23006400"
-    },
-    {
-      "id": "gdelt-1327485863",
-      "dtg": "12 OCT",
-      "date": "2026-10-12",
-      "location": "Kyiv",
-      "fact": "SHELLING  ? \u2192 RUSSIA  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://sana.sy/en/international/2349908/"
     },
     {
       "id": "gdelt-1327486417",
@@ -438,22 +470,6 @@
       "theater": "yemen",
       "origin": null,
       "url": "https://www.hindustantimes.com/ht-explainers/saudi-airport-attack-why-are-yemen-s-houthis-targeting-riyadh-101791718768861.html"
-    },
-    {
-      "id": "gdelt-1327472166",
-      "dtg": "12 OCT",
-      "date": "2026-10-12",
-      "location": "Sanaa",
-      "fact": "STRIKE  PAKISTANI \u2192 RIYADH  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.geo.tv/latest/686103-pakistani-killed-11-others-injured-in-riyadh-airport-attack"
     }
   ]
 }
