@@ -1,7 +1,44 @@
 {
-  "generated_at": "2026-10-12T19:36:44.806966+00:00",
+  "generated_at": "2026-10-12T19:52:28.933735+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327586688",
+      "dtg": "12 OCT",
+      "date": "2026-10-12",
+      "location": "Riyadh",
+      "fact": "SHELLING  SAUDI \u2192 PILGRIM  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.thenationalnews.com/news/mena/2026/10/12/fighting-intensifies-in-yemen-as-houthis-fire-on-saudi-arabia/"
+    },
+    {
+      "id": "gdelt-1327586957",
+      "dtg": "12 OCT",
+      "date": "2026-10-12",
+      "location": "Tehran",
+      "fact": "SHELLING  YEMENI \u2192 RIYADH  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.thenationalnews.com/news/mena/2026/10/12/fighting-intensifies-in-yemen-as-houthis-fire-on-saudi-arabia/"
+    },
     {
       "id": "gdelt-1327584320",
       "dtg": "12 OCT",
@@ -160,27 +197,6 @@
       "theater": "ethiopia",
       "origin": null,
       "url": "https://www.okayafrica.com/today-in-africa-october-12-2026-boat-capsizes-off-djibouti-killing-at-least-139-migrants-south-africas-suspended-deputy-police-chief-resigns/1440697"
-    },
-    {
-      "id": "gdelt-1327565533",
-      "dtg": "12 OCT",
-      "date": "2026-10-12",
-      "location": "Riyadh",
-      "fact": "SHELLING  REBEL \u2192 YEMEN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.wsbradio.com/news/world/airstrikes-yemens/KKFGNOAX6Y5K7CME3EIHR4NKUU/"
     },
     {
       "id": "gdelt-1327563330",
