@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-10-13T03:23:27.372565+00:00",
+  "generated_at": "2026-10-13T04:22:51.045316+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327638326",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Tehran",
+      "fact": "SHELLING  TEHRAN \u2192 CIVILIAN  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.hindustantimes.com/world-news/iran-is-fortifying-nuclear-sites-and-rallying-its-people-for-a-return-to-fighting-101791863321855.html"
+    },
+    {
+      "id": "gdelt-1327638339",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Beirut",
+      "fact": "SHELLING  ISRAEL \u2192 UNITED STATES  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 33.8719,
+      "lon": 35.5097,
+      "event_type": "shelling",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://yalibnan.com/2026/10/13/lebanons-pm-vows-thorough-investigation-after-a-hezbollah-explosives-laden-truck-seized-at-checkpoint/"
+    },
     {
       "id": "gdelt-1327633791",
       "dtg": "13 OCT",
@@ -214,54 +246,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://slguardian.org/the-new-asymmetry-of-middle-east-war/"
-    },
-    {
-      "id": "gdelt-1327601947",
-      "dtg": "12 OCT",
-      "date": "2026-10-12",
-      "location": "Moscow",
-      "fact": "STRIKE  EUROPE \u2192 NATO  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "strike",
-      "theater": "overview",
-      "origin": null,
-      "url": "http://www.washingtonexaminer.com/news/world/4763265/us-ambassador-nato-europe-overhaul-military-infrastructure/"
-    },
-    {
-      "id": "gdelt-1327602217",
-      "dtg": "12 OCT",
-      "date": "2026-10-12",
-      "location": "Khamis Mushait",
-      "fact": "SHELLING  RIYADH \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 18.3064,
-      "lon": 42.7292,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://aa.com.tr/en/middle-east/houthis-claim-missile-attack-on-riyadh-airport-drone-strike-on-saudi-air-base-in-khamis-mushait/4086631"
-    },
-    {
-      "id": "gdelt-1327599522",
-      "dtg": "12 OCT",
-      "date": "2026-10-12",
-      "location": "Gaza",
-      "fact": "SHELLING  ISRAEL \u2192 LEBANON  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.naharnet.com/stories/en/323065-student-killed-24-people-hurt-by-suspected-leftover-hezbollah-cluster-bomb-in-north-israel"
     }
   ]
 }
