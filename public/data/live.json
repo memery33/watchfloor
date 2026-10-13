@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-13T09:18:07.783618+00:00",
+  "generated_at": "2026-10-13T09:33:12.880872+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327675145",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Kyiv",
+      "fact": "STRIKE  UKRAINIAN \u2192 VLADIMIR  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "strike",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://naija247news.com/trump-announces-russia-ukraine-energy-ceasefire-as-zelenskyy-seeks-kremlin-commitment/"
+    },
     {
       "id": "gdelt-1327672660",
       "dtg": "13 OCT",
@@ -166,22 +182,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.express.co.uk/news/world/2256707/ww3-fears-explode-russia-attacks"
-    },
-    {
-      "id": "gdelt-1327659023",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Kyiv",
-      "fact": "STRIKE  RUSSIA \u2192 UKRAINE  (12 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.express.co.uk/news/world/2256702/nato-scrambles-fighter-jets-russia-air-attack"
     },
     {
       "id": "gdelt-1327655313",
