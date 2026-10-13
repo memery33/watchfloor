@@ -1,7 +1,44 @@
 {
-  "generated_at": "2026-10-13T11:28:40.672495+00:00",
+  "generated_at": "2026-10-13T12:25:55.921678+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327703586",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Riyadh",
+      "fact": "STRIKE  YEMEN \u2192 SAUDI ARABIA  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.prokerala.com/news/articles/a1823919.html"
+    },
+    {
+      "id": "gdelt-1327699261",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Moscow",
+      "fact": "SHELLING  UKRAINE \u2192 ?  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.rferl.org/a/russia-pounds-ukraine-in-overnight-missile-and-drone-attacks/33875763.html"
+    },
     {
       "id": "gdelt-1327691615",
       "dtg": "13 OCT",
@@ -40,6 +77,59 @@
       "url": "https://www.bankingnews.gr/diethni/articles/904906/houthi-attacks-threaten-saudi-oil-infrastructure-and-crown-prince-s-economic-vision-qatar-shock"
     },
     {
+      "id": "gdelt-1327689318",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Kondrinka",
+      "fact": "SHELLING  RUSSIA \u2192 ?  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 52.0885,
+      "lon": 36.554,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://en.interfax.com.ua/news/general/1219125.html"
+    },
+    {
+      "id": "gdelt-1327689342",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Dubai",
+      "fact": "STRIKE  SAUDI \u2192 YEMEN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 25.2522,
+      "lon": 55.28,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.breakingnews.ie/world/riyadh-airport-closes-but-travel-continues-to-other-middle-east-destinations-1953492.html"
+    },
+    {
+      "id": "gdelt-1327689365",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Yanbu",
+      "fact": "SHELLING  TERRORIST \u2192 SAUDI  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.0891,
+      "lon": 38.0637,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-Shoots-Down-Houthi-Missiles-as-Regional-Conflict-Escalates.html"
+    },
+    {
       "id": "gdelt-1327686939",
       "dtg": "13 OCT",
       "date": "2026-10-13",
@@ -54,27 +144,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.bankingnews.gr/diethni/articles/904896/nato-unveils-victory-plan-against-russia-with-deep-strikes"
-    },
-    {
-      "id": "gdelt-1327686992",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Riyadh",
-      "fact": "STRIKE  SAUDI \u2192 YEMENI  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.hawaiitribune-herald.com/2026/10/13/nation-world-news/saudi-arabia-faces-more-attacks-as-it-reels-from-airport-strikes/"
     },
     {
       "id": "gdelt-1327683871",
@@ -157,22 +226,6 @@
       "url": "https://english.aawsat.com/world/5329024-iran-reportedly-fortifies-nuclear-sites-rallies-its-people-return-combat"
     },
     {
-      "id": "gdelt-1327677734",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Moscow",
-      "fact": "SHELLING  UNITED STATES \u2192 RUSSIAN  (7 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.bankingnews.gr/diethni/articles/904875/how-trump-s-diesel-deal-with-moscow-is-accelerating-pressure-on-kyiv-and-fueling-partitioning-fears"
-    },
-    {
       "id": "gdelt-1327675145",
       "dtg": "13 OCT",
       "date": "2026-10-13",
@@ -203,22 +256,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://en.interfax.com.ua/news/general/1218947.html"
-    },
-    {
-      "id": "gdelt-1327668721",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Dubai",
-      "fact": "STRIKE  ENVOY \u2192 SAUDI  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 25.2522,
-      "lon": 55.28,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.dailyexcelsior.com/indian-envoy-attends-funeral-of-compatriot-killed-in-saudi-airport-attack/"
     },
     {
       "id": "gdelt-1327668828",
@@ -288,22 +325,6 @@
       "theater": "energy",
       "origin": null,
       "url": "http://www.reflector.com/news/national/houthi-rebels-say-multiple-airstrikes-targeted-them-in-yemen-and-other-mideast-developments/article_ec7c6742-15c4-57a0-910e-c5cc05d0dd7c.html"
-    },
-    {
-      "id": "gdelt-1327646714",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Ahvaz",
-      "fact": "SHELLING  RUSSIA \u2192 CHINA  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.3203,
-      "lon": 48.6693,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.israelnationalnews.com/news/434521"
     }
   ]
 }
