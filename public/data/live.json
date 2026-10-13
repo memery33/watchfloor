@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-13T06:26:32.558406+00:00",
+  "generated_at": "2026-10-13T07:17:41.183228+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1327651452",
+      "id": "gdelt-1327654887",
       "dtg": "13 OCT",
       "date": "2026-10-13",
       "location": "Riyadh",
-      "fact": "STRIKE  CONGRESS \u2192 RIYADH  (7 mentions)",
+      "fact": "STRIKE  ENVOY \u2192 RIYADH  (16 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-2",
@@ -16,7 +16,39 @@
       "event_type": "strike",
       "theater": "energy",
       "origin": null,
-      "url": "https://thechronicle.com.gh/saudi-minister-vows-serious-response-to-houthi-attacks-on-airports/"
+      "url": "https://article.wn.com/view/2026/10/13/Indian_envoy_attends_funeral_of_Riyadh_airport_attack_victim/"
+    },
+    {
+      "id": "gdelt-1327655263",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Gaza",
+      "fact": "SHELLING  HAMAS \u2192 COMMANDO  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "shelling",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://www.citywatchla.com/voices/33515-75-military-and-legal-experts-reject-the-genocide-charge-against-israel-where-does-that-leave-nithya-raman"
+    },
+    {
+      "id": "gdelt-1327655313",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "King Khalid International",
+      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.9581,
+      "lon": 46.6956,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "http://www.reflector.com/news/national/houthi-rebels-say-multiple-airstrikes-targeted-them-in-yemen-and-other-mideast-developments/article_ec7c6742-15c4-57a0-910e-c5cc05d0dd7c.html"
     },
     {
       "id": "gdelt-1327646714",
@@ -224,38 +256,6 @@
       "theater": "overview",
       "origin": null,
       "url": "http://en.people.cn/n3/2026/1013/c90000-20507548.html"
-    },
-    {
-      "id": "gdelt-1327621530",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "King Khalid International",
-      "fact": "SHELLING  TERRORIST \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.9581,
-      "lon": 46.6956,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://aninews.in/news/world/middle-east/saudi-led-coalition-claims-to-intercept-two-houthi-missiles-targeting-khamis-mushait16020261013045624/"
-    },
-    {
-      "id": "gdelt-1327619921",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Kharkiv",
-      "fact": "SHELLING  UKRAINE \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 49.9808,
-      "lon": 36.2527,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.spokesman.com/stories/2026/oct/12/kyiv-says-russia-hits-energy-targets-despite-trump/"
     }
   ]
 }
