@@ -1,13 +1,29 @@
 {
-  "generated_at": "2026-10-13T22:19:19.729506+00:00",
+  "generated_at": "2026-10-13T22:55:01.556722+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1327789701",
+      "id": "gdelt-1327795358",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Moscow",
+      "fact": "SHELLING  RUSSIAN \u2192 CIVILIAN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "http://www.econotimes.com/Zelenskiy-Says-Ukraine-Received-No-Warning-Before-Russian-Missile-Attack-1754838"
+    },
+    {
+      "id": "gdelt-1327791849",
       "dtg": "13 OCT",
       "date": "2026-10-13",
       "location": "Kyiv",
-      "fact": "SHELLING  UKRAINE \u2192 ?  (8 mentions)",
+      "fact": "SHELLING  MEDIA \u2192 KYIV  (18 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
@@ -16,7 +32,23 @@
       "event_type": "shelling",
       "theater": "ukraine",
       "origin": null,
-      "url": "https://www.wiltshiretimes.co.uk/news/national/26634139.burnham-meet-zelensky-wake-trumps-diesel-deal-moscow/"
+      "url": "https://www.wbaa.org/npr-news/2026-10-13/the-trump-administration-warns-ukraine-it-could-cut-off-intel-zelenskyy-tells-npr"
+    },
+    {
+      "id": "gdelt-1327792000",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Riyadh",
+      "fact": "SHELLING  SAUDI \u2192 SAUDI ARABIA  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.zerohedge.com/geopolitical/houthi-war-escalates-riyadh-strikes-sanaa-oil-several-saudi-airports-shuttered"
     },
     {
       "id": "gdelt-1327786229",
@@ -81,22 +113,6 @@
       "theater": "iran",
       "origin": null,
       "url": "http://www.jpost.com/middle-east/article-911610"
-    },
-    {
-      "id": "gdelt-1327781676",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Moscow",
-      "fact": "SHELLING  RUSSIA \u2192 UKRAINE  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.newsweek.com/what-military-equipment-putin-could-buy-with-trump-deal-cash-12559351"
     },
     {
       "id": "gdelt-1327779630",
@@ -257,70 +273,6 @@
       "theater": "yemen",
       "origin": null,
       "url": "https://www.moneycontrol.com/world/houthis-threaten-saudi-aramco-riyadh-airport-after-yemen-oil-facility-strikes-article-14051363.html"
-    },
-    {
-      "id": "gdelt-1327744081",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Ben Gurion",
-      "fact": "STRIKE  AIRLINE \u2192 TEL AVIV  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 32.0114,
-      "lon": 34.8867,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.arabnews.com/middle-east/israel-turns-back-ethiopian-airlines-cargo-flight-over-pilots-nationality-reports-say-3006138"
-    },
-    {
-      "id": "gdelt-1327744671",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Riyadh",
-      "fact": "SHELLING  IRAN \u2192 MILITIA  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.arabnews.com/saudi-arabia/coalition-says-it-intercepted-destroyed-3-drones-north-of-riyadh-3006116"
-    },
-    {
-      "id": "gdelt-1327745098",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Khartoum",
-      "fact": "STRIKE  SUDANESE \u2192 SUDANESE  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 15.5881,
-      "lon": 32.5342,
-      "event_type": "strike",
-      "theater": "sudan",
-      "origin": null,
-      "url": "https://egyptianstreets.com/2026/10/13/egypt-and-sudan-investigate-fatal-shooting-of-egyptian-truck-drivers-in-khartoum/"
-    },
-    {
-      "id": "gdelt-1327742271",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Jerusalem",
-      "fact": "STRIKE  MEDIA \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.7667,
-      "lon": 35.2333,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.middleeasteye.net/news/houthis-threaten-strikes-saudi-aramco-sites-if-attacked"
     }
   ]
 }
