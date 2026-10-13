@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-13T14:35:57.439476+00:00",
+  "generated_at": "2026-10-13T15:33:08.986881+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327727836",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Islamabad",
+      "fact": "SHELLING  PAKISTAN \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 33.7,
+      "lon": 73.1667,
+      "event_type": "shelling",
+      "theater": "afpak",
+      "origin": null,
+      "url": "https://thediplomat.com/2026/10/why-pakistan-tested-an-extended-range-version-of-the-fatah-iv/"
+    },
     {
       "id": "gdelt-1327724515",
       "dtg": "13 OCT",
@@ -373,38 +389,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://english.aawsat.com/world/5329024-iran-reportedly-fortifies-nuclear-sites-rallies-its-people-return-combat"
-    },
-    {
-      "id": "gdelt-1327675145",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Kyiv",
-      "fact": "STRIKE  UKRAINIAN \u2192 VLADIMIR  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://naija247news.com/trump-announces-russia-ukraine-energy-ceasefire-as-zelenskyy-seeks-kremlin-commitment/"
-    },
-    {
-      "id": "gdelt-1327670142",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Kharkiv",
-      "fact": "STRIKE  ? \u2192 UKRAINIAN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 49.9808,
-      "lon": 36.2527,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://en.interfax.com.ua/news/general/1218947.html"
     }
   ]
 }
