@@ -1,7 +1,55 @@
 {
-  "generated_at": "2026-10-13T16:44:50.673635+00:00",
+  "generated_at": "2026-10-13T17:39:39.462015+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327754905",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Gaza",
+      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "shelling",
+      "theater": "levant",
+      "origin": null,
+      "url": "http://www.thegazette.com/news/national/iran-increases-threat-to-strait-of-hormuz-shipping-and-other-middle-east-developments/article_3cdd23cc-0c92-5a5a-bce5-5c6faa30501f.html"
+    },
+    {
+      "id": "gdelt-1327752274",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Sanaa",
+      "fact": "STRIKE  MILITARY \u2192 SANAA  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://www.moneycontrol.com/world/houthis-threaten-saudi-aramco-riyadh-airport-after-yemen-oil-facility-strikes-article-14051363.html"
+    },
+    {
+      "id": "gdelt-1327747521",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Tehran",
+      "fact": "SHELLING  SAUDI \u2192 IRAN  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "http://www.theuknews.com/news/279372078/amnesty-slams-iran-execution-of-5-protesters"
+    },
     {
       "id": "gdelt-1327744081",
       "dtg": "13 OCT",
@@ -35,22 +83,6 @@
       "url": "https://www.arabnews.com/saudi-arabia/coalition-says-it-intercepted-destroyed-3-drones-north-of-riyadh-3006116"
     },
     {
-      "id": "gdelt-1327744894",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Tehran",
-      "fact": "SHELLING  COMMANDO \u2192 GUERRILLA  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.worthynews.com/118173-iran-fortifies-nuclear-sites-mobilizes-civilians-as-fears-of-renewed-war-with-u-s-grow"
-    },
-    {
       "id": "gdelt-1327745098",
       "dtg": "13 OCT",
       "date": "2026-10-13",
@@ -65,22 +97,6 @@
       "theater": "sudan",
       "origin": null,
       "url": "https://egyptianstreets.com/2026/10/13/egypt-and-sudan-investigate-fatal-shooting-of-egyptian-truck-drivers-in-khartoum/"
-    },
-    {
-      "id": "gdelt-1327742270",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Sanaa",
-      "fact": "STRIKE  MEDIA \u2192 ?  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.middleeasteye.net/news/houthis-threaten-strikes-saudi-aramco-sites-if-attacked"
     },
     {
       "id": "gdelt-1327742271",
@@ -274,22 +290,6 @@
       "url": "https://www.aljazeera.com/news/2026/10/13/yemeni-government-launches-air-strikes-on-houthi-positions"
     },
     {
-      "id": "gdelt-1327716600",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Gaza",
-      "fact": "SHELLING  STUDENT \u2192 COMMUNITY  (7 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": null,
-      "url": "http://www.jpost.com/opinion/article-911578"
-    },
-    {
       "id": "gdelt-1327717463",
       "dtg": "13 OCT",
       "date": "2026-10-13",
@@ -336,96 +336,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://english.wafa.ps/Pages/Details/175834"
-    },
-    {
-      "id": "gdelt-1327696638",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Mecca",
-      "fact": "STRIKE  PAKISTAN \u2192 SAUDI ARABIA  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 21.4267,
-      "lon": 39.8261,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.dailysabah.com/politics/turkish-government-ally-suggest-full-military-support-to-saudis/news"
-    },
-    {
-      "id": "gdelt-1327691800",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Qatar",
-      "fact": "SHELLING  YEMEN \u2192 SAUDI  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 25.5,
-      "lon": 51.25,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.bankingnews.gr/diethni/articles/904906/houthi-attacks-threaten-saudi-oil-infrastructure-and-crown-prince-s-economic-vision-qatar-shock"
-    },
-    {
-      "id": "gdelt-1327689318",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Kondrinka",
-      "fact": "SHELLING  RUSSIA \u2192 ?  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 52.0885,
-      "lon": 36.554,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://en.interfax.com.ua/news/general/1219125.html"
-    },
-    {
-      "id": "gdelt-1327689342",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Dubai",
-      "fact": "STRIKE  SAUDI \u2192 YEMEN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 25.2522,
-      "lon": 55.28,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.breakingnews.ie/world/riyadh-airport-closes-but-travel-continues-to-other-middle-east-destinations-1953492.html"
-    },
-    {
-      "id": "gdelt-1327689365",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Yanbu",
-      "fact": "SHELLING  TERRORIST \u2192 SAUDI  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.0891,
-      "lon": 38.0637,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://oilprice.com/Latest-Energy-News/World-News/Saudi-Arabia-Shoots-Down-Houthi-Missiles-as-Regional-Conflict-Escalates.html"
     }
   ]
 }
