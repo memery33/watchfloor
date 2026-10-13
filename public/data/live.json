@@ -1,13 +1,29 @@
 {
-  "generated_at": "2026-10-13T19:28:36.054361+00:00",
+  "generated_at": "2026-10-13T20:18:56.460967+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1327768885",
+      "id": "gdelt-1327771016",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Salamiya",
+      "fact": "STRIKE  ASSAILANT \u2192 SECURITY PERSONNEL  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 35.1854,
+      "lon": 37.559,
+      "event_type": "strike",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://aa.com.tr/en/middle-east/3-road-security-personnel-killed-in-attack-in-central-syria/4087790"
+    },
+    {
+      "id": "gdelt-1327771771",
       "dtg": "13 OCT",
       "date": "2026-10-13",
       "location": "Riyadh",
-      "fact": "STRIKE  CIVILIAN \u2192 SAUDI ARABIA  (8 mentions)",
+      "fact": "STRIKE  RIYADH \u2192 EMBASSY  (8 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-2",
@@ -16,7 +32,7 @@
       "event_type": "strike",
       "theater": "energy",
       "origin": null,
-      "url": "https://www.arabnews.com/middle-east/houthi-attacks-are-a-terrorist-threat-to-the-international-community-ex-cia-official-3006071"
+      "url": "https://article.wn.com/view/2026/10/13/Funeral_held_for_Indian_victim_of_Riyadh_airport_attack_4_re/"
     },
     {
       "id": "gdelt-1327768993",
@@ -368,22 +384,6 @@
         "inferred": true
       },
       "url": "https://www.aljazeera.com/news/2026/10/13/yemeni-government-launches-air-strikes-on-houthi-positions"
-    },
-    {
-      "id": "gdelt-1327717463",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Gulf Of Oman",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 25.4489,
-      "lon": 57.7939,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.thetimes-tribune.com/2026/10/13/airstrikes-yemen-middle-east-news/"
     }
   ]
 }
