@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-10-13T05:20:08.913040+00:00",
+  "generated_at": "2026-10-13T06:26:32.558406+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327651452",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Riyadh",
+      "fact": "STRIKE  CONGRESS \u2192 RIYADH  (7 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://thechronicle.com.gh/saudi-minister-vows-serious-response-to-houthi-attacks-on-airports/"
+    },
+    {
+      "id": "gdelt-1327646714",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Ahvaz",
+      "fact": "SHELLING  RUSSIA \u2192 CHINA  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.3203,
+      "lon": 48.6693,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.israelnationalnews.com/news/434521"
+    },
     {
       "id": "gdelt-1327642623",
       "dtg": "13 OCT",
@@ -40,6 +72,43 @@
       "url": "https://www.thenationalnews.com/news/gulf/2026/10/13/fighting-intensifies-in-yemen-as-houthis-fire-on-saudi-arabia/"
     },
     {
+      "id": "gdelt-1327641283",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "King Khalid International",
+      "fact": "STRIKE  SAUDI \u2192 YEMEN  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.9581,
+      "lon": 46.6956,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://bangaloremirror.indiatimes.com/news/world/riyadh-skies-empty-after-airport-strikes/articleshow/134905428.cms"
+    },
+    {
+      "id": "gdelt-1327641316",
+      "dtg": "13 OCT",
+      "date": "2026-10-13",
+      "location": "Vilne",
+      "fact": "STRIKE  UKRAINE \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 51.5852,
+      "lon": 32.3014,
+      "event_type": "strike",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "http://www.rightspeak.net/2026/10/180-c-clashes-in-f-line-23-in-pokrovsk.html"
+    },
+    {
       "id": "gdelt-1327638339",
       "dtg": "13 OCT",
       "date": "2026-10-13",
@@ -54,22 +123,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://yalibnan.com/2026/10/13/lebanons-pm-vows-thorough-investigation-after-a-hezbollah-explosives-laden-truck-seized-at-checkpoint/"
-    },
-    {
-      "id": "gdelt-1327633791",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Riyadh",
-      "fact": "STRIKE  SAUDI \u2192 BUSINESS  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://dominicanrepublicpost.com/houthi-missile-attack-targets-saudi-capital-riyadh-for-third-day-in-a-row/"
     },
     {
       "id": "gdelt-1327629908",
