@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-14T22:22:37.132732+00:00",
+  "generated_at": "2026-10-14T23:19:52.956492+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327990433",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Sanaa",
+      "fact": "STRIKE  ? \u2192 DHAHRAN  (12 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": null,
+      "url": "http://www.iraqsun.com/news/279374774/houthis-saudi-led-coalition-trade-fresh-strikes-as-houthis-vow-further-attacks-on-airports-oil-facilities"
+    },
     {
       "id": "gdelt-1327982622",
       "dtg": "14 OCT",
@@ -176,75 +192,6 @@
         "inferred": true
       },
       "url": "https://www.irishtimes.com/world/middle-east/2026/10/14/why-cant-saudi-arabia-stop-the-houthi-attacks/"
-    },
-    {
-      "id": "gdelt-1327944429",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Amhara",
-      "fact": "STRIKE  INSURGENT \u2192 ETHIOPIA  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 11.1667,
-      "lon": 39.1667,
-      "event_type": "strike",
-      "theater": "ethiopia",
-      "origin": null,
-      "url": "https://www.justsecurity.org/160520/ethiopia-new-war-different-conflict/"
-    },
-    {
-      "id": "gdelt-1327944941",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Dammam",
-      "fact": "SHELLING  YEMEN \u2192 IRAN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 26.4344,
-      "lon": 50.1033,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.rediff.com/news/report/indians-in-saudi-advised-to-stay-indoors-in-case-of-aerial-attacks/20261014.htm"
-    },
-    {
-      "id": "gdelt-1327938532",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "King Khalid International",
-      "fact": "STRIKE  PRIME MINISTER \u2192 RIYADH  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.9581,
-      "lon": 46.6956,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.arabnews.com/middle-east/lebanese-political-and-business-leaders-united-in-condemnation-of-houthi-attacks-on-saudi-arabia-3006321"
-    },
-    {
-      "id": "gdelt-1327939138",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Khamis Mushait",
-      "fact": "SHELLING  SAUDI \u2192 MILITARY  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 18.3064,
-      "lon": 42.7292,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://tribune.com.pk/story/2634837/fact-check-saudi-arabia-has-not-busted-any-assassination-plot-involving-crown-prince"
     }
   ]
 }
