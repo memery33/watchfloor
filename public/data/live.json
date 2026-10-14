@@ -1,7 +1,60 @@
 {
-  "generated_at": "2026-10-14T20:21:23.438197+00:00",
+  "generated_at": "2026-10-14T21:22:22.079048+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327979693",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Riyadh",
+      "fact": "STRIKE  AIRLINE \u2192 YEMEN  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.zawya.com/en/capital-markets/mideast-stocks-saudi-rebound-lifts-most-gulf-bourses-as-markets-weigh-regional-risks-1636615"
+    },
+    {
+      "id": "gdelt-1327980290",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Jerusalem",
+      "fact": "SHELLING  LEBANON \u2192 ISRAEL  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.7667,
+      "lon": 35.2333,
+      "event_type": "shelling",
+      "theater": "levant",
+      "origin": null,
+      "url": "http://www.jpost.com/israel-news/defense-news/article-911722"
+    },
+    {
+      "id": "gdelt-1327980483",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Gaza",
+      "fact": "SHELLING  RIYADH \u2192 IRAN  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "shelling",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://gulfnews.com/world/mena/riyadh-missile-attack-falling-shrapnel-injures-resident-as-houthis-claim-new-airport-strike-1.500709746"
+    },
     {
       "id": "gdelt-1327973383",
       "dtg": "14 OCT",
@@ -240,48 +293,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://en.apa.az/cis-countries/mp-from-pashinyans-party-denied-entry-to-russia-530071"
-    },
-    {
-      "id": "gdelt-1327924395",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Madinah",
-      "fact": "SHELLING  YEMEN \u2192 MILITIA  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 30.7799,
-      "lon": 48.8125,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.arabnews.com/saudi-arabia/several-injured-in-riyadh-from-houthi-missiles-interceptions-saudi-aramco-building-targeted-3006228"
-    },
-    {
-      "id": "gdelt-1327919198",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Gaza",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 YEMEN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://economictimes.indiatimes.com/news/international/world-news/why-saudi-arabia-may-keep-israel-out-of-its-fight-against-yemens-houthis-despite-escalating-missile-attacks-rising-security-threats/articleshow/134943646.cms"
     }
   ]
 }
