@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-14T17:29:14.933913+00:00",
+  "generated_at": "2026-10-14T18:18:23.523721+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327950129",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Moscow",
+      "fact": "SHELLING  NAVAL \u2192 RUSSIA  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.politico.eu/article/ukraine-starlink-restrictions-disrupt-drone-strikes/"
+    },
     {
       "id": "gdelt-1327944429",
       "dtg": "14 OCT",
@@ -118,22 +134,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://en.apa.az/cis-countries/mp-from-pashinyans-party-denied-entry-to-russia-530071"
-    },
-    {
-      "id": "gdelt-1327929247",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Moscow",
-      "fact": "SHELLING  UKRAINE \u2192 KYIV  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "http://www.reflector.com/news/national/sudden-starlink-limits-sap-ukraine-drone-power-as-kyiv-fears-us-intelligence-squeeze/article_b87119f2-4805-59af-97d5-86c577043659.html"
     },
     {
       "id": "gdelt-1327926213",
@@ -437,22 +437,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://www.ariananews.af/yemen-hospitals-overwhelmed-by-surge-in-war-casualties-red-cross-warns/"
-    },
-    {
-      "id": "gdelt-1327893311",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Moscow",
-      "fact": "STRIKE  RUSSIAN \u2192 UKRAINE  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "strike",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://nypost.com/2026/10/14/world-news/russian-strikes-kill-3-knock-out-power-for-600k-ukrainians-in-latest-snub-to-trumps-energy-cease-fire/"
     }
   ]
 }
