@@ -1,13 +1,29 @@
 {
-  "generated_at": "2026-10-14T13:50:33.684829+00:00",
+  "generated_at": "2026-10-14T14:32:13.095670+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1327904588",
+      "id": "gdelt-1327916475",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Kyiv",
+      "fact": "STRIKE  MOSCOW \u2192 UKRAINE  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "strike",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://aa.com.tr/en/russia-ukraine-war/russia-ukraine-renew-accusations-concerning-overnight-daytime-strikes-that-killed-over-10/4088316"
+    },
+    {
+      "id": "gdelt-1327916897",
       "dtg": "14 OCT",
       "date": "2026-10-14",
       "location": "Riyadh",
-      "fact": "SHELLING  BANGLADESHI \u2192 SAUDI  (3 mentions)",
+      "fact": "SHELLING  YEMEN \u2192 GOVERNMENT  (8 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
@@ -15,8 +31,66 @@
       "lon": 46.7728,
       "event_type": "shelling",
       "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://aa.com.tr/en/asia-pacific/pakistan-reiterates-unwavering-commitment-to-saudi-arabias-protection-under-makkah-defense-pact/4088664"
+    },
+    {
+      "id": "gdelt-1327913234",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Riyadh",
+      "fact": "STRIKE  NATIONALS \u2192 RIYADH  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
       "origin": null,
-      "url": "https://www.arabnews.com/world/we-were-his-whole-world-family-mourns-bangladeshi-father-killed-in-houthi-attack-3006275"
+      "url": "https://www.orissapost.com/india-urges-nationals-in-saudi-arabia-to-stay-indoors-during-aerial-attacks/"
+    },
+    {
+      "id": "gdelt-1327913506",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Gaza",
+      "fact": "STRIKE  GRENADA \u2192 ISRAEL  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://grenadachronicle.com/israeli-air-strike-kills-palestinian-woman-in-gaza-city/"
+    },
+    {
+      "id": "gdelt-1327913793",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Harib",
+      "fact": "STRIKE  TELEVISION \u2192 YEMEN  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 14.9316,
+      "lon": 45.5036,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://grenadachronicle.com/saudi-led-coalition-intercepts-houthi-missile-launched-towards-riyadh/"
     },
     {
       "id": "gdelt-1327901799",
@@ -97,22 +171,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://www.ariananews.af/yemen-hospitals-overwhelmed-by-surge-in-war-casualties-red-cross-warns/"
-    },
-    {
-      "id": "gdelt-1327895412",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Riyadh",
-      "fact": "STRIKE  RIYADH \u2192 CONGRESS  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://english.news.cn/20261014/3846876a0bf544d8b7bb6a902688c9b2/c.html"
     },
     {
       "id": "gdelt-1327895620",
@@ -214,22 +272,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.freepressjournal.in/world/fresh-explosions-rock-riyadh-as-saudi-arabia-intercepts-houthi-ballistic-missile"
-    },
-    {
-      "id": "gdelt-1327883574",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Gaza",
-      "fact": "STRIKE  ISRAELI \u2192 PALESTINIAN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.aljazeera.com/news/2026/10/14/israeli-air-strike-kills-palestinian-woman-in-gaza-city"
     },
     {
       "id": "gdelt-1327883959",
@@ -344,22 +386,6 @@
       "url": "https://www.bankingnews.gr/diethni/articles/905091/trump-and-musk-blind-ukrainians-block-starlink-new-hell-from-russia-blackout-in-kyiv%20title="
     },
     {
-      "id": "gdelt-1327869964",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Kyiv",
-      "fact": "STRIKE  PRESIDENT \u2192 MOSCOW  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.irishtimes.com/world/europe/2026/10/14/russia-showing-disrespect-to-trump-with-overnight-strikes-on-energy-facilities-says-zelenskiy/"
-    },
-    {
       "id": "gdelt-1327867995",
       "dtg": "14 OCT",
       "date": "2026-10-14",
@@ -390,38 +416,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.cbc.ca/news/world/russia-attacks-ukraine-energy-infrastructure-9.7379859"
-    },
-    {
-      "id": "gdelt-1327857462",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Shifa",
-      "fact": "STRIKE  ISRAELI \u2192 HOSPITAL  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 32.45,
-      "lon": 35.5333,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://countercurrents.org/2026/10/an-attack-long-before-the-next-strike-what-lies-behind-israels-incitement-campaign-against-gazas-hospitals/"
-    },
-    {
-      "id": "gdelt-1327857814",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Vnukovo",
-      "fact": "STRIKE  MOSCOW \u2192 UKRAINE  (7 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 45.4785,
-      "lon": 32.9794,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://en.apa.az/cis-countries/ukraine-launches-493-drone-attacks-on-moscow-since-last-evening-529906"
     }
   ]
 }
