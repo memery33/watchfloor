@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-10-14T01:19:59.517685+00:00",
+  "generated_at": "2026-10-14T01:59:17.927317+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327814112",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Gaza",
+      "fact": "SHELLING  ISRAEL \u2192 ISRAEL  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "shelling",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://calgarysun.com/opinion/columnists/hanson-examining-the-american-lefts-genocide-hypocrisy/wcm/ac49594d-fc50-4be7-88fe-3bd0f107469d"
+    },
+    {
+      "id": "gdelt-1327814408",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Riyadh",
+      "fact": "STRIKE  RIYADH \u2192 AIRLINE  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "http://www.sierraleonetimes.com/news/279369126/airlines-cancel-riyadh-flights-as-airport-closure-is-extended"
+    },
     {
       "id": "gdelt-1327810819",
       "dtg": "14 OCT",
@@ -56,22 +88,6 @@
       "url": "https://english.aawsat.com/gulf/5329315-coalition-destroys-ballistic-and-cruise-missiles-drones-fired-houthis-saudi-arabia"
     },
     {
-      "id": "gdelt-1327806764",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Riyadh",
-      "fact": "STRIKE  IRAN \u2192 TANKER  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.thestar.com.my/business/2026/10/14/oil-prices-mixed-amid-us-russia-diesel-talks-saudi-yemen-attacks"
-    },
-    {
       "id": "gdelt-1327807124",
       "dtg": "14 OCT",
       "date": "2026-10-14",
@@ -107,22 +123,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.thestar.com.my/business/2026/10/14/oil-prices-mixed-amid-us-russia-diesel-talks-saudi-yemen-attacks"
-    },
-    {
-      "id": "gdelt-1327802686",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Gaza",
-      "fact": "SHELLING  WARSHIP \u2192 ISRAEL  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.the-sun.com/news/17140894/"
     },
     {
       "id": "gdelt-1327798581",
@@ -288,22 +288,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://dominicanrepublicpost.com/gazas-yellow-line-advances-leaving-displaced-families-with-nowhere-to-go/"
-    },
-    {
-      "id": "gdelt-1327771016",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Salamiya",
-      "fact": "STRIKE  ASSAILANT \u2192 SECURITY PERSONNEL  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 35.1854,
-      "lon": 37.559,
-      "event_type": "strike",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://aa.com.tr/en/middle-east/3-road-security-personnel-killed-in-attack-in-central-syria/4087790"
     }
   ]
 }
