@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-10-14T18:43:23.540751+00:00",
+  "generated_at": "2026-10-14T19:27:26.540063+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327965120",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Jeddah",
+      "fact": "STRIKE  SAUDI ARABIA \u2192 ?  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 21.5169,
+      "lon": 39.2192,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.oneindia.com/international/riyadh-airport-attack-1-indian-dead-4-in-icu-as-india-demands-immediate-halt-8235485.html"
+    },
+    {
+      "id": "gdelt-1327963045",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Tehran",
+      "fact": "SHELLING  IRANIAN \u2192 MILITARY  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.jpost.com/middle-east/article-911729"
+    },
     {
       "id": "gdelt-1327957561",
       "dtg": "14 OCT",
@@ -43,22 +75,6 @@
         "inferred": true
       },
       "url": "https://www.irishtimes.com/world/middle-east/2026/10/14/why-cant-saudi-arabia-stop-the-houthi-attacks/"
-    },
-    {
-      "id": "gdelt-1327951746",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Tehran",
-      "fact": "SHELLING  REGIME \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "http://www.jpost.com/middle-east/article-911718"
     },
     {
       "id": "gdelt-1327950129",
@@ -399,38 +415,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.moneycontrol.com/world/musk-s-starlink-disrupts-ukrainian-military-operations-drone-connections-drop-missions-cancelled-article-14052213.html"
-    },
-    {
-      "id": "gdelt-1327901799",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Muzaffarabad",
-      "fact": "BLOCKADE  ? \u2192 PAKISTAN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 30.1338,
-      "lon": 71.3685,
-      "event_type": "blockade",
-      "theater": "afpak",
-      "origin": null,
-      "url": "https://www.moneycontrol.com/world/pok-will-get-freedom-soon-jkjaac-leader-rejects-pakistan-s-terror-links-claims-questions-silence-over-martyrs-article-14052108.html"
-    },
-    {
-      "id": "gdelt-1327900379",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Yanbu",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 COMPANY  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.0891,
-      "lon": 38.0637,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.thenationalnews.com/business/energy/2026/10/14/houthi-attack-hits-aramcos-historic-nerve-centre-in-saudi-arabia/"
     }
   ]
 }
