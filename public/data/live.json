@@ -1,7 +1,55 @@
 {
-  "generated_at": "2026-10-14T08:26:29.921527+00:00",
+  "generated_at": "2026-10-14T09:20:21.292981+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327866136",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Zelenskiy",
+      "fact": "STRIKE  RUSSIAN \u2192 UKRAINE  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 48.2907,
+      "lon": 46.5039,
+      "event_type": "strike",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.cbc.ca/news/world/russia-attacks-ukraine-energy-infrastructure-9.7379859"
+    },
+    {
+      "id": "gdelt-1327864176",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Riyadh",
+      "fact": "STRIKE  SAUDI ARABIA \u2192 ?  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "http://www.bignewsnetwork.com/news/279373527/pakistani-pm-reaffirms-full-support-for-saudi-arabia-right-to-self-defense"
+    },
+    {
+      "id": "gdelt-1327864241",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Kyiv",
+      "fact": "SHELLING  KYIV \u2192 ?  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://news.az/news/live-russia-continues-missile-and-drone-strikes-on-ukraine"
+    },
     {
       "id": "gdelt-1327856819",
       "dtg": "14 OCT",
@@ -163,38 +211,6 @@
       "url": "https://eaworldview.com/2026/10/ukraine-war-kyiv-3-murdered-russia/"
     },
     {
-      "id": "gdelt-1327845048",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Riyadh",
-      "fact": "STRIKE  TEHRAN \u2192 RIYADH  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://news.az/news/riyadh-airport-attack-a-dangerous-turning-point-for-middle-east-security"
-    },
-    {
-      "id": "gdelt-1327841578",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Kyiv",
-      "fact": "SHELLING  UKRAINIAN \u2192 UKRAINE  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.rte.ie/news/ukraine/2026/1014/1595299-ukraine-russia/"
-    },
-    {
       "id": "gdelt-1327839029",
       "dtg": "14 OCT",
       "date": "2026-10-14",
@@ -337,22 +353,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://theshillongtimes.com/2026/10/14/yemens-houthi-rebels-blame-saudi-for-overnight-airstrikes/"
-    },
-    {
-      "id": "gdelt-1327820360",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Al-Kharj",
-      "fact": "SHELLING  SAUDI \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.155,
-      "lon": 47.3346,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.middle-east-online.com/en/saudi-led-coalition-says-it-intercepts-missile-over-al-kharj"
     }
   ]
 }
