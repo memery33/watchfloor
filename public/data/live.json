@@ -1,13 +1,29 @@
 {
-  "generated_at": "2026-10-14T06:19:42.277147+00:00",
+  "generated_at": "2026-10-14T07:26:42.570849+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1327841459",
+      "id": "gdelt-1327851032",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Sanaa",
+      "fact": "STRIKE  MILITARY \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://www.presstv.co.uk/Detail/2026/10/13/778262/bombing-mountains-missing-target-why-saudi-airstrikes-cant-destroy-yemen-missile-infrastructure"
+    },
+    {
+      "id": "gdelt-1327851174",
       "dtg": "14 OCT",
       "date": "2026-10-14",
       "location": "Balakovo",
-      "fact": "SHELLING  RUSSIAN \u2192 KHARKIV  (6 mentions)",
+      "fact": "SHELLING  KYIV \u2192 RUSSIAN  (8 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
@@ -16,7 +32,55 @@
       "event_type": "shelling",
       "theater": "overview",
       "origin": null,
-      "url": "https://www.rte.ie/news/ukraine/2026/1014/1595299-ukraine-russia/"
+      "url": "https://eaworldview.com/2026/10/ukraine-war-kyiv-3-murdered-russia/"
+    },
+    {
+      "id": "gdelt-1327844450",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Tehran",
+      "fact": "STRIKE  ? \u2192 MILITARY  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "strike",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://news.az/news/riyadh-airport-attack-a-dangerous-turning-point-for-middle-east-security"
+    },
+    {
+      "id": "gdelt-1327844616",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Dhahran",
+      "fact": "SHELLING  COMPANY \u2192 DHAHRAN  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 26.3032,
+      "lon": 50.1353,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://news.az/news/missile-strike-hits-saudi-aramco-administrative-building-as-houthi-attacks-escalate"
+    },
+    {
+      "id": "gdelt-1327845048",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Riyadh",
+      "fact": "STRIKE  TEHRAN \u2192 RIYADH  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://news.az/news/riyadh-airport-attack-a-dangerous-turning-point-for-middle-east-security"
     },
     {
       "id": "gdelt-1327841578",
@@ -33,27 +97,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.rte.ie/news/ukraine/2026/1014/1595299-ukraine-russia/"
-    },
-    {
-      "id": "gdelt-1327841724",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Sanaa",
-      "fact": "STRIKE  YEMENI \u2192 GHANAIAN  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://thechronicle.com.gh/yemeni-government-launches-air-strikes-on-houthi-positions/"
     },
     {
       "id": "gdelt-1327839029",
@@ -262,59 +305,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://calgarysun.com/opinion/columnists/hanson-examining-the-american-lefts-genocide-hypocrisy/wcm/ac49594d-fc50-4be7-88fe-3bd0f107469d"
-    },
-    {
-      "id": "gdelt-1327814408",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Riyadh",
-      "fact": "STRIKE  RIYADH \u2192 AIRLINE  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "http://www.sierraleonetimes.com/news/279369126/airlines-cancel-riyadh-flights-as-airport-closure-is-extended"
-    },
-    {
-      "id": "gdelt-1327810819",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Dhahran",
-      "fact": "SHELLING  COMPANY \u2192 REUTERS  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 26.3032,
-      "lon": 50.1353,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.dw.com/en/saudi-arabia-houthis-yemen-war-missile-strikes-aramco-riyadh/live-79655805"
-    },
-    {
-      "id": "gdelt-1327807124",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Sanaa",
-      "fact": "SHELLING  SAUDI \u2192 YEMEN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.businesstimes.com.sg/international/saudi-aramco-hq-hit-houthi-strike-iran-escalates-ship-attacks-threatens-oil-export-recovery"
     }
   ]
 }
