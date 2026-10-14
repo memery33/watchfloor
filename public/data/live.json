@@ -1,7 +1,65 @@
 {
-  "generated_at": "2026-10-14T18:18:23.523721+00:00",
+  "generated_at": "2026-10-14T18:43:23.540751+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327957561",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Riyadh",
+      "fact": "SHELLING  YEMEN \u2192 RIYADH  (11 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.irishtimes.com/world/middle-east/2026/10/14/why-cant-saudi-arabia-stop-the-houthi-attacks/"
+    },
+    {
+      "id": "gdelt-1327957562",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Sanaa",
+      "fact": "SHELLING  YEMEN \u2192 RIYADH  (7 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.irishtimes.com/world/middle-east/2026/10/14/why-cant-saudi-arabia-stop-the-houthi-attacks/"
+    },
+    {
+      "id": "gdelt-1327951746",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Tehran",
+      "fact": "SHELLING  REGIME \u2192 ?  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "http://www.jpost.com/middle-east/article-911718"
+    },
     {
       "id": "gdelt-1327950129",
       "dtg": "14 OCT",
@@ -136,22 +194,6 @@
       "url": "https://en.apa.az/cis-countries/mp-from-pashinyans-party-denied-entry-to-russia-530071"
     },
     {
-      "id": "gdelt-1327926213",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Tehran",
-      "fact": "SHELLING  SAUDI \u2192 IRAN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "http://www.calcuttanews.net/news/279374124/irgc-spokesman-says-renewed-us-attack-possible-before-midterms"
-    },
-    {
       "id": "gdelt-1327924395",
       "dtg": "14 OCT",
       "date": "2026-10-14",
@@ -171,38 +213,6 @@
         "inferred": true
       },
       "url": "https://www.arabnews.com/saudi-arabia/several-injured-in-riyadh-from-houthi-missiles-interceptions-saudi-aramco-building-targeted-3006228"
-    },
-    {
-      "id": "gdelt-1327921720",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Riyadh",
-      "fact": "SHELLING  RIYADH \u2192 ?  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://english.aawsat.com/gulf/5329582-coalition-intercepts-houthi-attacks-resident-injured-ballistic-missile-debris"
-    },
-    {
-      "id": "gdelt-1327921721",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Sanaa",
-      "fact": "SHELLING  RIYADH \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://english.aawsat.com/gulf/5329582-coalition-intercepts-houthi-attacks-resident-injured-ballistic-missile-debris"
     },
     {
       "id": "gdelt-1327919198",
@@ -421,22 +431,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.thenationalnews.com/business/energy/2026/10/14/houthi-attack-hits-aramcos-historic-nerve-centre-in-saudi-arabia/"
-    },
-    {
-      "id": "gdelt-1327895406",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Dammam",
-      "fact": "STRIKE  DAMMAM \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 26.4344,
-      "lon": 50.1033,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.ariananews.af/yemen-hospitals-overwhelmed-by-surge-in-war-casualties-red-cross-warns/"
     }
   ]
 }
