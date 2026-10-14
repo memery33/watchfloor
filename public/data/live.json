@@ -1,7 +1,71 @@
 {
-  "generated_at": "2026-10-14T15:25:26.604763+00:00",
+  "generated_at": "2026-10-14T16:25:34.393369+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327933718",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Al-Kharj",
+      "fact": "STRIKE  IRANIAN \u2192 SAUDI  (17 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.155,
+      "lon": 47.3346,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://globalnews.ca/news/12102194/houthis-strike-saudi-aramco-headquarters/"
+    },
+    {
+      "id": "gdelt-1327934109",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Kyiv",
+      "fact": "SHELLING  UKRAINE \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://theconversation.com/operation-vivaldi-success-of-ukraines-counteroffensive-shows-it-has-learned-to-manoeuvre-on-a-drone-filled-battlefield-294197"
+    },
+    {
+      "id": "gdelt-1327929041",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Petersburg",
+      "fact": "BLOCKADE  RUSSIAN FEDERATION \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 59.8944,
+      "lon": 30.2642,
+      "event_type": "blockade",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://en.apa.az/cis-countries/mp-from-pashinyans-party-denied-entry-to-russia-530071"
+    },
+    {
+      "id": "gdelt-1327929247",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Moscow",
+      "fact": "SHELLING  UKRAINE \u2192 KYIV  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "http://www.reflector.com/news/national/sudden-starlink-limits-sap-ukraine-drone-power-as-kyiv-fears-us-intelligence-squeeze/article_b87119f2-4805-59af-97d5-86c577043659.html"
+    },
     {
       "id": "gdelt-1327926213",
       "dtg": "14 OCT",
@@ -70,22 +134,6 @@
       "theater": "yemen",
       "origin": null,
       "url": "https://english.aawsat.com/gulf/5329582-coalition-intercepts-houthi-attacks-resident-injured-ballistic-missile-debris"
-    },
-    {
-      "id": "gdelt-1327921808",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Kyiv",
-      "fact": "SHELLING  UKRAINIAN \u2192 INTELLIGENCE  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://abc17news.com/news/national-world/cnn-world/2026/10/14/russia-strikes-ukraines-energy-facilities-again-after-zelensky-says-no-early-warning-from-partners/"
     },
     {
       "id": "gdelt-1327919198",
@@ -290,22 +338,6 @@
       "url": "https://www.moneycontrol.com/world/pok-will-get-freedom-soon-jkjaac-leader-rejects-pakistan-s-terror-links-claims-questions-silence-over-martyrs-article-14052108.html"
     },
     {
-      "id": "gdelt-1327902850",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Moscow",
-      "fact": "SHELLING  UKRAINE \u2192 RUSSIAN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.union-bulletin.com/news/world/zelenskyy-says-russia-keeps-striking-ukraine-s-energy-sites-despite-trump-ceasefire-push/article_7bfbe952-3fbe-551b-bb0f-5bcfbcacc583.html"
-    },
-    {
       "id": "gdelt-1327900379",
       "dtg": "14 OCT",
       "date": "2026-10-14",
@@ -464,22 +496,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.freemalaysiatoday.com/category/world/2026/10/14/zelensky-accuses-putin-of-disrespecting-trump-after-latest-attacks"
-    },
-    {
-      "id": "gdelt-1327872651",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Kharkiv",
-      "fact": "STRIKE  UKRAINIAN \u2192 RUSSIA  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 49.9808,
-      "lon": 36.2527,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.bankingnews.gr/diethni/articles/905091/trump-and-musk-blind-ukrainians-block-starlink-new-hell-from-russia-blackout-in-kyiv%20title="
     }
   ]
 }
