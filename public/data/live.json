@@ -1,13 +1,82 @@
 {
-  "generated_at": "2026-10-14T05:26:03.382476+00:00",
+  "generated_at": "2026-10-14T06:19:42.277147+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1327835024",
+      "id": "gdelt-1327841459",
       "dtg": "14 OCT",
       "date": "2026-10-14",
       "location": "Balakovo",
-      "fact": "STRIKE  RUSSIAN \u2192 KYIV  (6 mentions)",
+      "fact": "SHELLING  RUSSIAN \u2192 KHARKIV  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 52.0278,
+      "lon": 47.8007,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.rte.ie/news/ukraine/2026/1014/1595299-ukraine-russia/"
+    },
+    {
+      "id": "gdelt-1327841578",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Kyiv",
+      "fact": "SHELLING  UKRAINIAN \u2192 UKRAINE  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.rte.ie/news/ukraine/2026/1014/1595299-ukraine-russia/"
+    },
+    {
+      "id": "gdelt-1327841724",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Sanaa",
+      "fact": "STRIKE  YEMENI \u2192 GHANAIAN  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://thechronicle.com.gh/yemeni-government-launches-air-strikes-on-houthi-positions/"
+    },
+    {
+      "id": "gdelt-1327839029",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Tehran",
+      "fact": "SHELLING  COMPANY \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.pakistantimes.com/saudi-aramco-building-attacked-in-dhahran-limited-fire-reported-15634/"
+    },
+    {
+      "id": "gdelt-1327839485",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Balakovo",
+      "fact": "STRIKE  KYIV \u2192 ?  (3 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-2",
@@ -16,7 +85,7 @@
       "event_type": "strike",
       "theater": "overview",
       "origin": null,
-      "url": "https://www.merimbulanewsweekly.com.au/story/9368077/russia-hits-ukraine-energy-facilities-despite-ceasefire/"
+      "url": "https://cyprus-mail.com/2026/10/14/russian-strikes-kill-one-hit-energy-facilities-in-kyiv-mayor-says"
     },
     {
       "id": "gdelt-1327835056",
@@ -129,22 +198,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://theshillongtimes.com/2026/10/14/indian-envoy-attends-funeral-of-compatriot-killed-in-saudi-airport-attack/"
-    },
-    {
-      "id": "gdelt-1327826154",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Kyiv",
-      "fact": "SHELLING  RUSSIA \u2192 KYIV  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://en.apa.az/europe/zelensky-says-kyiv-power-plant-was-main-target-of-russian-missile-attack-529879"
     },
     {
       "id": "gdelt-1327826175",
@@ -262,43 +315,6 @@
         "inferred": true
       },
       "url": "https://www.businesstimes.com.sg/international/saudi-aramco-hq-hit-houthi-strike-iran-escalates-ship-attacks-threatens-oil-export-recovery"
-    },
-    {
-      "id": "gdelt-1327798581",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "Kyiv",
-      "fact": "SHELLING  RUSSIA \u2192 KYIV  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.lynnnews.co.uk/national/burnham-to-meet-zelensky-in-wake-of-trump-s-diesel-deal-with-moscow-172928/"
-    },
-    {
-      "id": "gdelt-1327798590",
-      "dtg": "13 OCT",
-      "date": "2026-10-13",
-      "location": "King Khalid International",
-      "fact": "STRIKE  SAUDI \u2192 YEMEN  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.9581,
-      "lon": 46.6956,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://balticbusinessnews.com/airport-attacks-put-aviation-in-crosshairs-of-geopolitical-conflicts/"
     }
   ]
 }
