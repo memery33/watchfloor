@@ -1,7 +1,44 @@
 {
-  "generated_at": "2026-10-14T21:22:22.079048+00:00",
+  "generated_at": "2026-10-14T22:22:37.132732+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1327982622",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Moscow",
+      "fact": "SHELLING  RUSSIA \u2192 KYIV  (18 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.northwichguardian.co.uk/news/national/26635778.zelensky-says-russian-strikes-hit-ukraines-energy-sites-despite-ceasefire-push/"
+    },
+    {
+      "id": "gdelt-1327983012",
+      "dtg": "14 OCT",
+      "date": "2026-10-14",
+      "location": "Riyadh",
+      "fact": "SHELLING  YEMENI \u2192 RIYADH  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.presstv.co.uk/Detail/2026/10/14/778330/Yemeni-forces-launch-fresh-missile-strike-on-Riyadh%E2%80%99s-international-airport"
+    },
     {
       "id": "gdelt-1327979693",
       "dtg": "14 OCT",
@@ -54,27 +91,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://gulfnews.com/world/mena/riyadh-missile-attack-falling-shrapnel-injures-resident-as-houthis-claim-new-airport-strike-1.500709746"
-    },
-    {
-      "id": "gdelt-1327973383",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Riyadh",
-      "fact": "SHELLING  YEMEN \u2192 RIYADH  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.haaretz.com/middle-east-news/2026-10-14/ty-article/.premium/houthis-say-they-attacked-riyadh-airport-again-threaten-saudi-oil-facilities/000001a1-3b6a-d04a-a1f1-3f6ae34a0000"
     },
     {
       "id": "gdelt-1327969260",
@@ -162,22 +178,6 @@
       "url": "https://www.irishtimes.com/world/middle-east/2026/10/14/why-cant-saudi-arabia-stop-the-houthi-attacks/"
     },
     {
-      "id": "gdelt-1327950129",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Moscow",
-      "fact": "SHELLING  NAVAL \u2192 RUSSIA  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.politico.eu/article/ukraine-starlink-restrictions-disrupt-drone-strikes/"
-    },
-    {
       "id": "gdelt-1327944429",
       "dtg": "14 OCT",
       "date": "2026-10-14",
@@ -245,54 +245,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://tribune.com.pk/story/2634837/fact-check-saudi-arabia-has-not-busted-any-assassination-plot-involving-crown-prince"
-    },
-    {
-      "id": "gdelt-1327933718",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Al-Kharj",
-      "fact": "STRIKE  IRANIAN \u2192 SAUDI  (17 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.155,
-      "lon": 47.3346,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://globalnews.ca/news/12102194/houthis-strike-saudi-aramco-headquarters/"
-    },
-    {
-      "id": "gdelt-1327934109",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Kyiv",
-      "fact": "SHELLING  UKRAINE \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://theconversation.com/operation-vivaldi-success-of-ukraines-counteroffensive-shows-it-has-learned-to-manoeuvre-on-a-drone-filled-battlefield-294197"
-    },
-    {
-      "id": "gdelt-1327929041",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Petersburg",
-      "fact": "BLOCKADE  RUSSIAN FEDERATION \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 59.8944,
-      "lon": 30.2642,
-      "event_type": "blockade",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://en.apa.az/cis-countries/mp-from-pashinyans-party-denied-entry-to-russia-530071"
     }
   ]
 }
