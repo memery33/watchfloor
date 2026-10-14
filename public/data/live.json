@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T07:26:42.570849+00:00",
+  "generated_at": "2026-10-14T07:47:00.055895+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
@@ -289,22 +289,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.globalissues.org/news/2026/10/13/44332"
-    },
-    {
-      "id": "gdelt-1327814112",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Gaza",
-      "fact": "SHELLING  ISRAEL \u2192 ISRAEL  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://calgarysun.com/opinion/columnists/hanson-examining-the-american-lefts-genocide-hypocrisy/wcm/ac49594d-fc50-4be7-88fe-3bd0f107469d"
     }
   ]
 }
