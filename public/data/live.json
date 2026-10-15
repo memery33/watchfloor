@@ -1,7 +1,55 @@
 {
-  "generated_at": "2026-10-15T01:18:00.186929+00:00",
+  "generated_at": "2026-10-15T01:33:59.428681+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328009010",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Balochistan",
+      "fact": "BLOCKADE  ? \u2192 SCHOOL  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 28.4785,
+      "lon": 65.6436,
+      "event_type": "blockade",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://pakobserver.net/new-provinces-towards-a-more-inclusive-pakistan/"
+    },
+    {
+      "id": "gdelt-1328010100",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Balakovo",
+      "fact": "SHELLING  RUSSIA \u2192 UKRAINE  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 52.0278,
+      "lon": 47.8007,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://calgarysun.com/news/world/ukraine-accuses-u-s-of-helping-russia-as-missiles-hit-kyiv/wcm/30c6fb34-a0da-4701-bdd5-1ceacf54260a"
+    },
+    {
+      "id": "gdelt-1328010150",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Kharkiv",
+      "fact": "SHELLING  KHARKIV \u2192 PRIME MINISTER  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 49.9808,
+      "lon": 36.2527,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://calgarysun.com/news/world/ukraine-accuses-u-s-of-helping-russia-as-missiles-hit-kyiv/wcm/30c6fb34-a0da-4701-bdd5-1ceacf54260a"
+    },
     {
       "id": "gdelt-1328005861",
       "dtg": "15 OCT",
@@ -81,22 +129,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.dailyexcelsior.com/pakistan-reaffirms-commitment-to-saudi-arabias-security-amid-houthi-attacks/"
-    },
-    {
-      "id": "gdelt-1328000821",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Kharkiv",
-      "fact": "SHELLING  KHARKIV \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 49.9808,
-      "lon": 36.2527,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.arabnews.com/world/ukraine-accuses-us-of-helping-russia-restricting-starlink-as-missiles-hit-kyiv-3006366"
     },
     {
       "id": "gdelt-1328000895",
@@ -267,22 +299,6 @@
       "theater": "iran",
       "origin": null,
       "url": "http://www.bignewsnetwork.com/news/279374633/houthis-claim-fresh-missile-attacks-on-riyadh-airport-yemeni-govt-forces"
-    },
-    {
-      "id": "gdelt-1327965120",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Jeddah",
-      "fact": "STRIKE  SAUDI ARABIA \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 21.5169,
-      "lon": 39.2192,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.oneindia.com/international/riyadh-airport-attack-1-indian-dead-4-in-icu-as-india-demands-immediate-halt-8235485.html"
     }
   ]
 }
