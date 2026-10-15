@@ -1,7 +1,71 @@
 {
-  "generated_at": "2026-10-15T13:31:47.010999+00:00",
+  "generated_at": "2026-10-15T14:31:03.209727+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328116201",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Kyiv",
+      "fact": "SHELLING  RUSSIA \u2192 UKRAINE  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.businessinsider.com/ukraine-starlink-speed-starshield-service-coming-back-2026-10"
+    },
+    {
+      "id": "gdelt-1328113218",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Hradenytsi",
+      "fact": "STRIKE  MOLDOVA \u2192 UKRAINE  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 46.5996,
+      "lon": 29.9965,
+      "event_type": "strike",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://en.interfax.com.ua/news/general/1220811.html"
+    },
+    {
+      "id": "gdelt-1328113410",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Riyadh",
+      "fact": "STRIKE  SAUDI \u2192 RIYADH  (12 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.emirates247.com/uae/uae-leaders-offer-condolences-to-saudi-king-over-victims-of-riyadh-airport-attacks/6785"
+    },
+    {
+      "id": "gdelt-1328108296",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Rassvet",
+      "fact": "SHELLING  RUSSIAN \u2192 KYIV  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 54.4192,
+      "lon": 21.1539,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.bankingnews.gr/diethni/articles/905349/ukraine-will-cease-to-exist-ridiculous-zelensky-accuses-trump-of-treason-but-asks-for-patriot-thriller-with-starlink"
+    },
     {
       "id": "gdelt-1328104819",
       "dtg": "15 OCT",
@@ -258,22 +322,6 @@
       "url": "https://www.winnipegfreepress.com/world/2026/10/15/hezbollah-claims-confiscated-explosives-and-denies-assassination-plans"
     },
     {
-      "id": "gdelt-1328079772",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Riyadh",
-      "fact": "STRIKE  INDONESIA \u2192 RIYADH  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://en.antaranews.com/news/435669/indonesia-prepares-emergency-plans-after-riyadh-airport-attack"
-    },
-    {
       "id": "gdelt-1328080152",
       "dtg": "15 OCT",
       "date": "2026-10-15",
@@ -288,22 +336,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.thetottenhamindependent.co.uk/news/national/26639193.ukraine-resumes-attacks-russian-oil-refineries-tensions-deepen-us/"
-    },
-    {
-      "id": "gdelt-1328078026",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Kyiv",
-      "fact": "SHELLING  UKRAINE \u2192 RYAZAN  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.orissapost.com/ukraine-attacks-ryazan-oil-refinery-with-drones-missiles-says-officials/"
     },
     {
       "id": "gdelt-1328075451",
@@ -400,38 +432,6 @@
       "theater": "sudan",
       "origin": null,
       "url": "https://www.middleeastmonitor.com/20261015-sudanese-army-advances-in-west-darfur-recaptures-areas-from-rsf/"
-    },
-    {
-      "id": "gdelt-1328052492",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Western Kordofan",
-      "fact": "STRIKE  EGYPT \u2192 CIVILIAN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 12.0,
-      "lon": 28.5,
-      "event_type": "strike",
-      "theater": "sudan",
-      "origin": null,
-      "url": "https://english.aawsat.com/arab-world/5329811-sudans-famine-risk-worsened-conflict-drought-and-funding-shortages"
-    },
-    {
-      "id": "gdelt-1328050847",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Dammam",
-      "fact": "STRIKE  DAMMAM \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 26.4344,
-      "lon": 50.1033,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.ariananews.af/ukraines-zelenskiy-says-it-is-painful-when-trump-chooses-a-different-side/"
     }
   ]
 }
