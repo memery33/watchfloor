@@ -1,7 +1,55 @@
 {
-  "generated_at": "2026-10-15T00:20:07.922307+00:00",
+  "generated_at": "2026-10-15T01:18:00.186929+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328005861",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Khamis Mushait",
+      "fact": "STRIKE  CIVILIAN \u2192 SANAA  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 18.3064,
+      "lon": 42.7292,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://news.antiwar.com/2026/10/14/ansar-allah-warns-more-attacks-on-saudi-oil-facilities-are-coming-after-strike-hits-aramco-headquarters/"
+    },
+    {
+      "id": "gdelt-1328006097",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Kyiv",
+      "fact": "SHELLING  PRESIDENT \u2192 KYIV  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.goulburnpost.com.au/story/9368840/ukraine-says-spacex-hampers-drones-for-attack-defence/"
+    },
+    {
+      "id": "gdelt-1328006098",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Ryazan",
+      "fact": "SHELLING  PRESIDENT \u2192 UKRAINE  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 54.6269,
+      "lon": 39.6916,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.goulburnpost.com.au/story/9368840/ukraine-says-spacex-hampers-drones-for-attack-defence/"
+    },
     {
       "id": "gdelt-1328003411",
       "dtg": "15 OCT",
@@ -49,22 +97,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.arabnews.com/world/ukraine-accuses-us-of-helping-russia-restricting-starlink-as-missiles-hit-kyiv-3006366"
-    },
-    {
-      "id": "gdelt-1328000822",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Kyiv",
-      "fact": "SHELLING  KYIV \u2192 ?  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.nbcnewyork.com/news/national-international/ukrainian-drones-speed-spacex-starlink-restrictions/6559435/"
     },
     {
       "id": "gdelt-1328000895",
@@ -251,22 +283,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.oneindia.com/international/riyadh-airport-attack-1-indian-dead-4-in-icu-as-india-demands-immediate-halt-8235485.html"
-    },
-    {
-      "id": "gdelt-1327963045",
-      "dtg": "14 OCT",
-      "date": "2026-10-14",
-      "location": "Tehran",
-      "fact": "SHELLING  IRANIAN \u2192 MILITARY  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.jpost.com/middle-east/article-911729"
     }
   ]
 }
