@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-15T02:21:38.963260+00:00",
+  "generated_at": "2026-10-15T03:18:00.319772+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328019118",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Riyadh",
+      "fact": "SHELLING  RIYADH \u2192 SAUDI  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://yalibnan.com/2026/10/15/live-updates-houthis-launch-new-attack-on-saudi-capital-as-trump-mulls-u-s-role-in-mideast-wars-new-front/"
+    },
     {
       "id": "gdelt-1328017469",
       "dtg": "15 OCT",
@@ -145,22 +161,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.goulburnpost.com.au/story/9368840/ukraine-says-spacex-hampers-drones-for-attack-defence/"
-    },
-    {
-      "id": "gdelt-1328003411",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Riyadh",
-      "fact": "SHELLING  CENTER FOR STRATEGIC AND INTERNATIONAL STUDIES \u2192 SAUDI  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://themedialine.org/top-stories/why-cant-saudi-arabia-stop-houthi-missiles-and-could-israel-help/"
     },
     {
       "id": "gdelt-1328000783",
