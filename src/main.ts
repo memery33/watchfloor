@@ -32,6 +32,22 @@ import {
 } from "./cop";
 import "./style.css";
 
+/** Escape data before it goes into an HTML string (innerHTML, divIcon html, attribution). */
+function esc(v: unknown): string {
+  return String(v ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
+}
+
+/** Only http(s) URLs may become links; anything else (javascript:, data:, junk) returns null. */
+function safeUrl(raw: unknown): string | null {
+  if (typeof raw !== "string" || !raw.trim()) return null;
+  try {
+    const u = new URL(raw.trim());
+    return u.protocol === "https:" || u.protocol === "http:" ? u.href : null;
+  } catch {
+    return null;
+  }
+}
+
 type FilterMode = "ALL" | "CONFIRMED" | "REPORTED" | "CLAIM";
 
 const app = document.querySelector<HTMLDivElement>("#app");
@@ -255,10 +271,17 @@ function nodePopupContent(opts: PopupOpts): HTMLElement {
     root.appendChild(full);
   }
 
-  if (opts.link && /^https:\/\//.test(opts.link.href)) {
+  const linkHref = opts.link ? safeUrl(opts.link.href) : null;
+  if (opts.link && !linkHref) {
+    // Not an http(s) URL: show the label as plain text, never as a link.
+    const span = document.createElement("span");
+    span.className = "popup-link";
+    span.textContent = opts.link.label;
+    root.appendChild(span);
+  } else if (opts.link && linkHref) {
     const a = document.createElement("a");
     a.className = "popup-link";
-    a.href = opts.link.href;
+    a.href = linkHref;
     a.target = "_blank";
     a.rel = "noopener noreferrer";
     a.textContent = opts.link.label;
@@ -278,8 +301,8 @@ function renderRail() {
     return `
       <button data-id="${t.id}" class="${t.id === active ? "active" : ""}">
         <span class="pip ${t.pip}"></span>
-        <span class="name">${i + 1} ${t.name}</span>
-        <span class="status">${t.status}${n ? ` \u00b7 ${n} LIVE CLAIMS` : ""}</span>
+        <span class="name">${i + 1} ${esc(t.name)}</span>
+        <span class="status">${esc(t.status)}${n ? ` \u00b7 ${n} LIVE CLAIMS` : ""}</span>
       </button>
     `;
   }).join("");
@@ -290,7 +313,7 @@ function renderRail() {
   railSelect.innerHTML = THEATERS.map((t, i) => {
     const n = live ? live.events.filter((e) => liveFits(e, t.id)).length : 0;
     const liveBit = n ? ` \u00b7 ${n} live` : "";
-    return `<option value="${t.id}" ${t.id === active ? "selected" : ""}>${i + 1} ${t.name} \u2014 ${t.status}${liveBit}</option>`;
+    return `<option value="${t.id}" ${t.id === active ? "selected" : ""}>${i + 1} ${esc(t.name)} \u2014 ${esc(t.status)}${liveBit}</option>`;
   }).join("");
 }
 
@@ -316,7 +339,7 @@ function renderPanel(t: Theater) {
   kpis.innerHTML = row
     .map(
       (k) =>
-        `<div class="kpi ${k.tone}"><div class="l">${k.label}</div><div class="v">${k.value}</div></div>`,
+        `<div class="kpi ${esc(k.tone)}"><div class="l">${esc(k.label)}</div><div class="v">${esc(k.value)}</div></div>`,
     )
     .join("");
 
@@ -324,15 +347,15 @@ function renderPanel(t: Theater) {
     .filter((e) => passesFilter(e.confidence))
     .map(
       (e) => `
-    <article class="evt ${e.confidence}" data-lat="${e.lat}" data-lon="${e.lon}">
-      <time>${e.dtg}</time>
+    <article class="evt ${esc(e.confidence)}" data-lat="${esc(e.lat)}" data-lon="${esc(e.lon)}">
+      <time>${esc(e.dtg)}</time>
       <div>
-        <div class="loc">${e.location}</div>
-        <div class="fact">${e.fact}</div>
+        <div class="loc">${esc(e.location)}</div>
+        <div class="fact">${esc(e.fact)}</div>
         <div class="tags">
-          <span class="tag ${e.priority}">${e.priority}</span>
-          <span class="tag ${e.confidence}">${e.confidence}</span>
-          <span class="tag dim">${e.source}</span>
+          <span class="tag ${esc(e.priority)}">${esc(e.priority)}</span>
+          <span class="tag ${esc(e.confidence)}">${esc(e.confidence)}</span>
+          <span class="tag dim">${esc(e.source)}</span>
         </div>
       </div>
     </article>`,
@@ -343,15 +366,15 @@ function renderPanel(t: Theater) {
   const liveRows = liveFiltered
     .map(
       (e) => `
-    <article class="evt CLAIM" data-lat="${e.lat}" data-lon="${e.lon}">
-      <time>${e.dtg}</time>
+    <article class="evt CLAIM" data-lat="${esc(e.lat)}" data-lon="${esc(e.lon)}">
+      <time>${esc(e.dtg)}</time>
       <div>
-        <div class="loc">${e.location} \u00b7 LIVE</div>
-        <div class="fact">${e.fact}</div>
+        <div class="loc">${esc(e.location)} \u00b7 LIVE</div>
+        <div class="fact">${esc(e.fact)}</div>
         <div class="tags">
-          <span class="tag ${e.priority}">${e.priority}</span>
+          <span class="tag ${esc(e.priority)}">${esc(e.priority)}</span>
           <span class="tag CLAIM">CLAIM</span>
-          <span class="tag dim">${e.source}</span>
+          <span class="tag dim">${esc(e.source)}</span>
         </div>
       </div>
     </article>`,
@@ -368,7 +391,7 @@ function renderPanel(t: Theater) {
     rowEl.addEventListener("click", () => fly(Number(rowEl.dataset.lat), Number(rowEl.dataset.lon)));
   });
 
-  watchEl.innerHTML = t.watch.map((w) => `<li>${w}</li>`).join("");
+  watchEl.innerHTML = t.watch.map((w) => `<li>${esc(w)}</li>`).join("");
 
   const liveBits = overlay.slice(0, 6).map((e) => `${e.dtg}  ${e.location}  ${e.fact}`);
   tickerEl.textContent = [...TICKER, ...liveBits].join("   \u00b7   ");
@@ -428,7 +451,7 @@ function addEndpointLabel(
     html: `<div class="cap ${capKind} ${side}" style="color:${color}">
       <span class="dot"></span>
       <span class="role">${roleText}</span>
-      <span class="name">${shortName(name)}</span>
+      <span class="name">${esc(shortName(name))}</span>
     </div>`,
     iconSize: [1, 1],
     // Anchor at the geographic point; CSS transform offsets the cap opposite the peer
@@ -436,7 +459,7 @@ function addEndpointLabel(
   });
   const cap = L.marker([lat, lon], { icon, interactive: true, keyboard: false }).addTo(group);
   if (popup) attachPopup(cap, popup);
-  else cap.bindTooltip(fullTip, { className: "marker-label", direction: "top", offset: [0, -8] });
+  else cap.bindTooltip(esc(fullTip), { className: "marker-label", direction: "top", offset: [0, -8] });
 }
 
 function addArrow(
@@ -545,7 +568,7 @@ function drawLive(event: LiveEvent) {
       className: "inferred-arc",
     })
       .bindTooltip(
-        `INFERRED  ${event.origin.name} \u2192 ${event.location}  [CLAIM \u00b7 NOT RADAR]`,
+        `INFERRED  ${esc(event.origin.name)} \u2192 ${esc(event.location)}  [CLAIM \u00b7 NOT RADAR]`,
         { className: "marker-label" },
       )
       .addTo(liveLayer);
@@ -585,7 +608,7 @@ function drawWave(w: Wave) {
   L.marker(mid, {
     icon: L.divIcon({
       className: "wave-label",
-      html: `<span style="color:${color}">${label}</span>`,
+      html: `<span style="color:${esc(color)}">${esc(label)}</span>`,
       iconSize: [1, 1],
       iconAnchor: [0, 0],
     }),
@@ -647,7 +670,11 @@ function drawUnderLayers(t: Theater): { counts: Record<LayerId, number>; attribu
         interactive: false,
         style: () => ({ color: "#b79cff", weight: 1.2, opacity: 0.8, fillColor: "#b79cff", fillOpacity: 0.07 }),
       }).addTo(frontLayer);
-      attribution.push(`Fronts: <a href="${f.url}" target="_blank" rel="noopener">${f.name}</a> (${f.license}, as of ${f.asOf})`);
+      {
+        const fu = safeUrl(f.url);
+        const fn = esc(f.name);
+        attribution.push(`Fronts: ${fu ? `<a href="${esc(fu)}" target="_blank" rel="noopener">${fn}</a>` : fn} (${esc(f.license)}, as of ${esc(f.asOf)})`);
+      }
     }
   }
   if (layerOn.fires && fireLayer && fires) {
@@ -664,8 +691,8 @@ function drawUnderLayers(t: Theater): { counts: Record<LayerId, number>; attribu
       })
         .bindTooltip(
           flare
-            ? `LIKELY GAS FLARE / INDUSTRIAL HEAT \u00b7 ${p.acq}`
-            : `THERMAL ANOMALY, NOT CONFIRMED STRIKE \u00b7 ${p.acq}`,
+            ? `LIKELY GAS FLARE / INDUSTRIAL HEAT \u00b7 ${esc(p.acq)}`
+            : `THERMAL ANOMALY, NOT CONFIRMED STRIKE \u00b7 ${esc(p.acq)}`,
           { className: "marker-label" },
         )
         .addTo(fireLayer);
@@ -676,7 +703,7 @@ function drawUnderLayers(t: Theater): { counts: Record<LayerId, number>; attribu
         '<a href="https://earthdata.nasa.gov/firms" target="_blank" rel="noopener">NASA FIRMS</a> (<a href="https://firms.modaps.eosdis.nasa.gov/download/Readme.txt" target="_blank" rel="noopener">disclaimer</a>)',
       );
       // Full FIRMS citation lives in the layer toggle's tooltip; the footer keeps the short linked credit (phone width).
-      if (fires.attribution && !/FIRMS/i.test(fires.attribution)) attribution.push(fires.attribution);
+      if (fires.attribution && !/FIRMS/i.test(fires.attribution)) attribution.push(esc(fires.attribution));
     }
   }
   if (layerOn.ships && shipLayer && ships) {
@@ -689,10 +716,10 @@ function drawUnderLayers(t: Theater): { counts: Record<LayerId, number>; attribu
         fillColor: "#9fd6ff",
         fillOpacity: 0.35,
       })
-        .bindTooltip(`${p.kind.toUpperCase()} \u00b7 position ${p.at} (\u22651h delayed)`, { className: "marker-label" })
+        .bindTooltip(`${esc(String(p.kind).toUpperCase())} \u00b7 position ${esc(p.at)} (\u22651h delayed)`, { className: "marker-label" })
         .addTo(shipLayer);
     }
-    if (shipRows.length) attribution.push(ships.attribution);
+    if (shipRows.length) attribution.push(esc(ships.attribution));
   }
   return {
     counts: {
@@ -723,7 +750,7 @@ function renderLayerToggles(counts: Record<LayerId, number>) {
     const capped = id !== "vectors" && n > cap;
     const shown = empty ? "\u2014" : capped ? `${cap}/${n}` : String(n);
     const notLoaded = (id === "fires" || id === "ships") && !on && !(id === "fires" ? fires : ships);
-    const cite = id === "fires" && fires?.attribution ? ` \u00b7 ${fires.attribution.replace(/"/g, "&quot;").replace(/</g, "&lt;")}` : "";
+    const cite = id === "fires" && fires?.attribution ? ` \u00b7 ${esc(fires.attribution)}` : "";
     const title = (notLoaded
       ? "Off. Data loads when you turn this on"
       : empty
@@ -769,7 +796,7 @@ function drawLandmarks(t: Theater) {
       fillOpacity: 0.35,
       interactive: true,
     })
-      .bindTooltip(`${kind}  ${title}`, {
+      .bindTooltip(`${esc(kind)}  ${esc(title)}`, {
         className: "marker-label",
         direction: "top",
         offset: [0, -6],
@@ -777,7 +804,7 @@ function drawLandmarks(t: Theater) {
       .addTo(landmarkLayer);
     const icon = L.divIcon({
       className: `landmark-label${showName ? "" : " zoom-out"}`,
-      html: `<span class="lm-cap">${lm.code ?? (airport ? "APT" : "PORT")}</span>`,
+      html: `<span class="lm-cap">${esc(lm.code ?? (airport ? "APT" : "PORT"))}</span>`,
       iconSize: [1, 1],
       iconAnchor: [-6, 8],
     });
