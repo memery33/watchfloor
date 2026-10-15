@@ -819,7 +819,7 @@ function renderMap(t: Theater) {
       "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}",
       {
         // Esri requires "Powered by Esri" plus the service's own copyright text (copyrightText on the MapServer).
-        // The OSM credit is linked here once; it also covers OSM-derived gazetteer coordinates (strikes, waves).
+        // The OSM credit here is for the Esri basemap data.
         attribution:
           'Powered by <a href="https://www.esri.com" target="_blank" rel="noopener">Esri</a> \u00b7 Esri, HERE, Garmin, \u00a9 <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>, and the GIS user community \u00b7 Watchfloor OSINT COP',
         maxZoom: 16,

@@ -22,12 +22,12 @@ for (const mod of Object.values(THEATER_MODULES)) {
 }
 
 export const SNAPSHOT = {
-  dtgLocal: "2026-10-15 1130L",
-  dtgZulu: "2026-10-15 1530Z",
+  dtgLocal: "2026-10-15 1111L",
+  dtgZulu: "2026-10-15 1511Z",
   classification: "UNCLASSIFIED // OSINT // OPEN PRESS",
   watchcon: "ELEVATED",
   priorityTheater: "IRAN / GULF",
-  sourceAge: "SNAPSHOT 15 OCT 2026 ~11:30 ET",
+  sourceAge: "SNAPSHOT 15 OCT 2026 11:11 ET",
   disclaimer:
     "Best-effort open-source COP. Yellow = unverified claim. Dashed arcs are reconstructed from named origin+impact, not radar. Not a targeting product.",
 };
