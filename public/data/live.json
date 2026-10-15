@@ -1,7 +1,81 @@
 {
-  "generated_at": "2026-10-15T17:19:06.206534+00:00",
+  "generated_at": "2026-10-15T18:21:43.565469+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328152376",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Gaza",
+      "fact": "STRIKE  OPERATIVE \u2192 HAMAS  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://morningstaronline.co.uk/article/inside-dark-soul-idf"
+    },
+    {
+      "id": "gdelt-1328147869",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Kharkiv",
+      "fact": "SHELLING  RUSSIAN \u2192 KYIV  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 49.9808,
+      "lon": 36.2527,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://en.interfax.com.ua/news/general/1220959.html"
+    },
+    {
+      "id": "gdelt-1328148207",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Jawf",
+      "fact": "STRIKE  YEMEN \u2192 MILITARY  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 13.8378,
+      "lon": 45.8349,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://english.aawsat.com/arab-world/5330055-fighting-deepens-pressure-taiz-houthi-leaders-captured"
+    },
+    {
+      "id": "gdelt-1328145663",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Riyadh",
+      "fact": "SHELLING  RIYADH \u2192 YEMEN  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.arabnews.com/saudi-arabia/saudi-air-defenses-intercept-cruise-missile-targeting-madinah-3006463"
+    },
     {
       "id": "gdelt-1328143537",
       "dtg": "15 OCT",
@@ -86,22 +160,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://city.udn.com/2976/7210328?raid=7299266"
-    },
-    {
-      "id": "gdelt-1328138852",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Riyadh",
-      "fact": "SHELLING  ADEN \u2192 PRESIDENTIAL PALACE  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.pakistantoday.com.pk/2026/10/15/houthis-attack-presidential-palace-complex-in-yemens-aden-pm-unharmed-officials-say"
     },
     {
       "id": "gdelt-1328138853",
@@ -480,38 +538,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.cp24.com/news/world/2026/10/15/ukraine-resumes-attacks-on-russian-oil-refineries-officials-say-as-us-relations-teeter/"
-    },
-    {
-      "id": "gdelt-1328091800",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Borisoglebsk",
-      "fact": "STRIKE  RUSSIA \u2192 UKRAINIAN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 69.6504,
-      "lon": 30.1442,
-      "event_type": "strike",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.cbc.ca/news/world/russia-ukraine-war-day-1695-9.7381475"
-    },
-    {
-      "id": "gdelt-1328084336",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Beirut",
-      "fact": "SHELLING  ISRAEL \u2192 UNITED STATES  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 33.8719,
-      "lon": 35.5097,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.winnipegfreepress.com/world/2026/10/15/hezbollah-claims-confiscated-explosives-and-denies-assassination-plans"
     }
   ]
 }
