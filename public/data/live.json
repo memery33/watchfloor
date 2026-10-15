@@ -1,13 +1,34 @@
 {
-  "generated_at": "2026-10-15T18:23:15.199598+00:00",
+  "generated_at": "2026-10-15T19:19:40.260307+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1328152376",
+      "id": "gdelt-1328160979",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Marib",
+      "fact": "SHELLING  PRESIDENTIAL PALACE \u2192 YEMENI  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 15.461,
+      "lon": 45.3253,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.al-monitor.com/originals/2026/10/houthis-launch-deadly-attack-presidential-palace-yemens-aden"
+    },
+    {
+      "id": "gdelt-1328161364",
       "dtg": "15 OCT",
       "date": "2026-10-15",
       "location": "Gaza",
-      "fact": "STRIKE  OPERATIVE \u2192 HAMAS  (10 mentions)",
+      "fact": "STRIKE  SAUDI ARABIA \u2192 ISRAEL  (3 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-2",
@@ -16,7 +37,44 @@
       "event_type": "strike",
       "theater": "levant",
       "origin": null,
-      "url": "https://morningstaronline.co.uk/article/inside-dark-soul-idf"
+      "url": "https://www.al-monitor.com/originals/2026/10/analysis-how-are-yemens-houthis-attacking-saudi-arabia-so-effectively"
+    },
+    {
+      "id": "gdelt-1328159478",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "King Khalid International",
+      "fact": "SHELLING  ADEN \u2192 PRIME MINISTER  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.9581,
+      "lon": 46.6956,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://kesq.com/news/national-world/cnn-world/2026/10/15/iran-aligned-houthis-target-yemeni-presidential-palace-prime-minister-remains-unharmed/"
+    },
+    {
+      "id": "gdelt-1328159488",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Riyadh",
+      "fact": "SHELLING  YEMEN \u2192 ADEN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.ibtimes.com/houthis-strike-yemens-presidential-palace-two-killed-prime-minister-escapes-missile-attack-3808637"
     },
     {
       "id": "gdelt-1328147869",
@@ -54,27 +112,6 @@
         "inferred": true
       },
       "url": "https://english.aawsat.com/arab-world/5330055-fighting-deepens-pressure-taiz-houthi-leaders-captured"
-    },
-    {
-      "id": "gdelt-1328145663",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Riyadh",
-      "fact": "SHELLING  RIYADH \u2192 YEMEN  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.arabnews.com/saudi-arabia/saudi-air-defenses-intercept-cruise-missile-targeting-madinah-3006463"
     },
     {
       "id": "gdelt-1328143537",
@@ -453,91 +490,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://dominicanrepublicpost.com/us-iran-stalemate-what-are-trumps-next-military-options/"
-    },
-    {
-      "id": "gdelt-1328096337",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Madinah",
-      "fact": "STRIKE  ? \u2192 YEMEN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 13.9777,
-      "lon": 44.0484,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.samaa.tv/2087358531-saudi-coalition-intercepts-cruise-missile-over-madinah"
-    },
-    {
-      "id": "gdelt-1328097142",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Dubai",
-      "fact": "SHELLING  IRAQ \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 25.2522,
-      "lon": 55.28,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.paradisepost.com/2020/01/07/iran-warns-us-not-retaliate-over-missile-attack-in-iraq/"
-    },
-    {
-      "id": "gdelt-1328097547",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Khamis Mushait",
-      "fact": "SHELLING  SAUDI \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 18.3064,
-      "lon": 42.7292,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.bankingnews.gr/diethni/articles/905326/houthis-claim-eurofighter-typhoon-hit-in-historic-air-twist"
-    },
-    {
-      "id": "gdelt-1328097548",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "King Khalid International",
-      "fact": "SHELLING  RIYADH \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.9581,
-      "lon": 46.6956,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.samaa.tv/2087358523-saudi-arabia-intercepts-destroys-drone-over-eastern-province"
-    },
-    {
-      "id": "gdelt-1328097659",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Kirovohrad",
-      "fact": "STRIKE  UKRAINIAN \u2192 UKRAINE  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 48.5132,
-      "lon": 32.2597,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.cp24.com/news/world/2026/10/15/ukraine-resumes-attacks-on-russian-oil-refineries-officials-say-as-us-relations-teeter/"
     }
   ]
 }
