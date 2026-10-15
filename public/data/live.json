@@ -1,18 +1,50 @@
 {
-  "generated_at": "2026-10-15T19:19:40.260307+00:00",
+  "generated_at": "2026-10-15T20:20:22.865088+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1328160979",
+      "id": "gdelt-1328167019",
       "dtg": "15 OCT",
       "date": "2026-10-15",
       "location": "Marib",
-      "fact": "SHELLING  PRESIDENTIAL PALACE \u2192 YEMENI  (4 mentions)",
+      "fact": "SHELLING  GOVERNMENT \u2192 NEIGHBORHOOD  (10 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
       "lat": 15.461,
       "lon": 45.3253,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://aa.com.tr/en/middle-east/houthis-target-yemens-presidential-palace-in-aden-with-ballistic-missiles/4090086"
+    },
+    {
+      "id": "gdelt-1328165302",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Riyadh",
+      "fact": "STRIKE  FIGHTER JET \u2192 SAUDI  (7 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://theaviationist.com/2026/10/15/houthi-militants-score-apparent-hit-against-saudi-typhoon/"
+    },
+    {
+      "id": "gdelt-1328165399",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Dhubab",
+      "fact": "SHELLING  SAUDI ARABIA \u2192 YEMEN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 12.9431,
+      "lon": 43.4102,
       "event_type": "shelling",
       "theater": "yemen",
       "origin": {
@@ -21,7 +53,49 @@
         "lon": 43.58,
         "inferred": true
       },
-      "url": "https://www.al-monitor.com/originals/2026/10/houthis-launch-deadly-attack-presidential-palace-yemens-aden"
+      "url": "https://theaviationist.com/2026/10/15/houthi-militants-score-apparent-hit-against-saudi-typhoon/"
+    },
+    {
+      "id": "gdelt-1328165656",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Khamis Mushait",
+      "fact": "SHELLING  YEMEN \u2192 PRESIDENTIAL PALACE  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 18.3064,
+      "lon": 42.7292,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.cbc.ca/news/world/yemen-houthis-attack-presidential-palace-9.7382188"
+    },
+    {
+      "id": "gdelt-1328165665",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "King Khalid International",
+      "fact": "SHELLING  YEMEN \u2192 SAUDI  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.9581,
+      "lon": 46.6956,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.cbc.ca/news/world/yemen-houthis-attack-presidential-palace-9.7382188"
     },
     {
       "id": "gdelt-1328161364",
@@ -38,22 +112,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://www.al-monitor.com/originals/2026/10/analysis-how-are-yemens-houthis-attacking-saudi-arabia-so-effectively"
-    },
-    {
-      "id": "gdelt-1328159478",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "King Khalid International",
-      "fact": "SHELLING  ADEN \u2192 PRIME MINISTER  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.9581,
-      "lon": 46.6956,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://kesq.com/news/national-world/cnn-world/2026/10/15/iran-aligned-houthis-target-yemeni-presidential-palace-prime-minister-remains-unharmed/"
     },
     {
       "id": "gdelt-1328159488",
@@ -112,22 +170,6 @@
         "inferred": true
       },
       "url": "https://english.aawsat.com/arab-world/5330055-fighting-deepens-pressure-taiz-houthi-leaders-captured"
-    },
-    {
-      "id": "gdelt-1328143537",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Riyadh",
-      "fact": "STRIKE  SANAA \u2192 SAUDI ARABIA  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.thenationalnews.com/news/gulf/2026/10/15/what-are-saudi-arabias-options-to-deter-the-yemeni-rebels/"
     },
     {
       "id": "gdelt-1328143544",
@@ -426,70 +468,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.businessinsider.com/ukraine-starlink-speed-starshield-service-coming-back-2026-10"
-    },
-    {
-      "id": "gdelt-1328113218",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Hradenytsi",
-      "fact": "STRIKE  MOLDOVA \u2192 UKRAINE  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 46.5996,
-      "lon": 29.9965,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://en.interfax.com.ua/news/general/1220811.html"
-    },
-    {
-      "id": "gdelt-1328108296",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Rassvet",
-      "fact": "SHELLING  RUSSIAN \u2192 KYIV  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 54.4192,
-      "lon": 21.1539,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.bankingnews.gr/diethni/articles/905349/ukraine-will-cease-to-exist-ridiculous-zelensky-accuses-trump-of-treason-but-asks-for-patriot-thriller-with-starlink"
-    },
-    {
-      "id": "gdelt-1328104923",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Kyiv",
-      "fact": "STRIKE  MOSCOW \u2192 UKRAINE  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://grenadachronicle.com/ukrainians-fear-us-intelligence-cuts-as-russian-strikes-intensify/"
-    },
-    {
-      "id": "gdelt-1328105104",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Tehran",
-      "fact": "SHELLING  THE US \u2192 IRAN  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://dominicanrepublicpost.com/us-iran-stalemate-what-are-trumps-next-military-options/"
     }
   ]
 }
