@@ -1,7 +1,92 @@
 {
-  "generated_at": "2026-10-15T22:27:20.239310+00:00",
+  "generated_at": "2026-10-15T23:18:08.719240+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328189240",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Tehran",
+      "fact": "SHELLING  MERCHANT SHIP \u2192 ?  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.ynetnews.com/opinions-analysis/article/h1cvyqcjgg"
+    },
+    {
+      "id": "gdelt-1328189597",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Bandar Abbas",
+      "fact": "SHELLING  IRAN \u2192 ISRAEL  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 27.1865,
+      "lon": 56.2808,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.ynetnews.com/opinions-analysis/article/h1cvyqcjgg"
+    },
+    {
+      "id": "gdelt-1328188238",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Sanaa",
+      "fact": "SHELLING  AGENCE FRANCE PRESS \u2192 ?  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://www.hindustantimes.com/world-news/at-least-5-killed-16-injured-in-houthi-missile-strike-on-yemen-presidential-palace-says-health-minister-101792095716804.html"
+    },
+    {
+      "id": "gdelt-1328188697",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Moscow",
+      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIAN  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.kyivpost.com/post/87203"
+    },
+    {
+      "id": "gdelt-1328189072",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Riyadh",
+      "fact": "SHELLING  YEMEN \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.hindustantimes.com/world-news/at-least-5-killed-16-injured-in-houthi-missile-strike-on-yemen-presidential-palace-says-health-minister-101792095716804.html"
+    },
     {
       "id": "gdelt-1328185028",
       "dtg": "15 OCT",
@@ -31,27 +116,6 @@
       "lon": 39.6667,
       "event_type": "shelling",
       "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.presstv.co.uk/Detail/2026/10/15/778397/Yemen-dismisses-Saudi-death-toll-announcement,-says-Riyadh-attacked-Yemen-274,302-over-12-years"
-    },
-    {
-      "id": "gdelt-1328185379",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Sanaa",
-      "fact": "SHELLING  YEMEN \u2192 SAUDI  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
       "origin": {
         "name": "YEMEN / HOUTHI",
         "lat": 16.85,
@@ -215,27 +279,6 @@
       "url": "https://www.al-monitor.com/originals/2026/10/analysis-how-are-yemens-houthis-attacking-saudi-arabia-so-effectively"
     },
     {
-      "id": "gdelt-1328159488",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Riyadh",
-      "fact": "SHELLING  YEMEN \u2192 ADEN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.ibtimes.com/houthis-strike-yemens-presidential-palace-two-killed-prime-minister-escapes-missile-attack-3808637"
-    },
-    {
       "id": "gdelt-1328147869",
       "dtg": "15 OCT",
       "date": "2026-10-15",
@@ -271,59 +314,6 @@
         "inferred": true
       },
       "url": "https://english.aawsat.com/arab-world/5330055-fighting-deepens-pressure-taiz-houthi-leaders-captured"
-    },
-    {
-      "id": "gdelt-1328140609",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Bekaa Valley",
-      "fact": "SHELLING  ISRAEL \u2192 UNITED STATES  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 33.8333,
-      "lon": 36.0,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.naharnet.com:443/stories/en/323124-rubio-to-call-aoun-over-hezbollah-explosives-moawad-complaint"
-    },
-    {
-      "id": "gdelt-1328138583",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Moscow",
-      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIAN  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://city.udn.com/2976/7210328?raid=7299266"
-    },
-    {
-      "id": "gdelt-1328138853",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Mecca",
-      "fact": "SHELLING  YEMEN \u2192 PRESIDENTIAL PALACE  (20 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 21.4267,
-      "lon": 39.8261,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.jpost.com/middle-east/article-911849"
     }
   ]
 }
