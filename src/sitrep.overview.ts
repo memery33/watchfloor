@@ -53,8 +53,8 @@ export const THEATER_OVERVIEW: Theater =   {
         source: "PRESS",
         confidence: "CONFIRMED",
         priority: "PRI-1",
-        lat: 26.297,
-        lon: 50.12,
+        lat: 26.303239,
+        lon: 50.135284,
       },
       {
         id: "ov-ua-energy-cf",
@@ -223,7 +223,7 @@ export const THEATER_OVERVIEW: Theater =   {
       },
     ],
     markers: [
-      { id: "dhahran", name: "DHAHRAN", lat: 26.297, lon: 50.12, note: "Aramco building hit 13 Oct", tone: "hot" },
+      { id: "dhahran", name: "DHAHRAN", lat: 26.303239, lon: 50.135284, note: "Aramco building hit 13 Oct", tone: "hot" },
       { id: "m-iran", name: "IRAN / GULF", lat: 27.1, lon: 56.3, note: "12 hits/wk; Naqdi \u201cclosed\u201d", tone: "hot" },
       { id: "m-riyadh", name: "RIYADH", lat: 24.71, lon: 46.68, note: "Intercept N of Riyadh 7 Oct", tone: "warn" },
       { id: "m-kkia", name: "KKIA FUEL", lat: 24.958, lon: 46.699, note: "1 killed 7 Oct (GACA)", tone: "hot" },

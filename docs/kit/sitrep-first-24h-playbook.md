@@ -109,6 +109,10 @@ For every strike pin or event marker:
 | H6–H24 | every 3 h (sooner on an alert) | Same list, plus the day's OCHA/UN/maritime notices; re-run the D+ calc at each ship |
 | Every ship | — | SNAPSHOT updated; event `dtg` = event date (not ship date); no fact older than 72 h still marked as the lead without a reason; every new source has been through the licence gate |
 
+**Aging rule (every refresh)**
+- Events older than **about 3 weeks** are aged out of `events[]` and their markers at each refresh (the 2026-10-15 pass aged out Sep 25 and earlier).
+- **Background items (`PRIOR`) are kept**; they are context, not events, and don't age out.
+
 **Promotion / demotion**
 - **Lead-only sources (e.g. MENASTREAM):** can tip us off, but nothing ships on them alone, and nothing they say moves above CLAIM unless a wire on the named-wire list or an official source confirms it.
 - **CLAIM → REPORTED:** a wire on the named-wire list or a major outlet reports it *in its own voice* (not "X said on Telegram"), or a wire on the named-wire list **carries** the government/coalition statement. Relabel the fact `per <party>, via <wire>:`. An outlet that is not on the list carrying the statement does not promote it.

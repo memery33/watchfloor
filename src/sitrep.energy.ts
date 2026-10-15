@@ -33,8 +33,8 @@ export const THEATER_ENERGY: Theater =   {
         source: "PRESS",
         confidence: "CONFIRMED",
         priority: "PRI-1",
-        lat: 26.297,
-        lon: 50.12,
+        lat: 26.303239,
+        lon: 50.135284,
       },
       {
         id: "en-gfs-pride",
@@ -170,7 +170,7 @@ export const THEATER_ENERGY: Theater =   {
       },
     ],
     markers: [
-      { id: "dhahran", name: "DHAHRAN", lat: 26.297, lon: 50.12, note: "Aramco building hit 13 Oct", tone: "hot" },
+      { id: "dhahran", name: "DHAHRAN", lat: 26.303239, lon: 50.135284, note: "Aramco building hit 13 Oct", tone: "hot" },
       { id: "kapotnya-en", name: "KAPOTNYA ORF", lat: 55.635, lon: 37.795, note: "UA ORF strike", tone: "hot" },
       { id: "kkia-en", name: "KKIA FUEL", lat: 24.958, lon: 46.699, note: "Jet-fuel tanks Sep; 1 killed 7 Oct", tone: "hot" },
       { id: "hormuz2", name: "HORMUZ", lat: 26.57, lon: 56.25, note: "12 hits/wk; On Peace 6 Oct", tone: "hot" },

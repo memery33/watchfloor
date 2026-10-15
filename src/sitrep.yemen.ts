@@ -52,8 +52,8 @@ export const THEATER_YEMEN: Theater = {
       source: "PRESS",
       confidence: "CONFIRMED",
       priority: "PRI-1",
-      lat: 26.297,
-      lon: 50.12,
+      lat: 26.303239,
+      lon: 50.135284,
     },
     {
       id: "ye-dawn",
@@ -200,7 +200,7 @@ export const THEATER_YEMEN: Theater = {
     },
   ],
   markers: [
-    { id: "dhahran", name: "DHAHRAN", lat: 26.297, lon: 50.12, note: "Aramco building hit 13 Oct", tone: "hot" },
+    { id: "dhahran", name: "DHAHRAN", lat: 26.303239, lon: 50.135284, note: "Aramco building hit 13 Oct", tone: "hot" },
     { id: "yem-aden", name: "ADEN", lat: 12.79, lon: 45.029, note: "Airport missile/drone attack 7 Oct", tone: "hot" },
     { id: "yem-mocha", name: "MOCHA", lat: 13.318, lon: 43.25, note: "Control DELTA; JMIC: Houthi-held", tone: "warn" },
     { id: "yem-dhubab", name: "DHUBAB", lat: 12.943, lon: 43.411, note: "Main fighting 6\u20137 Oct (AP/Reuters)", tone: "hot" },

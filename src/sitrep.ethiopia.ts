@@ -46,8 +46,8 @@ export const THEATER_ETHIOPIA: Theater = {
       source: "PRESS",
       confidence: "REPORTED",
       priority: "PRI-1",
-      lat: 14.277,
-      lon: 39.461,
+      lat: 14.276944,
+      lon: 39.460833,
     },
     {
       id: "et-mekelle-1113",
@@ -194,7 +194,7 @@ export const THEATER_ETHIOPIA: Theater = {
     },
   ],
   markers: [
-    { id: "adigrat", name: "ADIGRAT", lat: 14.277, lon: 39.461, note: "Eritrean troops seen 7 Oct; blasts N (Reuters)", tone: "hot" },
+    { id: "adigrat", name: "ADIGRAT", lat: 14.276944, lon: 39.460833, note: "Eritrean troops seen 7 Oct; blasts N (Reuters)", tone: "hot" },
     { id: "et-mekelle", name: "MEKELLE", lat: 13.497, lon: 39.477, note: "Fell 3\u20134 Oct (Reuters); current control DELTA", tone: "warn" },
     { id: "et-adwa", name: "ADWA", lat: 14.167, lon: 38.891, note: "Airstrikes, \u22659 killed (aid bulletin via Reuters)", tone: "hot" },
     { id: "et-sheraro", name: "SHERARO", lat: 14.393, lon: 37.771, note: "Airstrikes, \u22658 killed (aid bulletin via Reuters)", tone: "hot" },
