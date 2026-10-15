@@ -1,7 +1,76 @@
 {
-  "generated_at": "2026-10-15T08:24:57.368368+00:00",
+  "generated_at": "2026-10-15T09:25:14.678919+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328066233",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "King Khalid International",
+      "fact": "STRIKE  SAUDI ARABIA \u2192 SAUDI ARABIA  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.9581,
+      "lon": 46.6956,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://english.aawsat.com/opinion/5329798-whats-next-after-houthi-attacks-saudi-civilian-airports"
+    },
+    {
+      "id": "gdelt-1328063993",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Kordofan",
+      "fact": "STRIKE  SUDANESE \u2192 VILLAGE  (7 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 13.0833,
+      "lon": 30.35,
+      "event_type": "strike",
+      "theater": "sudan",
+      "origin": null,
+      "url": "https://www.middleeastmonitor.com/20261015-sudanese-army-advances-in-west-darfur-recaptures-areas-from-rsf/"
+    },
+    {
+      "id": "gdelt-1328061678",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Moscow",
+      "fact": "SHELLING  RUSSIA \u2192 CIVILIAN  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.kyivpost.com/post/87123"
+    },
+    {
+      "id": "gdelt-1328062038",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Dhahran",
+      "fact": "STRIKE  YEMENI \u2192 DHAHRAN  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 26.3032,
+      "lon": 50.1353,
+      "event_type": "strike",
+      "theater": "iran",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://oilprice.com/Latest-Energy-News/World-News/IMF-Warns-of-Worldwide-Fallout-as-Attacks-on-Saudi-Arabia-Escalate.html"
+    },
     {
       "id": "gdelt-1328052492",
       "dtg": "15 OCT",
@@ -33,38 +102,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://www.ariananews.af/ukraines-zelenskiy-says-it-is-painful-when-trump-chooses-a-different-side/"
-    },
-    {
-      "id": "gdelt-1328047064",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Moscow",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.trend.az/business/energy/4234976.html"
-    },
-    {
-      "id": "gdelt-1328047065",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Dhahran",
-      "fact": "STRIKE  SAUDI \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 26.3032,
-      "lon": 50.1353,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.khaama.com/houthi-attacks-disrupt-saudi-flights-affecting-pilgrims-travelling-to-mecca-and-medina/"
     },
     {
       "id": "gdelt-1328045014",
@@ -198,38 +235,6 @@
         "inferred": true
       },
       "url": "https://www.moneycontrol.com/world/houthis-target-saudi-aramco-riyadh-airport-with-missiles-yemen-army-launches-offensive-article-14052412.html"
-    },
-    {
-      "id": "gdelt-1328023027",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Kyiv",
-      "fact": "SHELLING  UKRAINE \u2192 RUSSIAN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://telecom.economictimes.indiatimes.com/news/portal-in-portal/satcom/as-ukraine-struggles-with-starlink-and-us-satellite-data-europe-has-no-quick-fix/134955538"
-    },
-    {
-      "id": "gdelt-1328019118",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Riyadh",
-      "fact": "SHELLING  RIYADH \u2192 SAUDI  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://yalibnan.com/2026/10/15/live-updates-houthis-launch-new-attack-on-saudi-capital-as-trump-mulls-u-s-role-in-mideast-wars-new-front/"
     }
   ]
 }
