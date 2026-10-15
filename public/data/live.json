@@ -1,7 +1,81 @@
 {
-  "generated_at": "2026-10-15T21:20:37.414070+00:00",
+  "generated_at": "2026-10-15T22:21:09.517941+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328185028",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Sanaa",
+      "fact": "STRIKE  REBEL \u2192 ADEN  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://www.abc.net.au/news/2026-10-16/houthis-attack-aden-killing-five-and-wounding-16/107268204"
+    },
+    {
+      "id": "gdelt-1328185378",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Medina Region",
+      "fact": "SHELLING  YEMENI \u2192 MEDINA  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 25.6667,
+      "lon": 39.6667,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.presstv.co.uk/Detail/2026/10/15/778397/Yemen-dismisses-Saudi-death-toll-announcement,-says-Riyadh-attacked-Yemen-274,302-over-12-years"
+    },
+    {
+      "id": "gdelt-1328185379",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Sanaa",
+      "fact": "SHELLING  YEMEN \u2192 SAUDI  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.presstv.co.uk/Detail/2026/10/15/778397/Yemen-dismisses-Saudi-death-toll-announcement,-says-Riyadh-attacked-Yemen-274,302-over-12-years"
+    },
+    {
+      "id": "gdelt-1328183355",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Gaza",
+      "fact": "BLOCKADE  ISRAEL \u2192 ?  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "blockade",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://www.thenationalnews.com/news/mena/2026/10/15/israel-says-entry-of-commercial-goods-into-gaza-halted-amid-dispute-between-traders-and-hamas/"
+    },
     {
       "id": "gdelt-1328177921",
       "dtg": "15 OCT",
@@ -199,27 +273,6 @@
       "url": "https://english.aawsat.com/arab-world/5330055-fighting-deepens-pressure-taiz-houthi-leaders-captured"
     },
     {
-      "id": "gdelt-1328143544",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Sanaa",
-      "fact": "SHELLING  YEMENI \u2192 MINIST  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.bbc.com/news/articles/cm62y6lp73zdo"
-    },
-    {
       "id": "gdelt-1328140609",
       "dtg": "15 OCT",
       "date": "2026-10-15",
@@ -234,22 +287,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://www.naharnet.com:443/stories/en/323124-rubio-to-call-aoun-over-hezbollah-explosives-moawad-complaint"
-    },
-    {
-      "id": "gdelt-1328138214",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Sanaa",
-      "fact": "STRIKE  SECURITY PERSONNEL \u2192 ADEN  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.bbc.co.uk/news/articles/cm62y6lp73zdo"
     },
     {
       "id": "gdelt-1328138583",
@@ -287,38 +324,6 @@
         "inferred": true
       },
       "url": "https://www.jpost.com/middle-east/article-911849"
-    },
-    {
-      "id": "gdelt-1328135937",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Ryazan",
-      "fact": "STRIKE  UKRAINE \u2192 RUSSIA  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 54.6269,
-      "lon": 39.6916,
-      "event_type": "strike",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.justsecurity.org/160924/early-edition-october-15-2026/"
-    },
-    {
-      "id": "gdelt-1328130997",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "King Khalid International",
-      "fact": "STRIKE  SAUDI \u2192 WORKER  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.9581,
-      "lon": 46.6956,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.arabnews.com/saudi-arabia/praise-for-saudi-airport-worker-who-guided-passengers-to-safety-during-riyadh-attack-3006508"
     }
   ]
 }
