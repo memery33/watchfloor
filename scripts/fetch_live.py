@@ -10,6 +10,7 @@ import csv
 import io
 import json
 import os
+import re
 import time
 import zipfile
 from concurrent.futures import ThreadPoolExecutor
@@ -19,10 +20,7 @@ from urllib.request import urlopen
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(ROOT, "public", "data", "live.json")
-FALLBACK = os.path.expanduser(
-    "~/conflict-globe/public/data/events.json"
-)
-LASTUPDATE = "http://data.gdeltproject.org/gdeltv2/lastupdate.txt"
+LASTUPDATE = "https://data.gdeltproject.org/gdeltv2/lastupdate.txt"
 # Read the last WINDOW_HOURS of 15-minute exports (newest = the one lastupdate.txt
 # names), not just the newest file, so one quiet slice can't publish an empty
 # overlay. 0.25 = newest file only (the pre-window behavior). Override per run with
@@ -443,7 +441,8 @@ def fetch_export_url() -> str:
     for line in text.splitlines():
         line = line.strip()
         if line.endswith(".export.CSV.zip"):
-            return line.split(" ")[-1]
+            # lastupdate.txt still lists http:// URLs; fetch the same file over https.
+            return re.sub(r"^http://", "https://", line.split(" ")[-1])
     raise RuntimeError("no GDELT export URL")
 
 
@@ -535,6 +534,14 @@ def rows_from_exports(exports: list[list[list[str]]]) -> list[list[str]]:
     return merged
 
 
+_HTML_UNSAFE = str.maketrans({"<": " ", ">": " ", "&": "and", '"': "'"})
+
+
+def clean_text(value: str) -> str:
+    """Defense in depth: GDELT text never carries markup into live.json."""
+    return (value or "").translate(_HTML_UNSAFE)
+
+
 def from_gdelt_row(row: list[str]) -> dict | None:
     if len(row) < 61:
         return None
@@ -547,8 +554,8 @@ def from_gdelt_row(row: list[str]) -> dict | None:
         mentions = 0
     if mentions < 3:
         return None
-    actor1 = (row[6] or "").strip()
-    actor2 = (row[16] or "").strip()
+    actor1 = clean_text(row[6]).strip()
+    actor2 = clean_text(row[16]).strip()
     if actor1 in NOISE or actor2 in NOISE:
         return None
     try:
@@ -558,7 +565,7 @@ def from_gdelt_row(row: list[str]) -> dict | None:
         return None
     if lat == 0 and lon == 0:
         return None
-    location = row[52] or "Unknown"
+    location = clean_text(row[52]) or "Unknown"
     if not in_aor(location):
         return None
     if not coords_match_place(location, lat, lon) or not preset_gate(location, lat, lon):
@@ -676,16 +683,7 @@ def main() -> int:
         events = [item for row in rows if (item := from_gdelt_row(row))]
     except Exception as exc:  # noqa: BLE001
         log(f"live GDELT fetch failed: {exc}")
-        if os.path.exists(FALLBACK):
-            log(f"falling back to {FALLBACK}")
-            with open(FALLBACK, encoding="utf-8") as handle:
-                globe = json.load(handle)
-            events = [
-                item
-                for raw in globe.get("events", [])
-                if (item := from_globe_event(raw))
-            ]
-        elif os.path.exists(OUT):
+        if os.path.exists(OUT):
             log("keeping previous live.json")
             return 0
         else:
