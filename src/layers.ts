@@ -74,10 +74,35 @@ export const WAVES: Wave[] = [];
 // Pin coordinates: NGA GeoNames Server (GNS), US Government public domain; UFIs listed per pin.
 // GNS: "There are no licensing requirements or restrictions in place for the use of the GNS data."
 // (https://geonames.nga.mil/). Earlier OSM/Nominatim draft lookups were replaced; none remain.
+// Pins added 2026-10-15 (Dhahran, Adigrat) use OSM town nodes, noted per pin.
 // Each pin is the GNS populated-place point (fc P) for a town where a named outlet or official
 // body placed the strike. The outlet is named at the start of `fact`, and `url` is its article/post.
 // No coordinates from GeoConfirmed, DeepStateMap or ISW. Several pins can share a town point.
 export const STRIKES: StrikePin[] = [
+  {
+    id: "ye-1310-dhahran",
+    theaters: ["overview", "energy", "yemen"],
+    dtg: "13 OCT",
+    name: "DHAHRAN — ARAMCO BUILDING HIT",
+    lat: 26.297,
+    lon: 50.12, // Dhahran: OSM node 447805356 (town point), rounded
+    confidence: "CONFIRMED",
+    fact: "Reuters / Al Jazeera: an Aramco administrative building in Dhahran was hit overnight; Saudi energy ministry says limited fire, no casualties. Town-level pin, not the building.",
+    geolocator: "Watchfloor (town-level placement)",
+    url: "https://www.aljazeera.com/news/2026/10/15/fighting-in-yemen-intensifies-whats-the-latest-on-the-battlefield",
+  },
+  {
+    id: "et-0708-adigrat",
+    theaters: ["ethiopia"],
+    dtg: "07–08 OCT",
+    name: "ADIGRAT — BLASTS NORTH OF TOWN",
+    lat: 14.277,
+    lon: 39.461, // Adigrat: OSM node 298296178 (town point), rounded
+    confidence: "REPORTED",
+    fact: "Reuters: a resident heard three explosions north of Adigrat overnight as Eritrean troops pulled back under reported Ethiopian drone strikes. Town-level pin; blasts were north of the town.",
+    geolocator: "Watchfloor (town-level placement)",
+    url: "https://www.devdiscourse.com/article/international/3989294-drones-target-eritrean-troops-inside-ethiopia-conflict-monitor-says",
+  },
   {
     id: "ua-0110-odesa",
     theaters: ["ukraine"],
