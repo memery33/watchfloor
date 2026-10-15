@@ -595,48 +595,6 @@ def from_gdelt_row(row: list[str]) -> dict | None:
     }
 
 
-def from_globe_event(raw: dict) -> dict | None:
-    event_type = raw.get("event_type")
-    if event_type not in {"strike", "shelling", "blockade"}:
-        return None
-    location = raw.get("location_name") or "Unknown"
-    if not in_aor(location):
-        return None
-    try:
-        lat = float(raw["lat"])
-        lon = float(raw["lon"])
-        dt = datetime.strptime(str(raw.get("date")), "%Y-%m-%d").replace(
-            tzinfo=timezone.utc
-        )
-    except (KeyError, TypeError, ValueError):
-        return None
-    if dt < datetime.now(timezone.utc) - timedelta(days=3):
-        return None
-    actor1 = raw.get("actor1") or ""
-    actor2 = raw.get("actor2") or ""
-    if actor1 in NOISE or actor2 in NOISE:
-        return None
-    if not coords_match_place(location, lat, lon) or not preset_gate(location, lat, lon):
-        return None
-    origin = infer_origin(actor1, actor2, lat, lon)
-    return {
-        "id": raw.get("id") or f"globe-{lat}-{lon}",
-        "dtg": dt.strftime("%d %b").upper(),
-        "date": dt.strftime("%Y-%m-%d"),
-        "location": location.split(",")[0][:48],
-        "fact": f"{event_type.upper()}  {actor1 or '?'} → {actor2 or '?'}",
-        "source": "GDELT",
-        "confidence": "CLAIM",
-        "priority": "PRI-2" if event_type == "strike" else "PRI-3",
-        "lat": round(lat, 4),
-        "lon": round(lon, 4),
-        "event_type": event_type,
-        "theater": theater_for(lat, lon),
-        "origin": origin,
-        "url": raw.get("source_url"),
-    }
-
-
 def dedupe(events: list[dict]) -> list[dict]:
     seen: set[tuple] = set()
     uniq: list[dict] = []
