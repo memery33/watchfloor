@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-10-16T03:19:47.670593+00:00",
+  "generated_at": "2026-10-16T04:23:20.389387+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328223848",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Kupyansk",
+      "fact": "STRIKE  UKRAINE \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 49.7209,
+      "lon": 37.5998,
+      "event_type": "strike",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "http://www.rightspeak.net/2026/10/244-c-clashes-in-f-line-31-in-pokrovsk.html"
+    },
+    {
+      "id": "gdelt-1328222393",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Tehran",
+      "fact": "SHELLING  IRAN \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "http://www.jpost.com/middle-east/iran-news/2026-10-16/live-updates-911900"
+    },
     {
       "id": "gdelt-1328217005",
       "dtg": "16 OCT",
@@ -325,43 +357,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.kyivpost.com/post/87203"
-    },
-    {
-      "id": "gdelt-1328185378",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Medina Region",
-      "fact": "SHELLING  YEMENI \u2192 MEDINA  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 25.6667,
-      "lon": 39.6667,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.presstv.co.uk/Detail/2026/10/15/778397/Yemen-dismisses-Saudi-death-toll-announcement,-says-Riyadh-attacked-Yemen-274,302-over-12-years"
-    },
-    {
-      "id": "gdelt-1328183355",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Gaza",
-      "fact": "BLOCKADE  ISRAEL \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "blockade",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.thenationalnews.com/news/mena/2026/10/15/israel-says-entry-of-commercial-goods-into-gaza-halted-amid-dispute-between-traders-and-hamas/"
     }
   ]
 }
