@@ -1,7 +1,55 @@
 {
-  "generated_at": "2026-10-16T17:31:05.489542+00:00",
+  "generated_at": "2026-10-16T18:19:31.995738+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328337553",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Donbas",
+      "fact": "STRIKE  CIVILIAN \u2192 ?  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 48.5,
+      "lon": 38.5,
+      "event_type": "strike",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.hindustantimes.com/world-news/russia-ukraine-war-latest-officer-stupnikov-military-intelligence-kill-300-soldiers-before-escpaing-to-kyiv-report-putin-zelensky-moscow-kremlin-101792165975044.html"
+    },
+    {
+      "id": "gdelt-1328337554",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Petersburg",
+      "fact": "STRIKE  CIVILIAN \u2192 ?  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 59.8944,
+      "lon": 30.2642,
+      "event_type": "strike",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.hindustantimes.com/world-news/russia-ukraine-war-latest-officer-stupnikov-military-intelligence-kill-300-soldiers-before-escpaing-to-kyiv-report-putin-zelensky-moscow-kremlin-101792165975044.html"
+    },
+    {
+      "id": "gdelt-1328337839",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Kyiv",
+      "fact": "SHELLING  UNITED NATIONS \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.stripes.com/theaters/europe/2026-10-16/ukraine-civilian-casualties-rise-23173114.html"
+    },
     {
       "id": "gdelt-1328336509",
       "dtg": "16 OCT",
@@ -273,27 +321,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://www.thedailystar.net/business/economy/aviation/news/saudi-airport-restrictions-disrupt-travel-16620-passengers-4300286"
-    },
-    {
-      "id": "gdelt-1328277326",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Jonglei",
-      "fact": "SHELLING  YEMEN \u2192 SAUDI ARABIA  (7 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 6.8308,
-      "lon": 31.2772,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.aol.co.uk/articles/8-barely-reported-countries-war-110900000.html"
     }
   ]
 }
