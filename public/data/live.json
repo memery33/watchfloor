@@ -1,7 +1,44 @@
 {
-  "generated_at": "2026-10-16T04:23:20.389387+00:00",
+  "generated_at": "2026-10-16T05:26:19.127668+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328228253",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Riyadh",
+      "fact": "SHELLING  YEMEN \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.aol.co.uk/articles/war-yemen-houthis-now-virtually-042746000.html"
+    },
+    {
+      "id": "gdelt-1328225250",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Gaza",
+      "fact": "SHELLING  IRAN \u2192 ISRAEL  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "shelling",
+      "theater": "levant",
+      "origin": null,
+      "url": "http://www.bignewsnetwork.com/news/279377831/israel-unlikely-to-attack-iran-before-elections-media"
+    },
     {
       "id": "gdelt-1328223848",
       "dtg": "16 OCT",
@@ -35,20 +72,20 @@
       "url": "http://www.jpost.com/middle-east/iran-news/2026-10-16/live-updates-911900"
     },
     {
-      "id": "gdelt-1328217005",
+      "id": "gdelt-1328220143",
       "dtg": "16 OCT",
       "date": "2026-10-16",
-      "location": "Riyadh",
-      "fact": "SHELLING  CIVILIAN \u2192 ?  (10 mentions)",
+      "location": "Kirovohrad",
+      "fact": "STRIKE  UKRAINIAN \u2192 RUSSIAN  (3 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
+      "priority": "PRI-2",
+      "lat": 48.5132,
+      "lon": 32.2597,
+      "event_type": "strike",
+      "theater": "ukraine",
       "origin": null,
-      "url": "https://www.moneycontrol.com/world/houthi-attack-on-yemen-s-aden-palace-kills-5-us-canada-india-issue-advisory-as-iran-backed-group-steps-up-attack-on-saudi-arabia-article-14053407.html"
+      "url": "https://www.timesfreepress.com/news/2026/oct/15/ukraine-abandons-truce-and-attacks-russian-oil-refinery-as-zelenskyy-says-he-feels-betrayed-by-trump/"
     },
     {
       "id": "gdelt-1328217023",
@@ -65,22 +102,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.moneycontrol.com/world/houthi-attack-on-yemen-s-aden-palace-kills-5-us-canada-india-issue-advisory-as-iran-backed-group-steps-up-attack-on-saudi-arabia-article-14053407.html"
-    },
-    {
-      "id": "gdelt-1328215983",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Gaza",
-      "fact": "SHELLING  ISRAEL \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.theyeshivaworld.com/news/israel-news/2610548/chilling-letter-sinwars-son-wrote-of-wanting-to-shoot-jews-at-age-10-idf-says.html"
     },
     {
       "id": "gdelt-1328216090",
@@ -256,107 +277,6 @@
         "inferred": true
       },
       "url": "https://aninews.in/news/world/middle-east/5-killed-16-injured-in-houthi-attack-on-yemen8217s-aden-presidential-palace20261016044500/"
-    },
-    {
-      "id": "gdelt-1328190813",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Riyadh",
-      "fact": "STRIKE  ? \u2192 YEMEN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://english.news.cn/20261016/cb5dbcf839a14cfd9fe26ea4ab77bdc7/c.html"
-    },
-    {
-      "id": "gdelt-1328191276",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Riyadh",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 ADEN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.ynetnews.com/article/hjucn5ajgl"
-    },
-    {
-      "id": "gdelt-1328189240",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Tehran",
-      "fact": "SHELLING  MERCHANT SHIP \u2192 ?  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.ynetnews.com/opinions-analysis/article/h1cvyqcjgg"
-    },
-    {
-      "id": "gdelt-1328189597",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Bandar Abbas",
-      "fact": "SHELLING  IRAN \u2192 ISRAEL  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 27.1865,
-      "lon": 56.2808,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.ynetnews.com/opinions-analysis/article/h1cvyqcjgg"
-    },
-    {
-      "id": "gdelt-1328188238",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Sanaa",
-      "fact": "SHELLING  AGENCE FRANCE PRESS \u2192 ?  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.hindustantimes.com/world-news/at-least-5-killed-16-injured-in-houthi-missile-strike-on-yemen-presidential-palace-says-health-minister-101792095716804.html"
-    },
-    {
-      "id": "gdelt-1328188697",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Moscow",
-      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIAN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.kyivpost.com/post/87203"
     }
   ]
 }
