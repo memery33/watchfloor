@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T11:21:26.520714+00:00",
+  "generated_at": "2026-10-16T12:19:16.219347+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
@@ -359,20 +359,25 @@
       "url": "https://www.albawaba.net/news/houthi-missile-strikes-kill-soldiers-1639149"
     },
     {
-      "id": "gdelt-1328233052",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Bryansk",
-      "fact": "SHELLING  RUSSIA \u2192 ?  (4 mentions)",
+      "id": "gdelt-1328277326",
+      "dtg": "15 OCT",
+      "date": "2026-10-15",
+      "location": "Jonglei",
+      "fact": "SHELLING  YEMEN \u2192 SAUDI ARABIA  (7 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
-      "lat": 53.2521,
-      "lon": 34.3717,
+      "lat": 6.8308,
+      "lon": 31.2772,
       "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.hngn.com/articles/273523/20261015/ukraine-out-patriot-interceptors-zelensky-turns-europe.htm"
+      "theater": "overview",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.aol.co.uk/articles/8-barely-reported-countries-war-110900000.html"
     }
   ]
 }
