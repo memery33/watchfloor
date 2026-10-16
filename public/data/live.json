@@ -1,7 +1,71 @@
 {
-  "generated_at": "2026-10-16T10:26:51.376762+00:00",
+  "generated_at": "2026-10-16T11:21:26.520714+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328269891",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Lutsk",
+      "fact": "STRIKE  RUSSIAN \u2192 VLADIMIR  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 50.7593,
+      "lon": 25.3424,
+      "event_type": "strike",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.rferl.org/a/us-senators-probe-starlink-zelenskyy-eu-summit/33877820.html"
+    },
+    {
+      "id": "gdelt-1328269957",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Moscow",
+      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIA  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://isp.netscape.com:443/news/world/story/0001/20261016/025bdb5cebc0be727a6197ce37f2c365"
+    },
+    {
+      "id": "gdelt-1328269958",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Kyiv",
+      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIA  (24 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://isp.netscape.com:443/news/world/story/0001/20261016/025bdb5cebc0be727a6197ce37f2c365"
+    },
+    {
+      "id": "gdelt-1328270045",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Tehran",
+      "fact": "STRIKE  THE US \u2192 HIROSHIMA  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "strike",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.aljazeera.com/news/2026/10/16/trump-rules-out-using-a-nuclear-bomb-on-iran-why-that-matters"
+    },
     {
       "id": "gdelt-1328267417",
       "dtg": "16 OCT",
@@ -104,22 +168,6 @@
       "url": "https://themedialine.org/headlines/houthis-hit-saudi-airport-20-times-since-oct-1-kill-5-in-yemens-presidential-palace-attack/"
     },
     {
-      "id": "gdelt-1328256678",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Kyiv",
-      "fact": "SHELLING  CIVILIAN \u2192 RUSSIAN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "http://www.bgnes.com/conflicts/ukraine-on-the-verge-of-running-out-of-patriot-missiles"
-    },
-    {
       "id": "gdelt-1328254475",
       "dtg": "16 OCT",
       "date": "2026-10-16",
@@ -214,22 +262,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://www.aljazeera.com/features/2026/10/16/alone-in-gaza-genocide-leaves-palestinian-man-without-family-or-a-home"
-    },
-    {
-      "id": "gdelt-1328245449",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Kremlin",
-      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIAN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.bankingnews.gr/diethni/articles/905464/ukraine-trump-finishes-off-zelensky-talks-with-putin-ukrainian-air-defense-collapses-only-2-patriots-left"
     },
     {
       "id": "gdelt-1328245668",
@@ -341,27 +373,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.hngn.com/articles/273523/20261015/ukraine-out-patriot-interceptors-zelensky-turns-europe.htm"
-    },
-    {
-      "id": "gdelt-1328228253",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Riyadh",
-      "fact": "SHELLING  YEMEN \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.aol.co.uk/articles/war-yemen-houthis-now-virtually-042746000.html"
     }
   ]
 }
