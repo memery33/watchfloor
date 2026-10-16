@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-10-16T20:25:00.698145+00:00",
+  "generated_at": "2026-10-16T21:21:49.502679+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328366458",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Moscow",
+      "fact": "SHELLING  RUSSIA \u2192 CIVILIAN  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://peakoil.com/publicpolicy/were-done-zelensky-says-ukraine-will-resume-strikes-on-russian-oil-refineries"
+    },
+    {
+      "id": "gdelt-1328365131",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Sanaa",
+      "fact": "SHELLING  ADEN \u2192 SECURITY PERSONNEL  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://www.thenationalnews.com/news/mena/2026/10/16/yemen-government-will-remain-in-aden-despite-houthi-attack-says-official/"
+    },
     {
       "id": "gdelt-1328360958",
       "dtg": "16 OCT",
@@ -17,22 +49,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://www.military.com/iran-boosts-air-defenses-as-it-braces-for-fresh-us-attacks"
-    },
-    {
-      "id": "gdelt-1328358784",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Moscow",
-      "fact": "SHELLING  CIVILIAN \u2192 ?  (7 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.bbc.co.uk/news/articles/ckz65g34wyd8o"
     },
     {
       "id": "gdelt-1328358900",
