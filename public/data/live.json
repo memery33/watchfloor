@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-16T06:26:13.222507+00:00",
+  "generated_at": "2026-10-16T07:18:15.228485+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
@@ -266,22 +266,6 @@
         "inferred": true
       },
       "url": "https://www.freemalaysiatoday.com/category/world/2026/10/16/saudi-led-coalition-says-it-intercepted-cruise-missile-3-drones"
-    },
-    {
-      "id": "gdelt-1328204866",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Gaza",
-      "fact": "BLOCKADE  ISRAEL \u2192 JOURNALIST  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "blockade",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.spokanepublicradio.org/2026-10-15/three-years-on-israel-still-bars-foreign-journalists-from-entering-gaza"
     }
   ]
 }
