@@ -1,13 +1,29 @@
 {
-  "generated_at": "2026-10-16T01:29:32.728299+00:00",
+  "generated_at": "2026-10-16T02:19:37.207028+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1328206975",
+      "id": "gdelt-1328213202",
       "dtg": "16 OCT",
       "date": "2026-10-16",
       "location": "Riyadh",
-      "fact": "STRIKE  SAUDI ARABIAN \u2192 ?  (4 mentions)",
+      "fact": "SHELLING  AIRLINE \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.eurasiareview.com/16102026-iran-and-its-houthi-proxies-target-saudi-airports-and-gulf-shipping-analysis/"
+    },
+    {
+      "id": "gdelt-1328214077",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Riyadh",
+      "fact": "STRIKE  YEMENI \u2192 ?  (4 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-2",
@@ -15,8 +31,87 @@
       "lon": 46.7728,
       "event_type": "strike",
       "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.breitbart.com/middle-east/2026/10/15/saudis-accuse-iran-backed-houthi-terrorists-of-attacking-islams-holy-city-of-medina/"
+    },
+    {
+      "id": "gdelt-1328212267",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Sanaa",
+      "fact": "STRIKE  SAUDI \u2192 YEMEN  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://spacewar.com/yemen-strike-strains-ties-with-saudi-arabias-us-ally-999/"
+    },
+    {
+      "id": "gdelt-1328210059",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Qatar",
+      "fact": "STRIKE  TRAVELER \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 25.5,
+      "lon": 51.25,
+      "event_type": "strike",
+      "theater": "iran",
       "origin": null,
-      "url": "https://www.eastbaytimes.com/2026/10/15/letters-trumps-healthcare-cuts-financial-ruin/"
+      "url": "https://peakoil.com/production/why-the-real-price-of-oil-is-likely-30-40-higher-than-where-it-is-now"
+    },
+    {
+      "id": "gdelt-1328210650",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Kyiv",
+      "fact": "STRIKE  UKRAINIAN \u2192 RUSSIAN  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "strike",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "http://www.goskagit.com/news/ap_business/ukraine-abandons-truce-and-attacks-russian-oil-refinery-as-zelenskyy-says-he-feels-betrayed-by/article_c7620f53-5bf7-5bff-8e0c-52afef017421.html"
+    },
+    {
+      "id": "gdelt-1328210893",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Sanaa",
+      "fact": "SHELLING  YEMEN \u2192 SAUDI  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.freemalaysiatoday.com/category/world/2026/10/16/saudi-led-coalition-says-it-intercepted-cruise-missile-3-drones"
     },
     {
       "id": "gdelt-1328204866",
@@ -81,64 +176,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://abc17news.com/news/national-world/cnn-world/2026/10/15/exclusive-ukraine-runs-out-of-patriot-defense-missiles-leaving-it-more-vulnerable-to-russian-attacks-source-tells-cnn/"
-    },
-    {
-      "id": "gdelt-1328197425",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Sanaa",
-      "fact": "SHELLING  YEMEN \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://abc17news.com/news/national-world/cnn-world/2026/10/15/iran-aligned-houthis-target-yemeni-presidential-palace-prime-minister-remains-unharmed/"
-    },
-    {
-      "id": "gdelt-1328194238",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Sanaa",
-      "fact": "STRIKE  ? \u2192 YEMEN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "http://www.heraldglobe.com/news/279377577/5-killed-in-presidential-palace-attack-in-yemen-aden-as-houthis-claim-saudi-officers-killed"
-    },
-    {
-      "id": "gdelt-1328195239",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Riyadh",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.foxnews.com/world/houthis-emerge-global-threat-iran-control-saudi-attacks-says-former-envoy"
     },
     {
       "id": "gdelt-1328195240",
@@ -346,80 +383,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.livemint.com/politics/yemen-government-says-houthis-strike-presidential-palace-in-aden-11792094233341.html"
-    },
-    {
-      "id": "gdelt-1328171271",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Kremlin",
-      "fact": "STRIKE  UKRAINE \u2192 RUSSIA  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "strike",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://economictimes.indiatimes.com/news/international/world-news/were-done-zelenskyy-declares-end-to-ceasefire-as-ukraine-strikes-russian-oil-refinery/articleshow/134976315.cms"
-    },
-    {
-      "id": "gdelt-1328167019",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Marib",
-      "fact": "SHELLING  GOVERNMENT \u2192 NEIGHBORHOOD  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.461,
-      "lon": 45.3253,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://aa.com.tr/en/middle-east/houthis-target-yemens-presidential-palace-in-aden-with-ballistic-missiles/4090086"
-    },
-    {
-      "id": "gdelt-1328165399",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "Dhubab",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 YEMEN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 12.9431,
-      "lon": 43.4102,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://theaviationist.com/2026/10/15/houthi-militants-score-apparent-hit-against-saudi-typhoon/"
-    },
-    {
-      "id": "gdelt-1328165665",
-      "dtg": "15 OCT",
-      "date": "2026-10-15",
-      "location": "King Khalid International",
-      "fact": "SHELLING  YEMEN \u2192 SAUDI  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.9581,
-      "lon": 46.6956,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.cbc.ca/news/world/yemen-houthis-attack-presidential-palace-9.7382188"
     }
   ]
 }
