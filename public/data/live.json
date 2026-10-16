@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-10-16T07:18:15.228485+00:00",
+  "generated_at": "2026-10-16T07:19:28.522832+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328239666",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Jeddah",
+      "fact": "STRIKE  RIYADH \u2192 CIVILIAN  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 21.5169,
+      "lon": 39.2192,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://aninews.in/news/world/asia/air-india-cancels-flights-to-riyadh-dammam-jeddah-until-oct-20-amid-houthi-strikes-on-saudi-arabia20261016113551/"
+    },
+    {
+      "id": "gdelt-1328239669",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Gaza",
+      "fact": "STRIKE  SAUDI ARABIA \u2192 IRAN  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://slguardian.org/how-yemens-houthis-have-developed-the-weapons-to-challenge-saudi-arabias-defences/"
+    },
     {
       "id": "gdelt-1328236252",
       "dtg": "16 OCT",
