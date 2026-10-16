@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-16T12:19:16.219347+00:00",
+  "generated_at": "2026-10-16T12:35:17.202049+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328286341",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Tehran",
+      "fact": "STRIKE  AIRCRAFT CARRIER \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "strike",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.middleeastmonitor.com/20261016-why-a-new-us-israeli-war-against-iran-could-carry-enormous-risks/"
+    },
     {
       "id": "gdelt-1328269891",
       "dtg": "16 OCT",
@@ -49,22 +65,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://isp.netscape.com:443/news/world/story/0001/20261016/025bdb5cebc0be727a6197ce37f2c365"
-    },
-    {
-      "id": "gdelt-1328270045",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Tehran",
-      "fact": "STRIKE  THE US \u2192 HIROSHIMA  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.aljazeera.com/news/2026/10/16/trump-rules-out-using-a-nuclear-bomb-on-iran-why-that-matters"
     },
     {
       "id": "gdelt-1328267417",
@@ -320,43 +320,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://aninews.in/news/world/asia/air-india-cancels-flights-to-riyadh-dammam-jeddah-until-oct-20-amid-houthi-strikes-on-saudi-arabia20261016113551/"
-    },
-    {
-      "id": "gdelt-1328236252",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Taif",
-      "fact": "SHELLING  SAUDI \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 21.2703,
-      "lon": 40.4158,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.albawaba.net/news/saudi-arabia-reports-19-killed-463-1639150"
-    },
-    {
-      "id": "gdelt-1328236473",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Marib",
-      "fact": "STRIKE  ADEN \u2192 YEMEN  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 15.461,
-      "lon": 45.3253,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.albawaba.net/news/houthi-missile-strikes-kill-soldiers-1639149"
     },
     {
       "id": "gdelt-1328277326",
