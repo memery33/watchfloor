@@ -1,7 +1,118 @@
 {
-  "generated_at": "2026-10-17T10:56:05.580196+00:00",
+  "generated_at": "2026-10-17T12:17:54.648201+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328446687",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Moscow",
+      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIA  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.news-gazette.com/news/nation-world/zelenskyy-urges-support-for-new-us-sanctions-on-russia-after-trump-puts-them-on-hold/article_ea52723e-4ff9-51f0-af20-184cc54fa68d.html"
+    },
+    {
+      "id": "gdelt-1328445047",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Shifa",
+      "fact": "STRIKE  ? \u2192 YEMEN  (24 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 32.45,
+      "lon": 35.5333,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.messenger-inquirer.com/ap/elections/airstrike-kills-3-children-in-yemen-and-other-middle-east-developments/article_367dcc0f-b3b7-5dcd-a3b0-a2d6b6f71e43.html"
+    },
+    {
+      "id": "gdelt-1328442373",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Al Jubayl",
+      "fact": "SHELLING  TANKER \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 27.0112,
+      "lon": 49.6583,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://aa.com.tr/en/middle-east/2nd-tanker-attack-reported-in-same-area-off-saudi-arabia-ukmto/4091700"
+    },
+    {
+      "id": "gdelt-1328442826",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Baghdad",
+      "fact": "STRIKE  SAUDI ARABIA \u2192 FIGHTER  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 33.3386,
+      "lon": 44.3939,
+      "event_type": "strike",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.bankingnews.gr/diethni/articles/905675/houthis-enter-taiz-as-typhoon-jet-downed-and-saboteurs-caught"
+    },
+    {
+      "id": "gdelt-1328442947",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Indian Embassy",
+      "fact": "SHELLING  YEMEN \u2192 AIRLINE  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 15.3285,
+      "lon": 44.1977,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.freepressjournal.in/india/air-india-air-india-express-extend-saudi-flight-suspension-until-october-24-amid-regional-tensions"
+    },
+    {
+      "id": "gdelt-1328441223",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Tehran",
+      "fact": "STRIKE  ? \u2192 YEMEN  (30 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "strike",
+      "theater": "iran",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.wfmz.com/business/airstrike-kills-3-children-in-yemen-and-other-middle-east-developments/article_3b9d69b5-ca27-5ced-b700-8d0ab922d0ee.html"
+    },
     {
       "id": "gdelt-1328440319",
       "dtg": "17 OCT",
@@ -93,22 +204,6 @@
       "url": "https://www.globalissues.org/news/2026/10/16/44368"
     },
     {
-      "id": "gdelt-1328437331",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Moscow",
-      "fact": "SHELLING  RUSSIA \u2192 UKRAINE  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://eaworldview.com/2026/10/ukraine-war-trump-refuses-to-implement-new-russia-sanctions/"
-    },
-    {
       "id": "gdelt-1328435373",
       "dtg": "17 OCT",
       "date": "2026-10-17",
@@ -123,22 +218,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://nuclear-news.net/2026/10/17/1-a-trumps-california-dreaming-is-a-nuclear-nightmare/"
-    },
-    {
-      "id": "gdelt-1328434059",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Al Jubayl",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 TANKER  (7 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 27.0112,
-      "lon": 49.6583,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.azernews.az/region/265731.html"
     },
     {
       "id": "gdelt-1328434110",
@@ -304,22 +383,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.manilatimes.net/2026/10/17/world/un-news/ukraine-civilian-casualty-rates-among-deadliest-in-years-as-energy-attacks-intensify/2447865"
-    },
-    {
-      "id": "gdelt-1328411215",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "King Khalid International",
-      "fact": "SHELLING  TRAVELLER \u2192 SAUDI ARABIA  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.9581,
-      "lon": 46.6956,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.perthnow.com.au/news/smart-traveller-warns-australians-to-avoid-saudi-arabia-after-deadly-airport-missile-attacks-c-23034840"
     }
   ]
 }
