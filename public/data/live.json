@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-17T22:26:16.905375+00:00",
+  "generated_at": "2026-10-17T23:26:15.412105+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328500649",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Khamis Mushait",
+      "fact": "SHELLING  SAUDI \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 18.3064,
+      "lon": 42.7292,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://english.news.cn/20261018/109113f5d17440a283c8123a3a937bd3/c.html"
+    },
     {
       "id": "gdelt-1328496770",
       "dtg": "17 OCT",
@@ -214,22 +230,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://www.ynetnews.com/article/bkrmczw3gx"
-    },
-    {
-      "id": "gdelt-1328476264",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Jerusalem",
-      "fact": "BLOCKADE  DIPLOMAT \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.7667,
-      "lon": 35.2333,
-      "event_type": "blockade",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://kesq.com/news/national-world/cnn-world/2026/10/17/israeli-settlers-attack-group-of-european-diplomats-in-the-occupied-west-bank/"
     }
   ]
 }
