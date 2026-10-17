@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-10-17T21:24:00.776860+00:00",
+  "generated_at": "2026-10-17T22:26:16.905375+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328496770",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Oman",
+      "fact": "SHELLING  SYRIAN \u2192 ?  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 21.0,
+      "lon": 57.0,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.dailymail.com/news/article-15615723/Flock-awe-Missile-lands-Syrian-sheep-field-bemusement.html"
+    },
+    {
+      "id": "gdelt-1328496807",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Belgorod",
+      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIA  (16 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.6107,
+      "lon": 36.5802,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.ksl.com:443/article/news/world/zelenskyy-urges-support-for-new-us-sanctions-on-russia-put-on-hold-by-trump/51637549"
+    },
     {
       "id": "gdelt-1328493116",
       "dtg": "17 OCT",
@@ -198,22 +230,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://kesq.com/news/national-world/cnn-world/2026/10/17/israeli-settlers-attack-group-of-european-diplomats-in-the-occupied-west-bank/"
-    },
-    {
-      "id": "gdelt-1328466878",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Sanaa",
-      "fact": "STRIKE  AIRWAY \u2192 ADEN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.rustourismnews.com/2026/10/17/missiles-strike-aden-airport-just-500-metres-from-passenger-plane-preparing-for-takeoff/"
     }
   ]
 }
