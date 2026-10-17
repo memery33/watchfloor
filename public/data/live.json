@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-17T04:23:25.836727+00:00",
+  "generated_at": "2026-10-17T05:18:54.696835+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328407128",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Tehran",
+      "fact": "STRIKE  ISRAEL \u2192 IRAN  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "strike",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.spokesman.com/stories/2026/oct/16/iran-boosts-air-defenses-as-it-braces-for-fresh-us/"
+    },
     {
       "id": "gdelt-1328406210",
       "dtg": "17 OCT",
@@ -65,22 +81,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://www.sbs.com.au/news/article/how-are-yemens-houthis-attacking-saudi-arabia-so-effectively/faki56ctm"
-    },
-    {
-      "id": "gdelt-1328397350",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Tehran",
-      "fact": "STRIKE  ? \u2192 SAUDI ARABIA  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": null,
-      "url": "http://usa.chinadaily.com.cn/a/202610/17/WS6ad2cc24e4b06d4aa05634db.html"
     },
     {
       "id": "gdelt-1328396501",
@@ -235,54 +235,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.rte.ie/news/middle-east/2026/1017/1595732-middle-east-iran/"
-    },
-    {
-      "id": "gdelt-1328378680",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Khamis Mushait",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 18.3064,
-      "lon": 42.7292,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "http://www.jpost.com/middle-east/article-911943"
-    },
-    {
-      "id": "gdelt-1328377453",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Al Buraiqa",
-      "fact": "SHELLING  ADEN \u2192 SECURITY OFFICIAL  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 25.4927,
-      "lon": 49.6561,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://english.news.cn/20261017/e2601ec72a1b4c2f84bfd5d3174e6618/c.html"
-    },
-    {
-      "id": "gdelt-1328377455",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Sanaa",
-      "fact": "SHELLING  ADEN \u2192 MEDIA  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://english.news.cn/20261017/e2601ec72a1b4c2f84bfd5d3174e6618/c.html"
     }
   ]
 }
