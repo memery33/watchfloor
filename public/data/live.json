@@ -1,7 +1,103 @@
 {
-  "generated_at": "2026-10-17T09:24:33.613880+00:00",
+  "generated_at": "2026-10-17T10:22:54.110797+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328436881",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Pryluky",
+      "fact": "SHELLING  CIVILIAN \u2192 ?  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 51.4634,
+      "lon": 28.8657,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.globalissues.org/news/2026/10/16/44368"
+    },
+    {
+      "id": "gdelt-1328437119",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Yanbu",
+      "fact": "SHELLING  IRAN \u2192 PRESIDENTIAL PALACE  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.0891,
+      "lon": 38.0637,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.aljazeera.com/news/2026/10/17/iran-backed-houthis-strike-yemens-aden-what-that-means"
+    },
+    {
+      "id": "gdelt-1328437331",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Moscow",
+      "fact": "SHELLING  RUSSIA \u2192 UKRAINE  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://eaworldview.com/2026/10/ukraine-war-trump-refuses-to-implement-new-russia-sanctions/"
+    },
+    {
+      "id": "gdelt-1328435373",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Tehran",
+      "fact": "SHELLING  IRAN \u2192 BRITISH  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://nuclear-news.net/2026/10/17/1-a-trumps-california-dreaming-is-a-nuclear-nightmare/"
+    },
+    {
+      "id": "gdelt-1328434059",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Al Jubayl",
+      "fact": "SHELLING  SAUDI ARABIA \u2192 TANKER  (7 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 27.0112,
+      "lon": 49.6583,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.azernews.az/region/265731.html"
+    },
+    {
+      "id": "gdelt-1328434110",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Moscow",
+      "fact": "STRIKE  UKRAINE \u2192 RUSSIAN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "strike",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://jowhar.com/ukraine-endures-a-punishing-week-under-pressure-from-trump-and-putin/"
+    },
     {
       "id": "gdelt-1328430661",
       "dtg": "17 OCT",
@@ -22,22 +118,6 @@
         "inferred": true
       },
       "url": "https://www.winnipegfreepress.com/arts-and-life/life/faith/2026/10/17/airstrike-kills-3-children-in-yemen-and-other-middle-east-developments"
-    },
-    {
-      "id": "gdelt-1328429593",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Al Jubayl",
-      "fact": "SHELLING  TANKER \u2192 SAUDI ARABIA  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 27.0112,
-      "lon": 49.6583,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://cedarnews.net/newstasks/1076328/tanker-captain-reports-rpg-attack-near-saudi-arabias-al-jubayl/"
     },
     {
       "id": "gdelt-1328428491",
@@ -152,22 +232,6 @@
       "url": "https://slguardian.org/black-sea-oil-spills-worsen-as-russian-ukrainian-attacks-threaten-marine-wildlife/"
     },
     {
-      "id": "gdelt-1328420536",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Kremlin",
-      "fact": "STRIKE  UKRAINE \u2192 ROMANIA  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "strike",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://slguardian.org/black-sea-oil-spills-worsen-as-russian-ukrainian-attacks-threaten-marine-wildlife/"
-    },
-    {
       "id": "gdelt-1328420703",
       "dtg": "17 OCT",
       "date": "2026-10-17",
@@ -246,22 +310,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://www.spokesman.com/stories/2026/oct/16/iran-boosts-air-defenses-as-it-braces-for-fresh-us/"
-    },
-    {
-      "id": "gdelt-1328406210",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Moscow",
-      "fact": "SHELLING  RUSSIA \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.orissapost.com/zelenskyy-voices-outrage-as-russia-continues-energy-strikes-despite-ceasefire-claim/"
     }
   ]
 }
