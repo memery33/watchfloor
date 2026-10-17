@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-10-17T07:26:15.638517+00:00",
+  "generated_at": "2026-10-17T08:23:49.756746+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328426028",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Beirut",
+      "fact": "STRIKE  SAUDI \u2192 FIGHTER  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 33.8719,
+      "lon": 35.5097,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://www.presstv.co.uk/Detail/2026/10/17/778503/Iraq-detains-seven-Ukrainians-over-suspected-plot-to-attack-Persian-Gulf-oil-facilities--Report"
+    },
+    {
+      "id": "gdelt-1328424247",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Riyadh",
+      "fact": "STRIKE  SAUDI \u2192 ISLAM  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.surinametimes.com/artikel/un-security-council-slams-escalatory-houthi-attacks"
+    },
     {
       "id": "gdelt-1328420526",
       "dtg": "17 OCT",
@@ -161,38 +193,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://www.sbs.com.au/news/article/how-are-yemens-houthis-attacking-saudi-arabia-so-effectively/faki56ctm"
-    },
-    {
-      "id": "gdelt-1328396501",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Yanbu",
-      "fact": "SHELLING  GOVERNMENT \u2192 ?  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.0891,
-      "lon": 38.0637,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.manilatimes.net/2026/10/17/world/americas-emea/iran-denies-saudi-accusation-of-involvement-in-houthi-attacks/2447828"
-    },
-    {
-      "id": "gdelt-1328393852",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Yanbu",
-      "fact": "SHELLING  GOVERNMENT \u2192 ?  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.0891,
-      "lon": 38.0637,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.rte.ie/news/middle-east/2026/1017/1595732-middle-east-iran/"
     }
   ]
 }
