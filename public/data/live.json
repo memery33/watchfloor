@@ -1,7 +1,81 @@
 {
-  "generated_at": "2026-10-17T10:22:54.110797+00:00",
+  "generated_at": "2026-10-17T10:56:05.580196+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328440319",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Riyadh",
+      "fact": "STRIKE  SAUDI ARABIA \u2192 YEMEN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.manilatimes.net/2026/10/17/world/americas-emea/houthi-strikes-on-saudi-arabia-show-the-yemeni-rebels-growing-strength/2447885"
+    },
+    {
+      "id": "gdelt-1328438602",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Sanaa",
+      "fact": "SHELLING  TRANSPORT MINIST \u2192 ?  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://www.samaa.tv/2087358605-two-missiles-hit-yemen-s-aden-airport-near-aircraft"
+    },
+    {
+      "id": "gdelt-1328438771",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Yanbu",
+      "fact": "SHELLING  MILITARY \u2192 SAUDI  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.0891,
+      "lon": 38.0637,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.samaa.tv/2087358605-two-missiles-hit-yemen-s-aden-airport-near-aircraft"
+    },
+    {
+      "id": "gdelt-1328439082",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Marib",
+      "fact": "STRIKE  YEMENI \u2192 IRAN  (7 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 15.461,
+      "lon": 45.3253,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.samaa.tv/2087358605-two-missiles-hit-yemen-s-aden-airport-near-aircraft"
+    },
     {
       "id": "gdelt-1328436881",
       "dtg": "17 OCT",
@@ -17,22 +91,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.globalissues.org/news/2026/10/16/44368"
-    },
-    {
-      "id": "gdelt-1328437119",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Yanbu",
-      "fact": "SHELLING  IRAN \u2192 PRESIDENTIAL PALACE  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.0891,
-      "lon": 38.0637,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.aljazeera.com/news/2026/10/17/iran-backed-houthis-strike-yemens-aden-what-that-means"
     },
     {
       "id": "gdelt-1328437331",
@@ -200,22 +258,6 @@
       "url": "https://www.presstv.co.uk/Detail/2026/10/17/778503/Iraq-detains-seven-Ukrainians-over-suspected-plot-to-attack-Persian-Gulf-oil-facilities--Report"
     },
     {
-      "id": "gdelt-1328424247",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Riyadh",
-      "fact": "STRIKE  SAUDI \u2192 ISLAM  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.surinametimes.com/artikel/un-security-council-slams-escalatory-houthi-attacks"
-    },
-    {
       "id": "gdelt-1328420526",
       "dtg": "17 OCT",
       "date": "2026-10-17",
@@ -264,22 +306,6 @@
       "url": "https://www.manilatimes.net/2026/10/17/world/un-news/ukraine-civilian-casualty-rates-among-deadliest-in-years-as-energy-attacks-intensify/2447865"
     },
     {
-      "id": "gdelt-1328413857",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Sanaa",
-      "fact": "SHELLING  MINIST \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://openthemagazine.com/world/trump-backs-israeli-help-for-saudi-arabia-as-yemen-alleges-missile-attack-on-aden-airport"
-    },
-    {
       "id": "gdelt-1328411215",
       "dtg": "17 OCT",
       "date": "2026-10-17",
@@ -294,22 +320,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.perthnow.com.au/news/smart-traveller-warns-australians-to-avoid-saudi-arabia-after-deadly-airport-missile-attacks-c-23034840"
-    },
-    {
-      "id": "gdelt-1328407128",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Tehran",
-      "fact": "STRIKE  ISRAEL \u2192 IRAN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.spokesman.com/stories/2026/oct/16/iran-boosts-air-defenses-as-it-braces-for-fresh-us/"
     }
   ]
 }
