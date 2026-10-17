@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-17T16:20:39.763180+00:00",
+  "generated_at": "2026-10-17T17:19:26.411941+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
@@ -346,101 +346,6 @@
         "inferred": true
       },
       "url": "https://www.freepressjournal.in/india/air-india-air-india-express-extend-saudi-flight-suspension-until-october-24-amid-regional-tensions"
-    },
-    {
-      "id": "gdelt-1328441223",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Tehran",
-      "fact": "STRIKE  ? \u2192 YEMEN  (30 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.wfmz.com/business/airstrike-kills-3-children-in-yemen-and-other-middle-east-developments/article_3b9d69b5-ca27-5ced-b700-8d0ab922d0ee.html"
-    },
-    {
-      "id": "gdelt-1328440319",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Riyadh",
-      "fact": "STRIKE  SAUDI ARABIA \u2192 YEMEN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.manilatimes.net/2026/10/17/world/americas-emea/houthi-strikes-on-saudi-arabia-show-the-yemeni-rebels-growing-strength/2447885"
-    },
-    {
-      "id": "gdelt-1328438602",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Sanaa",
-      "fact": "SHELLING  TRANSPORT MINIST \u2192 ?  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.samaa.tv/2087358605-two-missiles-hit-yemen-s-aden-airport-near-aircraft"
-    },
-    {
-      "id": "gdelt-1328438771",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Yanbu",
-      "fact": "SHELLING  MILITARY \u2192 SAUDI  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.0891,
-      "lon": 38.0637,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.samaa.tv/2087358605-two-missiles-hit-yemen-s-aden-airport-near-aircraft"
-    },
-    {
-      "id": "gdelt-1328439082",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Marib",
-      "fact": "STRIKE  YEMENI \u2192 IRAN  (7 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 15.461,
-      "lon": 45.3253,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.samaa.tv/2087358605-two-missiles-hit-yemen-s-aden-airport-near-aircraft"
     }
   ]
 }
