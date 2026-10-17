@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-10-17T02:26:45.447645+00:00",
+  "generated_at": "2026-10-17T03:19:58.462485+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328401866",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Tehran",
+      "fact": "SHELLING  IRAN \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "http://www.jpost.com/middle-east/iran-news/2026-10-17/live-updates-911954"
+    },
+    {
+      "id": "gdelt-1328398992",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Gaza",
+      "fact": "STRIKE  SAUDI ARABIA \u2192 ISRAEL  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://www.sbs.com.au/news/article/how-are-yemens-houthis-attacking-saudi-arabia-so-effectively/faki56ctm"
+    },
     {
       "id": "gdelt-1328397350",
       "dtg": "17 OCT",
@@ -157,22 +189,6 @@
       "url": "https://www.siasat.com/2-missiles-strike-airport-in-yemens-aden-officials-say-3559781/"
     },
     {
-      "id": "gdelt-1328386929",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Tehran",
-      "fact": "SHELLING  ADEN \u2192 ADMINISTRATION  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "http://www.iranherald.com/news/279380153/strikes-hit-yemen-aden-airport-saudi-led-coalition-intercepts-fresh-drones-missiles"
-    },
-    {
       "id": "gdelt-1328383202",
       "dtg": "17 OCT",
       "date": "2026-10-17",
@@ -187,6 +203,22 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.jpost.com/middle-east/article-911943"
+    },
+    {
+      "id": "gdelt-1328393852",
+      "dtg": "16 OCT",
+      "date": "2026-10-16",
+      "location": "Yanbu",
+      "fact": "SHELLING  GOVERNMENT \u2192 ?  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.0891,
+      "lon": 38.0637,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.rte.ie/news/middle-east/2026/1017/1595732-middle-east-iran/"
     },
     {
       "id": "gdelt-1328378680",
@@ -336,22 +368,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.newsx.com/world/russian-soldier-helped-ukraine-kill-300-of-his-own-troops-then-escaped-to-kyiv-and-joined-anti-putin-unit-284268/"
-    },
-    {
-      "id": "gdelt-1328366458",
-      "dtg": "16 OCT",
-      "date": "2026-10-16",
-      "location": "Moscow",
-      "fact": "SHELLING  RUSSIA \u2192 CIVILIAN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://peakoil.com/publicpolicy/were-done-zelensky-says-ukraine-will-resume-strikes-on-russian-oil-refineries"
     }
   ]
 }
