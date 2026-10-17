@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-10-17T05:41:07.423623+00:00",
+  "generated_at": "2026-10-17T06:22:32.600680+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328414961",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Zaporizhzhya",
+      "fact": "SHELLING  CIVILIAN \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 47.8229,
+      "lon": 35.1903,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.manilatimes.net/2026/10/17/world/un-news/ukraine-civilian-casualty-rates-among-deadliest-in-years-as-energy-attacks-intensify/2447865"
+    },
+    {
+      "id": "gdelt-1328413857",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Sanaa",
+      "fact": "SHELLING  MINIST \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://openthemagazine.com/world/trump-backs-israeli-help-for-saudi-arabia-as-yemen-alleges-missile-attack-on-aden-airport"
+    },
     {
       "id": "gdelt-1328411215",
       "dtg": "17 OCT",
@@ -99,27 +131,6 @@
       "url": "https://www.manilatimes.net/2026/10/17/world/americas-emea/iran-denies-saudi-accusation-of-involvement-in-houthi-attacks/2447828"
     },
     {
-      "id": "gdelt-1328395472",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Sanaa",
-      "fact": "SHELLING  PRESIDENTIAL PALACE \u2192 YEMENI  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.latintimes.com/houthi-missiles-hit-yemens-presidential-palace-5-dead-pm-survives-600245"
-    },
-    {
       "id": "gdelt-1328392903",
       "dtg": "17 OCT",
       "date": "2026-10-17",
@@ -203,22 +214,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.siasat.com/2-missiles-strike-airport-in-yemens-aden-officials-say-3559781/"
-    },
-    {
-      "id": "gdelt-1328383202",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Khamis Mushait",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 18.3064,
-      "lon": 42.7292,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.jpost.com/middle-east/article-911943"
     },
     {
       "id": "gdelt-1328393852",
