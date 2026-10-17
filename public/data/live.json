@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-17T05:18:54.696835+00:00",
+  "generated_at": "2026-10-17T05:41:07.423623+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328411215",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "King Khalid International",
+      "fact": "SHELLING  TRAVELLER \u2192 SAUDI ARABIA  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.9581,
+      "lon": 46.6956,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.perthnow.com.au/news/smart-traveller-warns-australians-to-avoid-saudi-arabia-after-deadly-airport-missile-attacks-c-23034840"
+    },
     {
       "id": "gdelt-1328407128",
       "dtg": "17 OCT",
@@ -33,22 +49,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.orissapost.com/zelenskyy-voices-outrage-as-russia-continues-energy-strikes-despite-ceasefire-claim/"
-    },
-    {
-      "id": "gdelt-1328405182",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "King Khalid International",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (48 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.9581,
-      "lon": 46.6956,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.bunburymail.com.au/story/9370264/dire-travel-warning-after-deadly-attacks-on-key-airport/"
     },
     {
       "id": "gdelt-1328401866",
