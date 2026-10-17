@@ -1,7 +1,97 @@
 {
-  "generated_at": "2026-10-17T13:25:53.044748+00:00",
+  "generated_at": "2026-10-17T14:16:17.219438+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328457578",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Moscow",
+      "fact": "STRIKE  ? \u2192 YEMEN  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "strike",
+      "theater": "overview",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "http://www.hngnews.com/nation_world/ap-news-summary-at-9-45-a-m-edt/article_01bc30a8-64c5-5557-8be4-68a6951171c8.html"
+    },
+    {
+      "id": "gdelt-1328457900",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Dhamar",
+      "fact": "STRIKE  IRANIAN \u2192 YEMEN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 14.5427,
+      "lon": 44.4051,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "http://www.hngnews.com/nation_world/ap-news-summary-at-9-45-a-m-edt/article_01bc30a8-64c5-5557-8be4-68a6951171c8.html"
+    },
+    {
+      "id": "gdelt-1328458110",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Kuwait",
+      "fact": "STRIKE  SAUDI ARABIA \u2192 REBEL  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 29.5,
+      "lon": 47.75,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.oneindia.com/international/india-saudi-arabia-flights-cancelled-till-oct-24-heres-why-8238307.html"
+    },
+    {
+      "id": "gdelt-1328458148",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Moscow",
+      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIA  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.cbc.ca/news/world/zelenskyy-trump-russia-sanctions-9.7385125"
+    },
+    {
+      "id": "gdelt-1328456389",
+      "dtg": "17 OCT",
+      "date": "2026-10-17",
+      "location": "Al Jubail",
+      "fact": "SHELLING  UNITED KINGDOM \u2192 SAUDI ARABIA  (9 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 25.4,
+      "lon": 49.65,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://news.az/news/second-oil-supertanker-explodes-after-mine-strike-iran-says"
+    },
     {
       "id": "gdelt-1328452492",
       "dtg": "17 OCT",
@@ -54,22 +144,6 @@
       "theater": "iran",
       "origin": null,
       "url": "http://www.jpost.com/middle-east/article-911798"
-    },
-    {
-      "id": "gdelt-1328449347",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Moscow",
-      "fact": "STRIKE  RUSSIAN \u2192 UKRAINE  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "strike",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.moneycontrol.com/world/zelenskyy-says-believes-us-will-lift-more-russia-sanctions-article-14054512.html"
     },
     {
       "id": "gdelt-1328449354",
@@ -155,22 +229,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://americanpress.com/2026/10/17/jim-beam-columnnews-stories-create-questions/"
-    },
-    {
-      "id": "gdelt-1328446687",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Moscow",
-      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIA  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.news-gazette.com/news/nation-world/zelenskyy-urges-support-for-new-us-sanctions-on-russia-after-trump-puts-them-on-hold/article_ea52723e-4ff9-51f0-af20-184cc54fa68d.html"
     },
     {
       "id": "gdelt-1328445047",
@@ -372,27 +430,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://nuclear-news.net/2026/10/17/1-a-trumps-california-dreaming-is-a-nuclear-nightmare/"
-    },
-    {
-      "id": "gdelt-1328430661",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Dhamar",
-      "fact": "STRIKE  ? \u2192 YEMEN  (40 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 14.5427,
-      "lon": 44.4051,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.winnipegfreepress.com/arts-and-life/life/faith/2026/10/17/airstrike-kills-3-children-in-yemen-and-other-middle-east-developments"
     },
     {
       "id": "gdelt-1328428491",
