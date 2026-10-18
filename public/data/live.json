@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-18T21:26:54.351039+00:00",
+  "generated_at": "2026-10-18T21:35:06.421964+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1328601222",
+      "id": "gdelt-1328604084",
       "dtg": "18 OCT",
       "date": "2026-10-18",
       "location": "Tehran",
-      "fact": "SHELLING  ADEN \u2192 YEMEN  (5 mentions)",
+      "fact": "SHELLING  UNITED KINGDOM \u2192 SAUDI ARABIA  (6 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
@@ -15,13 +15,8 @@
       "lon": 51.5148,
       "event_type": "shelling",
       "theater": "iran",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://morningstaronline.co.uk/article/egypt-brink-joining-saudi-houthi-conflict"
+      "origin": null,
+      "url": "https://www.hellenicshippingnews.com/iran-war-saudi-helicopter-crash-kills-two-as-tanker-attacks-threaten-hormuz/"
     },
     {
       "id": "gdelt-1328597859",
