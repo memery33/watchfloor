@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-18T22:23:13.352652+00:00",
+  "generated_at": "2026-10-18T23:17:53.872554+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328609311",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Riyadh",
+      "fact": "STRIKE  MEDIA \u2192 CIVILIAN  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://news.antiwar.com/2026/10/18/saudi-airstrike-on-civilian-home-in-yemen-kills-10-including-seven-children-health-ministry/"
+    },
     {
       "id": "gdelt-1328606035",
       "dtg": "18 OCT",
@@ -182,48 +198,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://ksevradio.com/captain-of-flydubai-plane-describes-blocking-axe-blows-as-co-pilot-attacked/"
-    },
-    {
-      "id": "gdelt-1328583676",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Gaza",
-      "fact": "STRIKE  YEMEN \u2192 REBEL  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://lancasteronline.com/news/world/airstrike-kills-at-least-9-in-rebel-held-yemen-and-other-mideast-news/article_4e0a89a4-272b-5378-9dec-8165f0adbfa7.html"
-    },
-    {
-      "id": "gdelt-1328581052",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Makkah",
-      "fact": "SHELLING  YEMEN \u2192 SAUDI  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 21.4267,
-      "lon": 39.8261,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://thefrontierpost.com/pakistans-middle-east-calculus-defender-or-mediator/"
     }
   ]
 }
