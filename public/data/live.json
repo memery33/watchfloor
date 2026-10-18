@@ -1,7 +1,71 @@
 {
-  "generated_at": "2026-10-18T11:22:12.495622+00:00",
+  "generated_at": "2026-10-18T12:23:20.387970+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328557656",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Tehran",
+      "fact": "STRIKE  IRAN \u2192 BRAC  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "strike",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.newstribune.com/news/2026/oct/18/iran-boosts-air-defenses-as-it-braces-for-fresh/"
+    },
+    {
+      "id": "gdelt-1328555853",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Dera Ismail Khan",
+      "fact": "BLOCKADE  ISMAIL KHAN \u2192 ?  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.8327,
+      "lon": 70.9024,
+      "event_type": "blockade",
+      "theater": "afpak",
+      "origin": null,
+      "url": "https://economictimes.indiatimes.com/news/international/world-news/pakistan-seals-200-year-old-hindu-temple-after-bid-to-demolish-it-for-plaza/articleshow/135028330.cms"
+    },
+    {
+      "id": "gdelt-1328556232",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Tehran",
+      "fact": "SHELLING  IRAN \u2192 ?  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "http://www.jpost.com/middle-east/iran-news/article-912042"
+    },
+    {
+      "id": "gdelt-1328553632",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Gaza",
+      "fact": "STRIKE  ISRAEL \u2192 LEBANON  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://morningstaronline.co.uk/article/iran-will-respond-immediately-and-appropriately-any-us-threats"
+    },
     {
       "id": "gdelt-1328550914",
       "dtg": "18 OCT",
@@ -54,22 +118,6 @@
         "inferred": true
       },
       "url": "https://www.thenationalnews.com/travel/2026/10/18/riyadh-airport-reopens-which-airlines-are-still-cancelling-flights-to-saudi-arabia/"
-    },
-    {
-      "id": "gdelt-1328547201",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Tehran",
-      "fact": "STRIKE  A US \u2192 IRAN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.thenationalnews.com/news/mena/2026/10/18/iran-names-new-defence-minister-as-he-warns-us-over-mother-of-all-bombs/"
     },
     {
       "id": "gdelt-1328544171",
@@ -224,22 +272,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.examiner.com.au/story/9370357/zelenskiy-criticises-us-waiver-of-sanctions-on-russia/"
-    },
-    {
-      "id": "gdelt-1328528036",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Gaza",
-      "fact": "STRIKE  ? \u2192 ISRAEL  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.thenational.scot/news/26646675.inside-information-war-shaping-story-gaza/"
     }
   ]
 }
