@@ -1,7 +1,76 @@
 {
-  "generated_at": "2026-10-18T10:18:13.772645+00:00",
+  "generated_at": "2026-10-18T11:22:12.495622+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328550914",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Beirut",
+      "fact": "SHELLING  ISRAEL \u2192 ?  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 33.8719,
+      "lon": 35.5097,
+      "event_type": "shelling",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://www.naharnet.com/stories/en/323171-aoun-asks-french-fm-for-help-preventing-security-vacuum-in-south"
+    },
+    {
+      "id": "gdelt-1328549778",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Romania",
+      "fact": "STRIKE  FIGHTER JET \u2192 ROMANIA  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 46.0,
+      "lon": 25.0,
+      "event_type": "strike",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://eaworldview.com/2026/10/ukraine-war-russia-trump-camp-proposes-renewed-europe-purchases-gas/"
+    },
+    {
+      "id": "gdelt-1328547064",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Madinah",
+      "fact": "STRIKE  RIYADH \u2192 YEMEN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 13.9777,
+      "lon": 44.0484,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.thenationalnews.com/travel/2026/10/18/riyadh-airport-reopens-which-airlines-are-still-cancelling-flights-to-saudi-arabia/"
+    },
+    {
+      "id": "gdelt-1328547201",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Tehran",
+      "fact": "STRIKE  A US \u2192 IRAN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "strike",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.thenationalnews.com/news/mena/2026/10/18/iran-names-new-defence-minister-as-he-warns-us-over-mother-of-all-bombs/"
+    },
     {
       "id": "gdelt-1328544171",
       "dtg": "18 OCT",
@@ -171,38 +240,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://www.thenational.scot/news/26646675.inside-information-war-shaping-story-gaza/"
-    },
-    {
-      "id": "gdelt-1328523772",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Marib",
-      "fact": "SHELLING  ADEN \u2192 ?  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.461,
-      "lon": 45.3253,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.samaa.tv/2087358670-saudi-led-coalition-intercepts-drones-as-yemen-fighting-intensifies"
-    },
-    {
-      "id": "gdelt-1328520330",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Odesa",
-      "fact": "STRIKE  RUSSIA \u2192 UKRAINE  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 46.4639,
-      "lon": 30.7386,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://jowhar.com/russia-says-ukraines-territorial-gains-are-an-illusion-officials-claim/"
     }
   ]
 }
