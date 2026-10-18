@@ -1,7 +1,44 @@
 {
-  "generated_at": "2026-10-18T12:23:20.387970+00:00",
+  "generated_at": "2026-10-18T13:20:20.632113+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328560610",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Tabuk",
+      "fact": "SHELLING  SAUDI ARABIA \u2192 EMPLOYEE  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 28.3998,
+      "lon": 36.5715,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.arabnews.com/saudi-arabia/saudi-airport-worker-ignores-wounds-to-rescue-passengers-during-riyadh-attack-3006992"
+    },
+    {
+      "id": "gdelt-1328559355",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Riyadh",
+      "fact": "SHELLING  YEMEN \u2192 REBEL  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/18/34-philippines-nationals-from-riyadh-to-return-monday-oct-19-more-await-flights"
+    },
     {
       "id": "gdelt-1328557656",
       "dtg": "18 OCT",
@@ -118,22 +155,6 @@
         "inferred": true
       },
       "url": "https://www.thenationalnews.com/travel/2026/10/18/riyadh-airport-reopens-which-airlines-are-still-cancelling-flights-to-saudi-arabia/"
-    },
-    {
-      "id": "gdelt-1328544171",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Riyadh",
-      "fact": "SHELLING  COMMANDER \u2192 ADEN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.hngn.com/articles/273541/20261018/uae-returns-yemen-war-under-saudi-air-cover.htm"
     },
     {
       "id": "gdelt-1328540184",
@@ -256,22 +277,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://arynews.tv/two-officers-killed-as-saudi-military-helicopter-crashes-in-najran"
-    },
-    {
-      "id": "gdelt-1328532456",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Kyiv",
-      "fact": "STRIKE  ST PETERSBURG \u2192 UKRAINIAN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.examiner.com.au/story/9370357/zelenskiy-criticises-us-waiver-of-sanctions-on-russia/"
     }
   ]
 }
