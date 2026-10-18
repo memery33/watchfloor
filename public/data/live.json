@@ -1,7 +1,28 @@
 {
-  "generated_at": "2026-10-18T20:18:25.217690+00:00",
+  "generated_at": "2026-10-18T21:26:54.351039+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328601222",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Tehran",
+      "fact": "SHELLING  ADEN \u2192 YEMEN  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://morningstaronline.co.uk/article/egypt-brink-joining-saudi-houthi-conflict"
+    },
     {
       "id": "gdelt-1328597859",
       "dtg": "18 OCT",
@@ -203,112 +224,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://www.businesstoday.in/world/story/take-shelter-dont-film-attacks-indias-fresh-advisory-for-citizens-in-saudi-arabia-amid-rising-tensions-562317-2026-10-18"
-    },
-    {
-      "id": "gdelt-1328574332",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Toloka",
-      "fact": "SHELLING  RUSSIAN \u2192 ?  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 48.1,
-      "lon": 25.05,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "http://www.strategypage.com/htmw/htsurf/articles/202610188471.aspx"
-    },
-    {
-      "id": "gdelt-1328574333",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Novorossiysk",
-      "fact": "SHELLING  RUSSIAN \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 44.7244,
-      "lon": 37.7675,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "http://www.strategypage.com/htmw/htsurf/articles/202610188471.aspx"
-    },
-    {
-      "id": "gdelt-1328573061",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Tehran",
-      "fact": "STRIKE  YEMEN \u2192 REBEL  (20 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "http://www.idahopress.com/ap_news/us/airstrike-kills-at-least-9-in-rebel-held-yemen-and-other-mideast-news/article_d6d93bfd-9ec3-5d82-ab86-896a3cad24dd.html"
-    },
-    {
-      "id": "gdelt-1328570913",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "King Khalid International",
-      "fact": "STRIKE  ? \u2192 SAUDI ARABIA  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.9581,
-      "lon": 46.6956,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.siasat.com/egypt-approves-sending-troops-to-saudi-amid-houthi-attacks-3560586/"
-    },
-    {
-      "id": "gdelt-1328571578",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Gulf Of Oman",
-      "fact": "STRIKE  SAUDI ARABIA \u2192 YEMEN  (7 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 25.4489,
-      "lon": 57.7939,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.foxcarolina.com/2026/10/18/american-journalist-injured-settler-attack-israeli-occupied-west-bank/"
-    },
-    {
-      "id": "gdelt-1328571590",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Odesa",
-      "fact": "SHELLING  INTELLIGENCE \u2192 THE US  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 46.4639,
-      "lon": 30.7386,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://localnews8.com/news/national-world/cnn-world/2026/10/18/ukraine-defies-trump-and-launches-one-of-its-biggest-drone-attacks-on-russia-this-year/"
     }
   ]
 }
