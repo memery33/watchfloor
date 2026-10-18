@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-18T18:24:31.682558+00:00",
+  "generated_at": "2026-10-18T18:42:26.593823+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328590181",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Sanaa",
+      "fact": "STRIKE  GOVERNMENT \u2192 ?  (20 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://www.clickorlando.com/news/world/2026/10/18/egypts-top-security-body-agrees-to-help-saudi-arabia-defend-itself-against-houthi-attacks/"
+    },
     {
       "id": "gdelt-1328589006",
       "dtg": "18 OCT",
@@ -277,27 +293,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.arabnews.com/saudi-arabia/saudi-airport-worker-ignores-wounds-to-rescue-passengers-during-riyadh-attack-3006992"
-    },
-    {
-      "id": "gdelt-1328559355",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Riyadh",
-      "fact": "SHELLING  YEMEN \u2192 REBEL  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/18/34-philippines-nationals-from-riyadh-to-return-monday-oct-19-more-await-flights"
     }
   ]
 }
