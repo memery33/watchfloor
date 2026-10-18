@@ -1,7 +1,71 @@
 {
-  "generated_at": "2026-10-18T13:20:20.632113+00:00",
+  "generated_at": "2026-10-18T14:22:10.792901+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328566346",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Balad",
+      "fact": "SHELLING  AFGHANISTAN \u2192 INSURGENT  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 34.0148,
+      "lon": 44.1457,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.ems1.com/military/inside-the-73m-race-to-build-synthetic-blood-for-the-battlefield"
+    },
+    {
+      "id": "gdelt-1328566417",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Arabian Peninsula",
+      "fact": "SHELLING  TANKER \u2192 SAUDI ARABIA  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 25.0,
+      "lon": 45.0,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.cnbc.com/2026/10/18/iran-us-war-rezaei-operational-plan-shipping-attacks.html"
+    },
+    {
+      "id": "gdelt-1328566899",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Beirut",
+      "fact": "SHELLING  BEIRUT \u2192 ?  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 33.8719,
+      "lon": 35.5097,
+      "event_type": "shelling",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://redstate.com/andrewmalcolm/2026/10/18/executing-a-murderer-is-no-big-deal-except-for-one-person-n2208273"
+    },
+    {
+      "id": "gdelt-1328564449",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Kyiv",
+      "fact": "SHELLING  UKRAINIAN \u2192 ?  (20 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.bankingnews.gr/diethni/articles/905783/russian-barrage-in-ukraine-geran-5-destroys-energy-grid-and-trains-odessa-blaze"
+    },
     {
       "id": "gdelt-1328560610",
       "dtg": "18 OCT",
@@ -102,22 +166,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://morningstaronline.co.uk/article/iran-will-respond-immediately-and-appropriately-any-us-threats"
-    },
-    {
-      "id": "gdelt-1328550914",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Beirut",
-      "fact": "SHELLING  ISRAEL \u2192 ?  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 33.8719,
-      "lon": 35.5097,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.naharnet.com/stories/en/323171-aoun-asks-french-fm-for-help-preventing-security-vacuum-in-south"
     },
     {
       "id": "gdelt-1328549778",
@@ -261,22 +309,6 @@
         "inferred": true
       },
       "url": "https://www.presstv.co.uk/Detail/2026/10/18/778587/Yemen-denounces-intl--community%E2%80%99s-deafening-silence-on-Saudi-aggression,-siege"
-    },
-    {
-      "id": "gdelt-1328535997",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Khamis Mushait",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 MILITIA  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 18.3064,
-      "lon": 42.7292,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://arynews.tv/two-officers-killed-as-saudi-military-helicopter-crashes-in-najran"
     }
   ]
 }
