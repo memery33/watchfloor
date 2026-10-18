@@ -1,39 +1,7 @@
 {
-  "generated_at": "2026-10-18T15:20:32.990879+00:00",
+  "generated_at": "2026-10-18T15:58:30.383607+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
-    {
-      "id": "gdelt-1328574332",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Toloka",
-      "fact": "SHELLING  RUSSIAN \u2192 ?  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 48.1,
-      "lon": 25.05,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "http://www.strategypage.com/htmw/htsurf/articles/202610188471.aspx"
-    },
-    {
-      "id": "gdelt-1328574333",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Novorossiysk",
-      "fact": "SHELLING  RUSSIAN \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 44.7244,
-      "lon": 37.7675,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "http://www.strategypage.com/htmw/htsurf/articles/202610188471.aspx"
-    },
     {
       "id": "gdelt-1328573061",
       "dtg": "18 OCT",
