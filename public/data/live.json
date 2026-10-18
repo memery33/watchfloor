@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-10-17T23:26:15.412105+00:00",
+  "generated_at": "2026-10-18T00:17:39.190175+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328503369",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Khamis Mushait",
+      "fact": "SHELLING  SAUDI \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 18.3064,
+      "lon": 42.7292,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "http://www.bignewsnetwork.com/news/279382048/roundup-ground-fighting-in-yemen-intensifies-as-egypt-considers-possible-support-for-saudi-arabia"
+    },
+    {
+      "id": "gdelt-1328503422",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Moscow",
+      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIA  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.eldoradonews.com/news/2026/oct/17/zelenskyy-urges-support-for-new-us-sanctions-on/"
+    },
     {
       "id": "gdelt-1328500649",
       "dtg": "17 OCT",
@@ -198,38 +230,6 @@
         "inferred": true
       },
       "url": "https://www.arabnews.com/opinion/defending-saudi-arabia-is-key-to-global-economy-3006664"
-    },
-    {
-      "id": "gdelt-1328481162",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Khutor Lenina",
-      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIAN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 47.75,
-      "lon": 31.3667,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.kyivpost.com/post/87387"
-    },
-    {
-      "id": "gdelt-1328479558",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Yatta",
-      "fact": "BLOCKADE  PALESTINIAN \u2192 ACTIVIST  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.4459,
-      "lon": 35.0944,
-      "event_type": "blockade",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.ynetnews.com/article/bkrmczw3gx"
     }
   ]
 }
