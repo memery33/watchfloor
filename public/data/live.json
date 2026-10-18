@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-18T07:22:35.831852+00:00",
+  "generated_at": "2026-10-18T08:21:25.924785+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328536868",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Gaza",
+      "fact": "SHELLING  ISRAELI \u2192 ?  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "shelling",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://news.az/news/live-israeli-forces-target-two-towns-along-lebanons-yellow-line"
+    },
     {
       "id": "gdelt-1328532456",
       "dtg": "18 OCT",
@@ -235,38 +251,6 @@
       "theater": "iran",
       "origin": null,
       "url": "http://www.jpost.com/middle-east/iran-news/2026-10-18/live-updates-911999"
-    },
-    {
-      "id": "gdelt-1328512939",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Al Jubayl",
-      "fact": "SHELLING  TANKER \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 27.0112,
-      "lon": 49.6583,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://finchannel.com/hormuz-attacks-escalate-as-iran-claims-tanker-hit-a-mine/138557/world-2/2026/10/"
-    },
-    {
-      "id": "gdelt-1328510927",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Moscow",
-      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIA  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.dailyexcelsior.com/zelenskyy-urges-support-for-new-us-sanctions-on-russia-after-trump-places-package-on-hold/"
     }
   ]
 }
