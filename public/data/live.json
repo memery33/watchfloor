@@ -1,13 +1,66 @@
 {
-  "generated_at": "2026-10-18T08:21:25.924785+00:00",
+  "generated_at": "2026-10-18T09:19:40.964748+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1328536868",
+      "id": "gdelt-1328540184",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "West Bank",
+      "fact": "STRIKE  IRANIAN \u2192 YEMEN  (18 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 31.6667,
+      "lon": 35.25,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.nwaonline.com/news/2026/oct/18/houthis-say-3-children-killed-by-saudi-strikes/"
+    },
+    {
+      "id": "gdelt-1328540382",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Moscow",
+      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIA  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.nwaonline.com/news/2026/oct/18/zelenskyy-advocates-for-sanctions/"
+    },
+    {
+      "id": "gdelt-1328540383",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Belgorod",
+      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIA  (16 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.6107,
+      "lon": 36.5802,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.nwaonline.com/news/2026/oct/18/zelenskyy-advocates-for-sanctions/"
+    },
+    {
+      "id": "gdelt-1328537976",
       "dtg": "18 OCT",
       "date": "2026-10-18",
       "location": "Gaza",
-      "fact": "SHELLING  ISRAELI \u2192 ?  (8 mentions)",
+      "fact": "SHELLING  ISRAELI \u2192 PALESTINIAN  (4 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
@@ -16,7 +69,60 @@
       "event_type": "shelling",
       "theater": "levant",
       "origin": null,
-      "url": "https://news.az/news/live-israeli-forces-target-two-towns-along-lebanons-yellow-line"
+      "url": "https://english.wafa.ps/Pages/Details/175998"
+    },
+    {
+      "id": "gdelt-1328538144",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Taizz",
+      "fact": "STRIKE  SAUDI \u2192 CIVILIAN  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 13.5795,
+      "lon": 44.0209,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://www.presstv.co.uk/Detail/2026/10/18/778587/Yemen-denounces-intl--community%E2%80%99s-deafening-silence-on-Saudi-aggression,-siege"
+    },
+    {
+      "id": "gdelt-1328538147",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Riyadh",
+      "fact": "STRIKE  SAUDI \u2192 YEMEN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.presstv.co.uk/Detail/2026/10/18/778587/Yemen-denounces-intl--community%E2%80%99s-deafening-silence-on-Saudi-aggression,-siege"
+    },
+    {
+      "id": "gdelt-1328535997",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Khamis Mushait",
+      "fact": "SHELLING  SAUDI ARABIA \u2192 MILITIA  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 18.3064,
+      "lon": 42.7292,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://arynews.tv/two-officers-killed-as-saudi-military-helicopter-crashes-in-najran"
     },
     {
       "id": "gdelt-1328532456",
@@ -33,22 +139,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.examiner.com.au/story/9370357/zelenskiy-criticises-us-waiver-of-sanctions-on-russia/"
-    },
-    {
-      "id": "gdelt-1328530498",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Khamis Mushait",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 18.3064,
-      "lon": 42.7292,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://gulfnews.com/uae/iran-conflict-and-saudi-tensions-what-uae-residents-should-know-today-sept-18-1.500714723"
     },
     {
       "id": "gdelt-1328528036",
@@ -102,22 +192,6 @@
         "inferred": true
       },
       "url": "https://www.samaa.tv/2087358670-saudi-led-coalition-intercepts-drones-as-yemen-fighting-intensifies"
-    },
-    {
-      "id": "gdelt-1328522530",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Riyadh",
-      "fact": "STRIKE  INDONESIA \u2192 RIYADH  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://en.antaranews.com/news/436225/indonesia-urges-airlines-to-aid-passengers-amid-riyadh-closure"
     },
     {
       "id": "gdelt-1328520330",
@@ -203,54 +277,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://sofiaglobe.com/2026/10/18/"
-    },
-    {
-      "id": "gdelt-1328515716",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Dhahran",
-      "fact": "SHELLING  ? \u2192 DHAHRAN  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 26.3032,
-      "lon": 50.1353,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.eurasiareview.com/18102026-defending-saudi-arabia-is-key-to-global-economy-oped/"
-    },
-    {
-      "id": "gdelt-1328516262",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Qatar",
-      "fact": "STRIKE  QATAR \u2192 CARRIER  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 25.5,
-      "lon": 51.25,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.eurasiareview.com/18102026-defending-saudi-arabia-is-key-to-global-economy-oped/"
-    },
-    {
-      "id": "gdelt-1328515093",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Tehran",
-      "fact": "SHELLING  IRAN \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "http://www.jpost.com/middle-east/iran-news/2026-10-18/live-updates-911999"
     }
   ]
 }
