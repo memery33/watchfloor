@@ -1,7 +1,55 @@
 {
-  "generated_at": "2026-10-18T18:42:26.593823+00:00",
+  "generated_at": "2026-10-18T19:27:06.778681+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328593242",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Petersburg",
+      "fact": "SHELLING  UKRAINE \u2192 INTELLIGENCE  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 59.8944,
+      "lon": 30.2642,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-trump-putin-zelensky-sanctions-b3068692.html"
+    },
+    {
+      "id": "gdelt-1328591566",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Moscow",
+      "fact": "SHELLING  INTELLIGENCE \u2192 RUSSIA  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://news.wfsu.org/npr-news/2026-10-18/ukraine-and-the-u-s-are-at-odds-over-starshield-heres-what-to-know"
+    },
+    {
+      "id": "gdelt-1328591589",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Kyiv",
+      "fact": "SHELLING  UKRAINE \u2192 RUSSIA  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://news.wfsu.org/npr-news/2026-10-18/ukraine-and-the-u-s-are-at-odds-over-starshield-heres-what-to-know"
+    },
     {
       "id": "gdelt-1328590181",
       "dtg": "18 OCT",
@@ -261,38 +309,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://redstate.com/andrewmalcolm/2026/10/18/executing-a-murderer-is-no-big-deal-except-for-one-person-n2208273"
-    },
-    {
-      "id": "gdelt-1328564449",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Kyiv",
-      "fact": "SHELLING  UKRAINIAN \u2192 ?  (20 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.bankingnews.gr/diethni/articles/905783/russian-barrage-in-ukraine-geran-5-destroys-energy-grid-and-trains-odessa-blaze"
-    },
-    {
-      "id": "gdelt-1328560610",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Tabuk",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 EMPLOYEE  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 28.3998,
-      "lon": 36.5715,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.arabnews.com/saudi-arabia/saudi-airport-worker-ignores-wounds-to-rescue-passengers-during-riyadh-attack-3006992"
     }
   ]
 }
