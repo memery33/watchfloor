@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-18T09:19:40.964748+00:00",
+  "generated_at": "2026-10-18T10:18:13.772645+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328544171",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Riyadh",
+      "fact": "SHELLING  COMMANDER \u2192 ADEN  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.hngn.com/articles/273541/20261018/uae-returns-yemen-war-under-saudi-air-cover.htm"
+    },
     {
       "id": "gdelt-1328540184",
       "dtg": "18 OCT",
@@ -173,27 +189,6 @@
       "url": "https://www.samaa.tv/2087358670-saudi-led-coalition-intercepts-drones-as-yemen-fighting-intensifies"
     },
     {
-      "id": "gdelt-1328523774",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Riyadh",
-      "fact": "SHELLING  ADEN \u2192 YEMEN  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.samaa.tv/2087358670-saudi-led-coalition-intercepts-drones-as-yemen-fighting-intensifies"
-    },
-    {
       "id": "gdelt-1328520330",
       "dtg": "18 OCT",
       "date": "2026-10-18",
@@ -208,75 +203,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://jowhar.com/russia-says-ukraines-territorial-gains-are-an-illusion-officials-claim/"
-    },
-    {
-      "id": "gdelt-1328519032",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Dhamar",
-      "fact": "STRIKE  DUBAI \u2192 YEMEN  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 14.5427,
-      "lon": 44.4051,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://theshillongtimes.com/2026/10/18/saudi-accused-of-airstrike-in-yemen-that-killed-children/"
-    },
-    {
-      "id": "gdelt-1328517898",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Hajjah",
-      "fact": "SHELLING  YEMENI \u2192 ?  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.6942,
-      "lon": 43.6058,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.presstv.co.uk/Detail/2026/10/18/778578/Yemeni-forces-down-Saudi-Karayel-drone-over-Hajjah,-spokesman-says"
-    },
-    {
-      "id": "gdelt-1328516936",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Borcea",
-      "fact": "STRIKE  ROMANIAN \u2192 ROMANIAN  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 44.3333,
-      "lon": 27.75,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://sofiaglobe.com/2026/10/18/romanian-air-force-f-16s-shoot-down-two-drones-in-countrys-airspace/"
-    },
-    {
-      "id": "gdelt-1328516937",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Romania",
-      "fact": "STRIKE  ROMANIAN \u2192 ROMANIAN  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 46.0,
-      "lon": 25.0,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://sofiaglobe.com/2026/10/18/"
     }
   ]
 }
