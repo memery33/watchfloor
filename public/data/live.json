@@ -1,7 +1,44 @@
 {
-  "generated_at": "2026-10-18T03:19:13.072486+00:00",
+  "generated_at": "2026-10-18T04:17:46.274874+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328519032",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Dhamar",
+      "fact": "STRIKE  DUBAI \u2192 YEMEN  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 14.5427,
+      "lon": 44.4051,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://theshillongtimes.com/2026/10/18/saudi-accused-of-airstrike-in-yemen-that-killed-children/"
+    },
+    {
+      "id": "gdelt-1328517898",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Hajjah",
+      "fact": "SHELLING  YEMENI \u2192 ?  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 15.6942,
+      "lon": 43.6058,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://www.presstv.co.uk/Detail/2026/10/18/778578/Yemeni-forces-down-Saudi-Karayel-drone-over-Hajjah,-spokesman-says"
+    },
     {
       "id": "gdelt-1328516936",
       "dtg": "18 OCT",
@@ -173,27 +210,6 @@
       "url": "https://kdhnews.com/news/nation/diplomats-attacked-in-the-occupied-west-bank-and-other-middle-east-developments/article_b5ac01ed-2514-54d3-842d-c27d568b26c6.html"
     },
     {
-      "id": "gdelt-1328507494",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Dhamar",
-      "fact": "STRIKE  IRANIAN \u2192 YEMEN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 14.5427,
-      "lon": 44.4051,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://kdhnews.com/news/nation/diplomats-attacked-in-the-occupied-west-bank-and-other-middle-east-developments/article_b5ac01ed-2514-54d3-842d-c27d568b26c6.html"
-    },
-    {
       "id": "gdelt-1328507616",
       "dtg": "18 OCT",
       "date": "2026-10-18",
@@ -256,38 +272,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://english.news.cn/20261018/109113f5d17440a283c8123a3a937bd3/c.html"
-    },
-    {
-      "id": "gdelt-1328496770",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Oman",
-      "fact": "SHELLING  SYRIAN \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 21.0,
-      "lon": 57.0,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.dailymail.com/news/article-15615723/Flock-awe-Missile-lands-Syrian-sheep-field-bemusement.html"
-    },
-    {
-      "id": "gdelt-1328496807",
-      "dtg": "17 OCT",
-      "date": "2026-10-17",
-      "location": "Belgorod",
-      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIA  (16 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.6107,
-      "lon": 36.5802,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.ksl.com:443/article/news/world/zelenskyy-urges-support-for-new-us-sanctions-on-russia-put-on-hold-by-trump/51637549"
     }
   ]
 }
