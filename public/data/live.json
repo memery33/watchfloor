@@ -1,7 +1,55 @@
 {
-  "generated_at": "2026-10-19T07:23:45.812072+00:00",
+  "generated_at": "2026-10-19T08:20:06.155888+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328656841",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Borcea",
+      "fact": "STRIKE  ROMANIAN \u2192 MINIST OF NATIONAL DEFENCE  (7 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 44.3333,
+      "lon": 27.75,
+      "event_type": "strike",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.stiripesurse.ro/defence-ministry-six-drones-that-entered-romanian-territory-shot-down-in-2026_3929436"
+    },
+    {
+      "id": "gdelt-1328656844",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Targu Jiu",
+      "fact": "SHELLING  ROMANIA \u2192 ROMANIA  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 45.05,
+      "lon": 23.2833,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.stiripesurse.ro/interim-defmin-miruta-ministry-of-national-defence-records-three-firsts-in-saturday-evenings-drone-shoot-downs_3929433"
+    },
+    {
+      "id": "gdelt-1328656864",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Kyiv",
+      "fact": "SHELLING  RUSSIAN \u2192 KYIV  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.kyivpost.com/post/87476"
+    },
     {
       "id": "gdelt-1328652080",
       "dtg": "19 OCT",
@@ -216,22 +264,6 @@
       "url": "https://www.israelnationalnews.com/news/434810"
     },
     {
-      "id": "gdelt-1328630805",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Borcea",
-      "fact": "STRIKE  NATO \u2192 EUROPE  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 44.3333,
-      "lon": 27.75,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.investmentwatchblog.com/nato-jets-open-fire-on-attack-drones-over-europe/"
-    },
-    {
       "id": "gdelt-1328631042",
       "dtg": "19 OCT",
       "date": "2026-10-19",
@@ -246,38 +278,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.business-standard.com/world-news/us-issues-saudi-travel-alert-warns-of-missile-drone-attacks-on-airports-126101900046_1.html"
-    },
-    {
-      "id": "gdelt-1328624559",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Riyadh",
-      "fact": "SHELLING  FIREFIGHTER \u2192 SAUDI  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://tribune.net.ph/topic/saudi-arabia"
-    },
-    {
-      "id": "gdelt-1328621638",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Dera Ismail Khan",
-      "fact": "BLOCKADE  ISMAIL KHAN \u2192 ?  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.8327,
-      "lon": 70.9024,
-      "event_type": "blockade",
-      "theater": "afpak",
-      "origin": null,
-      "url": "https://www.dailyexcelsior.com/pakistan-seals-200-year-old-hindu-temple-after-demolition-attempt/"
     }
   ]
 }
