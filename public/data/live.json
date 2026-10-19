@@ -1,7 +1,71 @@
 {
-  "generated_at": "2026-10-19T04:53:40.421335+00:00",
+  "generated_at": "2026-10-19T05:23:46.857394+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328637958",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Khamis Mushait",
+      "fact": "SHELLING  AIRWAY \u2192 CAIRO  (9 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 18.3064,
+      "lon": 42.7292,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "http://www.sierraleonetimes.com/news/279381458/saudi-arabia-intercepts-missile-near-red-sea-oil-hub"
+    },
+    {
+      "id": "gdelt-1328636522",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Moscow",
+      "fact": "STRIKE  ? \u2192 KYIV  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "strike",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.aljazeera.com/news/2026/10/19/ukrainian-drone-attack-on-russias-st-petersburg-kills-1-hits-energy-sites"
+    },
+    {
+      "id": "gdelt-1328633660",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "El Gedaref",
+      "fact": "STRIKE  MILITARY \u2192 SUDAN  (12 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 14.0333,
+      "lon": 35.4,
+      "event_type": "strike",
+      "theater": "sudan",
+      "origin": null,
+      "url": "https://allafrica.com/stories/202610190015.html"
+    },
+    {
+      "id": "gdelt-1328633662",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Kordofan",
+      "fact": "STRIKE  MILITARY \u2192 SUDAN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 13.0833,
+      "lon": 30.35,
+      "event_type": "strike",
+      "theater": "sudan",
+      "origin": null,
+      "url": "https://allafrica.com/stories/202610190015.html"
+    },
     {
       "id": "gdelt-1328632575",
       "dtg": "19 OCT",
@@ -230,22 +294,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://www.jns.org/opinion/eyal-dror/al-sharaas-yemen-gambit-syria-wants-to-sell-security-not-just-buy-aid"
-    },
-    {
-      "id": "gdelt-1328609311",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Riyadh",
-      "fact": "STRIKE  MEDIA \u2192 CIVILIAN  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://news.antiwar.com/2026/10/18/saudi-airstrike-on-civilian-home-in-yemen-kills-10-including-seven-children-health-ministry/"
     }
   ]
 }
