@@ -1,7 +1,60 @@
 {
-  "generated_at": "2026-10-19T18:22:29.702710+00:00",
+  "generated_at": "2026-10-19T19:21:38.475351+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328761248",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Shabwa",
+      "fact": "SHELLING  YEMENI \u2192 ARMED FORCES  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 13.5167,
+      "lon": 44.4333,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://theindianawaaz.com/houthi-missile-attack-on-military-training-centre-in-yemen-kills-over-53-200-injured/"
+    },
+    {
+      "id": "gdelt-1328759188",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Kyiv",
+      "fact": "SHELLING  UKRAINE \u2192 RUSSIAN  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.hindustantimes.com/world-news/us-news/zelenskiy-says-ukraine-got-no-warning-as-russian-missiles-rain-in-101792436293102.html"
+    },
+    {
+      "id": "gdelt-1328754502",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Jerusalem",
+      "fact": "BLOCKADE  ISRAEL \u2192 ISRAEL  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.7667,
+      "lon": 35.2333,
+      "event_type": "blockade",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://english.wafa.ps/Pages/Details/176079"
+    },
     {
       "id": "gdelt-1328745731",
       "dtg": "19 OCT",
@@ -99,22 +152,6 @@
       "url": "http://www.iraqsun.com/news/279385543/israel-makes-arrests-after-settler-violence-sparks-diplomatic-outcry"
     },
     {
-      "id": "gdelt-1328735646",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Kyiv",
-      "fact": "SHELLING  ? \u2192 FIGHTER JET  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.newsweek.com/how-nato-is-solving-russian-drone-problem-12589029"
-    },
-    {
       "id": "gdelt-1328736892",
       "dtg": "19 OCT",
       "date": "2026-10-19",
@@ -150,22 +187,6 @@
         "inferred": true
       },
       "url": "https://www.prokerala.com/news/articles/a1826456.html"
-    },
-    {
-      "id": "gdelt-1328733693",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Shabwa",
-      "fact": "SHELLING  PRIME MINISTER \u2192 ?  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 13.5167,
-      "lon": 44.4333,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.ibtimes.com/yemens-houthis-keep-targeting-government-forces-more-50-died-latest-strike-3808728"
     },
     {
       "id": "gdelt-1328734653",
@@ -288,80 +309,6 @@
       "theater": "afpak",
       "origin": null,
       "url": "https://www.hindustantimes.com/india-news/beyond-fighter-jets-what-india-needs-to-prepare-for-the-wars-of-tomorrow-101792407327925.html"
-    },
-    {
-      "id": "gdelt-1328705264",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Marib",
-      "fact": "SHELLING  REBEL \u2192 YEMEN  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.461,
-      "lon": 45.3253,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.clickondetroit.com/news/world/2026/10/19/houthi-rebels-strike-a-government-military-camp-in-southern-yemen-killing-at-least-20-fighters/"
-    },
-    {
-      "id": "gdelt-1328705502",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Sanaa",
-      "fact": "SHELLING  YEMEN \u2192 ?  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://en.apa.az/asia/around-40-killed-injured-in-houthi-missile-attack-in-yemens-shabwa-updated-530866"
-    },
-    {
-      "id": "gdelt-1328697970",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Volhynia",
-      "fact": "STRIKE  POLISH \u2192 UKRAINIAN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 51.0,
-      "lon": 26.0,
-      "event_type": "strike",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.kyivpost.com/analysis/87420"
-    },
-    {
-      "id": "gdelt-1328698185",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Saint Petersburg",
-      "fact": "SHELLING  UKRAINE \u2192 RUSSIAN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 59.8944,
-      "lon": 30.2642,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.kyivpost.com/post/87487"
     }
   ]
 }
