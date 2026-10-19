@@ -1,39 +1,7 @@
 {
-  "generated_at": "2026-10-19T04:18:18.450960+00:00",
+  "generated_at": "2026-10-19T04:53:40.421335+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
-    {
-      "id": "gdelt-1328633660",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "El Gedaref",
-      "fact": "STRIKE  MILITARY \u2192 SUDAN  (12 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 14.0333,
-      "lon": 35.4,
-      "event_type": "strike",
-      "theater": "sudan",
-      "origin": null,
-      "url": "https://allafrica.com/stories/202610190015.html"
-    },
-    {
-      "id": "gdelt-1328633662",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Kordofan",
-      "fact": "STRIKE  MILITARY \u2192 SUDAN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 13.0833,
-      "lon": 30.35,
-      "event_type": "strike",
-      "theater": "sudan",
-      "origin": null,
-      "url": "https://allafrica.com/stories/202610190015.html"
-    },
     {
       "id": "gdelt-1328632575",
       "dtg": "19 OCT",
