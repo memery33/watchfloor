@@ -1,7 +1,76 @@
 {
-  "generated_at": "2026-10-19T06:20:39.853779+00:00",
+  "generated_at": "2026-10-19T07:23:45.812072+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328652080",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Tel Aviv",
+      "fact": "STRIKE  EGYPTIAN \u2192 TEL AVIV  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 32.0667,
+      "lon": 34.7667,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://dailypioneer.com/india/from-vulnerability-to-vanguard-how-india-and-israel-learned-to-guard-the-skies-together"
+    },
+    {
+      "id": "gdelt-1328653085",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Jeddah",
+      "fact": "SHELLING  YEMEN \u2192 MILITIA  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 21.5169,
+      "lon": 39.2192,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.arabnews.com/lifestyle/creative-industry-insiders-share-love-for-saudi-arabia-3007106"
+    },
+    {
+      "id": "gdelt-1328649838",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Gaza",
+      "fact": "STRIKE  ? \u2192 HAMAS  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": null,
+      "url": "http://www.jpost.com/israel-news/defense-news/article-912121"
+    },
+    {
+      "id": "gdelt-1328649027",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Oman",
+      "fact": "STRIKE  SAUDI \u2192 ?  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 21.0,
+      "lon": 57.0,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.middle-east-online.com/en/wounded-flydubai-captain-recounts-fight-survival"
+    },
     {
       "id": "gdelt-1328645715",
       "dtg": "19 OCT",
@@ -209,59 +278,6 @@
       "theater": "afpak",
       "origin": null,
       "url": "https://www.dailyexcelsior.com/pakistan-seals-200-year-old-hindu-temple-after-demolition-attempt/"
-    },
-    {
-      "id": "gdelt-1328619994",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Sanaa",
-      "fact": "SHELLING  RIYADH \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.foxnews.com/world/saudi-arabia-edge-iconic-kingdom-centre-sends-workers-home-amid-houthi-attacks"
-    },
-    {
-      "id": "gdelt-1328618946",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Saint Petersburg",
-      "fact": "STRIKE  RUSSIA \u2192 KYIV  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 59.8944,
-      "lon": 30.2642,
-      "event_type": "strike",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.dailymail.com/news/article-16219441/One-dead-two-injured-Russia-air-strike-Kyiv-buildings-medical-facility.html"
-    },
-    {
-      "id": "gdelt-1328618958",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Gulf Of Oman",
-      "fact": "STRIKE  SAUDI ARABIA \u2192 YEMEN  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 25.4489,
-      "lon": 57.7939,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.knoe.com/2026/10/18/american-journalist-injured-settler-attack-israeli-occupied-west-bank/"
     }
   ]
 }
