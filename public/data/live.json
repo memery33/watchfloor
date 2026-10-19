@@ -1,7 +1,65 @@
 {
-  "generated_at": "2026-10-19T21:23:36.927560+00:00",
+  "generated_at": "2026-10-19T22:28:22.985685+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328780365",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Riyadh",
+      "fact": "SHELLING  GOVERNMENT \u2192 YEMEN  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://english.news.cn/20261020/708046df596b4fdbb14e1288c5625501/c.html"
+    },
+    {
+      "id": "gdelt-1328780367",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Shabwa",
+      "fact": "SHELLING  GOVERNMENT \u2192 YEMEN  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 13.5167,
+      "lon": 44.4333,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://english.news.cn/20261020/708046df596b4fdbb14e1288c5625501/c.html"
+    },
+    {
+      "id": "gdelt-1328778833",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Moscow",
+      "fact": "SHELLING  MEDIA \u2192 ?  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://rollcall.com/2026/10/19/trumps-russia-moves-could-complicate-lame-duck-agenda/"
+    },
     {
       "id": "gdelt-1328776944",
       "dtg": "19 OCT",
@@ -35,22 +93,6 @@
       "url": "http://www.sitkasentinel.com/stories/sudans-famine-risk-worsened-by-conflict-drought-and-funding-shortages-report-says,178145"
     },
     {
-      "id": "gdelt-1328773523",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Moscow",
-      "fact": "SHELLING  MILITARY \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://cruxnow.com/church-in-oceania/2026/04/russia-strikes-targets-in-kyiv-region-as-ukraine-holds-door-open-for-easter-truce/"
-    },
-    {
       "id": "gdelt-1328773848",
       "dtg": "19 OCT",
       "date": "2026-10-19",
@@ -81,43 +123,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://cruxnow.com/church-in-oceania/2026/04/russia-strikes-targets-in-kyiv-region-as-ukraine-holds-door-open-for-easter-truce/"
-    },
-    {
-      "id": "gdelt-1328763270",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Riyadh",
-      "fact": "SHELLING  YEMEN \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.pakistantoday.com.pk/2026/10/19/around-40-killed-injured-in-houthi-missile-attack-in-yemens-shabwa-official"
-    },
-    {
-      "id": "gdelt-1328763274",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Shabwa",
-      "fact": "SHELLING  ADEN \u2192 MILITARY  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 13.5167,
-      "lon": 44.4333,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.pakistantoday.com.pk/2026/10/19/around-40-killed-injured-in-houthi-missile-attack-in-yemens-shabwa-official"
     },
     {
       "id": "gdelt-1328763275",
@@ -272,43 +277,6 @@
         "inferred": true
       },
       "url": "https://www.prokerala.com/news/articles/a1826456.html"
-    },
-    {
-      "id": "gdelt-1328734653",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Ataq",
-      "fact": "SHELLING  YEMEN \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 14.5377,
-      "lon": 46.8319,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://english.aawsat.com/arab-world/5331202-53-killed-more-200-wounded-houthi-missile-strike-security-camp-shabwa"
-    },
-    {
-      "id": "gdelt-1328731355",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Bekaa Valley",
-      "fact": "SHELLING  ISRAEL \u2192 UNITED STATES  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 33.8333,
-      "lon": 36.0,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.naharnet.com:443/stories/en/323196-aoun-chairs-security-meeting-says-no-leniency-with-security-violators"
     }
   ]
 }
