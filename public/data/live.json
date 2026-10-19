@@ -1,7 +1,97 @@
 {
-  "generated_at": "2026-10-19T12:28:53.483139+00:00",
+  "generated_at": "2026-10-19T13:32:13.692988+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328705264",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Marib",
+      "fact": "SHELLING  REBEL \u2192 YEMEN  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 15.461,
+      "lon": 45.3253,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.clickondetroit.com/news/world/2026/10/19/houthi-rebels-strike-a-government-military-camp-in-southern-yemen-killing-at-least-20-fighters/"
+    },
+    {
+      "id": "gdelt-1328705502",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Sanaa",
+      "fact": "SHELLING  YEMEN \u2192 ?  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 15.3547,
+      "lon": 44.2067,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://en.apa.az/asia/around-40-killed-injured-in-houthi-missile-attack-in-yemens-shabwa-updated-530866"
+    },
+    {
+      "id": "gdelt-1328697970",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Volhynia",
+      "fact": "STRIKE  POLISH \u2192 UKRAINIAN  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 51.0,
+      "lon": 26.0,
+      "event_type": "strike",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.kyivpost.com/analysis/87420"
+    },
+    {
+      "id": "gdelt-1328698184",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Kyiv",
+      "fact": "SHELLING  KYIV \u2192 RUSSIA  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.kyivpost.com/post/87504"
+    },
+    {
+      "id": "gdelt-1328698185",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Saint Petersburg",
+      "fact": "SHELLING  UKRAINE \u2192 RUSSIAN  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 59.8944,
+      "lon": 30.2642,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.kyivpost.com/post/87487"
+    },
     {
       "id": "gdelt-1328693361",
       "dtg": "19 OCT",
@@ -17,27 +107,6 @@
       "theater": "sudan",
       "origin": null,
       "url": "https://news.az/news/sudan-army-repels-rsf-attack-in-blue-nile-intercepts-drones-over-khartoum"
-    },
-    {
-      "id": "gdelt-1328693363",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Sanaa",
-      "fact": "SHELLING  MILITARY \u2192 YEMEN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://news.az/news/nearly-40-killed-injured-in-houthi-missile-attack-in-yemens-shabwa"
     },
     {
       "id": "gdelt-1328693511",
@@ -117,22 +186,6 @@
       "theater": "afpak",
       "origin": null,
       "url": "https://en.dailypakistan.com.pk/19-Oct-2026/afghan-taliban-taste-their-own-medicine-as-resistance-groups-claim-38-killed-across-12-provinces"
-    },
-    {
-      "id": "gdelt-1328689146",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Marib",
-      "fact": "SHELLING  REBEL \u2192 MILITARY  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.461,
-      "lon": 45.3253,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.ksat.com/news/world/2026/10/19/houthi-rebels-strike-a-government-military-camp-in-southern-yemen-killing-at-least-20-fighters/"
     },
     {
       "id": "gdelt-1328689164",
@@ -310,22 +363,6 @@
       "url": "https://www.thenationalnews.com/travel/2026/10/19/riyadh-airport-reopens-which-airlines-are-still-cancelling-flights-to-saudi-arabia/"
     },
     {
-      "id": "gdelt-1328676724",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Kyiv",
-      "fact": "SHELLING  RUSSIAN \u2192 ?  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.thehindu.com/news/international/ukraine-received-no-early-warning-of-russian-strikes-president-volodymyr-zelenskyy/article71602460.ece"
-    },
-    {
       "id": "gdelt-1328676809",
       "dtg": "19 OCT",
       "date": "2026-10-19",
@@ -452,59 +489,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.stiripesurse.ro/interim-defmin-miruta-ministry-of-national-defence-records-three-firsts-in-saturday-evenings-drone-shoot-downs_3929433"
-    },
-    {
-      "id": "gdelt-1328653085",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Jeddah",
-      "fact": "SHELLING  YEMEN \u2192 MILITIA  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 21.5169,
-      "lon": 39.2192,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.arabnews.com/lifestyle/creative-industry-insiders-share-love-for-saudi-arabia-3007106"
-    },
-    {
-      "id": "gdelt-1328649838",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Gaza",
-      "fact": "STRIKE  ? \u2192 HAMAS  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": null,
-      "url": "http://www.jpost.com/israel-news/defense-news/article-912121"
-    },
-    {
-      "id": "gdelt-1328649027",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Oman",
-      "fact": "STRIKE  SAUDI \u2192 ?  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 21.0,
-      "lon": 57.0,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.middle-east-online.com/en/wounded-flydubai-captain-recounts-fight-survival"
     }
   ]
 }
