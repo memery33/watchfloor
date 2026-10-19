@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-18T23:17:53.872554+00:00",
+  "generated_at": "2026-10-19T00:14:53.398412+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328610915",
+      "dtg": "18 OCT",
+      "date": "2026-10-18",
+      "location": "Jerusalem",
+      "fact": "SHELLING  ISRAEL \u2192 ?  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.7667,
+      "lon": 35.2333,
+      "event_type": "shelling",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://www.jns.org/opinion/eyal-dror/al-sharaas-yemen-gambit-syria-wants-to-sell-security-not-just-buy-aid"
+    },
     {
       "id": "gdelt-1328609311",
       "dtg": "18 OCT",
@@ -182,22 +198,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://peakoil.com/publicpolicy/us-and-iran-both-claim-control-of-strait-of-hormuz-amid-attacks-on-vessels"
-    },
-    {
-      "id": "gdelt-1328584874",
-      "dtg": "18 OCT",
-      "date": "2026-10-18",
-      "location": "Oman",
-      "fact": "STRIKE  SAUDI \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 21.0,
-      "lon": 57.0,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://ksevradio.com/captain-of-flydubai-plane-describes-blocking-axe-blows-as-co-pilot-attacked/"
     }
   ]
 }
