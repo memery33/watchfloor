@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-19T20:26:27.181209+00:00",
+  "generated_at": "2026-10-19T21:23:36.927560+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1328766507",
+      "id": "gdelt-1328776944",
       "dtg": "19 OCT",
       "date": "2026-10-19",
       "location": "Kyiv",
-      "fact": "SHELLING  UKRAINE \u2192 MEDIA  (4 mentions)",
+      "fact": "SHELLING  THE POPE \u2192 UKRAINE  (3 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
@@ -16,7 +16,71 @@
       "event_type": "shelling",
       "theater": "ukraine",
       "origin": null,
-      "url": "https://www.inquirer.com/news/nation-world/trump-zelensky-putin-push-ukraine-surrender-russian-diesel-satellite-internet-20261019.html"
+      "url": "https://www.euronews.com/2026/10/19/pope-leo-xiv-holds-call-with-zelenskyy-vatican-says"
+    },
+    {
+      "id": "gdelt-1328772868",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Western Kordofan",
+      "fact": "STRIKE  EGYPT \u2192 CIVILIAN  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 12.0,
+      "lon": 28.5,
+      "event_type": "strike",
+      "theater": "sudan",
+      "origin": null,
+      "url": "http://www.sitkasentinel.com/stories/sudans-famine-risk-worsened-by-conflict-drought-and-funding-shortages-report-says,178145"
+    },
+    {
+      "id": "gdelt-1328773523",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Moscow",
+      "fact": "SHELLING  MILITARY \u2192 ?  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://cruxnow.com/church-in-oceania/2026/04/russia-strikes-targets-in-kyiv-region-as-ukraine-holds-door-open-for-easter-truce/"
+    },
+    {
+      "id": "gdelt-1328773848",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Kordofan",
+      "fact": "STRIKE  SUDAN \u2192 ?  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 13.0833,
+      "lon": 30.35,
+      "event_type": "strike",
+      "theater": "sudan",
+      "origin": null,
+      "url": "https://www.riotimesonline.com/sudan-drone-strike-kordofan-100-dead-2026/"
+    },
+    {
+      "id": "gdelt-1328773915",
+      "dtg": "19 OCT",
+      "date": "2026-10-19",
+      "location": "Obukhiv",
+      "fact": "SHELLING  UKRAINE \u2192 ?  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.11,
+      "lon": 30.6227,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://cruxnow.com/church-in-oceania/2026/04/russia-strikes-targets-in-kyiv-region-as-ukraine-holds-door-open-for-easter-truce/"
     },
     {
       "id": "gdelt-1328763270",
@@ -189,22 +253,6 @@
       "url": "http://www.iraqsun.com/news/279385543/israel-makes-arrests-after-settler-violence-sparks-diplomatic-outcry"
     },
     {
-      "id": "gdelt-1328736892",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Moscow",
-      "fact": "SHELLING  UKRAINE \u2192 EUROPEAN  (7 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.newsweek.com/us-contradicts-zelensky-on-intelligence-sharing-claim-12586877"
-    },
-    {
       "id": "gdelt-1328737236",
       "dtg": "19 OCT",
       "date": "2026-10-19",
@@ -261,22 +309,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://www.naharnet.com:443/stories/en/323196-aoun-chairs-security-meeting-says-no-leniency-with-security-violators"
-    },
-    {
-      "id": "gdelt-1328716336",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Gaza City",
-      "fact": "SHELLING  ISRAELI \u2192 PALESTINIAN  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://english.wafa.ps/Pages/Details/176062"
     }
   ]
 }
