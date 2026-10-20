@@ -1,7 +1,55 @@
 {
-  "generated_at": "2026-10-20T13:24:13.595670+00:00",
+  "generated_at": "2026-10-20T13:39:27.682651+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328902144",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Tehran",
+      "fact": "STRIKE  UNITED KINGDOM \u2192 SAUDI ARABIA  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "strike",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://localnews8.com/news/national-world/cnn-world/2026/10/20/uk-to-deploy-fighter-jets-to-defend-saudi-arabia-against-houthi-attacks/"
+    },
+    {
+      "id": "gdelt-1328902258",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Riyadh",
+      "fact": "STRIKE  GOVERNMENT \u2192 SAUDI  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.aljazeera.com/news/2026/10/20/yemen-maps-show-10-years-of-changing-control"
+    },
+    {
+      "id": "gdelt-1328902651",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Gaza",
+      "fact": "STRIKE  PALESTINIAN \u2192 ISRAELI  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://www.aljazeera.com/news/2026/10/20/israeli-forces-kill-at-least-four-palestinians-in-gaza-strikes"
+    },
     {
       "id": "gdelt-1328897543",
       "dtg": "20 OCT",
@@ -141,22 +189,6 @@
       "url": "https://www.dailystar.co.uk/news/latest-news/three-uk-places-to-avoid-37791021"
     },
     {
-      "id": "gdelt-1328892114",
-      "dtg": "20 OCT",
-      "date": "2026-10-20",
-      "location": "Riyadh",
-      "fact": "STRIKE  UNITED KINGDOM \u2192 SAUDI ARABIA  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.channelnewsasia.com/world/uk-deploy-fighter-jets-protect-saudi-houthi-attacks-6475431"
-    },
-    {
       "id": "gdelt-1328890091",
       "dtg": "20 OCT",
       "date": "2026-10-20",
@@ -251,22 +283,6 @@
       "theater": "yemen",
       "origin": null,
       "url": "https://www.middle-east-online.com/en/yemen%E2%80%99s-war-escalates-deadly-houthi-strike-military-recruits"
-    },
-    {
-      "id": "gdelt-1328877080",
-      "dtg": "20 OCT",
-      "date": "2026-10-20",
-      "location": "Gaza",
-      "fact": "STRIKE  ISRAELI \u2192 HOSPITAL  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": null,
-      "url": "http://www.bignewsnetwork.com/news/279387197/2-people-killed-in-israeli-airstrike-on-gaza-city"
     },
     {
       "id": "gdelt-1328877093",
