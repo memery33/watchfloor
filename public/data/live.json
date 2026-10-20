@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T04:19:49.203657+00:00",
+  "generated_at": "2026-10-20T05:24:36.290024+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
@@ -139,86 +139,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://japantoday.com/category/world/zelenskiy-says-ukraine-got-no-warning-as-russian-missiles-rain-in1"
-    },
-    {
-      "id": "gdelt-1328787654",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Al Jubayl",
-      "fact": "SHELLING  TANKER \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 27.0112,
-      "lon": 49.6583,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://econotimes.com/Brent-Settles-0-28-Lower-After-U-S-Waives-New-Russia-Penalties-1757018"
-    },
-    {
-      "id": "gdelt-1328787997",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Gaza",
-      "fact": "STRIKE  ISRAELI \u2192 ISRAELI  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.theyeshivaworld.com/news/israel-news/2611658/three-terrorists-eliminated-idf-strikes-hamas-terrorists-who-violated-gaza-ceasefire.html"
-    },
-    {
-      "id": "gdelt-1328785199",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Irpin",
-      "fact": "SHELLING  RUSSIAN \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.5218,
-      "lon": 30.2506,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.kyivpost.com/post/87548"
-    },
-    {
-      "id": "gdelt-1328785202",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Zelenodolsk",
-      "fact": "SHELLING  RUSSIAN \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.8438,
-      "lon": 48.5178,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.kyivpost.com/post/87550"
-    },
-    {
-      "id": "gdelt-1328785297",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Moscow",
-      "fact": "SHELLING  UKRAINIAN \u2192 RUSSIAN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.kyivpost.com/post/87554"
     }
   ]
 }
