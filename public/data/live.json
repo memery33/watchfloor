@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-20T01:19:35.153630+00:00",
+  "generated_at": "2026-10-20T01:54:38.224689+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328808417",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Moscow",
+      "fact": "SHELLING  RUSSIA \u2192 MEDIA  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.theguardian.com/world/2026/oct/20/ukraine-war-briefing-zelenskyy-claims-us-deliberately-delaying-interceptor-missile-deliveries-to-kyiv"
+    },
     {
       "id": "gdelt-1328803471",
       "dtg": "20 OCT",
@@ -38,22 +54,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://slguardian.org/baloch-insurgency-intensifies-as-brg-escalates-attacks/"
-    },
-    {
-      "id": "gdelt-1328799567",
-      "dtg": "20 OCT",
-      "date": "2026-10-20",
-      "location": "Moscow",
-      "fact": "SHELLING  RUSSIA \u2192 KYIV  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.journalgazette.net/news/world/zelenskyy-says-ukraine-got-no-early-warning-from-partners-as-russia-hits-the-power-grid/article_e5355791-c642-5052-8b6d-12469e8336ab.html"
     },
     {
       "id": "gdelt-1328799568",
@@ -309,27 +309,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://cruxnow.com/church-in-oceania/2026/04/russia-strikes-targets-in-kyiv-region-as-ukraine-holds-door-open-for-easter-truce/"
-    },
-    {
-      "id": "gdelt-1328763275",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Al-Alam",
-      "fact": "SHELLING  YEMEN \u2192 YEMEN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 13.8955,
-      "lon": 45.7504,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.pakistantoday.com.pk/2026/10/19/around-40-killed-injured-in-houthi-missile-attack-in-yemens-shabwa-official"
     }
   ]
 }
