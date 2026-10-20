@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-20T03:17:46.780825+00:00",
+  "generated_at": "2026-10-20T04:19:49.203657+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1328817809",
+      "id": "gdelt-1328819041",
       "dtg": "20 OCT",
       "date": "2026-10-20",
       "location": "Moscow",
-      "fact": "SHELLING  INTELLIGENCE \u2192 RUSSIA  (4 mentions)",
+      "fact": "SHELLING  RUSSIAN \u2192 ?  (3 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
@@ -16,7 +16,7 @@
       "event_type": "shelling",
       "theater": "overview",
       "origin": null,
-      "url": "https://www.ijpr.org/npr-news/2026-10-18/ukraine-and-the-u-s-are-at-odds-over-starshield-heres-what-to-know"
+      "url": "https://www.dw.com/en/zelenskyy-accuses-us-of-delaying-patriot-missile-shipment/a-79707951"
     },
     {
       "id": "gdelt-1328816194",
@@ -219,64 +219,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.kyivpost.com/post/87554"
-    },
-    {
-      "id": "gdelt-1328780365",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Riyadh",
-      "fact": "SHELLING  GOVERNMENT \u2192 YEMEN  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://english.news.cn/20261020/708046df596b4fdbb14e1288c5625501/c.html"
-    },
-    {
-      "id": "gdelt-1328780367",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Shabwa",
-      "fact": "SHELLING  GOVERNMENT \u2192 YEMEN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 13.5167,
-      "lon": 44.4333,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://english.news.cn/20261020/708046df596b4fdbb14e1288c5625501/c.html"
-    },
-    {
-      "id": "gdelt-1328776944",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Kyiv",
-      "fact": "SHELLING  THE POPE \u2192 UKRAINE  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.euronews.com/2026/10/19/pope-leo-xiv-holds-call-with-zelenskyy-vatican-says"
     }
   ]
 }
