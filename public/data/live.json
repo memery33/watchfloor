@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-20T08:22:16.496414+00:00",
+  "generated_at": "2026-10-20T09:24:44.922741+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328860060",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Moscow",
+      "fact": "SHELLING  EMPLOYEE \u2192 KYIV  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.journal-advocate.com/2026/10/19/russia-hits-ukraine-power-grid-no-warning/"
+    },
     {
       "id": "gdelt-1328853282",
       "dtg": "20 OCT",
@@ -141,22 +157,6 @@
       "url": "https://www.newsbusters.org/blogs/nb/jack-coleman/2009/12/08/un-amb-rice-pointedly-reminds-rachel-maddow-threat-al-qaeda-not"
     },
     {
-      "id": "gdelt-1328835921",
-      "dtg": "20 OCT",
-      "date": "2026-10-20",
-      "location": "Moscow",
-      "fact": "SHELLING  UNITED KINGDOM \u2192 UKRAINIAN  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.odnako.org/the-us-replies-to-meloni-the-one-on-diesel-is-a-great-agreement/"
-    },
-    {
       "id": "gdelt-1328833367",
       "dtg": "20 OCT",
       "date": "2026-10-20",
@@ -171,22 +171,6 @@
       "theater": "overview",
       "origin": null,
       "url": "http://www.rightspeak.net/2026/10/170-c-clashes-in-f-line-22-in-s.html"
-    },
-    {
-      "id": "gdelt-1328816194",
-      "dtg": "20 OCT",
-      "date": "2026-10-20",
-      "location": "Gaza City",
-      "fact": "STRIKE  ISRAELI \u2192 GAZA  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.israelnationalnews.com/flashes/695686"
     }
   ]
 }
