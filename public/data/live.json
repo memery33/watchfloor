@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-20T09:24:44.922741+00:00",
+  "generated_at": "2026-10-20T10:20:20.624063+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328866707",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Riyadh",
+      "fact": "SHELLING  MILITIA \u2192 RIYADH  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.arabnews.com/saudi-arabia/coalition-destroyed-houthi-missile-fired-toward-riyadh-3007293"
+    },
     {
       "id": "gdelt-1328860060",
       "dtg": "20 OCT",
