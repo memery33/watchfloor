@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-20T06:25:05.485867+00:00",
+  "generated_at": "2026-10-20T07:18:19.052972+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
@@ -81,43 +81,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://www.israelnationalnews.com/flashes/695686"
-    },
-    {
-      "id": "gdelt-1328803471",
-      "dtg": "20 OCT",
-      "date": "2026-10-20",
-      "location": "Shabwa",
-      "fact": "SHELLING  YEMEN \u2192 MILITARY  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 13.5167,
-      "lon": 44.4333,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://dailytrust.com/houthi-attack-on-yemen-govt-camp-kills-over-50/"
-    },
-    {
-      "id": "gdelt-1328801098",
-      "dtg": "20 OCT",
-      "date": "2026-10-20",
-      "location": "Balochistan",
-      "fact": "SHELLING  PAKISTAN \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 28.4785,
-      "lon": 65.6436,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://slguardian.org/baloch-insurgency-intensifies-as-brg-escalates-attacks/"
     }
   ]
 }
