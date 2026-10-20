@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-20T01:54:38.224689+00:00",
+  "generated_at": "2026-10-20T03:17:46.780825+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1328808417",
+      "id": "gdelt-1328817809",
       "dtg": "20 OCT",
       "date": "2026-10-20",
       "location": "Moscow",
-      "fact": "SHELLING  RUSSIA \u2192 MEDIA  (6 mentions)",
+      "fact": "SHELLING  INTELLIGENCE \u2192 RUSSIA  (4 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
@@ -16,7 +16,23 @@
       "event_type": "shelling",
       "theater": "overview",
       "origin": null,
-      "url": "https://www.theguardian.com/world/2026/oct/20/ukraine-war-briefing-zelenskyy-claims-us-deliberately-delaying-interceptor-missile-deliveries-to-kyiv"
+      "url": "https://www.ijpr.org/npr-news/2026-10-18/ukraine-and-the-u-s-are-at-odds-over-starshield-heres-what-to-know"
+    },
+    {
+      "id": "gdelt-1328816194",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Gaza City",
+      "fact": "STRIKE  ISRAELI \u2192 GAZA  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://www.israelnationalnews.com/flashes/695686"
     },
     {
       "id": "gdelt-1328803471",
@@ -261,54 +277,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.euronews.com/2026/10/19/pope-leo-xiv-holds-call-with-zelenskyy-vatican-says"
-    },
-    {
-      "id": "gdelt-1328772868",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Western Kordofan",
-      "fact": "STRIKE  EGYPT \u2192 CIVILIAN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 12.0,
-      "lon": 28.5,
-      "event_type": "strike",
-      "theater": "sudan",
-      "origin": null,
-      "url": "http://www.sitkasentinel.com/stories/sudans-famine-risk-worsened-by-conflict-drought-and-funding-shortages-report-says,178145"
-    },
-    {
-      "id": "gdelt-1328773848",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Kordofan",
-      "fact": "STRIKE  SUDAN \u2192 ?  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 13.0833,
-      "lon": 30.35,
-      "event_type": "strike",
-      "theater": "sudan",
-      "origin": null,
-      "url": "https://www.riotimesonline.com/sudan-drone-strike-kordofan-100-dead-2026/"
-    },
-    {
-      "id": "gdelt-1328773915",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Obukhiv",
-      "fact": "SHELLING  UKRAINE \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.11,
-      "lon": 30.6227,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://cruxnow.com/church-in-oceania/2026/04/russia-strikes-targets-in-kyiv-region-as-ukraine-holds-door-open-for-easter-truce/"
     }
   ]
 }
