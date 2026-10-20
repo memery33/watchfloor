@@ -1,7 +1,92 @@
 {
-  "generated_at": "2026-10-20T00:18:16.019542+00:00",
+  "generated_at": "2026-10-20T01:19:35.153630+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328803471",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Shabwa",
+      "fact": "SHELLING  YEMEN \u2192 MILITARY  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 13.5167,
+      "lon": 44.4333,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://dailytrust.com/houthi-attack-on-yemen-govt-camp-kills-over-50/"
+    },
+    {
+      "id": "gdelt-1328801098",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Balochistan",
+      "fact": "SHELLING  PAKISTAN \u2192 ?  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 28.4785,
+      "lon": 65.6436,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://slguardian.org/baloch-insurgency-intensifies-as-brg-escalates-attacks/"
+    },
+    {
+      "id": "gdelt-1328799567",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Moscow",
+      "fact": "SHELLING  RUSSIA \u2192 KYIV  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.journalgazette.net/news/world/zelenskyy-says-ukraine-got-no-early-warning-from-partners-as-russia-hits-the-power-grid/article_e5355791-c642-5052-8b6d-12469e8336ab.html"
+    },
+    {
+      "id": "gdelt-1328799568",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Kyiv",
+      "fact": "SHELLING  RUSSIA \u2192 KYIV  (11 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://investinglive.com/commodities/trump-holds-up-patriot-missiles-for-ukraine-as-russian-strikes-intensify-officials-say/"
+    },
+    {
+      "id": "gdelt-1328799583",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "King Khalid International",
+      "fact": "SHELLING  SAUDI \u2192 ?  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.9581,
+      "lon": 46.6956,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://themedialine.org/headlines/saudi-arabia-postpones-davos-in-the-desert-conference-houthi-strikes-kill-53-in-yemen-military-facility/"
+    },
     {
       "id": "gdelt-1328792663",
       "dtg": "20 OCT",
@@ -15,27 +100,6 @@
       "lon": 46.7728,
       "event_type": "shelling",
       "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "http://www.heraldglobe.com/news/279385993/houthis-claim-new-attacks-on-saudi-arabia-as-riyadh-postpones-its-flagship-investment-conference"
-    },
-    {
-      "id": "gdelt-1328792665",
-      "dtg": "20 OCT",
-      "date": "2026-10-20",
-      "location": "Shabwa",
-      "fact": "SHELLING  GOVERNMENT \u2192 YEMEN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 13.5167,
-      "lon": 44.4333,
-      "event_type": "shelling",
-      "theater": "yemen",
       "origin": {
         "name": "YEMEN / HOUTHI",
         "lat": 16.85,
@@ -59,22 +123,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://japantoday.com/category/world/zelenskiy-says-ukraine-got-no-warning-as-russian-missiles-rain-in1"
-    },
-    {
-      "id": "gdelt-1328793628",
-      "dtg": "20 OCT",
-      "date": "2026-10-20",
-      "location": "Kyiv",
-      "fact": "SHELLING  KYIV \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.nzherald.co.nz/world/trump-is-pushing-ukraine-to-surrender-to-russia-zelenskyy-says/premium/PCNKPWZDXJCAZO3C645Z677BXU/"
     },
     {
       "id": "gdelt-1328787654",
@@ -282,22 +330,6 @@
         "inferred": true
       },
       "url": "https://www.pakistantoday.com.pk/2026/10/19/around-40-killed-injured-in-houthi-missile-attack-in-yemens-shabwa-official"
-    },
-    {
-      "id": "gdelt-1328754502",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Jerusalem",
-      "fact": "BLOCKADE  ISRAEL \u2192 ISRAEL  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.7667,
-      "lon": 35.2333,
-      "event_type": "blockade",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://english.wafa.ps/Pages/Details/176079"
     }
   ]
 }
