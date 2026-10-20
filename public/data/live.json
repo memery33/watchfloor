@@ -1,7 +1,81 @@
 {
-  "generated_at": "2026-10-19T23:24:25.335292+00:00",
+  "generated_at": "2026-10-20T00:18:16.019542+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1328792663",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Riyadh",
+      "fact": "SHELLING  GOVERNMENT \u2192 YEMEN  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "http://www.heraldglobe.com/news/279385993/houthis-claim-new-attacks-on-saudi-arabia-as-riyadh-postpones-its-flagship-investment-conference"
+    },
+    {
+      "id": "gdelt-1328792665",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Shabwa",
+      "fact": "SHELLING  GOVERNMENT \u2192 YEMEN  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 13.5167,
+      "lon": 44.4333,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "http://www.heraldglobe.com/news/279385993/houthis-claim-new-attacks-on-saudi-arabia-as-riyadh-postpones-its-flagship-investment-conference"
+    },
+    {
+      "id": "gdelt-1328793400",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Volyn",
+      "fact": "SHELLING  RUSSIAN \u2192 ?  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 54.1546,
+      "lon": 37.4002,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://japantoday.com/category/world/zelenskiy-says-ukraine-got-no-warning-as-russian-missiles-rain-in1"
+    },
+    {
+      "id": "gdelt-1328793628",
+      "dtg": "20 OCT",
+      "date": "2026-10-20",
+      "location": "Kyiv",
+      "fact": "SHELLING  KYIV \u2192 ?  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.nzherald.co.nz/world/trump-is-pushing-ukraine-to-surrender-to-russia-zelenskyy-says/premium/PCNKPWZDXJCAZO3C645Z677BXU/"
+    },
     {
       "id": "gdelt-1328787654",
       "dtg": "19 OCT",
@@ -224,38 +298,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://english.wafa.ps/Pages/Details/176079"
-    },
-    {
-      "id": "gdelt-1328745731",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Moscow",
-      "fact": "STRIKE  RUSSIA \u2192 CIVILIAN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "strike",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.kyivpost.com/post/87532"
-    },
-    {
-      "id": "gdelt-1328745965",
-      "dtg": "19 OCT",
-      "date": "2026-10-19",
-      "location": "Saqiya",
-      "fact": "STRIKE  THE US \u2192 CIVILIAN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 26.9667,
-      "lon": 43.4667,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://news.antiwar.com/2026/10/19/ansar-allah-strikes-military-training-camp-in-yemens-shabwah-governorate-killing-over-50/"
     }
   ]
 }
