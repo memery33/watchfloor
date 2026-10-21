@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-10-21T13:32:26.934119+00:00",
+  "generated_at": "2026-10-21T13:56:03.895897+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1329102276",
+      "id": "gdelt-1329107673",
       "dtg": "21 OCT",
       "date": "2026-10-21",
-      "location": "Mukalla",
-      "fact": "SHELLING  SECURITY OFFICIAL \u2192 MUKALLA  (10 mentions)",
+      "location": "Al-Mukalla",
+      "fact": "SHELLING  DUBAI \u2192 ADEN  (8 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
@@ -16,7 +16,44 @@
       "event_type": "shelling",
       "theater": "yemen",
       "origin": null,
-      "url": "http://www.bignewsnetwork.com/news/279389980/houthis-target-al-rayan-airport-in-se-yemen"
+      "url": "https://www.arabnews.com/middle-east/houthi-missile-strikes-aden-airport-as-attacks-reported-in-al-mukalla-3007486"
+    },
+    {
+      "id": "gdelt-1329107903",
+      "dtg": "21 OCT",
+      "date": "2026-10-21",
+      "location": "Golan Heights",
+      "fact": "SHELLING  CIVILIAN \u2192 SYRIA  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 32.9049,
+      "lon": 35.8072,
+      "event_type": "shelling",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://www.presstv.co.uk/Detail/2026/10/21/778858/who-gadi-eisenkot-former-israeli-top-cop-netanyahu-key-rival-elections"
+    },
+    {
+      "id": "gdelt-1329108555",
+      "dtg": "21 OCT",
+      "date": "2026-10-21",
+      "location": "Khor Maksar",
+      "fact": "SHELLING  MILITARY SPOKESMAN \u2192 YEMEN  (20 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 12.8123,
+      "lon": 45.0334,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "http://www.goskagit.com/news/nation/saudi-capitals-airport-reopens-to-limited-traffic-and-other-mideast-news/article_f12aca27-8d09-5cea-a437-0634ec08cf4c.html"
     },
     {
       "id": "gdelt-1329102633",
@@ -320,22 +357,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.independent.co.uk/news/world/europe/trump-russia-putin-ukraine-uk-europe-war-b3069650.html"
-    },
-    {
-      "id": "gdelt-1329048534",
-      "dtg": "21 OCT",
-      "date": "2026-10-21",
-      "location": "Riyadh",
-      "fact": "SHELLING  TERRORIST \u2192 RIYADH  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://english.aawsat.com/gulf/5331807-coalition-drones-launched-toward-saudi-arabia-intercepted-destroyed"
     }
   ]
 }
