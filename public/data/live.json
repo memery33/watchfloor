@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-10-21T01:32:45.317808+00:00",
+  "generated_at": "2026-10-21T01:41:50.326077+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1329006909",
+      "dtg": "21 OCT",
+      "date": "2026-10-21",
+      "location": "Riyadh",
+      "fact": "STRIKE  UNITED KINGDOM \u2192 SAUDI ARABIA  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.dw.com/en/united-kingdom-uk-saudi-arabia-houthis-yemen/a-79718467"
+    },
     {
       "id": "gdelt-1329005572",
       "dtg": "21 OCT",
