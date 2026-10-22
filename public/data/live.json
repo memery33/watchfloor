@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T13:31:06.523202+00:00",
+  "generated_at": "2026-10-22T13:54:26.293865+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
@@ -421,22 +421,6 @@
       "theater": "ukraine",
       "origin": null,
       "url": "https://www.thesunchronicle.com/news/nation_world/russia-pounds-ukraines-capital-kyiv-with-missiles-and-drones-hours-after-agreeing-to-peace-talks/article_9132d7a3-c692-5423-9197-4b2e119c2a93.html"
-    },
-    {
-      "id": "gdelt-1329255131",
-      "dtg": "22 OCT",
-      "date": "2026-10-22",
-      "location": "Sanaa",
-      "fact": "STRIKE  DAMMAM \u2192 ?  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.siasat.com/indian-killed-2-injured-in-dammam-airport-attack-8-hurt-3562342/"
     },
     {
       "id": "gdelt-1329277939",
