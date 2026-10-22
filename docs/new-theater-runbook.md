@@ -31,7 +31,7 @@ Use this when a new conflict needs its own map slot. You should be able to go fr
   - Its number key works.
   - The legend stamp reads `GDELT claims: N · refreshed <time>`.
   - The page has no console errors.
-- Retake the README screenshot (`docs/watchfloor.png`) only if the rail or legend changed noticeably.
+- Retake the README screenshots in `docs/screenshots/` (the .webp files) only if the rail or legend changed noticeably.
 
 ## 6. Roll back
 - To hide the theater, remove its id from `THEATER_ORDER` and push. The data file can stay.
