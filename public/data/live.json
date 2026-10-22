@@ -1,13 +1,29 @@
 {
-  "generated_at": "2026-10-22T07:35:04.040619+00:00",
+  "generated_at": "2026-10-22T07:44:08.121286+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1329251191",
+      "id": "gdelt-1329252470",
+      "dtg": "22 OCT",
+      "date": "2026-10-22",
+      "location": "Moscow",
+      "fact": "SHELLING  RESIDENTS \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.kyivpost.com/post/87817"
+    },
+    {
+      "id": "gdelt-1329253123",
       "dtg": "22 OCT",
       "date": "2026-10-22",
       "location": "Kyiv",
-      "fact": "SHELLING  MOSCOW \u2192 ?  (6 mentions)",
+      "fact": "SHELLING  RUSSIAN \u2192 UKRAINE  (16 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
@@ -16,7 +32,7 @@
       "event_type": "shelling",
       "theater": "ukraine",
       "origin": null,
-      "url": "https://www.khaama.com/russia-ukraine-attacks-peace-talks/"
+      "url": "http://www.wdtimes.com/news/world/russia-pounds-ukraines-capital-kyiv-with-missiles-and-drones-hours-after-agreeing-to-peace-talks/article_046f5712-b240-50ae-95f0-c86dc8f48bab.html"
     },
     {
       "id": "gdelt-1329248492",
@@ -134,54 +150,6 @@
         "inferred": true
       },
       "url": "https://www.thenationalnews.com/business/2026/10/22/abu-dhabi-finance-week-to-hold-half-of-2026-sessions-behind-closed-doors-to-drive-deals/"
-    },
-    {
-      "id": "gdelt-1329219743",
-      "dtg": "22 OCT",
-      "date": "2026-10-22",
-      "location": "Moscow",
-      "fact": "SHELLING  WALL STREET JOURNAL \u2192 RUSSIA  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.theguardian.com/world/2026/oct/22/ukraine-war-briefing-peace-proposals-lack-substance-witkoff-putin-meeting"
-    },
-    {
-      "id": "gdelt-1329214401",
-      "dtg": "22 OCT",
-      "date": "2026-10-22",
-      "location": "Eastern Region",
-      "fact": "STRIKE  KING \u2192 ?  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 22.5,
-      "lon": 51.0,
-      "event_type": "strike",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.kitv.com/news/business/1-person-killed-in-attack-on-eastern-saudi-airport-authorities-say/article_ee9f1670-e4ec-53a6-8cc0-8c18c3a08f18.html"
-    },
-    {
-      "id": "gdelt-1329214616",
-      "dtg": "22 OCT",
-      "date": "2026-10-22",
-      "location": "Ben-Gurion",
-      "fact": "SHELLING  TEL AVIV \u2192 LEBANON  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 32.0114,
-      "lon": 34.8867,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": null,
-      "url": "http://www.jpost.com/business-and-innovation/article-912471"
     }
   ]
 }
