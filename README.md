@@ -32,7 +32,7 @@ Ukraine, theater 4, with reported energy and strike claims and their sources.
 
 | Tag | Color | Meaning |
 | --- | --- | --- |
-| CONFIRMED | red | Named and corroborated. Still a reported claim, not a confirmed strike. |
+| CONFIRMED | red | Named and corroborated. Still not targeting quality. |
 | REPORTED | amber | Open press or official statement, not independently verified here. |
 | CLAIM | yellow | State, militant, or automated extraction. Shown, not trusted. |
 | DELTA | cyan | Credible sources contradict each other. |
@@ -40,7 +40,7 @@ Ukraine, theater 4, with reported energy and strike claims and their sources.
 
 ## What's on the map
 
-- Nine theaters: Overview, Iran/Gulf, Levant, Ukraine, Sudan, Energy/Sea, Afghanistan-Pakistan (AfPak), Yemen/Red Sea, and Ethiopia/Horn (keys 1-9)
+- Nine theaters: Overview, Iran/Gulf, Levant, Ukraine, Sudan, Energy/Sea, Afghanistan-Pakistan (AfPak), Yemen/Red Sea, and Ethiopia/Horn (keys `1` to `9`)
 - Curated event stack for each theater, with source class and confidence
 - Reconstructed missile and drone vectors where both ends are named
 - Dark English basemap, Powered by Esri
@@ -87,9 +87,9 @@ Open sources only. No classified, For Official Use Only (FOUO), or private Teleg
 
 One line per source. Full terms are in [docs/sources.md](docs/sources.md).
 
-- **Esri basemap.** Powered by Esri. Attribution: Esri, HERE, Garmin, [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), and the GIS user community.
+- **Esri basemap.** Powered by Esri. Attribution: Esri, HERE, Garmin, [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), and the Geographic Information System (GIS) user community. Used under [Esri's terms of use](https://www.esri.com/en-us/legal/terms/full-master-agreement).
 - **GDELT Project.** Free for any use with a citation and a link to [gdeltproject.org](https://www.gdeltproject.org/).
-- **NASA FIRMS.** Open data. Cite as NASA FIRMS. [earthdata.nasa.gov/firms](https://earthdata.nasa.gov/firms).
+- **NASA FIRMS.** Open data. Cite as NASA FIRMS. [earthdata.nasa.gov/firms](https://earthdata.nasa.gov/firms). Disclaimer: [firms.modaps.eosdis.nasa.gov/download/Readme.txt](https://firms.modaps.eosdis.nasa.gov/download/Readme.txt).
 - **Leaflet.** BSD 2 Clause. The license text is in [`THIRD_PARTY_NOTICES`](THIRD_PARTY_NOTICES).
 - **OurAirports.** Public domain.
 - **NGA GeoNames Server.** No restrictions. [geonames.nga.mil](https://geonames.nga.mil/).
