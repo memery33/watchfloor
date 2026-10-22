@@ -1,16 +1,28 @@
 # Watchfloor
 
-An unclassified, open-source **OSINT common operating picture** for following several conflicts at once.
+[![Watchfloor overview of all theaters, captured 21 Oct 2026, with the confidence legend and the reported event stack](docs/screenshots/overview.webp)](https://memery33.github.io/watchfloor/)
+
+An unclassified open source intelligence (OSINT) common operating picture (COP) for following several conflicts at once.
 
 **Live map:** https://memery33.github.io/watchfloor/
 
-![Watchfloor live map, Ukraine theater with thermal anomalies on, 7 Oct 2026](docs/watchfloor.png)
+Watchfloor is a watch-floor view, not a news site. It is not a targeting product. It is reconstructed OSINT only. Every point is a reported claim with its source cited, not a confirmed strike. Every item carries a confidence tag and a source. Anything that isn't backed by named, corroborating sources stays **yellow** as a claim. It is not radar.
 
-Watchfloor is a watch-floor view, not a news site. Every item on the map carries a confidence tag and a source. Anything that isn't backed by named, corroborating sources stays **yellow** as a claim. It is **not a targeting product and not radar.**
+## Screenshots
+
+The curated situation report (sitrep) snapshot in these shots is dated 15 Oct 2026. The live Global Database of Events, Language, and Tone (GDELT) overlay was refreshed Oct 21, 2026.
+
+![Iran and the Gulf theater, captured 21 Oct 2026, with reported Hormuz and Gulf claims, the confidence legend, and the event stack](docs/screenshots/iran-gulf.webp)
+
+Iran and the Gulf, theater 2, with reported Hormuz and Gulf claims and their sources.
+
+![Ukraine theater, captured 21 Oct 2026, with reported energy and strike claims, the confidence legend, and the event stack](docs/screenshots/ukraine.webp)
+
+Ukraine, theater 4, with reported energy and strike claims and their sources.
 
 ## How sources are vetted
 
-- **Named sources only.** Every event cites who reported it (wire services, official statements, UKMTO, named outlets).
+- **Named sources only.** Every event cites who reported it (wire services, official statements, United Kingdom Maritime Trade Operations (UKMTO), named outlets).
 - **Claims stay yellow.** State media, militant channels, and automated news extraction are shown as CLAIM. They are promoted only when an independent, named source corroborates the same event, place, and date.
 - **Disagreement is shown, not resolved.** When two credible sources contradict each other, the item is marked DELTA and both accounts stay visible.
 - **No coordinates, no marker.** Nothing is plotted on a guessed location.
@@ -20,7 +32,7 @@ Watchfloor is a watch-floor view, not a news site. Every item on the map carries
 
 | Tag | Color | Meaning |
 | --- | --- | --- |
-| CONFIRMED | red | Named and corroborated. Still not targeting quality. |
+| CONFIRMED | red | Named and corroborated. Still a reported claim, not a confirmed strike. |
 | REPORTED | amber | Open press or official statement, not independently verified here. |
 | CLAIM | yellow | State, militant, or automated extraction. Shown, not trusted. |
 | DELTA | cyan | Credible sources contradict each other. |
@@ -28,7 +40,7 @@ Watchfloor is a watch-floor view, not a news site. Every item on the map carries
 
 ## What's on the map
 
-- Nine theaters: Overview, Iran/Gulf, Levant, Ukraine, Sudan, Energy/Sea, AfPak, Yemen/Red Sea, and Ethiopia/Horn (keys `1`–`9`)
+- Nine theaters: Overview, Iran/Gulf, Levant, Ukraine, Sudan, Energy/Sea, Afghanistan-Pakistan (AfPak), Yemen/Red Sea, and Ethiopia/Horn (keys 1-9)
 - Curated event stack for each theater, with source class and confidence
 - Reconstructed missile and drone vectors where both ends are named
 - Dark English basemap, Powered by Esri
@@ -36,19 +48,19 @@ Watchfloor is a watch-floor view, not a news site. Every item on the map carries
 
 ## The live claim layer
 
-A yellow layer shows the last ~6 hours of public [GDELT](https://www.gdeltproject.org/) claims, re-read on every refresh. It keeps only strike, shelling, and blockade events inside the watched areas, and it drops country-level default locations, known bad geocodes, and vague actors. Because those filters are strict, the layer can still be thin or empty when news is quiet; an empty layer means nothing passed the filters, not that the feed is broken. The legend always shows the current count and the last refresh time, for example `GDELT claims: 23 · refreshed Oct 7, 6:50 PM ET`.
+A yellow layer shows the last 6 hours of public [GDELT](https://www.gdeltproject.org/) claims. It is re-read on every refresh. It keeps only strike, shelling, and blockade events inside the watched areas. It drops country-level default locations, known bad geocodes, and vague actors. Because those filters are strict, the layer can still be thin or empty when news is quiet. An empty layer means nothing passed the filters, not that the feed is broken. The legend always shows the current count and the last refresh time.
 
 Every GDELT row stays a CLAIM until the sitrep curator promotes it with named corroboration.
 
 ## Layers
 
-- **Vectors:** reconstructed strike paths, drawn as arcs. A path draws only when both ends are named, and it is inferred from reporting, not radar.
-- **Strike pins:** town-level placements whose coordinates come from NGA GeoNames (public domain). Each pin names the outlet or official source, and its geolocator reads "Watchfloor (town-level placement)", so it isn't an exact geolocation.
-- **Fronts:** catalog only. Nothing draws until a source is license-cleared for commercial use.
-- **Thermal anomalies (fires):** NASA FIRMS VIIRS 375 m near-real-time. Off by default and fetched only when switched on. Up to 400 points are drawn on desktop and 120 on phone, likely gas flares are drawn small and muted, and each point is labeled "thermal anomaly, not confirmed strike".
-- **Ships:** off until a commercially cleared source exists.
+- **Vectors:** reconstructed strike paths, drawn as arcs. A path draws only when both ends are named. It is inferred from reporting, not radar.
+- **Strike pins:** town-level placements. Coordinates come from the National Geospatial-Intelligence Agency (NGA) GeoNames Server. Each pin names the outlet or official source. Its geolocator reads "Watchfloor (town-level placement)", so it isn't an exact geolocation.
+- **Fronts:** catalog only. Nothing draws until a source is license-cleared.
+- **Thermal anomalies (fires):** NASA Fire Information for Resource Management System (FIRMS), Visible Infrared Imaging Radiometer Suite (VIIRS) 375 m near-real-time. Off by default, and fetched only when switched on. Up to 400 points are drawn on desktop and 120 on phone. Likely gas flares are drawn small and muted. Each point is labeled "thermal anomaly, not confirmed strike".
+- **Ships:** off until a license-cleared source exists.
 
-The map refuses to draw any layer whose source isn't cleared for commercial use; the license register is [docs/sources.md](docs/sources.md).
+The map draws a layer only when its license is cleared. The register is [docs/sources.md](docs/sources.md).
 
 ## How it stays current
 
@@ -65,20 +77,25 @@ python3 scripts/fetch_live.py
 npm run dev
 ```
 
-Keys: `1`–`9` switch theaters, `F` toggles fullscreen.
+Keys: `1`-`9` switch theaters, `F` toggles fullscreen.
 
 ## Public by design
 
-Open sources only. No classified, FOUO, or private Telegram material. If it can't be sourced publicly, it is a yellow claim or it does not plot.
+Open sources only. No classified, For Official Use Only (FOUO), or private Telegram material. If it can't be sourced publicly, it is a yellow claim or it does not plot.
 
-## Credits
+## Data sources and licenses
 
-- **Basemap:** Powered by Esri; data from Esri, HERE, Garmin, © OpenStreetMap contributors, and the GIS user community.
-- **Live claims:** [The GDELT Project](https://www.gdeltproject.org/).
-- **Thermal anomalies:** [NASA FIRMS](https://earthdata.nasa.gov/firms), with the disclaimer at https://firms.modaps.eosdis.nasa.gov/download/Readme.txt.
-- **Place names for the strike pins:** NGA GeoNames Server. Airports: [OurAirports](https://ourairports.com/data/) (public domain).
-- **Map engine:** Leaflet (BSD-2-Clause); see [`THIRD_PARTY_NOTICES`](THIRD_PARTY_NOTICES).
+One line per source. Full terms are in [docs/sources.md](docs/sources.md).
+
+- **Esri basemap.** Powered by Esri. Attribution: Esri, HERE, Garmin, [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), and the GIS user community.
+- **GDELT Project.** Free for any use with a citation and a link to [gdeltproject.org](https://www.gdeltproject.org/).
+- **NASA FIRMS.** Open data. Cite as NASA FIRMS. [earthdata.nasa.gov/firms](https://earthdata.nasa.gov/firms).
+- **Leaflet.** BSD 2 Clause. The license text is in [`THIRD_PARTY_NOTICES`](THIRD_PARTY_NOTICES).
+- **OurAirports.** Public domain.
+- **NGA GeoNames Server.** No restrictions. [geonames.nga.mil](https://geonames.nga.mil/).
+
+News outlets are cited and linked, never republished.
 
 ## License
 
-MIT
+[MIT](LICENSE). Free and open source.
