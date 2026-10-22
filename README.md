@@ -12,7 +12,7 @@ Watchfloor is a watch-floor view, not a news site. It is not a targeting product
 
 ## Screenshots
 
-The curated situation report (sitrep) snapshot in these shots is dated Oct 15, 2026. The live Global Database of Events, Language, and Tone (GDELT) overlay was refreshed Oct 21, 2026 at 9:39 PM ET (Eastern Time).
+The curated situation report (sitrep) snapshot in these shots is dated Oct 15, 2026. The live Global Database of Events, Language, and Tone (GDELT) overlay was refreshed Oct 21, 2026 at 9:39 PM Eastern Time (ET).
 
 ![Iran and the Gulf theater, captured Oct 21, 2026, with reported Hormuz and Gulf claims, the confidence legend, and the event stack](docs/screenshots/iran-gulf.webp)
 
@@ -59,7 +59,7 @@ Every GDELT row stays a CLAIM until the sitrep curator promotes it with named co
 - **Vectors:** reconstructed strike paths, drawn as arcs. A path draws only when both ends are named. It is inferred from reporting, not radar.
 - **Strike pins:** town-level placements. Coordinates come from the National Geospatial-Intelligence Agency (NGA) GeoNames Server (GNS). Each pin names the outlet or official source. Its geolocator reads "Watchfloor (town-level placement)", so it isn't an exact geolocation.
 - **Fronts:** catalog only. Nothing draws until a source is license-cleared for commercial use.
-- **Thermal anomalies (fires):** National Aeronautics and Space Administration (NASA) Fire Information for Resource Management System (FIRMS), Visible Infrared Imaging Radiometer Suite (VIIRS) 375 m near-real-time. Off by default, and fetched only when switched on. Up to 400 points are drawn on desktop and 120 on phone. Likely gas flares are drawn small and muted. Likely flare points are labeled "likely gas flare / industrial heat". Other points are labeled "thermal anomaly, not confirmed strike".
+- **Thermal anomalies (fires):** National Aeronautics and Space Administration (NASA) Fire Information for Resource Management System (FIRMS), Visible Infrared Imaging Radiometer Suite (VIIRS) 375 m near-real-time. Off by default, and fetched only when switched on. Up to 400 points are drawn on desktop and 120 on phone. Likely gas flares are drawn small and muted. Likely flare points are labeled "LIKELY GAS FLARE / INDUSTRIAL HEAT". Other points are labeled "THERMAL ANOMALY, NOT CONFIRMED STRIKE". The app shows both labels in capitals.
 - **Ships:** off until a source is license-cleared for commercial use.
 
 The commercial use gate in `src/layers.ts` covers fronts, fires, and ships. Fronts draw only when license-cleared for commercial use: `licenseCleared` is true, commercial use is yes, data is present, and a license and a source link are set. Fires load only when the file names a VIIRS source and commercial use is yes. The ships feed is disabled, and a payload is accepted only when commercial use is yes and the delay is at least 60 minutes. Strike pins and vectors are not behind that gate. The Esri basemap is loaded in `src/main.ts` and draws even though the register tags it needs paid license. The register is [docs/sources.md](docs/sources.md).
@@ -67,9 +67,9 @@ The commercial use gate in `src/layers.ts` covers fronts, fires, and ships. Fron
 ## How it stays current
 
 - **Curated sitrep:** `src/sitrep.ts` and the per-theater `src/sitrep.*.ts` files, with a snapshot timestamp shown in the header.
-- **Live layer:** `scripts/fetch_live.py` writes `public/data/live.json`. Every site build fetches the overlay fresh, so the deployed map is as current as its last build. A failed fetch keeps the committed `live.json`. A scheduled GitHub Action (nominally hourly, often less often) keeps the repo copy current and requests a site rebuild.
+- **Live layer:** `scripts/fetch_live.py` writes `public/data/live.json`. Every site build fetches the overlay fresh, so the deployed map is as current as its last build. A failed fetch keeps the committed `live.json`. The hourly live workflow requests a Pages rebuild only when `live.json` changes.
 - **Vectors:** `src/tracks.ts`, curated by hand.
-- **Site:** GitHub Pages rebuilds on every push to `main`, with a scheduled rebuild as a fallback.
+- **Site:** GitHub Pages rebuilds on a push to `main`. A bot push does not fire that push trigger. The workflow file also schedules an hourly rebuild.
 
 ## Run locally
 
@@ -89,13 +89,13 @@ Open sources only. No classified, For Official Use Only (FOUO), or private Teleg
 
 One line per source. Full terms are in [docs/sources.md](docs/sources.md).
 
-- **Esri World Dark Gray Base + World Dark Gray Reference tiles.** Esri terms of use, plus ArcGIS Location Platform licensing ([licensing and attribution](https://location.arcgis.com/help/licensing-and-attribution)). Commercial use: needs paid license. Attribution: Powered by Esri. Esri, HERE, Garmin, OpenStreetMap contributors, and the Geographic Information System (GIS) user community.
-- **GDELT 2.0 Events exports.** Terms: [gdeltproject.org/about.html](https://www.gdeltproject.org/about.html). Free for any use with a citation and a link to the GDELT Project. Commercial use: yes.
+- **Esri World Dark Gray Base + World Dark Gray Reference tiles.** Esri terms of use, plus ArcGIS Location Platform licensing ([licensing and attribution](https://location.arcgis.com/help/licensing-and-attribution)). Commercial use: needs paid license. Attribution: Powered by Esri. Esri, HERE, Garmin, [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), and the Geographic Information System (GIS) user community.
+- **GDELT 2.0 Events exports.** Terms: [gdeltproject.org/about.html](https://www.gdeltproject.org/about.html). Free for any use with a citation and a link to the [GDELT Project](https://www.gdeltproject.org/). Commercial use: yes.
 - **Leaflet 1.9.4.** BSD-2-Clause (Berkeley Software Distribution 2-Clause). [License](https://raw.githubusercontent.com/Leaflet/Leaflet/v1.9.4/LICENSE). Copy in [`THIRD_PARTY_NOTICES`](THIRD_PARTY_NOTICES). Commercial use: yes.
-- **NASA LANCE FIRMS, VIIRS 375 m near-real-time active fire files.** Land, Atmosphere Near real-time Capability for EOS (LANCE). EOS is the Earth Observing System. Open data. Cite as NASA FIRMS ([FAQ](https://www.earthdata.nasa.gov/data/tools/firms/faq)). Disclaimer: [Readme.txt](https://firms.modaps.eosdis.nasa.gov/download/Readme.txt). Commercial use: yes.
-- **Cited news and official statements.** Cited and linked, never republished. Commercial use: yes, as citation only.
-- **OurAirports.** Public domain ([ourairports.com/data](https://ourairports.com/data/)). Commercial use: yes.
-- **NGA World Port Index, Publication 150 (Pub 150).** Reference check only. No coordinates copied. US Government work. The terms clause is unverified ([msi.nga.mil/Publications/WPI](https://msi.nga.mil/Publications/WPI)). Commercial use: yes.
+- **NASA LANCE FIRMS, VIIRS 375 m near-real-time active fire files.** Land, Atmosphere Near real-time Capability for EOS (LANCE). EOS is the Earth Observing System. Open data (NASA data are Creative Commons Zero (CC0) unless marked otherwise). Cite as NASA FIRMS ([earthdata.nasa.gov/firms](https://earthdata.nasa.gov/firms)). Frequently asked questions (FAQ): [earthdata.nasa.gov/data/tools/firms/faq](https://www.earthdata.nasa.gov/data/tools/firms/faq). Disclaimer: [Readme.txt](https://firms.modaps.eosdis.nasa.gov/download/Readme.txt). Commercial use: yes.
+- **Cited news and official statements.** Cited with links, or by name, and not republished. Commercial use: yes, as citation only.
+- **OurAirports.** Public domain ([davidmegginson.github.io/ourairports-data](https://davidmegginson.github.io/ourairports-data/)). Commercial use: yes.
+- **NGA World Port Index, Publication 150 (Pub 150).** Reference check only. No coordinates copied. United States (US) Government work. The terms clause is unverified ([msi.nga.mil/Publications/WPI](https://msi.nga.mil/Publications/WPI)). Commercial use: yes.
 - **NGA GeoNames Server (GNS).** No licensing requirements or restrictions ([geonames.nga.mil](https://geonames.nga.mil/)). Commercial use: yes.
 
 ## License
