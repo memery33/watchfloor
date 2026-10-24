@@ -1,7 +1,28 @@
 {
-  "generated_at": "2026-10-24T22:33:51.835411+00:00",
+  "generated_at": "2026-10-24T22:34:12.655750+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1329699511",
+      "dtg": "24 OCT",
+      "date": "2026-10-24",
+      "location": "Tawahi",
+      "fact": "SHELLING  YEMEN \u2192 COAST GUARD  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 12.7847,
+      "lon": 44.9802,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://japantoday.com/category/world/houthis-say-they-targeted-saudi-oil-sites-attacks-reported-in-aden"
+    },
     {
       "id": "gdelt-1329698296",
       "dtg": "24 OCT",
@@ -248,22 +269,6 @@
       "url": "https://www.hindustantimes.com/world-news/houthis-claim-strikes-on-saudi-aramco-facility-oil-refinery-and-airports-in-riyadh-dammam-yemen-aden-101792856571150.html"
     },
     {
-      "id": "gdelt-1329684192",
-      "dtg": "24 OCT",
-      "date": "2026-10-24",
-      "location": "Tawahi",
-      "fact": "SHELLING  MINISTRY \u2192 ?  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 12.7847,
-      "lon": 44.9802,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://aa.com.tr/en/middle-east/yemen-says-houthis-target-aden-airport-port-and-coast-guard-facilities-with-ballistic-missiles/4099652"
-    },
-    {
       "id": "gdelt-1329683190",
       "dtg": "24 OCT",
       "date": "2026-10-24",
@@ -310,22 +315,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://english.aawsat.com/gulf/5333054-saudi-arabia-intercepts-three-missiles-targeting-riyadh-taif-and-yanbu"
-    },
-    {
-      "id": "gdelt-1329674003",
-      "dtg": "24 OCT",
-      "date": "2026-10-24",
-      "location": "Crimea",
-      "fact": "SHELLING  RUSSIA \u2192 UKRAINIAN  (12 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 45.0,
-      "lon": 34.0,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.mirror.co.uk/news/world-news/ukraines-starlink-speeds-restored-after-37807176"
     }
   ]
 }
