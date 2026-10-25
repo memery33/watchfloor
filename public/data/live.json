@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-10-25T19:27:42.066825+00:00",
+  "generated_at": "2026-10-25T19:45:27.651428+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1329793066",
+      "id": "gdelt-1329795826",
       "dtg": "25 OCT",
       "date": "2026-10-25",
-      "location": "Kharkiv",
-      "fact": "SHELLING  FIREFIGHTER \u2192 KHARKIV  (8 mentions)",
+      "location": "Jerusalem",
+      "fact": "SHELLING  THE US \u2192 THE US  (8 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-3",
-      "lat": 49.9808,
-      "lon": 36.2527,
+      "lat": 31.7667,
+      "lon": 35.2333,
       "event_type": "shelling",
-      "theater": "ukraine",
+      "theater": "levant",
       "origin": null,
-      "url": "https://www.cbc.ca/news/world/ukraine-disputes-elon-musk-claim-starlink-starshield-9.7395412"
+      "url": "https://en.globes.co.il/en/article-us-wants-control-of-israeli-defense-technology-in-exchange-for-aid-1001560761"
     },
     {
       "id": "gdelt-1329791473",
@@ -194,6 +194,22 @@
       "url": "https://www.hindustantimes.com/world-news/ukraine-rejects-musk-s-claim-that-it-used-starlink-for-drone-attacks-says-restrictions-make-it-impossible-101792944511885.html"
     },
     {
+      "id": "gdelt-1329780009",
+      "dtg": "25 OCT",
+      "date": "2026-10-25",
+      "location": "Kharkiv",
+      "fact": "SHELLING  UKRAINE \u2192 ?  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 49.9808,
+      "lon": 36.2527,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.euronews.com/2026/10/25/russian-strikes-on-ukraine-kill-four-and-injure-28-authorities-say"
+    },
+    {
       "id": "gdelt-1329778358",
       "dtg": "25 OCT",
       "date": "2026-10-25",
@@ -309,54 +325,6 @@
         "inferred": true
       },
       "url": "https://www.rediff.com/news/report/india-warns-nationals-in-saudi-arabia-against-filming-missile-attacks/20261025.htm"
-    },
-    {
-      "id": "gdelt-1329763510",
-      "dtg": "25 OCT",
-      "date": "2026-10-25",
-      "location": "Gaza Strip",
-      "fact": "BLOCKADE  ISRAELI \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.4251,
-      "lon": 34.3734,
-      "event_type": "blockade",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://aa.com.tr/en/middle-east/israeli-army-turns-palestinian-homes-into-military-posts-in-west-bank-city-of-hebron/4099934"
-    },
-    {
-      "id": "gdelt-1329763744",
-      "dtg": "25 OCT",
-      "date": "2026-10-25",
-      "location": "Dnipropetrovsk",
-      "fact": "SHELLING  UKRAINE \u2192 ?  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 48.463,
-      "lon": 35.039,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://aa.com.tr/en/russia-ukraine-war/russia-ukraine-report-casualties-in-overnight-strikes/4100175"
-    },
-    {
-      "id": "gdelt-1329763756",
-      "dtg": "25 OCT",
-      "date": "2026-10-25",
-      "location": "Moscow",
-      "fact": "SHELLING  UKRAINIAN \u2192 UKRAINE  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://abcnews.com/International/ukraine-unblock-patriot-missile-delivery-zelenskyy-after-deadly/story?id=137550094"
     }
   ]
 }
