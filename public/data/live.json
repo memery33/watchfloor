@@ -1,39 +1,7 @@
 {
-  "generated_at": "2026-10-26T13:38:41.673156+00:00",
+  "generated_at": "2026-10-26T14:23:31.720681+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
-    {
-      "id": "gdelt-1329903651",
-      "dtg": "26 OCT",
-      "date": "2026-10-26",
-      "location": "Shahed",
-      "fact": "SHELLING  UKRAINE \u2192 RUSSIA  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 28.5934,
-      "lon": 52.2295,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.kyivpost.com/post/88192"
-    },
-    {
-      "id": "gdelt-1329903655",
-      "dtg": "26 OCT",
-      "date": "2026-10-26",
-      "location": "Kiev",
-      "fact": "SHELLING  KIEV \u2192 UKRAINE  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.4333,
-      "lon": 30.5167,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.bankingnews.gr/diethni/articles/907254/landing-in-kherson-russians-crossed-the-dnieper-chaos-in-kiev-ukraine-s-sly-plan-for-the-oleshky-truce"
-    },
     {
       "id": "gdelt-1329891406",
       "dtg": "26 OCT",
@@ -288,6 +256,22 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.al-monitor.com/originals/2026/10/saudi-coalition-says-struck-houthi-missile-facilities-after-riyadh-airport-attack"
+    },
+    {
+      "id": "gdelt-1329859239",
+      "dtg": "26 OCT",
+      "date": "2026-10-26",
+      "location": "Kyiv",
+      "fact": "SHELLING  UKRAINE \u2192 UKRAINIAN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.euronews.com/2026/10/26/serbias-strongman-toppled-by-student-backed-movement"
     }
   ]
 }
