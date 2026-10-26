@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T19:33:26.904760+00:00",
+  "generated_at": "2026-10-26T20:36:03.083841+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
@@ -171,43 +171,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://www.clevelandjewishnews.com/jns/ad-for-el-sayed-blaming-rising-grocery-costs-on-israel-a-case-study-in-jew/article_0907b49f-e39f-5f53-8f15-799b4858f9a3.html"
-    },
-    {
-      "id": "gdelt-1329908036",
-      "dtg": "26 OCT",
-      "date": "2026-10-26",
-      "location": "Shahed",
-      "fact": "SHELLING  IRAN \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 28.5934,
-      "lon": 52.2295,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.moneycontrol.com/world/150-000-missile-with-a-1-200-km-range-and-497-mph-speed-why-russia-s-filin-has-ukraine-on-alert-article-14060414.html"
-    },
-    {
-      "id": "gdelt-1329905215",
-      "dtg": "26 OCT",
-      "date": "2026-10-26",
-      "location": "Mokha",
-      "fact": "SHELLING  ? \u2192 YEMEN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 13.3195,
-      "lon": 43.2448,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.ksat.com/news/world/2026/10/26/saudi-led-coalition-says-it-has-destroyed-yemeni-rebels-missile-facilities-and-other-mideast-news/"
     }
   ]
 }
