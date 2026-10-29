@@ -1,7 +1,60 @@
 {
-  "generated_at": "2026-10-28T23:19:17.892194+00:00",
+  "generated_at": "2026-10-29T02:34:00.091830+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1330388744",
+      "dtg": "29 OCT",
+      "date": "2026-10-29",
+      "location": "Hebron",
+      "fact": "STRIKE  ? \u2192 YEMEN  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 31.5333,
+      "lon": 35.1,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.wsbradio.com/news/world/iran-hails-tehran/T4T2DWZTQY7KBKLDD32MN3PTNA/"
+    },
+    {
+      "id": "gdelt-1330386890",
+      "dtg": "29 OCT",
+      "date": "2026-10-29",
+      "location": "Mecca",
+      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 21.4267,
+      "lon": 39.8261,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.breitbart.com/middle-east/2026/10/28/report-qatar-offers-iran-deal-to-end-war-with-u-s/"
+    },
+    {
+      "id": "gdelt-1330378473",
+      "dtg": "28 OCT",
+      "date": "2026-10-28",
+      "location": "Gaza",
+      "fact": "SHELLING  HAMAS \u2192 ISRAEL  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "shelling",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://www.jns.org/opinion/column/mitchell-bard/the-two-state-solution-is-a-suicide-pact"
+    },
     {
       "id": "gdelt-1330376979",
       "dtg": "28 OCT",
@@ -97,75 +150,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://themedialine.org/headlines/syria-jordan-reopen-sole-border-crossing-after-strikes-agree-to-joint-investigation/"
-    },
-    {
-      "id": "gdelt-1330354302",
-      "dtg": "28 OCT",
-      "date": "2026-10-28",
-      "location": "Hebron",
-      "fact": "STRIKE  SAUDI \u2192 YEMEN  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.5333,
-      "lon": 35.1,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "http://www.dailyadvance.com/news/national/houthis-say-saudi-led-airstrikes-killed-14-at-a-market-in-northern-yemen-and-other/article_1d01b617-9537-59e7-895e-10ed585cc503.html"
-    },
-    {
-      "id": "gdelt-1330352238",
-      "dtg": "28 OCT",
-      "date": "2026-10-28",
-      "location": "Rawalpindi",
-      "fact": "STRIKE  PAKISTAN \u2192 ?  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 33.6,
-      "lon": 73.0667,
-      "event_type": "strike",
-      "theater": "afpak",
-      "origin": null,
-      "url": "https://thediplomat.com/2026/10/will-pakistan-fight-in-saudi-arabias-wars/"
-    },
-    {
-      "id": "gdelt-1330347308",
-      "dtg": "28 OCT",
-      "date": "2026-10-28",
-      "location": "Nyala",
-      "fact": "STRIKE  ? \u2192 ARMY  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 12.05,
-      "lon": 24.8833,
-      "event_type": "strike",
-      "theater": "sudan",
-      "origin": null,
-      "url": "https://www.riotimesonline.com/sudan-nyala-market-strike-toll-102-activists/"
-    },
-    {
-      "id": "gdelt-1330333904",
-      "dtg": "28 OCT",
-      "date": "2026-10-28",
-      "location": "Gaza",
-      "fact": "BLOCKADE  ISRAEL \u2192 DISPLACED FAMILIES  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "blockade",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://mondoweiss.net/author/hayat-yildiz/"
     }
   ]
 }
