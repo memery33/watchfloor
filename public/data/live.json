@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-10-31T04:22:27.424485+00:00",
+  "generated_at": "2026-10-31T07:05:17.638143+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1330781460",
+      "dtg": "31 OCT",
+      "date": "2026-10-31",
+      "location": "Eastern Region",
+      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (7 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 22.5,
+      "lon": 51.0,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.khaama.com/saudi-arabia-intercepts-houthi-drones-eastern-southern-regions/"
+    },
+    {
+      "id": "gdelt-1330781461",
+      "dtg": "31 OCT",
+      "date": "2026-10-31",
+      "location": "Mecca",
+      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 21.4267,
+      "lon": 39.8261,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.khaama.com/saudi-arabia-intercepts-houthi-drones-eastern-southern-regions/"
+    },
     {
       "id": "gdelt-1330773739",
       "dtg": "31 OCT",
@@ -81,22 +113,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://www.middleeasteye.net/live-blog/live-blog-update/more-530-palestinian-families-forced-hebron-during-israeli-siege"
-    },
-    {
-      "id": "gdelt-1330751671",
-      "dtg": "31 OCT",
-      "date": "2026-10-31",
-      "location": "Sanaa",
-      "fact": "SHELLING  ADEN \u2192 ?  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": null,
-      "url": "http://www.calcuttanews.net/news/279405192/houthi-missiles-strike-near-presidential-palace-in-yemen-aden"
     }
   ]
 }
