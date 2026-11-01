@@ -1,5 +1,22 @@
 {
-  "generated_at": "2026-11-01T02:19:58.975980+00:00",
+  "generated_at": "2026-11-01T04:25:48.915631+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
-  "events": []
+  "events": [
+    {
+      "id": "gdelt-1330884101",
+      "dtg": "01 NOV",
+      "date": "2026-11-01",
+      "location": "Shabwah",
+      "fact": "SHELLING  ADEN \u2192 ?  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 14.544,
+      "lon": 45.9097,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://moderntokyotimes.com/yemen-crisis-saudi-arabia-builds-defensive-military-alliance-fears-of-wider-regional-conflict/"
+    }
+  ]
 }
