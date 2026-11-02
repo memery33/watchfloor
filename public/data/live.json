@@ -1,7 +1,81 @@
 {
-  "generated_at": "2026-11-02T17:27:26.926832+00:00",
+  "generated_at": "2026-11-02T18:31:10.954858+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1331109281",
+      "dtg": "02 NOV",
+      "date": "2026-11-02",
+      "location": "Moscow",
+      "fact": "SHELLING  MOSCOW \u2192 BRITISH  (7 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://english.pravda.ru/world/171287-iran-britain-designation-moscow-difference/"
+    },
+    {
+      "id": "gdelt-1331106931",
+      "dtg": "02 NOV",
+      "date": "2026-11-02",
+      "location": "Taif",
+      "fact": "STRIKE  DAMMAM \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 21.2703,
+      "lon": 40.4158,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.moneycontrol.com/world/houthis-claim-drone-attacks-on-saudi-arabia-s-dammam-airport-jizan-military-sites-article-14066790.html"
+    },
+    {
+      "id": "gdelt-1331102143",
+      "dtg": "02 NOV",
+      "date": "2026-11-02",
+      "location": "Riyan",
+      "fact": "STRIKE  CIVILIAN \u2192 YEMEN  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 14.65,
+      "lon": 49.3322,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://english.aawsat.com/arab-world/5336771-yemen-urges-int%E2%80%99l-pressure-dry-sources-houthi-funding-weapons"
+    },
+    {
+      "id": "gdelt-1331103120",
+      "dtg": "02 NOV",
+      "date": "2026-11-02",
+      "location": "Dammam",
+      "fact": "STRIKE  YEMEN \u2192 SAUDI ARABIA  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 26.4344,
+      "lon": 50.1033,
+      "event_type": "strike",
+      "theater": "iran",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.samaa.tv/2087359546-houthis-claim-strikes-on-dammam-airport-jizan-radar"
+    },
     {
       "id": "gdelt-1331100330",
       "dtg": "02 NOV",
@@ -331,38 +405,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://tribune.com.pk/story/2638263/israeli-forces-fire-tear-gas-at-palestinian-students-teachers-in-west-bank-as-occupiers-block-roads"
-    },
-    {
-      "id": "gdelt-1331053590",
-      "dtg": "02 NOV",
-      "date": "2026-11-02",
-      "location": "Oreshnik",
-      "fact": "STRIKE  RESIDENTS \u2192 RUSSIAN  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 57.3633,
-      "lon": 49.9722,
-      "event_type": "strike",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://theindianawaaz.com/ukraines-public-air-raid-alert-app-hacked/"
-    },
-    {
-      "id": "gdelt-1331047991",
-      "dtg": "02 NOV",
-      "date": "2026-11-02",
-      "location": "Moscow",
-      "fact": "STRIKE  SPOKESMAN \u2192 UKRAINE  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "strike",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.clactonandfrintongazette.co.uk/news/national/26689909.ukraine-russia-report-fake-emergency-alerts-cyber-attacks/"
     }
   ]
 }
