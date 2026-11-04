@@ -1,7 +1,23 @@
 {
-  "generated_at": "2026-11-04T05:21:42.169841+00:00",
+  "generated_at": "2026-11-04T06:41:01.177306+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1331377254",
+      "dtg": "04 NOV",
+      "date": "2026-11-04",
+      "location": "Petersburg",
+      "fact": "SHELLING  RUSSIAN \u2192 KYIV  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 59.8944,
+      "lon": 30.2642,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://kesq.com/news/national-world/cnn-world/2026/11/03/russian-bombing-of-ukrainian-aid-center-is-one-of-the-wars-deadliest-attacks-zelensky-says/"
+    },
     {
       "id": "gdelt-1331369938",
       "dtg": "04 NOV",
