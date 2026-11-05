@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-11-05T17:22:35.633156+00:00",
+  "generated_at": "2026-11-05T18:50:07.132857+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1331668915",
+      "dtg": "05 NOV",
+      "date": "2026-11-05",
+      "location": "Pakistan",
+      "fact": "SHELLING  PAKISTAN \u2192 ?  (5 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 30.0,
+      "lon": 70.0,
+      "event_type": "shelling",
+      "theater": "afpak",
+      "origin": null,
+      "url": "https://idrw.org/pakistan-faaz-iir-missile-test-100km-jf17/"
+    },
+    {
+      "id": "gdelt-1331668990",
+      "dtg": "05 NOV",
+      "date": "2026-11-05",
+      "location": "Madinah",
+      "fact": "SHELLING  RIYADH \u2192 ISLAM  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 13.9777,
+      "lon": 44.0484,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://www.arabnews.com/saudi-arabia/coalition-says-houthi-missile-fired-at-saudi-arabias-madinah-region-intercepted-3009937"
+    },
     {
       "id": "gdelt-1331652877",
       "dtg": "05 NOV",
@@ -161,38 +193,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://english.news.cn/20261105/8f82466aa2c74539905b72cab3458730/c.html"
-    },
-    {
-      "id": "gdelt-1331619907",
-      "dtg": "05 NOV",
-      "date": "2026-11-05",
-      "location": "Tehran",
-      "fact": "BLOCKADE  DEMONSTRATOR \u2192 ?  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "blockade",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://irannewsupdate.com/news/insider/november-2019-uprising-a-turning-point-in-irans-struggle-against-religious-dictatorship/"
-    },
-    {
-      "id": "gdelt-1331614958",
-      "dtg": "05 NOV",
-      "date": "2026-11-05",
-      "location": "Qeshm",
-      "fact": "SHELLING  IRAN \u2192 A US  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 35.4421,
-      "lon": 47.3506,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.middleeastmonitor.com/20261105-iran-says-4-oil-tankers-destroyed-by-sea-mines-in-strait-of-hormuz/"
     }
   ]
 }
