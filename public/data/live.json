@@ -1,7 +1,71 @@
 {
-  "generated_at": "2026-11-05T02:34:29.222128+00:00",
+  "generated_at": "2026-11-05T05:21:08.532380+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1331558786",
+      "dtg": "05 NOV",
+      "date": "2026-11-05",
+      "location": "Arabian Peninsula",
+      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 25.0,
+      "lon": 45.0,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "http://www.strategypage.com/%5Cqnd%5Cyemen%5Carticles%5C20261030114345.aspx"
+    },
+    {
+      "id": "gdelt-1331556292",
+      "dtg": "05 NOV",
+      "date": "2026-11-05",
+      "location": "Riyadh",
+      "fact": "SHELLING  ADEN \u2192 RETIRED  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.hindustantimes.com/world-news/saudi-arabia-has-no-easy-choices-as-it-weighs-how-to-combat-houthi-threat-101793848346760.html"
+    },
+    {
+      "id": "gdelt-1331552336",
+      "dtg": "05 NOV",
+      "date": "2026-11-05",
+      "location": "Kyiv",
+      "fact": "STRIKE  UKRAINE \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "strike",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://timesofindia.indiatimes.com/world/europe/russias-deadliest-strike-kills-40-bodycam-footage-shows-moments-before-bombs-hit-ukrainian-shelter/articleshow/135555961.cms"
+    },
+    {
+      "id": "gdelt-1331550622",
+      "dtg": "05 NOV",
+      "date": "2026-11-05",
+      "location": "Tehran",
+      "fact": "SHELLING  ISRAELI \u2192 TEHRAN  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://thenationonlineng.net/beaten-at-home-trump-faces-stark-choice-on-iran-deal-or-escalation/"
+    },
     {
       "id": "gdelt-1331548146",
       "dtg": "05 NOV",
@@ -38,22 +102,6 @@
       "theater": "iran",
       "origin": null,
       "url": "https://oilprice.com/Energy/Natural-Gas/Qatar-Becomes-Largest-Buyer-of-US-LNG-Amid-Hormuz-Crisis.html"
-    },
-    {
-      "id": "gdelt-1331518537",
-      "dtg": "04 NOV",
-      "date": "2026-11-04",
-      "location": "Komyshuvakha",
-      "fact": "SHELLING  UKRAINE \u2192 MINIST OF ENERGY  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 47.7176,
-      "lon": 35.5288,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.kyivpost.com/post/89170"
     }
   ]
 }
