@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-11-08T05:26:54.909607+00:00",
+  "generated_at": "2026-11-08T06:18:22.002491+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1332041893",
+      "dtg": "08 NOV",
+      "date": "2026-11-08",
+      "location": "Lahj",
+      "fact": "STRIKE  ? \u2192 SANAA  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 13.0567,
+      "lon": 44.8819,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://aninews.in/news/world/middle-east/houthis-claim-strikes-on-saudi-arabia8217s-oil-facilities-riyadh-airport20261108101847/"
+    },
+    {
+      "id": "gdelt-1332042386",
+      "dtg": "08 NOV",
+      "date": "2026-11-08",
+      "location": "Kursk",
+      "fact": "SHELLING  RUSSIAN \u2192 ?  (7 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 51.7373,
+      "lon": 36.1873,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.dailykos.com/stories/2026/11/7/800124923/community/1718/"
+    },
     {
       "id": "gdelt-1332036065",
       "dtg": "08 NOV",
@@ -219,80 +251,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.kztv10.com/us-news/iran-war/us-offers-millions-for-information-on-irans-nuclear-program-despite-trumps-claims-of-obliteration"
-    },
-    {
-      "id": "gdelt-1332020632",
-      "dtg": "08 NOV",
-      "date": "2026-11-08",
-      "location": "Gaza",
-      "fact": "STRIKE  ? \u2192 YEMEN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.2news.com/news/world/iran-says-it-has-lifted-its-self-imposed-limit-on-missile-ranges-and-other-mideast/article_7bdc6199-0925-5d7f-8aa6-d4bc9bdc3b2f.html"
-    },
-    {
-      "id": "gdelt-1332020990",
-      "dtg": "08 NOV",
-      "date": "2026-11-08",
-      "location": "Jerusalem",
-      "fact": "SHELLING  IRANIAN \u2192 NEWS AGENCY  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 31.7667,
-      "lon": 35.2333,
-      "event_type": "shelling",
-      "theater": "levant",
-      "origin": null,
-      "url": "http://www.jpost.com/middle-east/iran-news/article-914153"
-    },
-    {
-      "id": "gdelt-1332020002",
-      "dtg": "08 NOV",
-      "date": "2026-11-08",
-      "location": "Belgorod",
-      "fact": "SHELLING  UKRAINE \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 50.6107,
-      "lon": 36.5802,
-      "event_type": "shelling",
-      "theater": "ukraine",
-      "origin": null,
-      "url": "https://www.mercurynews.com/2026/11/07/drone-and-missile-attacks-wound-9-as-ukraine-prepares-for-talks-with-russia-and-the-us/"
-    },
-    {
-      "id": "gdelt-1332018864",
-      "dtg": "07 NOV",
-      "date": "2026-11-07",
-      "location": "Sanaa",
-      "fact": "STRIKE  HEALTH MINIST \u2192 YEMEN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.al-monitor.com/originals/2026/11/houthi-run-health-ministry-says-airstrikes-it-blames-saudi-arabia-kill-27-near"
     }
   ]
 }
