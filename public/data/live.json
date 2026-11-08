@@ -1,7 +1,39 @@
 {
-  "generated_at": "2026-11-08T17:22:26.533214+00:00",
+  "generated_at": "2026-11-08T18:53:02.538131+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1332097889",
+      "dtg": "08 NOV",
+      "date": "2026-11-08",
+      "location": "Tehran",
+      "fact": "SHELLING  NEWS AGENCY \u2192 ?  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.el-balad.com/17065206"
+    },
+    {
+      "id": "gdelt-1332096539",
+      "dtg": "08 NOV",
+      "date": "2026-11-08",
+      "location": "Moscow",
+      "fact": "STRIKE  EUROPE \u2192 IRANIAN  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "strike",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.jpost.com/middle-east/iran-news/article-914229"
+    },
     {
       "id": "gdelt-1332091868",
       "dtg": "08 NOV",
@@ -72,22 +104,6 @@
       "url": "https://www.arabnews.com/middle-east/qatar-bahrain-and-syria-condemn-houthi-missile-attacks-on-riyadh-3010523"
     },
     {
-      "id": "gdelt-1332086613",
-      "dtg": "08 NOV",
-      "date": "2026-11-08",
-      "location": "Tehran",
-      "fact": "SHELLING  NEWS AGENCY \u2192 IRAN  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://cyprus-mail.com/2026/11/08/iran-suggests-blasts-are-not-us-attacks-as-both-sides-report-ships-hit"
-    },
-    {
       "id": "gdelt-1332084219",
       "dtg": "08 NOV",
       "date": "2026-11-08",
@@ -155,38 +171,6 @@
       "theater": "yemen",
       "origin": null,
       "url": "https://www.middleeasteye.net/news/saudi-aramco-tower-damaged-after-houthi-missile-attacks-riyadh"
-    },
-    {
-      "id": "gdelt-1332070306",
-      "dtg": "08 NOV",
-      "date": "2026-11-08",
-      "location": "Bahrain",
-      "fact": "SHELLING  ATHENS \u2192 ?  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 26.0,
-      "lon": 50.5,
-      "event_type": "shelling",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.keeptalkinggreece.com/2026/11/06/velos-sapphire-seafarer-killed-missile-gulf/"
-    },
-    {
-      "id": "gdelt-1332068227",
-      "dtg": "08 NOV",
-      "date": "2026-11-08",
-      "location": "Jizan",
-      "fact": "SHELLING  SAUDI \u2192 ?  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 16.8892,
-      "lon": 42.5511,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://pakobserver.net/saudi-aramco-riyadh-airport-targeted-in-houthi-missile-attacks-again-as-fighting-intensifies/"
     }
   ]
 }
