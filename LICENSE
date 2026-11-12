@@ -19,3 +19,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+The MIT grant above does not cover public/data/claims_x.json. That file is an
+offline copy of short excerpts from public posts by @hey_itsmyturn on X. It
+was not obtained through the X API. Remove it before any commercial sale. A
+sold product needs an X-authorized feed (the Enterprise API, or X for Websites
+embeds). See docs/sources.md.

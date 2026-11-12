@@ -1,7 +1,7 @@
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { eventsForTheater, loadLive, type LiveEvent, type LivePayload } from "./live";
-import { X_CLAIMS_LIMIT, loadXClaims, type XClaimsPayload } from "./claims_x";
+import { X_CLAIMS_LIMIT, loadXClaims, xPostUrl, type XClaimsPayload } from "./claims_x";
 import { SNAPSHOT, THEATERS, TICKER, type Theater, type TheaterId, type Confidence } from "./sitrep";
 import { TRACKS } from "./tracks";
 import { LANDMARKS, landmarkFits } from "./landmarks";
@@ -342,37 +342,70 @@ function formatUtcZ(iso: string): { day: string; z: string } {
 }
 
 function renderXClaims(t: Theater) {
+  xClaimsEl.replaceChildren();
   if (t.id !== "overview" || xClaims === undefined) {
     xClaimsEl.hidden = true;
-    xClaimsEl.replaceChildren();
     return;
   }
   xClaimsEl.hidden = false;
-  const caption = "Unverified single-source X posts. Not corroborated, not plotted.";
+
+  const heading = document.createElement("h2");
+  heading.textContent = "X CLAIMS FEED";
+  const caption = document.createElement("p");
+  caption.className = "x-claims-caption";
+  caption.textContent = "Unverified single-source X posts. Not corroborated, not plotted.";
+  xClaimsEl.append(heading, caption);
+
   if (!xClaims) {
-    xClaimsEl.innerHTML = `<h2>X CLAIMS FEED</h2><p class="x-claims-caption">${caption}</p><p class="empty">Feed unavailable.</p>`;
+    const missing = document.createElement("p");
+    missing.className = "empty";
+    missing.textContent = "Feed unavailable.";
+    xClaimsEl.append(missing);
     return;
   }
-  const rows = xClaims.posts.slice(0, X_CLAIMS_LIMIT).map((p) => {
-    const href = safeUrl(p.url);
-    const link = href
-      ? `<a class="x-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">x.com</a>`
-      : "";
-    const handle = `@${esc(String(p.handle || "hey_itsmyturn").replace(/^@/, ""))}`;
+
+  const list = document.createElement("div");
+  list.className = "x-claims-list";
+  for (const p of xClaims.posts.slice(0, X_CLAIMS_LIMIT)) {
+    const href = xPostUrl(p.url);
+    if (!href) continue;
     const when = formatUtcZ(p.created_at);
-    return `<article class="x-claim">
-      <time datetime="${esc(p.created_at)}">${esc(when.day)}<br>${esc(when.z)}</time>
-      <div>
-        <div class="fact">${esc(p.excerpt)}</div>
-        <div class="tags">
-          <span class="tag CLAIM">CLAIM</span>
-          <span class="tag dim">${handle}</span>
-          ${link}
-        </div>
-      </div>
-    </article>`;
-  }).join("");
-  xClaimsEl.innerHTML = `<h2>X CLAIMS FEED</h2><p class="x-claims-caption">${caption}</p><div class="x-claims-list">${rows}</div>`;
+
+    const article = document.createElement("article");
+    article.className = "x-claim";
+
+    const time = document.createElement("time");
+    time.dateTime = p.created_at;
+    time.append(when.day, document.createElement("br"), when.z);
+
+    const body = document.createElement("div");
+    const fact = document.createElement("div");
+    fact.className = "fact";
+    fact.textContent = p.excerpt;
+
+    const tags = document.createElement("div");
+    tags.className = "tags";
+    const claim = document.createElement("span");
+    claim.className = "tag CLAIM";
+    claim.textContent = "CLAIM";
+    const who = document.createElement("span");
+    who.className = "tag dim";
+    who.textContent = "@hey_itsmyturn";
+    const onX = document.createElement("span");
+    onX.className = "tag dim";
+    onX.textContent = "on X";
+    const link = document.createElement("a");
+    link.className = "x-link";
+    link.href = href;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "x.com";
+    tags.append(claim, who, onX, link);
+    body.append(fact, tags);
+    article.append(time, body);
+    list.append(article);
+  }
+  xClaimsEl.append(list);
 }
 
 function renderPanel(t: Theater) {
