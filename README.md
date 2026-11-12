@@ -54,6 +54,8 @@ A yellow layer shows the last 6 hours of public [GDELT](https://www.gdeltproject
 
 Every GDELT row stays a CLAIM until the sitrep curator promotes it with named corroboration.
 
+On Overview, a separate panel lists the 50 newest original and quote posts from @hey_itsmyturn (`public/data/claims_x.json`, rebuilt by hand with `scripts/build_claims_x.py`): yellow CLAIM excerpts with a link to each post on x.com. Unverified, not corroborated, and not plotted.
+
 ## Layers
 
 - **Vectors:** reconstructed strike paths, drawn as arcs. A path draws only when both ends are named. It is inferred from reporting, not radar.
@@ -94,6 +96,7 @@ One line per source. Full terms are in [docs/sources.md](docs/sources.md).
 - **Leaflet 1.9.4.** BSD-2-Clause (Berkeley Software Distribution 2-Clause). [License](https://raw.githubusercontent.com/Leaflet/Leaflet/v1.9.4/LICENSE). Copy in [`THIRD_PARTY_NOTICES`](THIRD_PARTY_NOTICES). Commercial use: yes.
 - **NASA LANCE FIRMS, VIIRS 375 m near-real-time active fire files.** Land, Atmosphere Near real-time Capability for EOS (LANCE). EOS is the Earth Observing System. Data from NASA-led missions are Creative Commons Zero (CC0) unless marked otherwise ([data use guidance](https://www.earthdata.nasa.gov/engage/open-data-services-software-policies/data-use-guidance)). CC0 coverage of the National Oceanic and Atmospheric Administration (NOAA) satellites NOAA-20 and NOAA-21 is unverified. Cite as NASA FIRMS ([earthdata.nasa.gov/firms](https://earthdata.nasa.gov/firms)). Frequently asked questions (FAQ): [earthdata.nasa.gov/data/tools/firms/faq](https://www.earthdata.nasa.gov/data/tools/firms/faq). Disclaimer: [Readme.txt](https://firms.modaps.eosdis.nasa.gov/download/Readme.txt). Commercial use: yes.
 - **Cited news and official statements.** Cited with links, or by name, and not republished. Commercial use: yes, as citation only.
+- **X posts (@hey_itsmyturn).** Short excerpts only, linked and attributed. Not licensed for redistribution. Commercial use: no.
 - **OurAirports.** Public domain ([davidmegginson.github.io/ourairports-data](https://davidmegginson.github.io/ourairports-data/)). License: the Unlicense ([LICENSE](https://github.com/davidmegginson/ourairports-data/blob/main/LICENSE)). Commercial use: yes.
 - **NGA World Port Index, Publication 150 (Pub 150).** Reference check only. No coordinates copied. United States (US) Government work. The terms clause is unverified ([msi.nga.mil/Publications/WPI](https://msi.nga.mil/Publications/WPI)). Commercial use: yes.
 - **NGA GeoNames Server (GNS).** No licensing requirements or restrictions ([geonames.nga.mil](https://geonames.nga.mil/)). Commercial use: yes.

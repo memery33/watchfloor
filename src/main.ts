@@ -1,6 +1,7 @@
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { eventsForTheater, loadLive, type LiveEvent, type LivePayload } from "./live";
+import { X_CLAIMS_LIMIT, loadXClaims, type XClaimsPayload } from "./claims_x";
 import { SNAPSHOT, THEATERS, TICKER, type Theater, type TheaterId, type Confidence } from "./sitrep";
 import { TRACKS } from "./tracks";
 import { LANDMARKS, landmarkFits } from "./landmarks";
@@ -73,6 +74,8 @@ let labelZoom = 6;
 const SPARSE_VECTORS = 4;
 const SPARSE_MIN_ZOOM = 5; // never show endpoint caps at overview zooms
 let live: LivePayload | null = null;
+// undefined = not loaded yet; null = the file failed to load. Never plotted.
+let xClaims: XClaimsPayload | null | undefined;
 let confidenceFilter: FilterMode = "ALL";
 let stackCollapsed = false;
 let landmarksOn = true;
@@ -132,6 +135,7 @@ app.innerHTML = `
         <button type="button" class="collapse-btn" id="collapseBtn" title="Collapse event stack" aria-expanded="true">\u25c2</button>
       </div>
       <div class="stack-body">
+        <section id="xClaims" class="x-claims" hidden></section>
         <h2>PRIORITY / EVENT STACK</h2>
         <div id="events"></div>
         <h2>WATCH ITEMS</h2>
@@ -151,6 +155,7 @@ const watchEl = document.querySelector<HTMLElement>("#watch")!;
 const tickerEl = document.querySelector<HTMLElement>("#ticker")!;
 const liveAgeEl = document.querySelector<HTMLElement>("#liveAge")!;
 const hudNote = document.querySelector<HTMLElement>("#hudNote")!;
+const xClaimsEl = document.querySelector<HTMLElement>("#xClaims")!;
 
 function liveRefreshedET(iso: string | undefined): string {
   const t = iso ? Date.parse(iso) : NaN;
@@ -324,6 +329,52 @@ function renderFilters() {
   });
 }
 
+const UTC_MON = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+
+function formatUtcZ(iso: string): { day: string; z: string } {
+  const t = Date.parse(iso);
+  if (!Number.isFinite(t)) return { day: iso, z: "" };
+  const d = new Date(t);
+  const dd = String(d.getUTCDate()).padStart(2, "0");
+  const hh = String(d.getUTCHours()).padStart(2, "0");
+  const mm = String(d.getUTCMinutes()).padStart(2, "0");
+  return { day: `${dd} ${UTC_MON[d.getUTCMonth()]}`, z: `${hh}:${mm}Z` };
+}
+
+function renderXClaims(t: Theater) {
+  if (t.id !== "overview" || xClaims === undefined) {
+    xClaimsEl.hidden = true;
+    xClaimsEl.replaceChildren();
+    return;
+  }
+  xClaimsEl.hidden = false;
+  const caption = "Unverified single-source X posts. Not corroborated, not plotted.";
+  if (!xClaims) {
+    xClaimsEl.innerHTML = `<h2>X CLAIMS FEED</h2><p class="x-claims-caption">${caption}</p><p class="empty">Feed unavailable.</p>`;
+    return;
+  }
+  const rows = xClaims.posts.slice(0, X_CLAIMS_LIMIT).map((p) => {
+    const href = safeUrl(p.url);
+    const link = href
+      ? `<a class="x-link" href="${esc(href)}" target="_blank" rel="noopener noreferrer">x.com</a>`
+      : "";
+    const handle = `@${esc(String(p.handle || "hey_itsmyturn").replace(/^@/, ""))}`;
+    const when = formatUtcZ(p.created_at);
+    return `<article class="x-claim">
+      <time datetime="${esc(p.created_at)}">${esc(when.day)}<br>${esc(when.z)}</time>
+      <div>
+        <div class="fact">${esc(p.excerpt)}</div>
+        <div class="tags">
+          <span class="tag CLAIM">CLAIM</span>
+          <span class="tag dim">${handle}</span>
+          ${link}
+        </div>
+      </div>
+    </article>`;
+  }).join("");
+  xClaimsEl.innerHTML = `<h2>X CLAIMS FEED</h2><p class="x-claims-caption">${caption}</p><div class="x-claims-list">${rows}</div>`;
+}
+
 function renderPanel(t: Theater) {
   const overlay = live ? eventsForTheater(live.events, t.id) : [];
   const claims = overlay.filter((e) => e.confidence === "CLAIM").length;
@@ -392,6 +443,7 @@ function renderPanel(t: Theater) {
   });
 
   watchEl.innerHTML = t.watch.map((w) => `<li>${esc(w)}</li>`).join("");
+  renderXClaims(t);
 
   const liveBits = overlay.slice(0, 6).map((e) => `${e.dtg}  ${e.location}  ${e.fact}`);
   tickerEl.textContent = [...TICKER, ...liveBits].join("   \u00b7   ");
@@ -1056,6 +1108,10 @@ function boot() {
       ? `${SNAPSHOT.sourceAge} \u00b7 ${liveAge(live.generated_at)}`
       : `${SNAPSHOT.sourceAge} \u00b7 LIVE OVERLAY OFFLINE`;
     select(active);
+  });
+  void loadXClaims().then((payload) => {
+    xClaims = payload;
+    if (active === "overview") renderPanel(theater(active));
   });
   ensureFeeds();
 }

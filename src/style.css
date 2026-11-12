@@ -502,6 +502,57 @@ h2:first-child { margin-top: 0; }
 .disclaimer { margin-top: 12px; display: inline-block; }
 .empty { color: var(--dim); font-size: 12px; }
 
+.x-claims {
+  margin: 0 0 14px;
+  padding: 8px 8px 6px;
+  background: #0a1016;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+}
+.x-claims h2 {
+  margin: 0 0 6px;
+  color: var(--yellow);
+}
+.x-claims-caption {
+  margin: 0 0 8px;
+  color: var(--dim);
+  font-size: 11px;
+  line-height: 1.35;
+}
+.x-claims-list {
+  max-height: 260px;
+  overflow: auto;
+  border-top: 1px solid var(--line);
+}
+.x-claim {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 8px;
+  padding: 8px 2px 8px 8px;
+  border-bottom: 1px solid var(--line-soft);
+  border-left: 2px solid var(--yellow);
+}
+.x-claim time {
+  color: var(--amber);
+  font-size: 10px;
+  font-family: var(--mono);
+  line-height: 1.35;
+  letter-spacing: .02em;
+}
+.x-claim .fact {
+  color: var(--ink);
+  margin-top: 0;
+  font-size: 12.5px;
+  line-height: 1.35;
+}
+.x-claim .x-link {
+  font-size: 9px;
+  font-family: var(--mono);
+  letter-spacing: .08em;
+  color: var(--cyan);
+  align-self: center;
+}
+
 .ticker {
   display: flex;
   align-items: center;
@@ -718,6 +769,10 @@ h2:first-child { margin-top: 0; }
   .stack-body h2 { margin: 8px 0 6px; font-size: 10px; padding-bottom: 4px; }
   .evt { padding: 7px 0 7px 6px; gap: 6px; }
   .evt .fact { font-size: 12px; }
+  .x-claims { margin-bottom: 10px; padding: 6px 6px 4px; }
+  .x-claims-list { max-height: 120px; }
+  .x-claim { grid-template-columns: 56px 1fr; gap: 6px; padding: 6px 0 6px 6px; }
+  .x-claim .fact { font-size: 12px; }
 
   /* Legend: collapsed-by-default chip — map stays readable; no zoom collision */
   .hud {
