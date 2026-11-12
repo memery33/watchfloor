@@ -1,6 +1,7 @@
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { eventsForTheater, loadLive, type LiveEvent, type LivePayload } from "./live";
+import { X_CLAIMS_LIMIT, loadXClaims, xPostUrl, type XClaimsPayload } from "./claims_x";
 import { SNAPSHOT, THEATERS, TICKER, type Theater, type TheaterId, type Confidence } from "./sitrep";
 import { TRACKS } from "./tracks";
 import { LANDMARKS, landmarkFits } from "./landmarks";
@@ -73,6 +74,8 @@ let labelZoom = 6;
 const SPARSE_VECTORS = 4;
 const SPARSE_MIN_ZOOM = 5; // never show endpoint caps at overview zooms
 let live: LivePayload | null = null;
+// undefined = not loaded yet; null = the file failed to load. Never plotted.
+let xClaims: XClaimsPayload | null | undefined;
 let confidenceFilter: FilterMode = "ALL";
 let stackCollapsed = false;
 let landmarksOn = true;
@@ -132,6 +135,7 @@ app.innerHTML = `
         <button type="button" class="collapse-btn" id="collapseBtn" title="Collapse event stack" aria-expanded="true">\u25c2</button>
       </div>
       <div class="stack-body">
+        <section id="xClaims" class="x-claims" hidden></section>
         <h2>PRIORITY / EVENT STACK</h2>
         <div id="events"></div>
         <h2>WATCH ITEMS</h2>
@@ -151,6 +155,7 @@ const watchEl = document.querySelector<HTMLElement>("#watch")!;
 const tickerEl = document.querySelector<HTMLElement>("#ticker")!;
 const liveAgeEl = document.querySelector<HTMLElement>("#liveAge")!;
 const hudNote = document.querySelector<HTMLElement>("#hudNote")!;
+const xClaimsEl = document.querySelector<HTMLElement>("#xClaims")!;
 
 function liveRefreshedET(iso: string | undefined): string {
   const t = iso ? Date.parse(iso) : NaN;
@@ -324,6 +329,85 @@ function renderFilters() {
   });
 }
 
+const UTC_MON = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+
+function formatUtcZ(iso: string): { day: string; z: string } {
+  const t = Date.parse(iso);
+  if (!Number.isFinite(t)) return { day: iso, z: "" };
+  const d = new Date(t);
+  const dd = String(d.getUTCDate()).padStart(2, "0");
+  const hh = String(d.getUTCHours()).padStart(2, "0");
+  const mm = String(d.getUTCMinutes()).padStart(2, "0");
+  return { day: `${dd} ${UTC_MON[d.getUTCMonth()]}`, z: `${hh}:${mm}Z` };
+}
+
+function renderXClaims(t: Theater) {
+  xClaimsEl.replaceChildren();
+  if (t.id !== "overview" || xClaims === undefined) {
+    xClaimsEl.hidden = true;
+    return;
+  }
+  xClaimsEl.hidden = false;
+
+  const heading = document.createElement("h2");
+  heading.textContent = "X CLAIMS FEED";
+  const caption = document.createElement("p");
+  caption.className = "x-claims-caption";
+  caption.textContent = "Unverified single-source X posts. Not corroborated, not plotted.";
+  xClaimsEl.append(heading, caption);
+
+  if (!xClaims) {
+    const missing = document.createElement("p");
+    missing.className = "empty";
+    missing.textContent = "Feed unavailable.";
+    xClaimsEl.append(missing);
+    return;
+  }
+
+  const list = document.createElement("div");
+  list.className = "x-claims-list";
+  for (const p of xClaims.posts.slice(0, X_CLAIMS_LIMIT)) {
+    const href = xPostUrl(p.url);
+    if (!href) continue;
+    const when = formatUtcZ(p.created_at);
+
+    const article = document.createElement("article");
+    article.className = "x-claim";
+
+    const time = document.createElement("time");
+    time.dateTime = p.created_at;
+    time.append(when.day, document.createElement("br"), when.z);
+
+    const body = document.createElement("div");
+    const fact = document.createElement("div");
+    fact.className = "fact";
+    fact.textContent = p.excerpt;
+
+    const tags = document.createElement("div");
+    tags.className = "tags";
+    const claim = document.createElement("span");
+    claim.className = "tag CLAIM";
+    claim.textContent = "CLAIM";
+    const who = document.createElement("span");
+    who.className = "tag dim";
+    who.textContent = "@hey_itsmyturn";
+    const onX = document.createElement("span");
+    onX.className = "tag dim";
+    onX.textContent = "on X";
+    const link = document.createElement("a");
+    link.className = "x-link";
+    link.href = href;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "x.com";
+    tags.append(claim, who, onX, link);
+    body.append(fact, tags);
+    article.append(time, body);
+    list.append(article);
+  }
+  xClaimsEl.append(list);
+}
+
 function renderPanel(t: Theater) {
   const overlay = live ? eventsForTheater(live.events, t.id) : [];
   const claims = overlay.filter((e) => e.confidence === "CLAIM").length;
@@ -392,6 +476,7 @@ function renderPanel(t: Theater) {
   });
 
   watchEl.innerHTML = t.watch.map((w) => `<li>${esc(w)}</li>`).join("");
+  renderXClaims(t);
 
   const liveBits = overlay.slice(0, 6).map((e) => `${e.dtg}  ${e.location}  ${e.fact}`);
   tickerEl.textContent = [...TICKER, ...liveBits].join("   \u00b7   ");
@@ -1056,6 +1141,10 @@ function boot() {
       ? `${SNAPSHOT.sourceAge} \u00b7 ${liveAge(live.generated_at)}`
       : `${SNAPSHOT.sourceAge} \u00b7 LIVE OVERLAY OFFLINE`;
     select(active);
+  });
+  void loadXClaims().then((payload) => {
+    xClaims = payload;
+    if (active === "overview") renderPanel(theater(active));
   });
   ensureFeeds();
 }
