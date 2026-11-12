@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T03:54:41.401188+00:00",
+  "generated_at": "2026-11-12T05:25:53.711129+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
@@ -102,59 +102,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.foxnews.com/world/iran-escalates-hormuz-claims-strike-omani-island-enemy-uses-us-military-ops"
-    },
-    {
-      "id": "gdelt-1332683686",
-      "dtg": "11 NOV",
-      "date": "2026-11-11",
-      "location": "Gaza",
-      "fact": "STRIKE  NEIGHBOURHOOD \u2192 ISRAEL  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://www.aljazeera.com/news/2026/11/11/israeli-strikes-hit-tent-camp-as-five-killed-in-gaza"
-    },
-    {
-      "id": "gdelt-1332682905",
-      "dtg": "11 NOV",
-      "date": "2026-11-11",
-      "location": "Yanbu",
-      "fact": "SHELLING  MEDIA \u2192 SAUDI ARABIA  (3 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.0891,
-      "lon": 38.0637,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://english.news.cn/20261112/9ec0dc0497934321bb100050f79290f4/c.html"
-    },
-    {
-      "id": "gdelt-1332683274",
-      "dtg": "11 NOV",
-      "date": "2026-11-11",
-      "location": "Mecca",
-      "fact": "SHELLING  YEMEN \u2192 RIYADH  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 21.4267,
-      "lon": 39.8261,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://english.news.cn/20261112/9ec0dc0497934321bb100050f79290f4/c.html"
     }
   ]
 }
