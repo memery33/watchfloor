@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-11-14T14:17:12.543360+00:00",
+  "generated_at": "2026-11-14T17:33:55.611841+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
-      "id": "gdelt-1333119230",
+      "id": "gdelt-1333156664",
       "dtg": "14 NOV",
       "date": "2026-11-14",
       "location": "Hormozgan",
-      "fact": "STRIKE  IRAN \u2192 ?  (6 mentions)",
+      "fact": "STRIKE  IRAN \u2192 EUROPE  (5 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-2",
@@ -16,23 +16,55 @@
       "event_type": "strike",
       "theater": "iran",
       "origin": null,
-      "url": "https://www.onenewspage.com/story/iran-says-it-targeted-us-military-radar-in-bahrain-in-retaliatory-strike-6eabe65d/"
+      "url": "https://www.albawaba.net/news/iran-reports-strike-sirik-trump-1641252"
     },
     {
-      "id": "gdelt-1333109562",
+      "id": "gdelt-1333154040",
       "dtg": "14 NOV",
       "date": "2026-11-14",
-      "location": "Bahrain",
-      "fact": "STRIKE  IRAN \u2192 ?  (5 mentions)",
+      "location": "Gaza Strip",
+      "fact": "STRIKE  ISLAMIC \u2192 PALESTINIAN  (8 mentions)",
       "source": "GDELT",
       "confidence": "CLAIM",
       "priority": "PRI-2",
-      "lat": 26.0,
-      "lon": 50.5,
+      "lat": 31.4251,
+      "lon": 34.3734,
       "event_type": "strike",
-      "theater": "iran",
+      "theater": "levant",
       "origin": null,
-      "url": "https://econotimes.com/Iran-Claims-U-S-Radar-Destroyed-in-Bahrain-as-CENTCOM-Reports-Two-Drones-Downed-1776662"
+      "url": "https://english.news.cn/20261114/04a0c67ee33e43398e275a6a96d59590/c.html"
+    },
+    {
+      "id": "gdelt-1333152796",
+      "dtg": "14 NOV",
+      "date": "2026-11-14",
+      "location": "Moscow",
+      "fact": "SHELLING  KYIV \u2192 RUSSIAN  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.7522,
+      "lon": 37.6156,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-trump-putin-zelensky-spacex-starshield-b3084909.html"
+    },
+    {
+      "id": "gdelt-1333149893",
+      "dtg": "14 NOV",
+      "date": "2026-11-14",
+      "location": "Gaza",
+      "fact": "STRIKE  ISLAMIC \u2192 PALESTINIAN  (8 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": null,
+      "url": "http://www.bignewsnetwork.com/news/279432718/18-arab-islamic-countries-condemn-israeli-attack-on-gaza-hospital"
     }
   ]
 }
