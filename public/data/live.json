@@ -1,7 +1,55 @@
 {
-  "generated_at": "2026-11-14T19:16:58.391614+00:00",
+  "generated_at": "2026-11-14T23:08:20.681198+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1333180982",
+      "dtg": "14 NOV",
+      "date": "2026-11-14",
+      "location": "Tehran",
+      "fact": "SHELLING  MILITARY \u2192 IRANIAN  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 35.75,
+      "lon": 51.5148,
+      "event_type": "shelling",
+      "theater": "iran",
+      "origin": null,
+      "url": "https://www.hngn.com/articles/273803/20261113/hegseth-survives-impeachment-vote-three-clocks-keep-ticking.htm"
+    },
+    {
+      "id": "gdelt-1333178752",
+      "dtg": "14 NOV",
+      "date": "2026-11-14",
+      "location": "Kyiv",
+      "fact": "SHELLING  UKRAINIAN \u2192 UKRAINE  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 50.4333,
+      "lon": 30.5167,
+      "event_type": "shelling",
+      "theater": "ukraine",
+      "origin": null,
+      "url": "https://www.cbc.ca/news/world/european-security-zelenskyy-putin-9.7422273"
+    },
+    {
+      "id": "gdelt-1333176864",
+      "dtg": "14 NOV",
+      "date": "2026-11-14",
+      "location": "Naro-Fominsk",
+      "fact": "SHELLING  UKRAINE \u2192 RUSSIA  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 55.3875,
+      "lon": 36.7331,
+      "event_type": "shelling",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://redstate.com/streiff/2026/11/14/russian-corvette-mauled-energy-terminal-ablaze-as-ukraine-expands-wars-reach-n2209398"
+    },
     {
       "id": "gdelt-1333164815",
       "dtg": "14 NOV",
@@ -54,54 +102,6 @@
         "inferred": true
       },
       "url": "https://www.presstv.co.uk/Detail/2026/11/14/780726/yemen-hits-saudi-controlled-targets-in-lahij-dozens-killed-and-wounded"
-    },
-    {
-      "id": "gdelt-1333156664",
-      "dtg": "14 NOV",
-      "date": "2026-11-14",
-      "location": "Hormozgan",
-      "fact": "STRIKE  IRAN \u2192 EUROPE  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 27.75,
-      "lon": 56.5,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.albawaba.net/news/iran-reports-strike-sirik-trump-1641252"
-    },
-    {
-      "id": "gdelt-1333154040",
-      "dtg": "14 NOV",
-      "date": "2026-11-14",
-      "location": "Gaza Strip",
-      "fact": "STRIKE  ISLAMIC \u2192 PALESTINIAN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.4251,
-      "lon": 34.3734,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": null,
-      "url": "https://english.news.cn/20261114/04a0c67ee33e43398e275a6a96d59590/c.html"
-    },
-    {
-      "id": "gdelt-1333152796",
-      "dtg": "14 NOV",
-      "date": "2026-11-14",
-      "location": "Moscow",
-      "fact": "SHELLING  KYIV \u2192 RUSSIAN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 55.7522,
-      "lon": 37.6156,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-trump-putin-zelensky-spacex-starshield-b3084909.html"
     }
   ]
 }
