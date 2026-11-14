@@ -1,7 +1,60 @@
 {
-  "generated_at": "2026-11-14T17:33:55.611841+00:00",
+  "generated_at": "2026-11-14T19:16:58.391614+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1333164815",
+      "dtg": "14 NOV",
+      "date": "2026-11-14",
+      "location": "Gaza",
+      "fact": "STRIKE  ISRAELI \u2192 NASSER  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 31.4167,
+      "lon": 34.3333,
+      "event_type": "strike",
+      "theater": "levant",
+      "origin": null,
+      "url": "https://www.aljazeera.com/news/2026/11/14/eu-calls-for-immediate-humanitarian-access-to-gaza"
+    },
+    {
+      "id": "gdelt-1333164940",
+      "dtg": "14 NOV",
+      "date": "2026-11-14",
+      "location": "Arabian Peninsula",
+      "fact": "SHELLING  SHIA \u2192 SAUDI  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 25.0,
+      "lon": 45.0,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "http://www.strategypage.com/qnd/pothot/articles/20261114103315.aspx"
+    },
+    {
+      "id": "gdelt-1333164039",
+      "dtg": "14 NOV",
+      "date": "2026-11-14",
+      "location": "Riyadh",
+      "fact": "STRIKE  YEMEN \u2192 SCHOOL  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 24.6408,
+      "lon": 46.7728,
+      "event_type": "strike",
+      "theater": "energy",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.presstv.co.uk/Detail/2026/11/14/780726/yemen-hits-saudi-controlled-targets-in-lahij-dozens-killed-and-wounded"
+    },
     {
       "id": "gdelt-1333156664",
       "dtg": "14 NOV",
@@ -49,22 +102,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.independent.co.uk/news/world/europe/ukraine-russia-war-live-trump-putin-zelensky-spacex-starshield-b3084909.html"
-    },
-    {
-      "id": "gdelt-1333149893",
-      "dtg": "14 NOV",
-      "date": "2026-11-14",
-      "location": "Gaza",
-      "fact": "STRIKE  ISLAMIC \u2192 PALESTINIAN  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 31.4167,
-      "lon": 34.3333,
-      "event_type": "strike",
-      "theater": "levant",
-      "origin": null,
-      "url": "http://www.bignewsnetwork.com/news/279432718/18-arab-islamic-countries-condemn-israeli-attack-on-gaza-hospital"
     }
   ]
 }
