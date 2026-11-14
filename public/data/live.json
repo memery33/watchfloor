@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T05:24:58.700451+00:00",
+  "generated_at": "2026-11-14T06:43:22.968222+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
     {
@@ -113,75 +113,6 @@
       "theater": "levant",
       "origin": null,
       "url": "https://www.hngn.com/articles/273746/20261112/eisenkot-gets-28-days-form-israel-government-13-seats-short.htm"
-    },
-    {
-      "id": "gdelt-1333071731",
-      "dtg": "14 NOV",
-      "date": "2026-11-14",
-      "location": "Jazan",
-      "fact": "SHELLING  SAUDI \u2192 ?  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 16.8892,
-      "lon": 42.5511,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://english.news.cn/20261114/7568db72a3ff4507846e0a4bb239b7e7/c.html"
-    },
-    {
-      "id": "gdelt-1333071735",
-      "dtg": "14 NOV",
-      "date": "2026-11-14",
-      "location": "Sanaa",
-      "fact": "SHELLING  SAUDI \u2192 YEMEN  (7 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "shelling",
-      "theater": "yemen",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://english.news.cn/20261114/7568db72a3ff4507846e0a4bb239b7e7/c.html"
-    },
-    {
-      "id": "gdelt-1333065122",
-      "dtg": "14 NOV",
-      "date": "2026-11-14",
-      "location": "Sanaa",
-      "fact": "STRIKE  SAUDI \u2192 IRAN  (16 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 15.3547,
-      "lon": 44.2067,
-      "event_type": "strike",
-      "theater": "yemen",
-      "origin": null,
-      "url": "https://www.kzyx.org/npr-news/2026-11-13/whats-trumps-strategy-now-with-iran-to-keep-things-as-they-are"
-    },
-    {
-      "id": "gdelt-1333065123",
-      "dtg": "14 NOV",
-      "date": "2026-11-14",
-      "location": "Tehran",
-      "fact": "STRIKE  SAUDI \u2192 IRAN  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 35.75,
-      "lon": 51.5148,
-      "event_type": "strike",
-      "theater": "iran",
-      "origin": null,
-      "url": "https://www.kzyx.org/npr-news/2026-11-13/whats-trumps-strategy-now-with-iran-to-keep-things-as-they-are"
     }
   ]
 }
