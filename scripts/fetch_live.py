@@ -24,10 +24,13 @@ LASTUPDATE = "https://data.gdeltproject.org/gdeltv2/lastupdate.txt"
 # Read the last WINDOW_HOURS of 15-minute exports (newest = the one lastupdate.txt
 # names), not just the newest file, so one quiet slice can't publish an empty
 # overlay. 0.25 = newest file only (the pre-window behavior). Override per run with
-# env WATCHFLOOR_WINDOW_HOURS. The 3-day date filter, CLAIM tagging, presets and
-# the 250 cap are unchanged.
+# env WATCHFLOOR_WINDOW_HOURS. There is no country allowlist. Each run merges into
+# the existing file, drops anything older than ROLLING_DAYS, dedupes, and caps at
+# EVENT_CAP. Every kept row is still CLAIM. Preset boxes only assign a theater.
 WINDOW_HOURS_DEFAULT = 6.0
 WINDOW_HOURS_MAX = 72.0
+ROLLING_DAYS = 30
+EVENT_CAP = 300
 EXPORT_STEP = timedelta(minutes=15)
 FETCH_WORKERS = 4
 RETRY_DELAY_S = 2.0
@@ -182,10 +185,9 @@ def infer_origin(actor1: str, actor2: str, lat: float, lon: float) -> dict | Non
 #   id           switch name (used in WATCHFLOOR_PRESETS)
 #   label        human label
 #   enabled      default False
-#   aor          lowercase substrings matched against ActionGeo_FullName. A row
-#                admitted ONLY by a preset token (no built-in AOR token) must also
-#                fall inside that preset's bbox, so loose tokens like ", india" or
-#                "korea" cannot leak Indiana / Koreatown rows into live.json.
+#   aor          lowercase substrings kept for the record. They are NOT an
+#                admission gate: worldwide rows that pass the quality filters are
+#                kept. Preset boxes still assign the theater id.
 #   theater      theater id written to each row's "theater" field
 #   bbox         tuple of (south, west, north, east) boxes for that theater
 #   precedence   "first" = checked BEFORE the built-in BBOX (wins overlaps),
@@ -388,7 +390,7 @@ def _in_boxes(boxes, lat: float, lon: float) -> bool:
 
 
 def preset_gate(location: str, lat: float, lon: float) -> bool:
-    """A row admitted only by a preset token must sit inside that preset's bbox."""
+    """Unused admission gate. Worldwide rows are not filtered by country or preset token."""
     if not _PRESET_GATES:
         return True
     n = (location or "").lower()
@@ -566,15 +568,17 @@ def from_gdelt_row(row: list[str]) -> dict | None:
     if lat == 0 and lon == 0:
         return None
     location = clean_text(row[52]) or "Unknown"
-    if not in_aor(location):
-        return None
-    if not coords_match_place(location, lat, lon) or not preset_gate(location, lat, lon):
+    # No country allowlist. coords_match_place still drops generic country
+    # names, known country centroids, far-east overview geocodes, and place
+    # mismatches. Actor noise and the mentions floor are unchanged.
+    if not coords_match_place(location, lat, lon):
         return None
     try:
         dt = datetime.strptime(row[1], "%Y%m%d").replace(tzinfo=timezone.utc)
     except (ValueError, IndexError):
         return None
-    if dt < datetime.now(timezone.utc) - timedelta(days=3):
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=ROLLING_DAYS)).date()
+    if dt.date() < cutoff:
         return None
     origin = infer_origin(actor1, actor2, lat, lon)
     return {
@@ -595,22 +599,60 @@ def from_gdelt_row(row: list[str]) -> dict | None:
     }
 
 
+def within_rolling(event: dict) -> bool:
+    raw = event.get("date")
+    if not isinstance(raw, str):
+        return False
+    try:
+        day = datetime.strptime(raw, "%Y-%m-%d").date()
+    except ValueError:
+        return False
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=ROLLING_DAYS)).date()
+    return day >= cutoff
+
+
+def load_existing_events() -> list[dict]:
+    """Previous live.json rows. A bad file contributes nothing; the caller still writes."""
+    if not os.path.exists(OUT):
+        return []
+    try:
+        with open(OUT, encoding="utf-8") as handle:
+            payload = json.load(handle)
+    except (OSError, json.JSONDecodeError) as exc:
+        log(f"could not read previous live.json: {exc}")
+        return []
+    events = payload.get("events") if isinstance(payload, dict) else None
+    if not isinstance(events, list):
+        return []
+    return [event for event in events if isinstance(event, dict)]
+
+
 def dedupe(events: list[dict]) -> list[dict]:
-    seen: set[tuple] = set()
+    """First occurrence wins (pass fresh rows before retained ones). Then newest dates, then the cap."""
+    seen_ids: set[str] = set()
+    seen_keys: set[tuple] = set()
     uniq: list[dict] = []
     for event in events:
-        key = (
-            event["date"],
-            event["event_type"],
-            round(event["lat"], 2),
-            round(event["lon"], 2),
-        )
-        if key in seen:
+        eid = event.get("id")
+        if isinstance(eid, str):
+            if eid in seen_ids:
+                continue
+            seen_ids.add(eid)
+        try:
+            key = (
+                event["date"],
+                event["event_type"],
+                round(float(event["lat"]), 2),
+                round(float(event["lon"]), 2),
+            )
+        except (KeyError, TypeError, ValueError):
             continue
-        seen.add(key)
+        if key in seen_keys:
+            continue
+        seen_keys.add(key)
         uniq.append(event)
-    uniq.sort(key=lambda item: item["date"], reverse=True)
-    return uniq[:250]
+    uniq.sort(key=lambda item: item.get("date") or "", reverse=True)
+    return uniq[:EVENT_CAP]
 
 
 def write_payload(events: list[dict]) -> None:
@@ -638,7 +680,7 @@ def main() -> int:
         rows = rows_from_exports(exports)
         log(f"window {hours:g}h: {len(exports)}/{len(urls)} exports")
         log(f"raw rows {len(rows)}")
-        events = [item for row in rows if (item := from_gdelt_row(row))]
+        fresh = [item for row in rows if (item := from_gdelt_row(row))]
     except Exception as exc:  # noqa: BLE001
         log(f"live GDELT fetch failed: {exc}")
         if os.path.exists(OUT):
@@ -647,7 +689,10 @@ def main() -> int:
         else:
             return 1
 
-    write_payload(dedupe(events))
+    retained = [event for event in load_existing_events() if within_rolling(event)]
+    events = dedupe(fresh + retained)
+    log(f"fresh {len(fresh)}; retained {len(retained)}; kept {len(events)}")
+    write_payload(events)
     return 0
 
 

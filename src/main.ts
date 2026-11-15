@@ -1,8 +1,16 @@
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { eventsForTheater, loadLive, type LiveEvent, type LivePayload } from "./live";
-import { X_CLAIMS_LIMIT, loadXClaims, xPostUrl, type XClaimsPayload } from "./claims_x";
+import { eventsForTheater, LIVE_EVENT_CAP, loadLive, type LiveEvent, type LivePayload } from "./live";
+import { loadXClaims, xPostUrl, type XClaimPost, type XClaimsPayload } from "./claims_x";
 import { SNAPSHOT, THEATERS, TICKER, type Theater, type TheaterId, type Confidence } from "./sitrep";
+import {
+  curatedInWindow,
+  dayInWindow,
+  instantInWindow,
+  readTimeWindow,
+  writeTimeWindow,
+  type TimeWindow,
+} from "./timewindow";
 import { TRACKS } from "./tracks";
 import { LANDMARKS, landmarkFits } from "./landmarks";
 import {
@@ -77,10 +85,23 @@ let live: LivePayload | null = null;
 // undefined = not loaded yet; null = the file failed to load. Never plotted.
 let xClaims: XClaimsPayload | null | undefined;
 let confidenceFilter: FilterMode = "ALL";
+function browserStorage(): Storage | null {
+  try {
+    return localStorage;
+  } catch {
+    return null;
+  }
+}
+let timeWindow: TimeWindow = readTimeWindow(browserStorage());
 let stackCollapsed = false;
 let landmarksOn = true;
 const LABEL_ZOOM = 6;
 const LANDMARK_LABEL_ZOOM = 7;
+
+function windowButton(id: TimeWindow): string {
+  const pressed = timeWindow === id;
+  return `<button type="button" class="chip${pressed ? " active" : ""}" data-window="${id}" aria-pressed="${pressed ? "true" : "false"}">${id}</button>`;
+}
 
 app.innerHTML = `
   <header class="top">
@@ -126,13 +147,19 @@ app.innerHTML = `
     <aside class="stack" id="stack">
       <div class="stack-toolbar">
         <span class="stack-title">Event stack</span>
+        <button type="button" class="collapse-btn" id="collapseBtn" title="Collapse event stack" aria-expanded="true">\u25c2</button>
+        <div class="filters" id="windows" role="group" aria-label="Time window">
+          ${windowButton("24H")}
+          ${windowButton("3D")}
+          ${windowButton("7D")}
+          ${windowButton("30D")}
+        </div>
         <div class="filters" id="filters" role="group" aria-label="Confidence filter">
           <button type="button" class="chip active" data-filter="ALL">All</button>
           <button type="button" class="chip" data-filter="CONFIRMED">Confirmed</button>
           <button type="button" class="chip" data-filter="REPORTED">Reported</button>
           <button type="button" class="chip" data-filter="CLAIM">Claim</button>
         </div>
-        <button type="button" class="collapse-btn" id="collapseBtn" title="Collapse event stack" aria-expanded="true">\u25c2</button>
       </div>
       <div class="stack-body">
         <section id="xClaims" class="x-claims" hidden></section>
@@ -166,6 +193,7 @@ function liveRefreshedET(iso: string | undefined): string {
   return `${day} ${time} ET`;
 }
 const filtersEl = document.querySelector<HTMLElement>("#filters")!;
+const windowsEl = document.querySelector<HTMLElement>("#windows")!;
 const collapseBtn = document.querySelector<HTMLButtonElement>("#collapseBtn")!;
 const railSelect = document.querySelector<HTMLSelectElement>("#railSelect")!;
 const hudEl = document.querySelector<HTMLElement>("#hud")!;
@@ -205,6 +233,18 @@ function passesFilter(confidence: Confidence): boolean {
   if (confidenceFilter === "ALL") return true;
   if (confidenceFilter === "CLAIM") return confidence === "CLAIM" || confidence === "DELTA";
   return confidence === confidenceFilter;
+}
+
+function passesTimeLive(event: LiveEvent): boolean {
+  return dayInWindow(event.date, timeWindow);
+}
+
+function passesTimeCurated(dtg: string): boolean {
+  return curatedInWindow(dtg, SNAPSHOT.dtgZulu, timeWindow);
+}
+
+function passesTimeClaim(iso: string): boolean {
+  return instantInWindow(Date.parse(iso), timeWindow);
 }
 
 function shortName(name: string): string {
@@ -302,7 +342,7 @@ function attachPopup(layer: L.Layer, opts: PopupOpts) {
 
 function renderRail() {
   rail.innerHTML = THEATERS.map((t, i) => {
-    const n = live ? live.events.filter((e) => liveFits(e, t.id)).length : 0;
+    const n = live ? live.events.filter((e) => liveFits(e, t.id) && passesTimeLive(e)).length : 0;
     return `
       <button data-id="${t.id}" class="${t.id === active ? "active" : ""}">
         <span class="pip ${t.pip}"></span>
@@ -316,7 +356,7 @@ function renderRail() {
   });
   // Compact <select> for narrow viewports \u2014 all 6 theaters, no horizontal overflow
   railSelect.innerHTML = THEATERS.map((t, i) => {
-    const n = live ? live.events.filter((e) => liveFits(e, t.id)).length : 0;
+    const n = live ? live.events.filter((e) => liveFits(e, t.id) && passesTimeLive(e)).length : 0;
     const liveBit = n ? ` \u00b7 ${n} live` : "";
     return `<option value="${t.id}" ${t.id === active ? "selected" : ""}>${i + 1} ${esc(t.name)} \u2014 ${esc(t.status)}${liveBit}</option>`;
   }).join("");
@@ -326,6 +366,15 @@ function renderFilters() {
   filtersEl.querySelectorAll<HTMLButtonElement>(".chip").forEach((chip) => {
     const mode = chip.getAttribute("data-filter") as FilterMode;
     chip.classList.toggle("active", mode === confidenceFilter);
+  });
+}
+
+function renderWindows() {
+  windowsEl.querySelectorAll<HTMLButtonElement>(".chip").forEach((chip) => {
+    const mode = chip.getAttribute("data-window");
+    const on = mode === timeWindow;
+    chip.classList.toggle("active", on);
+    chip.setAttribute("aria-pressed", on ? "true" : "false");
   });
 }
 
@@ -364,52 +413,67 @@ function renderXClaims(t: Theater) {
     return;
   }
 
+  const visible = xClaims.posts.filter((p) => passesFilter(p.confidence) && passesTimeClaim(p.created_at) && xPostUrl(p.url));
+  if (!visible.length) {
+    const missing = document.createElement("p");
+    missing.className = "empty";
+    missing.textContent = passesFilter("CLAIM") ? "No X claims in this window." : "No X claims for this filter.";
+    xClaimsEl.append(missing);
+    return;
+  }
+
   const list = document.createElement("div");
   list.className = "x-claims-list";
-  for (const p of xClaims.posts.slice(0, X_CLAIMS_LIMIT)) {
+  for (const p of visible) {
     const href = xPostUrl(p.url);
     if (!href) continue;
-    const when = formatUtcZ(p.created_at);
-
-    const article = document.createElement("article");
-    article.className = "x-claim";
-
-    const time = document.createElement("time");
-    time.dateTime = p.created_at;
-    time.append(when.day, document.createElement("br"), when.z);
-
-    const body = document.createElement("div");
-    const fact = document.createElement("div");
-    fact.className = "fact";
-    fact.textContent = p.excerpt;
-
-    const tags = document.createElement("div");
-    tags.className = "tags";
-    const claim = document.createElement("span");
-    claim.className = "tag CLAIM";
-    claim.textContent = "CLAIM";
-    const who = document.createElement("span");
-    who.className = "tag dim";
-    who.textContent = "@hey_itsmyturn";
-    const onX = document.createElement("span");
-    onX.className = "tag dim";
-    onX.textContent = "on X";
-    const link = document.createElement("a");
-    link.className = "x-link";
-    link.href = href;
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.textContent = "x.com";
-    tags.append(claim, who, onX, link);
-    body.append(fact, tags);
-    article.append(time, body);
-    list.append(article);
+    appendXClaim(list, p, href);
   }
   xClaimsEl.append(list);
 }
 
+function appendXClaim(list: HTMLElement, p: XClaimPost, href: string) {
+  const when = formatUtcZ(p.created_at);
+  const article = document.createElement("article");
+  article.className = "x-claim";
+
+  const time = document.createElement("time");
+  time.dateTime = p.created_at;
+  time.append(when.day, document.createElement("br"), when.z);
+
+  const body = document.createElement("div");
+  const fact = document.createElement("div");
+  fact.className = "fact";
+  fact.textContent = p.excerpt;
+
+  const tags = document.createElement("div");
+  tags.className = "tags";
+  const claim = document.createElement("span");
+  claim.className = "tag CLAIM";
+  claim.textContent = "CLAIM";
+  const who = document.createElement("span");
+  who.className = "tag dim";
+  who.textContent = `@${p.handle}`;
+  const onX = document.createElement("span");
+  onX.className = "tag dim";
+  onX.textContent = "on X";
+  const link = document.createElement("a");
+  link.className = "x-link";
+  link.href = href;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
+  link.textContent = "x.com";
+  const whenLabel = `${when.day} ${when.z}`.trim();
+  link.setAttribute("aria-label", whenLabel ? `${whenLabel}, status ${p.id}` : `status ${p.id}`);
+  tags.append(claim, who, onX, link);
+  body.append(fact, tags);
+  article.append(time, body);
+  list.append(article);
+}
+
 function renderPanel(t: Theater) {
-  const overlay = live ? eventsForTheater(live.events, t.id) : [];
+  const overlayAll = live ? eventsForTheater(live.events, t.id) : [];
+  const overlay = overlayAll.filter(passesTimeLive);
   const claims = overlay.filter((e) => e.confidence === "CLAIM").length;
   const extra = [
     { label: "LIVE CLAIMS", value: live ? String(claims) : "OFFLINE", tone: claims ? "warn" : "dim" },
@@ -428,7 +492,7 @@ function renderPanel(t: Theater) {
     .join("");
 
   const curated = t.events
-    .filter((e) => passesFilter(e.confidence))
+    .filter((e) => passesFilter(e.confidence) && passesTimeCurated(e.dtg))
     .map(
       (e) => `
     <article class="evt ${esc(e.confidence)}" data-lat="${esc(e.lat)}" data-lon="${esc(e.lon)}">
@@ -446,7 +510,7 @@ function renderPanel(t: Theater) {
     )
     .join("");
 
-  const liveFiltered = overlay.filter((e) => passesFilter(e.confidence));
+  const liveFiltered = overlay.filter((e) => passesFilter(e.confidence)).slice(0, LIVE_EVENT_CAP);
   const liveRows = liveFiltered
     .map(
       (e) => `
@@ -469,7 +533,7 @@ function renderPanel(t: Theater) {
     (curated || `<p class="empty">No curated events for this filter.</p>`) +
     (liveRows
       ? `<h2 class="live-head">LIVE OVERLAY \u00b7 ALL CLAIM UNTIL VERIFIED</h2>${liveRows}`
-      : `<p class="empty">No live overlay in this theater${confidenceFilter !== "ALL" ? " for this filter" : ""}.</p>`);
+      : `<p class="empty">${overlayAll.length && !overlay.length ? "No live overlay in this window." : `No live overlay in this theater${confidenceFilter !== "ALL" ? " for this filter" : ""}.`}</p>`);
 
   eventsEl.querySelectorAll<HTMLElement>(".evt").forEach((rowEl) => {
     rowEl.addEventListener("click", () => fly(Number(rowEl.dataset.lat), Number(rowEl.dataset.lon)));
@@ -477,6 +541,7 @@ function renderPanel(t: Theater) {
 
   watchEl.innerHTML = t.watch.map((w) => `<li>${esc(w)}</li>`).join("");
   renderXClaims(t);
+  renderWindows();
 
   const liveBits = overlay.slice(0, 6).map((e) => `${e.dtg}  ${e.location}  ${e.fact}`);
   tickerEl.textContent = [...TICKER, ...liveBits].join("   \u00b7   ");
@@ -955,7 +1020,7 @@ function renderMap(t: Theater) {
     });
   });
 
-  t.events.filter((e) => passesFilter(e.confidence)).forEach((e) => {
+  t.events.filter((e) => passesFilter(e.confidence) && passesTimeCurated(e.dtg)).forEach((e) => {
     addImpact(e.lat, e.lon, colorForConfidence(e.confidence), sitrepLayer!, {
       title: e.location,
       meta: `${e.dtg} \u00b7 ${e.confidence} \u00b7 ${e.source}`,
@@ -966,7 +1031,7 @@ function renderMap(t: Theater) {
   const tracks = TRACKS.filter((tr) => trackFits(tr, t.id));
   const waves = WAVES.filter((w) => w.theaters.includes(t.id) && waveDrawable(w));
   const strikes = STRIKES.filter((sp) => sp.theaters.includes(t.id) && strikeDrawable(sp));
-  const overlay = (live?.events ?? []).filter((e) => liveFits(e, t.id));
+  const overlay = (live?.events ?? []).filter((e) => liveFits(e, t.id) && passesTimeLive(e) && passesFilter(e.confidence));
   const visibleTracks = tracks.filter((tr) => passesFilter(tr.confidence)).length;
   const visibleWaves = waves.filter((w) => passesFilter(w.confidence));
   const vectorCount = visibleTracks + visibleWaves.length;
@@ -976,13 +1041,14 @@ function renderMap(t: Theater) {
     visibleWaves.slice(0, Math.max(0, layerCap("vectors") - visibleTracks)).forEach(drawWave);
   }
   if (layerOn.strikes) strikes.slice(0, layerCap("strikes")).forEach(drawStrike);
-  overlay.slice(0, 80).forEach(drawLive);
+  const drawnLive = overlay.slice(0, LIVE_EVENT_CAP);
+  drawnLive.forEach(drawLive);
   renderLayerToggles({ ...under.counts, vectors: tracks.length + waves.length, strikes: strikes.length });
   setAttribution([
     ...(live ? ['<a href="https://www.gdeltproject.org/" target="_blank" rel="noopener">GDELT Project</a>'] : []),
     ...under.attribution,
   ]);
-  const visibleLive = overlay.filter((e) => passesFilter(e.confidence)).length;
+  const visibleLive = drawnLive.length;
   if (live) {
     const stamp = document.createElement("span");
     stamp.className = visibleLive === 0 ? "live-stamp zero" : "live-stamp";
@@ -1016,6 +1082,16 @@ function select(id: TheaterId) {
 function setFilter(mode: FilterMode) {
   confidenceFilter = mode;
   const t = theater(active);
+  renderRail();
+  renderPanel(t);
+  renderMap(t);
+}
+
+function setWindow(next: TimeWindow) {
+  timeWindow = next;
+  writeTimeWindow(browserStorage(), next);
+  const t = theater(active);
+  renderRail();
   renderPanel(t);
   renderMap(t);
 }
@@ -1047,6 +1123,12 @@ filtersEl.addEventListener("click", (e) => {
   const btn = (e.target as HTMLElement).closest<HTMLButtonElement>(".chip");
   if (!btn) return;
   setFilter(btn.getAttribute("data-filter") as FilterMode);
+});
+windowsEl.addEventListener("click", (e) => {
+  const btn = (e.target as HTMLElement).closest<HTMLButtonElement>(".chip");
+  if (!btn) return;
+  const next = btn.getAttribute("data-window");
+  if (next === "24H" || next === "3D" || next === "7D" || next === "30D") setWindow(next);
 });
 collapseBtn.addEventListener("click", toggleStack);
 

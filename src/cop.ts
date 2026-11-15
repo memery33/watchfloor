@@ -64,6 +64,6 @@ export function trackFits(track: Track, theaterId: string): boolean {
 }
 
 export function liveFits(event: LiveEvent, theaterId: string): boolean {
-  if (theaterId === "overview") return event.theater !== "overview";
+  if (theaterId === "overview") return true;
   return event.theater === theaterId;
 }
