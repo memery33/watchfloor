@@ -10,7 +10,7 @@ export const THEATER_ETHIOPIA: Theater =   {
     kpis: [
       { label: "BADME", value: "CONTROL DELTA", tone: "hot" },
       { label: "AXUM", value: "CLASHES REPORTED", tone: "warn" },
-      { label: "TIGRAY ADMIN", value: "CARETAKER STAND-UP", tone: "warn" },
+      { label: "CONSCRIPTION", value: "REPORTS OPEN", tone: "warn" },
       { label: "G7", value: "CALLED FOR RESTRAINT", tone: "ok" },
     ],
     watch: [

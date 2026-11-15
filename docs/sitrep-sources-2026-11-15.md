@@ -7,7 +7,7 @@ Rules used: no invented coordinates, dates, or status; no marker without a named
 
 Overview map center was shifted to latitude 18, longitude 15, zoom 2 so Americas, Africa, and Asia-Pacific markers can appear. Existing theater map centers were otherwise left in place. `THEATER_ORDER` was not changed. Iraq items are filed under **Iran / Gulf** (closest existing theater) and also on Overview.
 
-The country allowlist is gone. `scripts/fetch_live.py` keeps worldwide rows, tags anything outside a theater box as `overview`, and the Overview live panel shows those rows. The file is a deduped 30-day window capped at 300. The toolbar toggle (24H / 3D / 7D / 30D, default 7D, `localStorage` key `wf.timeWindow.v1`) filters curated events, live rows, X claims, the ticker, and dated strikes and waves. A date-only row counts for 24H only when its last named UTC day is today. This snapshot's `live.json` is still a single day's export until older rows accumulate.
+The country allowlist is gone. `scripts/fetch_live.py` keeps worldwide rows, tags anything outside a theater box as `overview`, and the Overview live panel shows those rows. The file is a deduped 30-day window capped at 300. The toolbar toggle (24H / 3D / 7D / 30D, default 7D, `localStorage` key `wf.timeWindow.v1`) filters curated events, live rows, X claims, and the ticker. Strike, wave, and track layers stay on the map in every window. A date-only row counts for 24H only when its last named UTC day is today. This snapshot's `live.json` is still a single day's export until older rows accumulate.
 
 ## Event source table
 

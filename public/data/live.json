@@ -157,22 +157,6 @@
       "url": "https://azbigmedia.com/real-estate/sky-harbor-logistics-marks-next-chapter-for-storied-property/"
     },
     {
-      "id": "gdelt-1333277025",
-      "dtg": "15 NOV",
-      "date": "2026-11-15",
-      "location": "Florida",
-      "fact": "SHELLING  COMPANY \u2192 ?  (10 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 27.8333,
-      "lon": -81.717,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.livemint.com/companies/ula-vulcan-rocket-launches-with-its-first-amazon-leo-payload-11794767538933.html"
-    },
-    {
       "id": "gdelt-1333277828",
       "dtg": "15 NOV",
       "date": "2026-11-15",

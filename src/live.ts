@@ -57,11 +57,60 @@ const CENTROIDS: [number, number][] = [
   [8.0, 30.0],
   [8.0, 38.0],
   [39.8, -98.6], // United States 39.8282, -98.5795
+  [27.8, -81.7], // Florida state centroid 27.8333, -81.717
 ];
 
+/**
+ * Match CPython `round(n, 1)`. Ties use the exact binary value, so a decimal
+ * that looks like x.x5 can still fall above or below the halfway point.
+ */
+function roundTenth(n: number): number {
+  if (!Number.isFinite(n) || n === 0) return 0;
+  const sign = n < 0 ? -1 : 1;
+  const buf = new ArrayBuffer(8);
+  const f64 = new Float64Array(buf);
+  const u64 = new BigUint64Array(buf);
+  f64[0] = Math.abs(n);
+  const bits = u64[0]!;
+  const expBits = Number((bits >> 52n) & 0x7ffn);
+  const frac = bits & ((1n << 52n) - 1n);
+  let significand: bigint;
+  let exp2: number;
+  if (expBits === 0) {
+    significand = frac;
+    exp2 = -1022 - 52;
+    if (significand === 0n) return 0;
+  } else if (expBits === 0x7ff) {
+    return n;
+  } else {
+    significand = frac | (1n << 52n);
+    exp2 = expBits - 1023 - 52;
+  }
+  if (exp2 > 0) {
+    significand <<= BigInt(exp2);
+    exp2 = 0;
+  }
+  const scale = -exp2;
+  const digitsInt = significand * 5n ** BigInt(scale);
+  if (scale === 0) return sign * Number(digitsInt);
+  const qPow = scale - 1;
+  if (qPow <= 0) {
+    const value = (sign * Number(digitsInt * 10n ** BigInt(-qPow))) / 10;
+    return Object.is(value, -0) ? 0 : value;
+  }
+  const divisor = 10n ** BigInt(qPow);
+  const quotient = digitsInt / divisor;
+  const remainder = digitsInt % divisor;
+  const half = divisor / 2n;
+  let rounded = quotient;
+  if (remainder > half || (remainder === half && (quotient & 1n) === 1n)) rounded += 1n;
+  const value = (sign * Number(rounded)) / 10;
+  return Object.is(value, -0) ? 0 : value;
+}
+
 function isCentroid(lat: number, lon: number): boolean {
-  const rlat = Math.round(lat * 10) / 10;
-  const rlon = Math.round(lon * 10) / 10;
+  const rlat = roundTenth(lat);
+  const rlon = roundTenth(lon);
   return CENTROIDS.some(([a, b]) => a === rlat && b === rlon);
 }
 

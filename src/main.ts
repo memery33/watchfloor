@@ -244,9 +244,13 @@ function passesTimeCurated(dtg: string): boolean {
   return curatedInWindow(dtg, SNAPSHOT.dtgZulu, timeWindow);
 }
 
-/** Strikes and waves with a parsed DTG follow the window. Undated rows stay. */
+/**
+ * A blank DTG has no date and stays. Any other DTG that does not parse is
+ * outside every window. Historical strike, wave, and track layers are not
+ * passed through this.
+ */
 function passesTimeDated(dtg: string): boolean {
-  if (!curatedRange(dtg, SNAPSHOT.dtgZulu)) return true;
+  if (!dtg.trim()) return true;
   return passesTimeCurated(dtg);
 }
 
@@ -551,7 +555,7 @@ function renderPanel(t: Theater) {
   renderWindows();
 
   const liveBits = overlay.slice(0, 6).map((e) => `${e.dtg}  ${e.location}  ${e.fact}`);
-  const tickerBits = tickerLines(THEATERS[0].events, passesTimeCurated);
+  const tickerBits = tickerLines(THEATERS[0].events, passesTimeDated);
   tickerEl.textContent = [...tickerBits, ...liveBits].join("   \u00b7   ");
   renderFilters();
 }
@@ -1019,7 +1023,12 @@ function renderMap(t: Theater) {
     const colocated = t.events.filter((e) => Math.abs(e.lat - m.lat) < 0.02 && Math.abs(e.lon - m.lon) < 0.02);
     const visible = colocated.filter((e) => passesFilter(e.confidence) && passesTimeCurated(e.dtg));
     if (colocated.length > 0 && visible.length === 0) return;
-    const match = visible[0];
+    const match = visible.reduce<typeof visible[number] | undefined>((best, event) => {
+      if (!best) return event;
+      const bestEnd = curatedRange(best.dtg, SNAPSHOT.dtgZulu)?.[1] ?? Number.NEGATIVE_INFINITY;
+      const eventEnd = curatedRange(event.dtg, SNAPSHOT.dtgZulu)?.[1] ?? Number.NEGATIVE_INFINITY;
+      return eventEnd > bestEnd ? event : best;
+    }, undefined);
     const marker = L.circleMarker([m.lat, m.lon], {
       radius: 10,
       color: c,
@@ -1043,8 +1052,8 @@ function renderMap(t: Theater) {
   });
 
   const tracks = TRACKS.filter((tr) => trackFits(tr, t.id));
-  const waves = WAVES.filter((w) => w.theaters.includes(t.id) && waveDrawable(w) && passesTimeDated(w.dtg));
-  const strikes = STRIKES.filter((sp) => sp.theaters.includes(t.id) && strikeDrawable(sp) && passesTimeDated(sp.dtg));
+  const waves = WAVES.filter((w) => w.theaters.includes(t.id) && waveDrawable(w));
+  const strikes = STRIKES.filter((sp) => sp.theaters.includes(t.id) && strikeDrawable(sp));
   const overlay = (live?.events ?? []).filter((e) => liveFits(e, t.id) && passesTimeLive(e) && passesFilter(e.confidence));
   const visibleTracks = tracks.filter((tr) => passesFilter(tr.confidence)).length;
   const visibleWaves = waves.filter((w) => passesFilter(w.confidence));

@@ -41,30 +41,6 @@ CODE_TYPE = {
     "194": "shelling",
     "195": "strike",
 }
-# Retired country-token list. Not an admission filter.
-AOR = (
-    "iran",
-    "israel",
-    "lebanon",
-    "syria",
-    "iraq",
-    "saudi arabia",
-    "yemen",
-    "united arab emirates",
-    "oman",
-    "qatar",
-    "kuwait",
-    "bahrain",
-    "ukraine",
-    "russia",
-    "sudan",
-    "ethiopia",
-    "pakistan",
-    "afghanistan",
-    "west bank",
-    "palestine",
-    "gaza",
-)
 NOISE = {
     "POLICE",
     "DISTRICT COURT",
@@ -136,6 +112,7 @@ CENTROIDS = {
     (33.0, 44.0),
     (15.5, 47.5),
     (39.8, -98.6),  # United States country centroid 39.8282, -98.5795
+    (27.8, -81.7),  # Florida state centroid 27.8333, -81.717
 }
 
 
@@ -587,20 +564,28 @@ def within_rolling(event: dict) -> bool:
     return day >= cutoff
 
 
-def load_existing_events() -> list[dict] | None:
-    """Previous live.json rows. None means the file exists but could not be read."""
+def load_existing_events() -> tuple[list[dict], str | None] | None:
+    """Previous rows and their generated_at.
+
+    None when the file exists but cannot be used: unreadable, not an object,
+    or `events` is missing or not a list. A missing file is an empty list.
+    """
     if not os.path.exists(OUT):
-        return []
+        return [], None
     try:
         with open(OUT, encoding="utf-8") as handle:
             payload = json.load(handle)
     except (OSError, json.JSONDecodeError) as exc:
         log(f"could not read previous live.json: {exc}")
         return None
-    events = payload.get("events") if isinstance(payload, dict) else None
+    if not isinstance(payload, dict):
+        return None
+    events = payload.get("events")
     if not isinstance(events, list):
-        return []
-    return [event for event in events if isinstance(event, dict)]
+        return None
+    generated = payload.get("generated_at")
+    stamp = generated if isinstance(generated, str) else None
+    return [event for event in events if isinstance(event, dict)], stamp
 
 
 def row_place_ok(event: dict) -> bool:
@@ -645,9 +630,9 @@ def dedupe(events: list[dict]) -> list[dict]:
     return uniq[:EVENT_CAP]
 
 
-def write_payload(events: list[dict]) -> None:
+def write_payload(events: list[dict], generated_at: str | None = None, *, keep_stamp: bool = False) -> None:
     payload = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": generated_at if keep_stamp else datetime.now(timezone.utc).isoformat(),
         "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
         "events": events,
     }
@@ -675,18 +660,18 @@ def main() -> int:
         log(f"live GDELT fetch failed: {exc}")
         if not os.path.exists(OUT):
             return 1
-        previous = load_existing_events()
-        if previous is None:
-            log("keeping unreadable live.json")
+        loaded = load_existing_events()
+        if loaded is None:
+            log("keeping previous live.json")
             return 0
+        previous, generated_at = loaded
         aged = dedupe([event for event in previous if within_rolling(event) and row_place_ok(event)])
         log(f"aged previous live.json; kept {len(aged)}")
-        write_payload(aged)
+        write_payload(aged, generated_at, keep_stamp=True)
         return 0
 
-    previous = load_existing_events()
-    if previous is None:
-        previous = []
+    loaded = load_existing_events()
+    previous = [] if loaded is None else loaded[0]
     retained = [event for event in previous if within_rolling(event) and row_place_ok(event)]
     events = dedupe(fresh + retained)
     log(f"fresh {len(fresh)}; retained {len(retained)}; kept {len(events)}")
