@@ -1,7 +1,55 @@
 {
-  "generated_at": "2026-11-15T22:17:24.181157+00:00",
+  "generated_at": "2026-11-15T22:57:53.751208+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1333288796",
+      "dtg": "15 NOV",
+      "date": "2026-11-15",
+      "location": "Argungu",
+      "fact": "BLOCKADE  AMNESTY INTERNATIONAL \u2192 ARMED GANG  (4 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 12.7433,
+      "lon": 4.5269,
+      "event_type": "blockade",
+      "theater": "overview",
+      "origin": null,
+      "url": "https://blueprint.ng/breaking-thugs-attack-kwankwasos-convoy-in-kano-many-injured-vehicles-vandalised/"
+    },
+    {
+      "id": "gdelt-1333288836",
+      "dtg": "15 NOV",
+      "date": "2026-11-15",
+      "location": "Dhubab",
+      "fact": "SHELLING  SAUDI ARABIA \u2192 ?  (10 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 12.9431,
+      "lon": 43.4102,
+      "event_type": "shelling",
+      "theater": "yemen",
+      "origin": null,
+      "url": "https://dominicanrepublicpost.com/yemeni-government-forces-redeploy-from-bab-al-mandeb-to-defend-aden/"
+    },
+    {
+      "id": "gdelt-1333288839",
+      "dtg": "15 NOV",
+      "date": "2026-11-15",
+      "location": "Eastern Region",
+      "fact": "SHELLING  SAUDI \u2192 SAUDI ARABIA  (6 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-3",
+      "lat": 22.5,
+      "lon": 51.0,
+      "event_type": "shelling",
+      "theater": "energy",
+      "origin": null,
+      "url": "https://www.theyeshivaworld.com/news/israel-news/2623381/shipping-lifeline-in-peril-houthis-left-in-control-near-bab-el-mandeb-as-yemeni-government-forces-pull-out.html"
+    },
     {
       "id": "gdelt-1333286052",
       "dtg": "15 NOV",
@@ -17,27 +65,6 @@
       "theater": "yemen",
       "origin": null,
       "url": "https://www.aljazeera.com/news/2026/11/15/yemeni-government-forces-redeploy-from-bab-al-mandeb-to-defend-aden"
-    },
-    {
-      "id": "gdelt-1333286121",
-      "dtg": "15 NOV",
-      "date": "2026-11-15",
-      "location": "Eastern Province",
-      "fact": "SHELLING  YEMEN \u2192 IRANIAN  (5 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 22.5,
-      "lon": 51.0,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": {
-        "name": "YEMEN / HOUTHI",
-        "lat": 16.85,
-        "lon": 43.58,
-        "inferred": true
-      },
-      "url": "https://www.clevelandjewishnews.com/jns/saudi-arabia-says-it-intercepted-houthi-missiles-targeting-riyadh/article_e034c782-e1fa-5990-983c-856dcae6758c.html"
     },
     {
       "id": "gdelt-1333286126",
