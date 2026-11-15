@@ -1,456 +1,1300 @@
 {
-  "generated_at": "2026-11-12T20:53:13Z",
-  "handle": "hey_itsmyturn",
+  "generated_at": "2026-11-15T22:17:14Z",
+  "handles": [
+    "hey_itsmyturn",
+    "GeoConfirmed",
+    "sentdefender",
+    "Osinttechnical",
+    "Faytuks",
+    "NOELreports"
+  ],
   "note": "Unverified single-source X posts. Not corroborated, not plotted.",
   "posts": [
     {
-      "id": "2120973698647670925",
-      "url": "https://x.com/hey_itsmyturn/status/2120973698647670925",
-      "created_at": "2026-11-12T20:15:10Z",
-      "handle": "hey_itsmyturn",
+      "id": "2122076325913465106",
+      "url": "https://x.com/NOELreports/status/2122076325913465106",
+      "created_at": "2026-11-15T21:16:37Z",
+      "handle": "NOELreports",
       "type": "original",
-      "excerpt": "Missile launched from Haftkel @ 2007Z Khuzestan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "excerpt": "Early one tonight. Good night, sleep well and see you all tomorrow!",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120960108775534984",
-      "url": "https://x.com/hey_itsmyturn/status/2120960108775534984",
-      "created_at": "2026-11-12T19:21:10Z",
-      "handle": "hey_itsmyturn",
+      "id": "2122062471888523617",
+      "url": "https://x.com/NOELreports/status/2122062471888523617",
+      "created_at": "2026-11-15T20:21:33Z",
+      "handle": "NOELreports",
       "type": "original",
-      "excerpt": "UAV launch from Omidiyeh + Heavy AA activity Khuzestan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "excerpt": "President Zelensky says Ukraine's deep-strike campaign has knocked out 55% of Russia's oil refining capacity, citing a military briefing.…",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120958963797598466",
-      "url": "https://x.com/hey_itsmyturn/status/2120958963797598466",
-      "created_at": "2026-11-12T19:16:37Z",
-      "handle": "hey_itsmyturn",
+      "id": "2122062052227244257",
+      "url": "https://x.com/NOELreports/status/2122062052227244257",
+      "created_at": "2026-11-15T20:19:53Z",
+      "handle": "NOELreports",
       "type": "original",
-      "excerpt": "22:40 Local time / 1910Z AA activity in Izeh, Khuzestan. Iran [Delayed Post via FromIran · 120-second delay]",
+      "excerpt": "Ukraine's 422nd Separate Unmanned Systems Regiment struck a Russian ammunition depot while troops were transferring ammunition into…",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120958759401083041",
-      "url": "https://x.com/hey_itsmyturn/status/2120958759401083041",
-      "created_at": "2026-11-12T19:15:48Z",
+      "id": "2122061022760693982",
+      "url": "https://x.com/NOELreports/status/2122061022760693982",
+      "created_at": "2026-11-15T20:15:48Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "❗️Zelensky warns that Russia is preparing new attacks focused on individual Ukrainian regions. According to intelligence, Russian forces…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2122060622493843907",
+      "url": "https://x.com/NOELreports/status/2122060622493843907",
+      "created_at": "2026-11-15T20:14:13Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "Five oil product storage tanks were completely destroyed by fire following the November 11 strikes on Russia's Ust-Luga port in Leningrad…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2122027523303145921",
+      "url": "https://x.com/sentdefender/status/2122027523303145921",
+      "created_at": "2026-11-15T18:02:41Z",
+      "handle": "sentdefender",
+      "type": "original",
+      "excerpt": "Bahrain’s Foreign Ministry issued a statement condemning “in the strongest terms” Iranian drone attacks on the kingdom, including one…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2122021512869765420",
+      "url": "https://x.com/NOELreports/status/2122021512869765420",
+      "created_at": "2026-11-15T17:38:48Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "Former German Chancellor Olaf Scholz has called for European security relations with Russia to be addressed collectively through the EU,…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2122018187550065146",
+      "url": "https://x.com/NOELreports/status/2122018187550065146",
+      "created_at": "2026-11-15T17:25:35Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "Ukraine's Defense Ministry says strikes over the past week disrupted 9 of Russia's 35 largest oil refineries. Reuters reports Russian oil…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2122002562656202956",
+      "url": "https://x.com/sentdefender/status/2122002562656202956",
+      "created_at": "2026-11-15T16:23:30Z",
+      "handle": "sentdefender",
+      "type": "quote",
+      "excerpt": "The FBI’s Springfield Field Office is now leading the investigation into an explosive device found at the BioUrja Renewables ethanol…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121998510430064650",
+      "url": "https://x.com/NOELreports/status/2121998510430064650",
+      "created_at": "2026-11-15T16:07:24Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "Ukraine's Phoenix drone unit reports a week of strikes against Russian forces across the Dobropillia, Lyman and Toretsk sectors. Targets…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121996351395234198",
+      "url": "https://x.com/sentdefender/status/2121996351395234198",
+      "created_at": "2026-11-15T15:58:49Z",
+      "handle": "sentdefender",
+      "type": "quote",
+      "excerpt": "The USS Spruance (DDG-111) and USS Michael Murphy (DDG-112) returned home this week after 357 and 346 day deployments, the latest sign of…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121996293790662782",
+      "url": "https://x.com/NOELreports/status/2121996293790662782",
+      "created_at": "2026-11-15T15:58:35Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "Ukrainian border guards from the Kharkiv Detachment's Rapid Response Command destroyed eight Russian troop shelters, a truck, a fuel and…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121995959471120727",
+      "url": "https://x.com/NOELreports/status/2121995959471120727",
+      "created_at": "2026-11-15T15:57:16Z",
+      "handle": "NOELreports",
+      "type": "quote",
+      "excerpt": "Additional SMO footage from Nizhnekamsk. #Russia",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121993494935814348",
+      "url": "https://x.com/NOELreports/status/2121993494935814348",
+      "created_at": "2026-11-15T15:47:28Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "❗️Estonia plans to close all border crossings with Russia from December 1 following an attempted sabotage attack against drone…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121987790833664042",
+      "url": "https://x.com/NOELreports/status/2121987790833664042",
+      "created_at": "2026-11-15T15:24:48Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "Welcome to the SMO zone. Residents captured the opening moments of the overnight Ukrainian drone attack on Nizhnekamsk, Tatarstan. #Ukraine",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121979153683562783",
+      "url": "https://x.com/sentdefender/status/2121979153683562783",
+      "created_at": "2026-11-15T14:50:29Z",
+      "handle": "sentdefender",
+      "type": "original",
+      "excerpt": "U.S. intelligence analysts assess that Iran has between 1,500 and 2,500 missiles, U.S. officials told The Wall Street Journal. It is a…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121974413188808743",
+      "url": "https://x.com/sentdefender/status/2121974413188808743",
+      "created_at": "2026-11-15T14:31:39Z",
+      "handle": "sentdefender",
+      "type": "quote",
+      "excerpt": "The United Kingdom Maritime Trade Operations (UKMTO) Center has issued a warning after receiving a report of an attack on a tanker. The…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121966139072778378",
+      "url": "https://x.com/NOELreports/status/2121966139072778378",
+      "created_at": "2026-11-15T13:58:46Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "❗️New satellite analysis by absreliable identifies fires at TAIF-NK's hydrotreating unit and Nizhnekamskneftekhim's MTBE/TAME and…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121965649236783467",
+      "url": "https://x.com/NOELreports/status/2121965649236783467",
+      "created_at": "2026-11-15T13:56:49Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "French President Emmanuel Macron has warned against reducing support for Ukraine to pressure Kyiv into accepting an unjust peace, arguing…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121965146109038754",
+      "url": "https://x.com/NOELreports/status/2121965146109038754",
+      "created_at": "2026-11-15T13:54:49Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "Three commercial ships were reportedly attacked by drones in Romanian territorial waters near the Danube Delta on November 14. The…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121964220740784334",
+      "url": "https://x.com/NOELreports/status/2121964220740784334",
+      "created_at": "2026-11-15T13:51:09Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "❗️SpaceX has told Ukraine that Starshield speed restrictions affecting operations near the frontline and in occupied territory are a…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121963673132372270",
+      "url": "https://x.com/NOELreports/status/2121963673132372270",
+      "created_at": "2026-11-15T13:48:58Z",
+      "handle": "NOELreports",
+      "type": "quote",
+      "excerpt": "❗️Russian hosting provider Beget reports a large-scale DDoS attack against its infrastructure, with traffic reaching up to 850 Gbps.…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121963258219295136",
+      "url": "https://x.com/NOELreports/status/2121963258219295136",
+      "created_at": "2026-11-15T13:47:19Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "EU forces participating in Operation IRINI boarded the tanker MIDAG in the Mediterranean on November 13, Kaja Kallas says. The vessel is…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121939085916868993",
+      "url": "https://x.com/Osinttechnical/status/2121939085916868993",
+      "created_at": "2026-11-15T12:11:16Z",
+      "handle": "Osinttechnical",
+      "type": "original",
+      "excerpt": "Ukrainian attack drones hit a key Russian bridge over the Mius River near Taganrog overnight, severely damaging the main deck. The bridge…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121936733159805306",
+      "url": "https://x.com/NOELreports/status/2121936733159805306",
+      "created_at": "2026-11-15T12:01:55Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "Ukraine's General Staff confirms strikes on Akhtubinsk airfield and the Tsymbulova drone base in Russia. At Akhtubinsk, a depot storing…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121926089585094855",
+      "url": "https://x.com/NOELreports/status/2121926089585094855",
+      "created_at": "2026-11-15T11:19:37Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "Kyiv has introduced new traffic restrictions on the Northern Bridge. Only public transport may travel from the left bank to the right…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121920590361788434",
+      "url": "https://x.com/NOELreports/status/2121920590361788434",
+      "created_at": "2026-11-15T10:57:46Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "Ukraine confirms strikes on three Russian industrial sites on November 15: Nizhnekamskneftekhim, TAIF-NK refinery and Monolit in Bryansk…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121919005136986589",
+      "url": "https://x.com/NOELreports/status/2121919005136986589",
+      "created_at": "2026-11-15T10:51:28Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "Zelensky says Russia launched over 2,300 drones, 1,590 aerial bombs and 15 missiles against Ukraine this week. He warned that Starshield…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121910757411762335",
+      "url": "https://x.com/NOELreports/status/2121910757411762335",
+      "created_at": "2026-11-15T10:18:42Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "Panorama view. The chemical plant in Nizhnekamsk continues to burn after a massive Ukrainian drone attack. #Russia",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121900877690613780",
+      "url": "https://x.com/NOELreports/status/2121900877690613780",
+      "created_at": "2026-11-15T09:39:26Z",
+      "handle": "NOELreports",
+      "type": "original",
+      "excerpt": "‼️New details on Ukraine's November 13 strike against Russia's Lipetsk-2 airfield: a Su-34 fighter-bomber sustained shrapnel damage, an…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121900471397052452",
+      "url": "https://x.com/NOELreports/status/2121900471397052452",
+      "created_at": "2026-11-15T09:37:50Z",
+      "handle": "NOELreports",
+      "type": "quote",
+      "excerpt": "Fire from inside Nizhnekamskneftekhim petrochemical complex in Russia's Republic of Tatarstan. #Russia",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121881488622838058",
+      "url": "https://x.com/hey_itsmyturn/status/2121881488622838058",
+      "created_at": "2026-11-15T08:22:24Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Jet activity over Mehrabad. Tehran, Tehran Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121879587541909585",
+      "url": "https://x.com/hey_itsmyturn/status/2121879587541909585",
+      "created_at": "2026-11-15T08:14:50Z",
       "handle": "hey_itsmyturn",
       "type": "quote",
-      "excerpt": "State-owned IRNA confirms that the blast in Sirik was a \"hostile strike\" Hormozgan Province, #Iran",
+      "excerpt": "Bahrain 🇧🇭 “The General Command of the Bahrain Defence Force announces that Iran is continuing its systematic hostile approach through…",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120957067284316513",
-      "url": "https://x.com/hey_itsmyturn/status/2120957067284316513",
-      "created_at": "2026-11-12T19:09:04Z",
+      "id": "2121877005016653844",
+      "url": "https://x.com/hey_itsmyturn/status/2121877005016653844",
+      "created_at": "2026-11-15T08:04:35Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Earlier @ 0345Z At least 3 BMs launched from Isfahan Isfahan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121875910051729609",
+      "url": "https://x.com/hey_itsmyturn/status/2121875910051729609",
+      "created_at": "2026-11-15T08:00:14Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "11:25 Local time / 0755Z Jet activity heard from the 8th Tactical Air Base in Isfahan. Isfahan Province, Iran [Delayed Post via FromIran…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121875599870275859",
+      "url": "https://x.com/hey_itsmyturn/status/2121875599870275859",
+      "created_at": "2026-11-15T07:59:00Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Morning at 7.8 local time 5 missile trails launched from a base in Isfahan. Isfahan Province, Iran [Delayed Post via FromIran ·…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121873288787829076",
+      "url": "https://x.com/hey_itsmyturn/status/2121873288787829076",
+      "created_at": "2026-11-15T07:49:49Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Missile launch from Ramadan District, Ahvaz, 0656Z Khuzestan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121872429840531829",
+      "url": "https://x.com/hey_itsmyturn/status/2121872429840531829",
+      "created_at": "2026-11-15T07:46:24Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "0350Z Najafabad, Isfahan",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121871854218449116",
+      "url": "https://x.com/hey_itsmyturn/status/2121871854218449116",
+      "created_at": "2026-11-15T07:44:07Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "08:20 Local time / 0450Z A very loud explosion came from 15 Khordad Garrison in Isfahan; \"it did not sound like a UXO disposal blast.\"…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121858758364082255",
+      "url": "https://x.com/Osinttechnical/status/2121858758364082255",
+      "created_at": "2026-11-15T06:52:04Z",
+      "handle": "Osinttechnical",
+      "type": "quote",
+      "excerpt": "More:",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121856317119775096",
+      "url": "https://x.com/Osinttechnical/status/2121856317119775096",
+      "created_at": "2026-11-15T06:42:22Z",
+      "handle": "Osinttechnical",
+      "type": "original",
+      "excerpt": "Russia's Nizhnekamsk petrochemical complex continues to burn this morning after an overnight Ukrainian drone strike. The refining complex…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121831378987741261",
+      "url": "https://x.com/Osinttechnical/status/2121831378987741261",
+      "created_at": "2026-11-15T05:03:17Z",
+      "handle": "Osinttechnical",
+      "type": "original",
+      "excerpt": "Iran's IRGC claims it targeted an air defense site at Riffa Air Base in Bahrain this morning with six attack drones. Locals in Bahrain…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121821909080014992",
+      "url": "https://x.com/sentdefender/status/2121821909080014992",
+      "created_at": "2026-11-15T04:25:39Z",
+      "handle": "sentdefender",
+      "type": "original",
+      "excerpt": "Iran’s Islamic Revolutionary Guard Corps (IRGC) claims to have targeted a U.S. air defense site and radar system tonight at Riffa Air…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121820123111760178",
+      "url": "https://x.com/sentdefender/status/2121820123111760178",
+      "created_at": "2026-11-15T04:18:33Z",
+      "handle": "sentdefender",
+      "type": "original",
+      "excerpt": "Several Iranian one-way attack drones were detected and destroyed by air defenses earlier over Bahrain, according to Bahrain TV.",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121813314695274892",
+      "url": "https://x.com/sentdefender/status/2121813314695274892",
+      "created_at": "2026-11-15T03:51:30Z",
+      "handle": "sentdefender",
+      "type": "original",
+      "excerpt": "Air raid sirens are sounding for the second time tonight in Bahrain.",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121809419029893556",
+      "url": "https://x.com/sentdefender/status/2121809419029893556",
+      "created_at": "2026-11-15T03:36:01Z",
+      "handle": "sentdefender",
+      "type": "original",
+      "excerpt": "Footage filmed by a passenger onboard the Copa Airlines Boeing 737 involved in the collision tonight at Miami International Airport in…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121806440570724374",
+      "url": "https://x.com/sentdefender/status/2121806440570724374",
+      "created_at": "2026-11-15T03:24:11Z",
+      "handle": "sentdefender",
+      "type": "original",
+      "excerpt": "Several massive fires are burning at the Tatarstan Oil Refinery Complex in the Russian city of Nizhnekamsk, part of the Republic of…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121802444694823263",
+      "url": "https://x.com/Osinttechnical/status/2121802444694823263",
+      "created_at": "2026-11-15T03:08:18Z",
+      "handle": "Osinttechnical",
+      "type": "original",
+      "excerpt": "Ukrainian attack drones struck Russia's Nizhnekamsk oil refinery moments ago, setting multiple parts of the refinery complex ablaze.",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121797115970232619",
+      "url": "https://x.com/sentdefender/status/2121797115970232619",
+      "created_at": "2026-11-15T02:47:08Z",
+      "handle": "sentdefender",
+      "type": "original",
+      "excerpt": "Dallas Love Field Airport in Texas is currently closed to arriving and departing flights due to a possible bomb threat, with local, state…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121791890794435052",
+      "url": "https://x.com/sentdefender/status/2121791890794435052",
+      "created_at": "2026-11-15T02:26:22Z",
+      "handle": "sentdefender",
+      "type": "original",
+      "excerpt": "Reports of a collision between a UPS Airlines Boeing 767 and a Copa Airlines Boeing 737 while taxiing this evening at Miami International…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121781904085057583",
+      "url": "https://x.com/Osinttechnical/status/2121781904085057583",
+      "created_at": "2026-11-15T01:46:41Z",
+      "handle": "Osinttechnical",
+      "type": "original",
+      "excerpt": "Bahrain's government has instructed civilians to take shelter due to a \"potential threat.\" Inbound flights are holding, with at least one…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121779019985428775",
+      "url": "https://x.com/sentdefender/status/2121779019985428775",
+      "created_at": "2026-11-15T01:35:13Z",
+      "handle": "sentdefender",
+      "type": "quote",
+      "excerpt": "Alerts for a potential threat have been sent out across Bahrain with some reports of explosions heard.",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121778277337485332",
+      "url": "https://x.com/hey_itsmyturn/status/2121778277337485332",
+      "created_at": "2026-11-15T01:32:16Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Emergency warning · Bahrain Source: @moi_bahrain [Via FromIran]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121772076994359372",
+      "url": "https://x.com/hey_itsmyturn/status/2121772076994359372",
+      "created_at": "2026-11-15T01:07:38Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Emergency warning — Riyadh · Saudi Arabia Source: @SaudiDCD [Via FromIran]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121762176293625963",
+      "url": "https://x.com/Osinttechnical/status/2121762176293625963",
+      "created_at": "2026-11-15T00:28:17Z",
+      "handle": "Osinttechnical",
+      "type": "original",
+      "excerpt": "Large Ukrainian attack drone raid into western Russia ongoing tonight, with local channels reporting hundreds pushing towards targets…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121736798887956910",
+      "url": "https://x.com/hey_itsmyturn/status/2121736798887956910",
+      "created_at": "2026-11-14T22:47:27Z",
       "handle": "hey_itsmyturn",
       "type": "quote",
-      "excerpt": "Missed the tweet.",
+      "excerpt": "Hamas terror organization has confirmed the elimination of Samir Abu Younis.",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120956564446102003",
-      "url": "https://x.com/hey_itsmyturn/status/2120956564446102003",
-      "created_at": "2026-11-12T19:07:05Z",
+      "id": "2121734356159136101",
+      "url": "https://x.com/hey_itsmyturn/status/2121734356159136101",
+      "created_at": "2026-11-14T22:37:45Z",
       "handle": "hey_itsmyturn",
       "type": "original",
-      "excerpt": "22:31 Local time / 1901Z UAV activity over Urmia. West Azerbaijan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "excerpt": "Hamas' new Rafah Brigades commander, Samir Abu Younis has been reportedly eliminated following 4 airstrikes by IDF 🇮🇱 UAVs on Khan…",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120954333114016202",
-      "url": "https://x.com/hey_itsmyturn/status/2120954333114016202",
-      "created_at": "2026-11-12T18:58:13Z",
+      "id": "2121719274746335663",
+      "url": "https://x.com/Osinttechnical/status/2121719274746335663",
+      "created_at": "2026-11-14T21:37:49Z",
+      "handle": "Osinttechnical",
+      "type": "original",
+      "excerpt": "Cockpit footage from a Ukrainian Air Force MiG-29 Fulcrum as it intercepts a Russian jet-powered drone at close range using an R-60 AAM.",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121716730204504487",
+      "url": "https://x.com/sentdefender/status/2121716730204504487",
+      "created_at": "2026-11-14T21:27:42Z",
+      "handle": "sentdefender",
+      "type": "original",
+      "excerpt": "After a more than 22 hour long flight, @SpaceX’s Mechazilla successfully caught Starship, in a notable first.",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121703729950814602",
+      "url": "https://x.com/hey_itsmyturn/status/2121703729950814602",
+      "created_at": "2026-11-14T20:36:03Z",
       "handle": "hey_itsmyturn",
       "type": "original",
-      "excerpt": "Missile launched again from Sarbandar - 1844Z Khuzestan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "excerpt": "UAV launched again from Omidiyeh Air Base Khuzestan Province, Iran [Delayed Post via FromIran · 120-second delay]",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120944359554035760",
-      "url": "https://x.com/hey_itsmyturn/status/2120944359554035760",
-      "created_at": "2026-11-12T18:18:35Z",
+      "id": "2121700009527722251",
+      "url": "https://x.com/hey_itsmyturn/status/2121700009527722251",
+      "created_at": "2026-11-14T20:21:16Z",
       "handle": "hey_itsmyturn",
       "type": "original",
-      "excerpt": "Jet activity over Marivan Kurdistan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "excerpt": "11:40 Local time / 0810Z 2 explosions heard in Bandar Kangan and Bandar Lengeh, Hormozgan Iran [Delayed Post via FromIran · 120-second…",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120941503052697842",
-      "url": "https://x.com/hey_itsmyturn/status/2120941503052697842",
-      "created_at": "2026-11-12T18:07:14Z",
+      "id": "2121699187578282310",
+      "url": "https://x.com/hey_itsmyturn/status/2121699187578282310",
+      "created_at": "2026-11-14T20:18:00Z",
       "handle": "hey_itsmyturn",
       "type": "original",
-      "excerpt": "Jet activity over Dezful. Khuzestan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "excerpt": "Blasts heard in the Strait of Hormuz. Iran [Delayed Post via FromIran · 120-second delay]",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120932468454748508",
-      "url": "https://x.com/hey_itsmyturn/status/2120932468454748508",
-      "created_at": "2026-11-12T17:31:20Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "2 UAVs spotted over Baharestan and Sepahan Shahr, Isfahan Isfahan Province, Iran [Delayed Post via FromIran · 120-second delay]",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120929284877406300",
-      "url": "https://x.com/hey_itsmyturn/status/2120929284877406300",
-      "created_at": "2026-11-12T17:18:41Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "Blast near Sarkhur Tahruyi, Sirik Hormozgan Province, Iran [Delayed Post via FromIran · 120-second delay]",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120920688894915019",
-      "url": "https://x.com/hey_itsmyturn/status/2120920688894915019",
-      "created_at": "2026-11-12T16:44:31Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "PM Al-Zaidi told Amiri and Fayyadh that IRGC-backed Kataib Hezballah must be dealt with \"under Iraq's laws in force\", Badr and PMF…",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120916588912091232",
-      "url": "https://x.com/hey_itsmyturn/status/2120916588912091232",
-      "created_at": "2026-11-12T16:28:14Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "Over 10 ASCM / SAM launched from Bandar Abbas Hormozgan Province, Iran [Delayed Post via FromIran · 120-second delay]",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120887555683992044",
-      "url": "https://x.com/hey_itsmyturn/status/2120887555683992044",
-      "created_at": "2026-11-12T14:32:52Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "BM test launch from Haftkel, Khuzestan Iran [Delayed Post via FromIran · 120-second delay]",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120887497286713580",
-      "url": "https://x.com/hey_itsmyturn/status/2120887497286713580",
-      "created_at": "2026-11-12T14:32:38Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "17:27 Local time / 1357Z BM [test] launch from Parchin. Tehran Province, Iran [Delayed Post via FromIran · 120-second delay]",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120870082838495267",
-      "url": "https://x.com/hey_itsmyturn/status/2120870082838495267",
-      "created_at": "2026-11-12T13:23:26Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "UAV launched from the Fifth Fighter Base in Omidiyeh Khuzestan Province, Iran [Delayed Post via FromIran · 120-second delay]",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120866342924333453",
-      "url": "https://x.com/hey_itsmyturn/status/2120866342924333453",
-      "created_at": "2026-11-12T13:08:34Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "POTUS: \"I have asked Vice President Vance to focus his complete and total attention on the Massive Corruption and Crime taking place in…",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120845038678573159",
-      "url": "https://x.com/hey_itsmyturn/status/2120845038678573159",
-      "created_at": "2026-11-12T11:43:55Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "Jet activity from the Fifth Fighter Base in Omidiyeh, Khuzestan Iran [Delayed Post via FromIran · 120-second delay]",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120841826160517620",
-      "url": "https://x.com/hey_itsmyturn/status/2120841826160517620",
-      "created_at": "2026-11-12T11:31:09Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "Unknown blast in Abudhar town, Mashhad Time: 1038Z | 1408Z Razavi Khorasan Province, Iran [Delayed Post via FromIran · 120-second delay]",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120824780186092001",
-      "url": "https://x.com/hey_itsmyturn/status/2120824780186092001",
-      "created_at": "2026-11-12T10:23:25Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "13:45 Local time / 1015Z Missile launch from mountains near Izeh, Khuzestan. Iran [Delayed Post via FromIran · 120-second delay]",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120680593583435860",
-      "url": "https://x.com/hey_itsmyturn/status/2120680593583435860",
-      "created_at": "2026-11-12T00:50:28Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "Raid-arrest operation ongoing in Baghdad #Iraq 🇮🇶",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120680232906592660",
-      "url": "https://x.com/hey_itsmyturn/status/2120680232906592660",
-      "created_at": "2026-11-12T00:49:02Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "Aerial activity over Baghdad #Iraq 🇮🇶",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120666829358092352",
-      "url": "https://x.com/hey_itsmyturn/status/2120666829358092352",
-      "created_at": "2026-11-11T23:55:46Z",
+      "id": "2121683794033844285",
+      "url": "https://x.com/hey_itsmyturn/status/2121683794033844285",
+      "created_at": "2026-11-14T19:16:50Z",
       "handle": "hey_itsmyturn",
       "type": "quote",
-      "excerpt": "Green Zone security forces on high alert. Baghdad, #Iraq 🇮🇶",
+      "excerpt": "Iraqi PM Al-Zaidi says the Jurf al-Sakhar committee confirmed oil smuggling, refers all suspects to the judiciary and removes 9…",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120645783234003165",
-      "url": "https://x.com/hey_itsmyturn/status/2120645783234003165",
-      "created_at": "2026-11-11T22:32:09Z",
+      "id": "2121673195270934905",
+      "url": "https://x.com/hey_itsmyturn/status/2121673195270934905",
+      "created_at": "2026-11-14T18:34:43Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "09:48 Local time / 0618Z Missile launch from Bandar Lengeh Hormozgan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121660137542725927",
+      "url": "https://x.com/hey_itsmyturn/status/2121660137542725927",
+      "created_at": "2026-11-14T17:42:49Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "UAV launch from Omidiyeh AB Khuzestan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121659197071008191",
+      "url": "https://x.com/sentdefender/status/2121659197071008191",
+      "created_at": "2026-11-14T17:39:05Z",
+      "handle": "sentdefender",
+      "type": "original",
+      "excerpt": "Details regarding what exactly occurred last night at U.S. bases across the United Kingdom are still extremely scarce nearly 24 hours…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121651140508991629",
+      "url": "https://x.com/hey_itsmyturn/status/2121651140508991629",
+      "created_at": "2026-11-14T17:07:04Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "AA activity on Marand-Tabriz road 20:29 local | 1659Z East Azerbaijan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121649017809523143",
+      "url": "https://x.com/hey_itsmyturn/status/2121649017809523143",
+      "created_at": "2026-11-14T16:58:38Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "20:23 Local time / 1653Z UAV activity over Jolfa and Hadishahr, East Azerbaijan. Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121647243660812592",
+      "url": "https://x.com/hey_itsmyturn/status/2121647243660812592",
+      "created_at": "2026-11-14T16:51:35Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "20:17 Local time / 1647Z Missile launch toward the Strait of Hormuz Hormozgan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121611136210731285",
+      "url": "https://x.com/hey_itsmyturn/status/2121611136210731285",
+      "created_at": "2026-11-14T14:28:07Z",
       "handle": "hey_itsmyturn",
       "type": "quote",
-      "excerpt": "KH's Security chief Abu Mujahid al-Assaf holds al-Zaidi \"fully responsible\" for any strike on KH or PMF positions and claims Iraqi…",
+      "excerpt": "Shaking was felt in Lavasan as well.",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120645314453348851",
-      "url": "https://x.com/hey_itsmyturn/status/2120645314453348851",
-      "created_at": "2026-11-11T22:30:17Z",
+      "id": "2121609056192266372",
+      "url": "https://x.com/hey_itsmyturn/status/2121609056192266372",
+      "created_at": "2026-11-14T14:19:51Z",
       "handle": "hey_itsmyturn",
       "type": "original",
-      "excerpt": "01:54 Local time / 2224Z [IRIAF] Jet activity heard in western Tehran. Tehran Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "excerpt": "An earthquake just shook Eastern Tehran",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120643625210306994",
-      "url": "https://x.com/hey_itsmyturn/status/2120643625210306994",
-      "created_at": "2026-11-11T22:23:34Z",
+      "id": "2121600762467729672",
+      "url": "https://x.com/sentdefender/status/2121600762467729672",
+      "created_at": "2026-11-14T13:46:53Z",
+      "handle": "sentdefender",
+      "type": "quote",
+      "excerpt": "The incident at the BioUrja ethanol plant in Peoria, Illinois remains very active this morning. Peoria Police Chief Brad Dixon said at an…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121595024576073849",
+      "url": "https://x.com/hey_itsmyturn/status/2121595024576073849",
+      "created_at": "2026-11-14T13:24:05Z",
       "handle": "hey_itsmyturn",
       "type": "original",
-      "excerpt": "Iraqi PM, Al-Zaidi orders a probe into fuel siphoning in Jurf al-Sakhar, the closed-off area south of Baghdad, which is one of the most…",
+      "excerpt": "2 blasts in Saqqez Reason is unknown Kurdistan Province, Iran [Delayed Post via FromIran · 120-second delay]",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120578692703289834",
-      "url": "https://x.com/hey_itsmyturn/status/2120578692703289834",
-      "created_at": "2026-11-11T18:05:33Z",
+      "id": "2121579187014144402",
+      "url": "https://x.com/hey_itsmyturn/status/2121579187014144402",
+      "created_at": "2026-11-14T12:21:09Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "BM [test] launched from Isfahan @ 1006Z Isfahan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121537266275525029",
+      "url": "https://x.com/Osinttechnical/status/2121537266275525029",
+      "created_at": "2026-11-14T09:34:35Z",
+      "handle": "Osinttechnical",
+      "type": "original",
+      "excerpt": "Rare footage of a Ukrainian STASH turret engaging and successfully shooting down a Russian attack drone using a laser-guided AGM-114…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121489988906827856",
+      "url": "https://x.com/sentdefender/status/2121489988906827856",
+      "created_at": "2026-11-14T06:26:43Z",
+      "handle": "sentdefender",
+      "type": "quote",
+      "excerpt": "ATF Special Agent/Certified Explosives Specialists from the Chicago field office are on scene at the BioUrja ethanol plant in Peoria,…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121484443437400143",
+      "url": "https://x.com/sentdefender/status/2121484443437400143",
+      "created_at": "2026-11-14T06:04:41Z",
+      "handle": "sentdefender",
+      "type": "quote",
+      "excerpt": "@KarmasBigPush",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121483625375871234",
+      "url": "https://x.com/sentdefender/status/2121483625375871234",
+      "created_at": "2026-11-14T06:01:26Z",
+      "handle": "sentdefender",
+      "type": "quote",
+      "excerpt": "@Trix_Eater You tell me:",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121483270009274569",
+      "url": "https://x.com/sentdefender/status/2121483270009274569",
+      "created_at": "2026-11-14T06:00:01Z",
+      "handle": "sentdefender",
+      "type": "original",
+      "excerpt": "\"A device has been identified. We know it's a credible threat. We know it's a bomb. Yes\" Peoria Mayor Rita Ali said at a press conference…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121471689586311261",
+      "url": "https://x.com/sentdefender/status/2121471689586311261",
+      "created_at": "2026-11-14T05:14:00Z",
+      "handle": "sentdefender",
+      "type": "quote",
+      "excerpt": "Peoria, Illinois Mayor Rita Ali says authorities have confirmed at least one active bomb at the BioUrja Renewables ethanol plant, the…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121415289984385098",
+      "url": "https://x.com/Osinttechnical/status/2121415289984385098",
+      "created_at": "2026-11-14T01:29:53Z",
+      "handle": "Osinttechnical",
+      "type": "original",
+      "excerpt": "The FAA has officially announced that the nationwide ground stop has been lifted.",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121404196046119330",
+      "url": "https://x.com/Osinttechnical/status/2121404196046119330",
+      "created_at": "2026-11-14T00:45:48Z",
+      "handle": "Osinttechnical",
+      "type": "quote",
+      "excerpt": "@flightradar24 MEDEVAC flights have been explicitly allowed to fly; they have priority right now.",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121353016456749485",
+      "url": "https://x.com/hey_itsmyturn/status/2121353016456749485",
+      "created_at": "2026-11-13T21:22:26Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "US FAA grounds all departing flights due to extraordinary circumstance, safety reasons",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121338389957894279",
+      "url": "https://x.com/Faytuks/status/2121338389957894279",
+      "created_at": "2026-11-13T20:24:19Z",
+      "handle": "Faytuks",
+      "type": "quote",
+      "excerpt": "There has been \"suspected unauthorised drone activity\" over RAF Lakenheath this evening, according to the US military -Sky News",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121332699847905397",
+      "url": "https://x.com/Faytuks/status/2121332699847905397",
+      "created_at": "2026-11-13T20:01:42Z",
+      "handle": "Faytuks",
+      "type": "quote",
+      "excerpt": "FPCON delta means an attack is \"imminent\" or has occurred",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121329501850276276",
+      "url": "https://x.com/Faytuks/status/2121329501850276276",
+      "created_at": "2026-11-13T19:49:00Z",
+      "handle": "Faytuks",
+      "type": "original",
+      "excerpt": "Sirens are sounding at RAF Lakenheath, RAF Mildenhall and RAF Feltwell in the United Kingdom, according to @DefenceGeek There are local…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121321603522781510",
+      "url": "https://x.com/hey_itsmyturn/status/2121321603522781510",
+      "created_at": "2026-11-13T19:17:37Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "UAV activity over Urmia, West Azerbaijan Province. 22:10 Local time. Air defense activity over Ordushahi, West Azerbaijan Province. 22:08…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121321137476944295",
+      "url": "https://x.com/hey_itsmyturn/status/2121321137476944295",
+      "created_at": "2026-11-13T19:15:46Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "A missile launcher was observed on the road from Baharestan to Mohammadabad, Isfahan. Isfahan Province, Iran [Delayed Post via FromIran ·…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121321062101086320",
+      "url": "https://x.com/hey_itsmyturn/status/2121321062101086320",
+      "created_at": "2026-11-13T19:15:28Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Jet took off from Doran Air Base at 21:00 local | 1730Z HDG S Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121320986205167888",
+      "url": "https://x.com/hey_itsmyturn/status/2121320986205167888",
+      "created_at": "2026-11-13T19:15:10Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Hormozgan Governor's office: \"No impacts or explosions in Jask as of 22:25 [local] [1855Z]\"",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121320920094560551",
+      "url": "https://x.com/hey_itsmyturn/status/2121320920094560551",
+      "created_at": "2026-11-13T19:14:54Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "UAV activity over the Fifth Base in Omidiyeh @ 1727Z Khuzestan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121292956044754994",
+      "url": "https://x.com/hey_itsmyturn/status/2121292956044754994",
+      "created_at": "2026-11-13T17:23:47Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "20:48 Local time / 1718Z UAV activity over Piranshahr. West Azerbaijan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121268083767550170",
+      "url": "https://x.com/hey_itsmyturn/status/2121268083767550170",
+      "created_at": "2026-11-13T15:44:57Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "19:11 Local time / 1541Z Intense UAV activity over Iraqi borders, West Azerbaijan Province. Iran [Delayed Post via FromIran · 120-second…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121267416994927081",
+      "url": "https://x.com/hey_itsmyturn/status/2121267416994927081",
+      "created_at": "2026-11-13T15:42:18Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "19:07 Local time / 1537Z 1 BM launched from Urmia, West Azerbaijan Province. Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121264019457679857",
+      "url": "https://x.com/hey_itsmyturn/status/2121264019457679857",
+      "created_at": "2026-11-13T15:28:48Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Secondhand information: A large number of missiles were launched in western Iran @ ~ 1400Z [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121263704771588109",
+      "url": "https://x.com/hey_itsmyturn/status/2121263704771588109",
+      "created_at": "2026-11-13T15:27:33Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "18:06 Local time / 1436Z Jet activity in Saqqez. Kurdistan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121263562312036593",
+      "url": "https://x.com/hey_itsmyturn/status/2121263562312036593",
+      "created_at": "2026-11-13T15:26:59Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Missile launched from Kouye Ramazan, Ahvaz 1405Z Khuzestan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121262656220782833",
+      "url": "https://x.com/hey_itsmyturn/status/2121262656220782833",
+      "created_at": "2026-11-13T15:23:23Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Another [3rd] explosion at the 15 Khordad military barracks in Isfahan, exactly in the barracks' warehouse area. 1324Z Isfahan Province,…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121262442407686582",
+      "url": "https://x.com/hey_itsmyturn/status/2121262442407686582",
+      "created_at": "2026-11-13T15:22:32Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Earlier @ 1316Z 2 BMs [test] launched from Sanandaj Kurdistan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121262245363519789",
+      "url": "https://x.com/hey_itsmyturn/status/2121262245363519789",
+      "created_at": "2026-11-13T15:21:45Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "17:30 Local time / 1400Z Smoke visible at the 15 Khordad military base in Isfahan following an explosion Isfahan Province, Iran [Delayed…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121262061246160921",
+      "url": "https://x.com/hey_itsmyturn/status/2121262061246160921",
+      "created_at": "2026-11-13T15:21:01Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Observation of a stationary luminous object in the sky over the Bostanabad road near Tabriz. After several seconds, its light went out,…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121225291376763170",
+      "url": "https://x.com/hey_itsmyturn/status/2121225291376763170",
+      "created_at": "2026-11-13T12:54:54Z",
       "handle": "hey_itsmyturn",
       "type": "quote",
-      "excerpt": "U.S. forces say they are enforcing the naval blockade against Iran while keeping the Strait of Hormuz open and disrupting IRGC routes by…",
+      "excerpt": "Following an IRGC claim that it struck a U.S. early-warning radar in Bahrain, CENTCOM says U.S. forces shot down both attack drones. No…",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120524029505253513",
-      "url": "https://x.com/hey_itsmyturn/status/2120524029505253513",
-      "created_at": "2026-11-11T14:28:20Z",
+      "id": "2121211909902827849",
+      "url": "https://x.com/hey_itsmyturn/status/2121211909902827849",
+      "created_at": "2026-11-13T12:01:44Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Military helicopters landing in Al-Dora, Baghdad, #Iraq 🇮🇶",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2121199373992235448",
+      "url": "https://x.com/hey_itsmyturn/status/2121199373992235448",
+      "created_at": "2026-11-13T11:11:55Z",
       "handle": "hey_itsmyturn",
       "type": "quote",
-      "excerpt": "Numerous planes with transponders off took off from Yazd, so far: 7 Yazd Province, #Iran",
+      "excerpt": "Iraqi PM Al-Zaidi's investigation committee enters Jurf al-Sakhar under Federal Police and army escort, first state presence in the…",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120522131628785713",
-      "url": "https://x.com/hey_itsmyturn/status/2120522131628785713",
-      "created_at": "2026-11-11T14:20:48Z",
+      "id": "2121188140274655489",
+      "url": "https://x.com/hey_itsmyturn/status/2121188140274655489",
+      "created_at": "2026-11-13T10:27:17Z",
       "handle": "hey_itsmyturn",
       "type": "original",
-      "excerpt": "Freighter took off from Yazd Yazd Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "excerpt": "BM launch @ 08:09 local | 0539Z from Marand suburbs East Azerbaijan Province, Iran [Delayed Post via FromIran · 120-second delay]",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120506025522471012",
-      "url": "https://x.com/hey_itsmyturn/status/2120506025522471012",
-      "created_at": "2026-11-11T13:16:48Z",
+      "id": "2121186815012991170",
+      "url": "https://x.com/hey_itsmyturn/status/2121186815012991170",
+      "created_at": "2026-11-13T10:22:01Z",
       "handle": "hey_itsmyturn",
       "type": "original",
-      "excerpt": "15:40 Local time / 1210Z 2 Missiles launched from the 15 Khordad Base in Isfahan. Isfahan Province, Iran [Delayed Post via FromIran ·…",
+      "excerpt": "Iraq closed the Soomar border crossing between Iraq and Iran. Kermanshah Province [Delayed Post via FromIran · 120-second delay]",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120456576171446616",
-      "url": "https://x.com/hey_itsmyturn/status/2120456576171446616",
-      "created_at": "2026-11-11T10:00:18Z",
+      "id": "2121186504751894852",
+      "url": "https://x.com/hey_itsmyturn/status/2121186504751894852",
+      "created_at": "2026-11-13T10:20:47Z",
       "handle": "hey_itsmyturn",
       "type": "original",
-      "excerpt": "Major General Rezaei, Secretary of the Supreme National Security Council, told Al Mayadeen: “We informed our Russian friends that the…",
+      "excerpt": "Iraq closed the Soomar border crossing between Iraq and Iran, due to technical and infrastructure operations, until further notice.",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120296878084411755",
-      "url": "https://x.com/hey_itsmyturn/status/2120296878084411755",
-      "created_at": "2026-11-10T23:25:43Z",
+      "id": "2121186097967308986",
+      "url": "https://x.com/hey_itsmyturn/status/2121186097967308986",
+      "created_at": "2026-11-13T10:19:10Z",
       "handle": "hey_itsmyturn",
       "type": "original",
-      "excerpt": "POTUS: \"The Democrats’ attempt to impeach Secretary of War Pete Hegseth has miserably FAILED! Every single Republican, except Thomas…",
+      "excerpt": "Jet activity over Bandar Abbas @ 13:34 local | 1004Z Hormozgan Province, Iran [Delayed Post via FromIran · 120-second delay]",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120255013884932468",
-      "url": "https://x.com/hey_itsmyturn/status/2120255013884932468",
-      "created_at": "2026-11-10T20:39:22Z",
+      "id": "2121003435776458753",
+      "url": "https://x.com/hey_itsmyturn/status/2121003435776458753",
+      "created_at": "2026-11-12T22:13:20Z",
       "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Initial reports of targeting AD site in Bandar Lengeh Hormozgan Province, #Iran [Can't confirm yet] (yes there's a pic)",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120995215171285065",
+      "url": "https://x.com/hey_itsmyturn/status/2120995215171285065",
+      "created_at": "2026-11-12T21:40:40Z",
+      "handle": "hey_itsmyturn",
+      "type": "original",
+      "excerpt": "Explosion in Sirik Hormozgan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120959369336479834",
+      "url": "https://x.com/GeoConfirmed/status/2120959369336479834",
+      "created_at": "2026-11-12T19:18:13Z",
+      "handle": "GeoConfirmed",
       "type": "quote",
-      "excerpt": "power outage in Narmak will continue till 2:00 local (2230Z)",
+      "excerpt": "Geolocation:",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120251079040422388",
-      "url": "https://x.com/hey_itsmyturn/status/2120251079040422388",
-      "created_at": "2026-11-10T20:23:44Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "Intense UAV activity over Iraqi borders, West Azerbaijan Province. 22:57 Local time. —————————— UAV activity over Jolfa and Hadishahr,…",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120243513589674403",
-      "url": "https://x.com/hey_itsmyturn/status/2120243513589674403",
-      "created_at": "2026-11-10T19:53:40Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "Wide power outage in Narmak, Eastern Tehran #Tehran Province, #Iran",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120239763496292812",
-      "url": "https://x.com/hey_itsmyturn/status/2120239763496292812",
-      "created_at": "2026-11-10T19:38:46Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "SPD14D platform in Southern Pars complex on fire Personnel evacuated Bushehr Province, #Iran",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120228551534223407",
-      "url": "https://x.com/hey_itsmyturn/status/2120228551534223407",
-      "created_at": "2026-11-10T18:54:13Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "Intense AA activity in Ramhormoz Khuzestan Province, Iran [Delayed Post via FromIran · 120-second delay]",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120222058755887297",
-      "url": "https://x.com/hey_itsmyturn/status/2120222058755887297",
-      "created_at": "2026-11-10T18:28:25Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "3 UAVs seen over Sanandaj Kurdistan Province, Iran [Delayed Post via FromIran · 120-second delay]",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120213769582416182",
-      "url": "https://x.com/hey_itsmyturn/status/2120213769582416182",
-      "created_at": "2026-11-10T17:55:28Z",
-      "handle": "hey_itsmyturn",
+      "id": "2120959366954148037",
+      "url": "https://x.com/GeoConfirmed/status/2120959366954148037",
+      "created_at": "2026-11-12T19:18:13Z",
+      "handle": "GeoConfirmed",
       "type": "quote",
-      "excerpt": "Judging by the image I got, something blew up for sure, smoke is big-ish, doesn't look like UXO disposal operation at all.",
+      "excerpt": "Geolocation: Vid1",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120209869726736403",
-      "url": "https://x.com/hey_itsmyturn/status/2120209869726736403",
-      "created_at": "2026-11-10T17:39:59Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "AA activity near 15 Khordad Base, Isfahan Isfahan Province, Iran [Delayed Post via FromIran · 120-second delay]",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120209744069579231",
-      "url": "https://x.com/hey_itsmyturn/status/2120209744069579231",
-      "created_at": "2026-11-10T17:39:29Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "AA activity + UAV launch from the Fifth Base in Omidiyeh. Khuzestan Province, Iran [Delayed Post via FromIran · 120-second delay]",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120201422671061337",
-      "url": "https://x.com/hey_itsmyturn/status/2120201422671061337",
-      "created_at": "2026-11-10T17:06:25Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "20:25 local | 1755Z Missile launch from Sar Bandar Khuzestan Province, Iran [Delayed Post via FromIran · 120-second delay]",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120196565990027585",
-      "url": "https://x.com/hey_itsmyturn/status/2120196565990027585",
-      "created_at": "2026-11-10T16:47:07Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "Explosion near the 15 Khordad base in Isfahan at 19:50 local | 1620Z followed by a column of smoke. Isfahan Province, Iran [Delayed Post…",
-      "confidence": "CLAIM"
-    },
-    {
-      "id": "2120178920666620297",
-      "url": "https://x.com/hey_itsmyturn/status/2120178920666620297",
-      "created_at": "2026-11-10T15:37:00Z",
-      "handle": "hey_itsmyturn",
+      "id": "2120959364886339727",
+      "url": "https://x.com/GeoConfirmed/status/2120959364886339727",
+      "created_at": "2026-11-12T19:18:12Z",
+      "handle": "GeoConfirmed",
       "type": "quote",
-      "excerpt": "With the \"You will be ruined.\" quote on the fuselage, a very famous threat to Israel by the former \"Supreme Leader\" of the Islamic Regime…",
+      "excerpt": "GeoConfirmed conflictmap ISR. An IDF airstrike hit the Nasser hospital in Khan Yunis, reportedly killing at least 6 people and injuring…",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120178069247848813",
-      "url": "https://x.com/hey_itsmyturn/status/2120178069247848813",
-      "created_at": "2026-11-10T15:33:37Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "Earlier: 2 launchers spotted on the Urmia–Tabriz road, heading to the IRGC Al-Mahdi base. West Azerbaijan Province, Iran [Delayed Post…",
+      "id": "2120959222108115123",
+      "url": "https://x.com/GeoConfirmed/status/2120959222108115123",
+      "created_at": "2026-11-12T19:17:38Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "Geolocation:",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120147547637399620",
-      "url": "https://x.com/hey_itsmyturn/status/2120147547637399620",
-      "created_at": "2026-11-10T13:32:20Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "16.30 local time | 1300Z 1 BM launched from the 15 Khordad base in Isfahan. Isfahan Province, Iran [Delayed Post via FromIran ·…",
+      "id": "2120959219822170173",
+      "url": "https://x.com/GeoConfirmed/status/2120959219822170173",
+      "created_at": "2026-11-12T19:17:38Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "GeoConfirmed conflictmap ISR. A vehicle was hit by reported Israeli airstrikes near the Al-Shifa Hospital in Gaza City. 31.523967,…",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120141834487726580",
-      "url": "https://x.com/hey_itsmyturn/status/2120141834487726580",
-      "created_at": "2026-11-10T13:09:38Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "Test launch of a missile in Kermanshah Kermanshah Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "id": "2120957347527049511",
+      "url": "https://x.com/GeoConfirmed/status/2120957347527049511",
+      "created_at": "2026-11-12T19:10:11Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "Proof",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120136434455634300",
-      "url": "https://x.com/hey_itsmyturn/status/2120136434455634300",
-      "created_at": "2026-11-10T12:48:10Z",
-      "handle": "hey_itsmyturn",
-      "type": "original",
-      "excerpt": "BM test launch from Aligudarz & Khorram Abad 15:20 local | 1150Z Lorestan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "id": "2120957344234557589",
+      "url": "https://x.com/GeoConfirmed/status/2120957344234557589",
+      "created_at": "2026-11-12T19:10:11Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "GeoConfirmed conflictmap World. Three police motorcycles and a police van were heading from P Street NW in a west direction towards 15th…",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120079643541651489",
-      "url": "https://x.com/hey_itsmyturn/status/2120079643541651489",
-      "created_at": "2026-11-10T09:02:30Z",
-      "handle": "hey_itsmyturn",
+      "id": "2120872526502867197",
+      "url": "https://x.com/Faytuks/status/2120872526502867197",
+      "created_at": "2026-11-12T13:33:08Z",
+      "handle": "Faytuks",
       "type": "original",
-      "excerpt": "Explosion near \"Radar Tabriz\" area. Reason is unclear East Azerbaijan Province, Iran [Delayed Post via FromIran · 120-second delay]",
+      "excerpt": "Norway's intelligence and security services say that there is good reason to believe that Russia will carry out sabotage acts in Norway…",
       "confidence": "CLAIM"
     },
     {
-      "id": "2120078083394814236",
-      "url": "https://x.com/hey_itsmyturn/status/2120078083394814236",
-      "created_at": "2026-11-10T08:56:18Z",
-      "handle": "hey_itsmyturn",
+      "id": "2120848170217296046",
+      "url": "https://x.com/GeoConfirmed/status/2120848170217296046",
+      "created_at": "2026-11-12T11:56:21Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "Geolocation:",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120848168157909293",
+      "url": "https://x.com/GeoConfirmed/status/2120848168157909293",
+      "created_at": "2026-11-12T11:56:21Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "Geolocation:",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120848166153289792",
+      "url": "https://x.com/GeoConfirmed/status/2120848166153289792",
+      "created_at": "2026-11-12T11:56:20Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "Pic",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120848162948624835",
+      "url": "https://x.com/GeoConfirmed/status/2120848162948624835",
+      "created_at": "2026-11-12T11:56:20Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "GeoConfirmed conflictmap UKR. Emergency vehicles and a large orange mobile crane positioned near a damaged dark passenger car -…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120846939726192791",
+      "url": "https://x.com/GeoConfirmed/status/2120846939726192791",
+      "created_at": "2026-11-12T11:51:28Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "Geolocation:",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120846936731263029",
+      "url": "https://x.com/GeoConfirmed/status/2120846936731263029",
+      "created_at": "2026-11-12T11:51:27Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "GeoConfirmed conflictmap UKR. Fire at a residential building, reportedly a Russian drone struck a nine-story building in Kyiv’s…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120845695003369819",
+      "url": "https://x.com/GeoConfirmed/status/2120845695003369819",
+      "created_at": "2026-11-12T11:46:31Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "Geolocation:",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120845692348321853",
+      "url": "https://x.com/GeoConfirmed/status/2120845692348321853",
+      "created_at": "2026-11-12T11:46:31Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "GeoConfirmed conflictmap UKR. Russian tanks & vehicles on a train, moving in eastern direction 54.963663, 83.106460 9M65X474+FH…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120840309546381638",
+      "url": "https://x.com/GeoConfirmed/status/2120840309546381638",
+      "created_at": "2026-11-12T11:25:07Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "Geolocation:",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120840307134574924",
+      "url": "https://x.com/GeoConfirmed/status/2120840307134574924",
+      "created_at": "2026-11-12T11:25:07Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "GeoConfirmed conflictmap UKR. Multiple trucks and vehicles destroyed after an alleged Ukrainian drone strike in Kalininsky district,…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120840035469504588",
+      "url": "https://x.com/GeoConfirmed/status/2120840035469504588",
+      "created_at": "2026-11-12T11:24:02Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "Geolocation:",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120840033384964404",
+      "url": "https://x.com/GeoConfirmed/status/2120840033384964404",
+      "created_at": "2026-11-12T11:24:01Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "GeoConfirmed conflictmap UKR. Russian drone destroyed a Ukrainian truck, injuring the driver 51.855380, 33.495371 9G3MVF4W+54 Shostka,…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120837239840407818",
+      "url": "https://x.com/GeoConfirmed/status/2120837239840407818",
+      "created_at": "2026-11-12T11:12:55Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "Geolocation:",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120837237092802822",
+      "url": "https://x.com/GeoConfirmed/status/2120837237092802822",
+      "created_at": "2026-11-12T11:12:55Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "GeoConfirmed conflictmap UKR. Russian Gerbera drone attacked by Ukrainian UAV Interceptor Unit \"Posipaki\" / \"Minions\" 47.838364,…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120835927908176019",
+      "url": "https://x.com/GeoConfirmed/status/2120835927908176019",
+      "created_at": "2026-11-12T11:07:43Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "Geolocation:",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120835925232042315",
+      "url": "https://x.com/GeoConfirmed/status/2120835925232042315",
+      "created_at": "2026-11-12T11:07:42Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "GeoConfirmed conflictmap UKR. Rough location - Reported Russian Howitzer hit by FPV's from UAS Battalion \"Perun\" 48.133417, 36.989421…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120835398540697842",
+      "url": "https://x.com/GeoConfirmed/status/2120835398540697842",
+      "created_at": "2026-11-12T11:05:36Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "Geolocation:",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120835396384776216",
+      "url": "https://x.com/GeoConfirmed/status/2120835396384776216",
+      "created_at": "2026-11-12T11:05:36Z",
+      "handle": "GeoConfirmed",
+      "type": "quote",
+      "excerpt": "GeoConfirmed conflictmap UKR. 0:15-0:19 - Ukrainian ATV attacked by Russian drone of the 14th Spetznaz Brigade 47.984533, 36.198591…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2120299910402638172",
+      "url": "https://x.com/Faytuks/status/2120299910402638172",
+      "created_at": "2026-11-10T23:37:46Z",
+      "handle": "Faytuks",
       "type": "original",
-      "excerpt": "07:35 local | 0305Z Fire near Kharrazi highway Iran [Delayed Post via FromIran · 120-second delay]",
+      "excerpt": "There has been air raid alerts in Lithuania and Latvia during the last hour or so due to possible drone intrusion. A drone appears to be…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2119896141428838439",
+      "url": "https://x.com/Faytuks/status/2119896141428838439",
+      "created_at": "2026-11-09T20:53:20Z",
+      "handle": "Faytuks",
+      "type": "quote",
+      "excerpt": "Some very interesting developments",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2119194181721854269",
+      "url": "https://x.com/Faytuks/status/2119194181721854269",
+      "created_at": "2026-11-07T22:24:00Z",
+      "handle": "Faytuks",
+      "type": "quote",
+      "excerpt": "More than 500k russians have been sent to their death in Ukraine. An unbelieveable toll",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2118631511826280900",
+      "url": "https://x.com/Faytuks/status/2118631511826280900",
+      "created_at": "2026-11-06T09:08:09Z",
+      "handle": "Faytuks",
+      "type": "original",
+      "excerpt": "The Russian double-tap strike on the Humanitarian aid center in Zaporizhzhia Oblast earlier this week has killed at least 50 with dozens…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2118131094776353188",
+      "url": "https://x.com/Faytuks/status/2118131094776353188",
+      "created_at": "2026-11-04T23:59:40Z",
+      "handle": "Faytuks",
+      "type": "quote",
+      "excerpt": "All indications are now pointing towards the Democrats getting 56 seats in the Senate and 260~ House seats. A blowout.",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2118023065716273227",
+      "url": "https://x.com/Faytuks/status/2118023065716273227",
+      "created_at": "2026-11-04T16:50:24Z",
+      "handle": "Faytuks",
+      "type": "original",
+      "excerpt": "Trump weighs removing Defence Secretary Pete Hegseth following midterm losses -CBS News Florida Gov. Ron DeSantis is being floated as a…",
+      "confidence": "CLAIM"
+    },
+    {
+      "id": "2117962803914891353",
+      "url": "https://x.com/Faytuks/status/2117962803914891353",
+      "created_at": "2026-11-04T12:50:56Z",
+      "handle": "Faytuks",
+      "type": "original",
+      "excerpt": "The democrats will win between 255 and 267 seats in the House, with the model now showing a Dem flip in the Senate race in Mississippi,…",
       "confidence": "CLAIM"
     }
   ]

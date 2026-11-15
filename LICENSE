@@ -7,7 +7,8 @@ of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+furnished to do so, subject to the following conditions. This grant does not
+cover public/data/claims_x.json.
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
@@ -21,7 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 The MIT grant above does not cover public/data/claims_x.json. That file is an
-offline copy of short excerpts from public posts by @hey_itsmyturn on X. It
+offline copy of short excerpts from public posts on X by @hey_itsmyturn,
+@GeoConfirmed, @sentdefender, @Osinttechnical, @Faytuks, and @NOELreports. It
 was not obtained through the X API. Remove it before any commercial sale. A
 sold product needs an X-authorized feed (the Enterprise API, or X for Websites
 embeds). See docs/sources.md.

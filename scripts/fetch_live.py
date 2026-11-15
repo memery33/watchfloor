@@ -24,10 +24,13 @@ LASTUPDATE = "https://data.gdeltproject.org/gdeltv2/lastupdate.txt"
 # Read the last WINDOW_HOURS of 15-minute exports (newest = the one lastupdate.txt
 # names), not just the newest file, so one quiet slice can't publish an empty
 # overlay. 0.25 = newest file only (the pre-window behavior). Override per run with
-# env WATCHFLOOR_WINDOW_HOURS. The 3-day date filter, CLAIM tagging, presets and
-# the 250 cap are unchanged.
+# env WATCHFLOOR_WINDOW_HOURS. There is no country allowlist. Each run merges into
+# the existing file, drops anything older than ROLLING_DAYS, dedupes, and caps at
+# EVENT_CAP. Every kept row is still CLAIM. Preset boxes only assign a theater.
 WINDOW_HOURS_DEFAULT = 6.0
 WINDOW_HOURS_MAX = 72.0
+ROLLING_DAYS = 30
+EVENT_CAP = 300
 EXPORT_STEP = timedelta(minutes=15)
 FETCH_WORKERS = 4
 RETRY_DELAY_S = 2.0
@@ -38,29 +41,6 @@ CODE_TYPE = {
     "194": "shelling",
     "195": "strike",
 }
-AOR = (
-    "iran",
-    "israel",
-    "lebanon",
-    "syria",
-    "iraq",
-    "saudi arabia",
-    "yemen",
-    "united arab emirates",
-    "oman",
-    "qatar",
-    "kuwait",
-    "bahrain",
-    "ukraine",
-    "russia",
-    "sudan",
-    "ethiopia",
-    "pakistan",
-    "afghanistan",
-    "west bank",
-    "palestine",
-    "gaza",
-)
 NOISE = {
     "POLICE",
     "DISTRICT COURT",
@@ -98,11 +78,6 @@ def log(msg: str) -> None:
     print(f"[{datetime.now(timezone.utc).isoformat()}] {msg}", flush=True)
 
 
-def in_aor(text: str) -> bool:
-    n = (text or "").lower()
-    return any(token in n for token in AOR)
-
-
 def theater_for(lat: float, lon: float) -> str:
     # Order: precedence="first" presets, built-in BBOX (dict order), then
     # precedence="last" presets. Both preset lists are empty unless enabled.
@@ -129,12 +104,15 @@ GENERIC = {
     "syria",
     "lebanon",
     "saudi arabia",
+    "united states",
 }
 CENTROIDS = {
     (60.0, 100.0),
     (32.0, 53.0),
     (33.0, 44.0),
     (15.5, 47.5),
+    (39.8, -98.6),  # United States country centroid 39.8282, -98.5795
+    (27.8, -81.7),  # Florida state centroid 27.8333, -81.717
 }
 
 
@@ -182,10 +160,9 @@ def infer_origin(actor1: str, actor2: str, lat: float, lon: float) -> dict | Non
 #   id           switch name (used in WATCHFLOOR_PRESETS)
 #   label        human label
 #   enabled      default False
-#   aor          lowercase substrings matched against ActionGeo_FullName. A row
-#                admitted ONLY by a preset token (no built-in AOR token) must also
-#                fall inside that preset's bbox, so loose tokens like ", india" or
-#                "korea" cannot leak Indiana / Koreatown rows into live.json.
+#   aor          lowercase substrings kept for the record. They are NOT an
+#                admission gate: worldwide rows that pass the quality filters are
+#                kept. Preset boxes still assign the theater id.
 #   theater      theater id written to each row's "theater" field
 #   bbox         tuple of (south, west, north, east) boxes for that theater
 #   precedence   "first" = checked BEFORE the built-in BBOX (wins overlaps),
@@ -376,32 +353,13 @@ PRESETS: tuple[dict, ...] = (
     },
 )
 
-_BASE_AOR = AOR
 _PRESET_FIRST: list[tuple[str, tuple[float, float, float, float]]] = []
 _PRESET_LAST: list[tuple[str, tuple[float, float, float, float]]] = []
-_PRESET_GATES: list[tuple[tuple[str, ...], tuple[tuple[float, float, float, float], ...]]] = []
 ACTIVE_PRESETS: tuple[str, ...] = ()
 
 
-def _in_boxes(boxes, lat: float, lon: float) -> bool:
-    return any(s <= lat <= n and w <= lon <= e for s, w, n, e in boxes)
-
-
-def preset_gate(location: str, lat: float, lon: float) -> bool:
-    """A row admitted only by a preset token must sit inside that preset's bbox."""
-    if not _PRESET_GATES:
-        return True
-    n = (location or "").lower()
-    if any(token in n for token in _BASE_AOR):
-        return True
-    return any(
-        any(token in n for token in tokens) and _in_boxes(boxes, lat, lon)
-        for tokens, boxes in _PRESET_GATES
-    )
-
-
 def _apply_presets() -> None:
-    global AOR, PLACE_CHECK, ACTIVE_PRESETS
+    global PLACE_CHECK, ACTIVE_PRESETS
     wanted = {
         part.strip().lower()
         for part in os.environ.get("WATCHFLOOR_PRESETS", "").split(",")
@@ -418,15 +376,12 @@ def _apply_presets() -> None:
             assert s < n and w < e, f"bad bbox in preset {preset['id']}"
         assert preset["precedence"] in ("first", "last"), preset["id"]
         assert boxes or not preset["aor"], f"preset {preset['id']} has tokens but no bbox"
-        AOR = AOR + tuple(t for t in preset["aor"] if t not in AOR)
         PLACE_CHECK = PLACE_CHECK + tuple(preset["place_check"])
         GENERIC.update(preset["generic"])
         CENTROIDS.update(preset["centroids"])
         NOISE.update(preset["noise"])
         target = _PRESET_FIRST if preset["precedence"] == "first" else _PRESET_LAST
         target.extend((preset["theater"], box) for box in boxes)
-        if preset["aor"]:
-            _PRESET_GATES.append((tuple(preset["aor"]), boxes))
         ACTIVE_PRESETS += (preset["id"],)
     if ACTIVE_PRESETS:
         log(f"region presets active: {', '.join(ACTIVE_PRESETS)}")
@@ -566,15 +521,17 @@ def from_gdelt_row(row: list[str]) -> dict | None:
     if lat == 0 and lon == 0:
         return None
     location = clean_text(row[52]) or "Unknown"
-    if not in_aor(location):
-        return None
-    if not coords_match_place(location, lat, lon) or not preset_gate(location, lat, lon):
+    # No country allowlist. coords_match_place still drops generic country
+    # names, known country centroids, far-east overview geocodes, and place
+    # mismatches. Actor noise and the mentions floor are unchanged.
+    if not coords_match_place(location, lat, lon):
         return None
     try:
         dt = datetime.strptime(row[1], "%Y%m%d").replace(tzinfo=timezone.utc)
     except (ValueError, IndexError):
         return None
-    if dt < datetime.now(timezone.utc) - timedelta(days=3):
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=ROLLING_DAYS)).date()
+    if dt.date() < cutoff:
         return None
     origin = infer_origin(actor1, actor2, lat, lon)
     return {
@@ -595,27 +552,87 @@ def from_gdelt_row(row: list[str]) -> dict | None:
     }
 
 
+def within_rolling(event: dict) -> bool:
+    raw = event.get("date")
+    if not isinstance(raw, str):
+        return False
+    try:
+        day = datetime.strptime(raw, "%Y-%m-%d").date()
+    except ValueError:
+        return False
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=ROLLING_DAYS)).date()
+    return day >= cutoff
+
+
+def load_existing_events() -> tuple[list[dict], str | None] | None:
+    """Previous rows and their generated_at.
+
+    None when the file exists but cannot be used: unreadable, not an object,
+    or `events` is missing or not a list. A missing file is an empty list.
+    """
+    if not os.path.exists(OUT):
+        return [], None
+    try:
+        with open(OUT, encoding="utf-8") as handle:
+            payload = json.load(handle)
+    except (OSError, json.JSONDecodeError) as exc:
+        log(f"could not read previous live.json: {exc}")
+        return None
+    if not isinstance(payload, dict):
+        return None
+    events = payload.get("events")
+    if not isinstance(events, list):
+        return None
+    generated = payload.get("generated_at")
+    stamp = generated if isinstance(generated, str) else None
+    return [event for event in events if isinstance(event, dict)], stamp
+
+
+def row_place_ok(event: dict) -> bool:
+    try:
+        return coords_match_place(str(event.get("location") or ""), float(event["lat"]), float(event["lon"]))
+    except (KeyError, TypeError, ValueError):
+        return False
+
+
+def as_claim(event: dict) -> dict:
+    if event.get("confidence") == "CLAIM":
+        return event
+    return {**event, "confidence": "CLAIM"}
+
+
 def dedupe(events: list[dict]) -> list[dict]:
-    seen: set[tuple] = set()
+    """First occurrence wins (pass fresh rows before retained ones). Non-CLAIM rows are forced to CLAIM. Then newest dates, then the cap."""
+    seen_ids: set[str] = set()
+    seen_keys: set[tuple] = set()
     uniq: list[dict] = []
     for event in events:
-        key = (
-            event["date"],
-            event["event_type"],
-            round(event["lat"], 2),
-            round(event["lon"], 2),
-        )
-        if key in seen:
+        event = as_claim(event)
+        eid = event.get("id")
+        if isinstance(eid, str):
+            if eid in seen_ids:
+                continue
+            seen_ids.add(eid)
+        try:
+            key = (
+                event["date"],
+                event["event_type"],
+                round(float(event["lat"]), 2),
+                round(float(event["lon"]), 2),
+            )
+        except (KeyError, TypeError, ValueError):
             continue
-        seen.add(key)
+        if key in seen_keys:
+            continue
+        seen_keys.add(key)
         uniq.append(event)
-    uniq.sort(key=lambda item: item["date"], reverse=True)
-    return uniq[:250]
+    uniq.sort(key=lambda item: item.get("date") or "", reverse=True)
+    return uniq[:EVENT_CAP]
 
 
-def write_payload(events: list[dict]) -> None:
+def write_payload(events: list[dict], generated_at: str | None = None, *, keep_stamp: bool = False) -> None:
     payload = {
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": generated_at if keep_stamp else datetime.now(timezone.utc).isoformat(),
         "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
         "events": events,
     }
@@ -638,16 +655,27 @@ def main() -> int:
         rows = rows_from_exports(exports)
         log(f"window {hours:g}h: {len(exports)}/{len(urls)} exports")
         log(f"raw rows {len(rows)}")
-        events = [item for row in rows if (item := from_gdelt_row(row))]
+        fresh = [item for row in rows if (item := from_gdelt_row(row))]
     except Exception as exc:  # noqa: BLE001
         log(f"live GDELT fetch failed: {exc}")
-        if os.path.exists(OUT):
+        if not os.path.exists(OUT):
+            return 1
+        loaded = load_existing_events()
+        if loaded is None:
             log("keeping previous live.json")
             return 0
-        else:
-            return 1
+        previous, generated_at = loaded
+        aged = dedupe([event for event in previous if within_rolling(event) and row_place_ok(event)])
+        log(f"aged previous live.json; kept {len(aged)}")
+        write_payload(aged, generated_at, keep_stamp=True)
+        return 0
 
-    write_payload(dedupe(events))
+    loaded = load_existing_events()
+    previous = [] if loaded is None else loaded[0]
+    retained = [event for event in previous if within_rolling(event) and row_place_ok(event)]
+    events = dedupe(fresh + retained)
+    log(f"fresh {len(fresh)}; retained {len(retained)}; kept {len(events)}")
+    write_payload(events)
     return 0
 
 

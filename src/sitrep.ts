@@ -22,12 +22,12 @@ for (const mod of Object.values(THEATER_MODULES)) {
 }
 
 export const SNAPSHOT = {
-  dtgLocal: "2026-10-15 1111L",
-  dtgZulu: "2026-10-15 1511Z",
+  dtgLocal: "2026-11-15 1700L",
+  dtgZulu: "2026-11-15 2200Z",
   classification: "UNCLASSIFIED // OSINT // OPEN PRESS",
   watchcon: "ELEVATED",
   priorityTheater: "IRAN / GULF",
-  sourceAge: "SNAPSHOT 15 OCT 2026 11:11 ET",
+  sourceAge: "SNAPSHOT 15 NOV 2026 17:00 ET",
   disclaimer:
     "Best-effort open-source COP. Yellow = unverified claim. Dashed arcs are reconstructed from named origin+impact, not radar. Not a targeting product.",
 };
@@ -43,6 +43,10 @@ export const THEATERS: Theater[] = THEATER_ORDER.flatMap((id) => {
   return t ? [t] : [];
 });
 
-export const TICKER = THEATERS[0].events.map(
-  (e) => `${e.dtg}  ${e.location}  ${e.fact}`,
-);
+/** Ticker copy for events whose DTG the caller says is inside the active window. */
+export function tickerLines(
+  events: { dtg: string; location: string; fact: string }[],
+  inWindow: (dtg: string) => boolean,
+): string[] {
+  return events.filter((e) => inWindow(e.dtg)).map((e) => `${e.dtg}  ${e.location}  ${e.fact}`);
+}
