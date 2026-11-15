@@ -55,6 +55,19 @@ export function rangeOverlapsWindow(startMs: number, endMs: number, window: Time
   return endMs > now - MS[window] && startMs <= now;
 }
 
+/**
+ * Date-only rows have no hour. Overlap would count the whole previous UTC day
+ * inside a 24H window. A 24H row counts only when its last named UTC day is
+ * today. Longer windows keep the overlap test.
+ */
+export function dateOnlyInWindow(startMs: number, endMs: number, window: TimeWindow, now = Date.now()): boolean {
+  if (window !== "24H") return rangeOverlapsWindow(startMs, endMs, window, now);
+  const nowDate = new Date(now);
+  const todayStart = Date.UTC(nowDate.getUTCFullYear(), nowDate.getUTCMonth(), nowDate.getUTCDate());
+  const lastDayStart = endMs - 24 * 60 * 60 * 1000;
+  return lastDayStart === todayStart && startMs <= now;
+}
+
 /** Clock skew of a few minutes still counts as current. Far-future timestamps do not. */
 export function instantInWindow(ts: number, window: TimeWindow, now = Date.now()): boolean {
   if (!Number.isFinite(ts)) return false;
@@ -119,10 +132,13 @@ export function curatedRange(dtg: string, anchorIso: string): [number, number] |
 export function curatedInWindow(dtg: string, anchorIso: string, window: TimeWindow, now = Date.now()): boolean {
   const range = curatedRange(dtg, anchorIso);
   if (!range) return false;
-  return rangeOverlapsWindow(range[0], range[1], window, now);
+  return dateOnlyInWindow(range[0], range[1], window, now);
 }
 
-/** Calendar day `YYYY-MM-DD` overlaps the window. Invalid dates do not. */
+/**
+ * Calendar day `YYYY-MM-DD`. Invalid dates do not count. 24H includes that
+ * UTC day only when it is today; 3D, 7D, and 30D use overlap.
+ */
 export function dayInWindow(isoDate: string, window: TimeWindow, now = Date.now()): boolean {
   const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(isoDate);
   if (!match) return false;
@@ -132,5 +148,5 @@ export function dayInWindow(isoDate: string, window: TimeWindow, now = Date.now(
   const start = Date.UTC(year, month - 1, date);
   const check = new Date(start);
   if (check.getUTCFullYear() !== year || check.getUTCMonth() !== month - 1 || check.getUTCDate() !== date) return false;
-  return rangeOverlapsWindow(start, start + 24 * 60 * 60 * 1000, window, now);
+  return dateOnlyInWindow(start, start + 24 * 60 * 60 * 1000, window, now);
 }

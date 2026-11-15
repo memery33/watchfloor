@@ -43,6 +43,10 @@ export const THEATERS: Theater[] = THEATER_ORDER.flatMap((id) => {
   return t ? [t] : [];
 });
 
-export const TICKER = THEATERS[0].events.map(
-  (e) => `${e.dtg}  ${e.location}  ${e.fact}`,
-);
+/** Ticker copy for events whose DTG the caller says is inside the active window. */
+export function tickerLines(
+  events: { dtg: string; location: string; fact: string }[],
+  inWindow: (dtg: string) => boolean,
+): string[] {
+  return events.filter((e) => inWindow(e.dtg)).map((e) => `${e.dtg}  ${e.location}  ${e.fact}`);
+}

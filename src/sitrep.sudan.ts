@@ -35,7 +35,7 @@ export const THEATER_SUDAN: Theater =   {
         id: "sd-nuhud",
         dtg: "14–15 NOV",
         location: "AL-NUHUD",
-        fact: "Sudanese Armed Forces and allied units took al-Khuwai (al-Khuwei) in West Kordofan on Friday, and military sources said they later seized Khamasat, Markab and Umm Oweisha while advancing on Rapid Support Forces-held Al-Nuhud (Al Jazeera, 14–15 Nov; Anadolu Agency military sources). The Rapid Support Forces had not commented in those reports. El Obeid’s siege has been described as broken in the same Al Jazeera reporting. Town-level pin for al-Khuwai.",
+        fact: "Sudanese Armed Forces and allied units took al-Khuwai (al-Khuwei) in West Kordofan on Friday, and military sources said they later seized Khamasat, Markab and Umm Oweisha while advancing on Rapid Support Forces-held Al-Nuhud (Al Jazeera, 14–15 Nov; Anadolu Agency military sources). The Rapid Support Forces had not commented in those reports. El Obeid’s siege has been described as broken in the same Al Jazeera reporting. Town-level pin for Al-Nuhud.",
         source: "PRESS",
         confidence: "REPORTED",
         priority: "PRI-1",

@@ -10,7 +10,7 @@ export const THEATER_OVERVIEW: Theater =   {
     kpis: [
       { label: "PRIORITY THEATER", value: "IRAN / GULF", tone: "hot" },
       { label: "HORMUZ", value: "MINE / SINKING CLAIMS", tone: "hot" },
-      { label: "YEMEN / KSA", value: "INTERCEPTS / ADEN PULLBACK", tone: "hot" },
+      { label: "YEMEN / KSA", value: "RIYADH CLAIMS / ADEN", tone: "hot" },
       { label: "UKRAINE", value: "ODESA ENERGY STRIKES", tone: "hot" },
     ],
     watch: [
@@ -63,7 +63,7 @@ export const THEATER_OVERVIEW: Theater =   {
         location: "RIYADH",
         fact: "Houthis said they launched two ballistic missiles at King Khalid International Airport and a financial centre in Riyadh, and also claimed strikes on two East-West pipeline pumping stations (CNBC; Reuters). The Saudi-led coalition said it intercepted two ballistic missiles toward Riyadh and drones in the Eastern Province (Reuters; Arab News; Al Jazeera). Launch toward Riyadh is reported by both sides. The intercept, and the pipeline-pump claims, are coalition or Houthi statements and are not independently confirmed here. Riyadh city pin.",
         source: "PRESS",
-        confidence: "CONFIRMED",
+        confidence: "REPORTED",
         priority: "PRI-1",
         lat: 24.71,
         lon: 46.68,

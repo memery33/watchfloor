@@ -39,7 +39,7 @@ HANDLES = (
     "Faytuks",
     "NOELreports",
 )
-HANDLE_SET = set(HANDLES)
+HANDLE_CANON = {handle.lower(): handle for handle in HANDLES}
 # X wraps outbound links as https://t.co/... . The left boundary stops "not.co" / "at.co" hits.
 TCO = re.compile(r"\b(?:https?://)?t\.co/\S+", re.IGNORECASE)
 STATUS_ID = re.compile(r"[0-9]+")
@@ -103,9 +103,9 @@ def post_url(raw: object) -> tuple[str, str, str] | None:
     segs = [s for s in parts.path.split("/") if s]
     if len(segs) != 3 or segs[1] != "status":
         return None
-    handle = segs[0]
+    handle = HANDLE_CANON.get(segs[0].lower())
     status_id = segs[2]
-    if handle not in HANDLE_SET or STATUS_ID.fullmatch(status_id) is None:
+    if handle is None or STATUS_ID.fullmatch(status_id) is None:
         return None
     url = f"https://x.com/{handle}/status/{status_id}"
     return url, handle, status_id
@@ -127,8 +127,8 @@ def collect_paths(args: list[str]) -> list[str]:
 
 
 def build(paths: list[str]) -> dict:
-    # (handle, status id) -> post. First write wins until a newer created_at replaces it.
-    best: dict[tuple[str, str], dict] = {}
+    # status id -> post. The same id from any handle keeps the newer created_at.
+    best: dict[str, dict] = {}
     dropped = {"repost": 0, "reply": 0, "other": 0, "bad": 0, "empty": 0}
     for path in paths:
         with open(path, encoding="utf-8") as fh:
@@ -168,13 +168,12 @@ def build(paths: list[str]) -> dict:
                     "excerpt": text,
                     "confidence": "CLAIM",
                 }
-                slot = (handle, status_id)
-                prev = best.get(slot)
+                prev = best.get(status_id)
                 if prev is None or created_at > prev["created_at"]:
-                    best[slot] = post
+                    best[status_id] = post
     posts: list[dict] = []
     for handle in HANDLES:
-        rows = [post for (h, _sid), post in best.items() if h == handle]
+        rows = [post for post in best.values() if post["handle"] == handle]
         rows.sort(key=lambda p: (p["created_at"], p["id"]), reverse=True)
         posts.extend(rows[:POST_CAP])
     posts.sort(key=lambda p: (p["created_at"], p["id"]), reverse=True)

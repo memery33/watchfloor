@@ -14,17 +14,11 @@ export const X_HANDLES = [
 
 export type XHandle = (typeof X_HANDLES)[number];
 
-const HANDLE_SET = new Set<string>(X_HANDLES);
+const HANDLE_BY_LOWER = new Map(X_HANDLES.map((handle) => [handle.toLowerCase(), handle]));
 const EXCERPT_MAX = 140; // JavaScript string length, UTF-16 code units
 
-function escapeRegExp(value: string): string {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
-
-/** Only this shape may become a claim link. twitter.com is not accepted here. ASCII digits only. */
-const X_POST_URL = new RegExp(
-  `^https://x\\.com/(${X_HANDLES.map(escapeRegExp).join("|")})/status/([0-9]+)$`,
-);
+/** Only this shape may become a claim link. twitter.com is not accepted here. ASCII digits only. Handle match is case-insensitive. */
+const X_POST_URL = /^https:\/\/x\.com\/([A-Za-z0-9_]+)\/status\/([0-9]+)$/;
 
 export interface XClaimPost {
   id: string;
@@ -55,10 +49,12 @@ export interface ParsedXPostUrl {
 
 export function parseXPostUrl(raw: unknown): ParsedXPostUrl | null {
   if (typeof raw !== "string") return null;
-  const url = raw.trim();
-  const match = X_POST_URL.exec(url);
-  if (!match || !HANDLE_SET.has(match[1])) return null;
-  return { url, handle: match[1] as XHandle, id: match[2] };
+  const match = X_POST_URL.exec(raw.trim());
+  if (!match) return null;
+  const handle = HANDLE_BY_LOWER.get(match[1].toLowerCase());
+  if (!handle) return null;
+  const id = match[2];
+  return { url: `https://x.com/${handle}/status/${id}`, handle, id };
 }
 
 export function xPostUrl(raw: unknown): string | null {
@@ -68,7 +64,7 @@ export function xPostUrl(raw: unknown): string | null {
 function sanePost(post: XClaimPost): post is XClaimPost {
   const parsed = parseXPostUrl(post?.url);
   if (!parsed) return false;
-  if (post.id !== parsed.id || post.handle !== parsed.handle) return false;
+  if (post.id !== parsed.id || post.handle.toLowerCase() !== parsed.handle.toLowerCase()) return false;
   if (!KEEP.has(post.type) || post.confidence !== "CLAIM") return false;
   if (typeof post.created_at !== "string" || !Number.isFinite(Date.parse(post.created_at))) return false;
   if (typeof post.excerpt !== "string") return false;
@@ -88,12 +84,13 @@ export async function loadXClaims(): Promise<XClaimsPayload | null> {
     const counts = new Map<string, number>();
     const posts: XClaimPost[] = [];
     for (const post of sorted) {
-      if (seen.has(post.id)) continue;
-      seen.add(post.id);
-      const n = counts.get(post.handle) ?? 0;
+      const parsed = parseXPostUrl(post.url);
+      if (!parsed || seen.has(parsed.id)) continue;
+      seen.add(parsed.id);
+      const n = counts.get(parsed.handle) ?? 0;
       if (n >= X_CLAIMS_PER_HANDLE) continue;
-      counts.set(post.handle, n + 1);
-      posts.push(post);
+      counts.set(parsed.handle, n + 1);
+      posts.push({ ...post, id: parsed.id, url: parsed.url, handle: parsed.handle });
     }
     return { ...payload, posts };
   } catch {

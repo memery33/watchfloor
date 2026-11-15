@@ -2,9 +2,10 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { eventsForTheater, LIVE_EVENT_CAP, loadLive, type LiveEvent, type LivePayload } from "./live";
 import { loadXClaims, xPostUrl, type XClaimPost, type XClaimsPayload } from "./claims_x";
-import { SNAPSHOT, THEATERS, TICKER, type Theater, type TheaterId, type Confidence } from "./sitrep";
+import { SNAPSHOT, THEATERS, tickerLines, type Theater, type TheaterId, type Confidence } from "./sitrep";
 import {
   curatedInWindow,
+  curatedRange,
   dayInWindow,
   instantInWindow,
   readTimeWindow,
@@ -241,6 +242,12 @@ function passesTimeLive(event: LiveEvent): boolean {
 
 function passesTimeCurated(dtg: string): boolean {
   return curatedInWindow(dtg, SNAPSHOT.dtgZulu, timeWindow);
+}
+
+/** Strikes and waves with a parsed DTG follow the window. Undated rows stay. */
+function passesTimeDated(dtg: string): boolean {
+  if (!curatedRange(dtg, SNAPSHOT.dtgZulu)) return true;
+  return passesTimeCurated(dtg);
 }
 
 function passesTimeClaim(iso: string): boolean {
@@ -544,7 +551,8 @@ function renderPanel(t: Theater) {
   renderWindows();
 
   const liveBits = overlay.slice(0, 6).map((e) => `${e.dtg}  ${e.location}  ${e.fact}`);
-  tickerEl.textContent = [...TICKER, ...liveBits].join("   \u00b7   ");
+  const tickerBits = tickerLines(THEATERS[0].events, passesTimeCurated);
+  tickerEl.textContent = [...tickerBits, ...liveBits].join("   \u00b7   ");
   renderFilters();
 }
 
@@ -553,7 +561,7 @@ function addImpact(
   lon: number,
   color: string,
   group: L.LayerGroup,
-  popup: { title: string; meta?: string; fact: string },
+  popup: PopupOpts,
 ) {
   const marker = L.circleMarker([lat, lon], {
     radius: 8,
@@ -702,10 +710,13 @@ function drawLive(event: LiveEvent) {
   if (!liveLayer) return;
   if (!passesFilter(event.confidence)) return;
   const color = colorForConfidence(event.confidence);
+  const href = safeUrl(event.url);
+  const source = href && href.startsWith("https:") ? href : null;
   addImpact(event.lat, event.lon, color, liveLayer, {
     title: event.location,
     meta: `${event.dtg} \u00b7 LIVE \u00b7 ${event.confidence}`,
     fact: event.fact,
+    ...(source ? { link: { href: source, label: "Source" } } : {}),
   });
   // Only draw inferred arc when both ends are named \u2014 keep styling distinct from reconstructed tracks
   if (event.origin && event.origin.name) {
@@ -1005,7 +1016,10 @@ function renderMap(t: Theater) {
 
   t.markers.forEach((m) => {
     const c = m.tone === "hot" ? "#ff4d3c" : m.tone === "warn" ? "#ffbf3c" : m.tone === "ok" ? "#3cff8a" : "#6fe3ff";
-    const match = t.events.find((e) => Math.abs(e.lat - m.lat) < 0.02 && Math.abs(e.lon - m.lon) < 0.02);
+    const colocated = t.events.filter((e) => Math.abs(e.lat - m.lat) < 0.02 && Math.abs(e.lon - m.lon) < 0.02);
+    const visible = colocated.filter((e) => passesFilter(e.confidence) && passesTimeCurated(e.dtg));
+    if (colocated.length > 0 && visible.length === 0) return;
+    const match = visible[0];
     const marker = L.circleMarker([m.lat, m.lon], {
       radius: 10,
       color: c,
@@ -1029,8 +1043,8 @@ function renderMap(t: Theater) {
   });
 
   const tracks = TRACKS.filter((tr) => trackFits(tr, t.id));
-  const waves = WAVES.filter((w) => w.theaters.includes(t.id) && waveDrawable(w));
-  const strikes = STRIKES.filter((sp) => sp.theaters.includes(t.id) && strikeDrawable(sp));
+  const waves = WAVES.filter((w) => w.theaters.includes(t.id) && waveDrawable(w) && passesTimeDated(w.dtg));
+  const strikes = STRIKES.filter((sp) => sp.theaters.includes(t.id) && strikeDrawable(sp) && passesTimeDated(sp.dtg));
   const overlay = (live?.events ?? []).filter((e) => liveFits(e, t.id) && passesTimeLive(e) && passesFilter(e.confidence));
   const visibleTracks = tracks.filter((tr) => passesFilter(tr.confidence)).length;
   const visibleWaves = waves.filter((w) => passesFilter(w.confidence));

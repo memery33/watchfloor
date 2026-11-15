@@ -46,7 +46,6 @@ export const THEATER_ETHIOPIA: Theater =   {
     markers: [
       { id: "et-m-badme", name: "BADME", lat: 14.725, lon: 37.803, note: "Control disputed", tone: "hot" },
       { id: "et-m-axum", name: "AXUM", lat: 14.121, lon: 38.723, note: "Clashes reported to the south", tone: "warn" },
-      { id: "et-m-mekelle", name: "MEKELLE", lat: 13.496, lon: 39.477, note: "Caretaker administration stand-up", tone: "warn" },
       { id: "et-m-addis", name: "ADDIS ABABA", lat: 9.03, lon: 38.74, note: "Federal capital reference pin", tone: "dim" },
     ],
   };

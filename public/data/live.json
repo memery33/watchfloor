@@ -226,22 +226,6 @@
       "url": "http://thepeninsulaqatar.com/article/15/11/2026/jordan-sentences-three-to-death-over-karak-church-attack"
     },
     {
-      "id": "gdelt-1333272569",
-      "dtg": "15 NOV",
-      "date": "2026-11-15",
-      "location": "United States",
-      "fact": "STRIKE  COLLEGE \u2192 ?  (6 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-2",
-      "lat": 39.8282,
-      "lon": -98.5795,
-      "event_type": "strike",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.thepiratescove.us/2026/11/15/sorta-blogless-sunday-pinup-1062/"
-    },
-    {
       "id": "gdelt-1333270576",
       "dtg": "15 NOV",
       "date": "2026-11-15",
@@ -309,22 +293,6 @@
       "theater": "energy",
       "origin": null,
       "url": "https://www.moneycontrol.com/world/yemeni-government-forces-pull-back-from-bab-al-mandeb-area-as-houthis-gain-ground-article-14080626.html"
-    },
-    {
-      "id": "gdelt-1333263034",
-      "dtg": "15 NOV",
-      "date": "2026-11-15",
-      "location": "United States",
-      "fact": "SHELLING  WALL STREET JOURNAL \u2192 MILITARY  (4 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 39.8282,
-      "lon": -98.5795,
-      "event_type": "shelling",
-      "theater": "overview",
-      "origin": null,
-      "url": "https://www.bankingnews.gr/diethni/articles/911179/iran-holds-2-500-missiles-with-4-000-km-range-and-33-underground-bases-strikes-bahrain%20title="
     },
     {
       "id": "gdelt-1333250524",
