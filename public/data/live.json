@@ -1,7 +1,28 @@
 {
-  "generated_at": "2026-11-15T17:30:48.165884+00:00",
+  "generated_at": "2026-11-15T17:50:31.915453+00:00",
   "note": "GDELT NLP overlay. All rows CLAIM. Not radar. Not a targeting product.",
   "events": [
+    {
+      "id": "gdelt-1333270576",
+      "dtg": "15 NOV",
+      "date": "2026-11-15",
+      "location": "Lahj",
+      "fact": "STRIKE  SAUDI \u2192 YEMEN  (3 mentions)",
+      "source": "GDELT",
+      "confidence": "CLAIM",
+      "priority": "PRI-2",
+      "lat": 13.0567,
+      "lon": 44.8819,
+      "event_type": "strike",
+      "theater": "yemen",
+      "origin": {
+        "name": "YEMEN / HOUTHI",
+        "lat": 16.85,
+        "lon": 43.58,
+        "inferred": true
+      },
+      "url": "https://www.freemalaysiatoday.com/category/world/2026/11/15/houthis-kill-8-near-aden-as-yemeni-govt-bolsters-city-defences"
+    },
     {
       "id": "gdelt-1333267312",
       "dtg": "15 NOV",
@@ -97,22 +118,6 @@
       "theater": "overview",
       "origin": null,
       "url": "https://www.rte.ie/news/2026/1115/1599272-ukrainian-strikes-hit-major-russian-industrial-city/"
-    },
-    {
-      "id": "gdelt-1333237425",
-      "dtg": "15 NOV",
-      "date": "2026-11-15",
-      "location": "Riyadh",
-      "fact": "SHELLING  SAUDI ARABIA \u2192 RIYADH  (8 mentions)",
-      "source": "GDELT",
-      "confidence": "CLAIM",
-      "priority": "PRI-3",
-      "lat": 24.6408,
-      "lon": 46.7728,
-      "event_type": "shelling",
-      "theater": "energy",
-      "origin": null,
-      "url": "https://www.rferl.org/a/bahrain-said-its-air-defenses-intercepted-and-destroyed-several-iranian-aerial-attacks/33898951.html"
     }
   ]
 }
